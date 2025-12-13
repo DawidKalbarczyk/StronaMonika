@@ -1,9 +1,8 @@
-name: Deploy react app to gh pages
-
-on: ## Definiuje kiedy ma być co robione
+name: Deploy react app to github pages
+on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
@@ -11,38 +10,37 @@ permissions:
   id-token: write
   actions: read
 
-concurrency: #parametr opisujący cykl pracy
+concurrency:
   group: "pages"
   cancel-in-progress: true
 
-jobs: ## Definiuje to co ma być robione
+jobs:
   build:
-    runs-on: ubuntu-latest   #wybranie systemu githuba
-    defaults: #definiowanie katalogu projektu
+    runs-on: ubuntu-latest
+    defaults:
       run:
         working-directory: config/node/frontend
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4   #wersja 4 tej instrukcji
+      steps:
+        - name: Sprawdzenie
+          uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-          cache-dependency-path: config/node/frontend/package-lock.json
+        - name: Przygotuj Node
+          uses: actions/setup-node@v4
+          with:
+            node-version: 24
+            cache: npm
+            cache-dependency-path: config/node/rontend/package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
+        - name: Instaluj zaleznosci
+          run: npm ci
 
-      - name: Build
-        run: npm run build
+        - name: Zkompiluj
+          run: npm run build
 
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: config/node/frontend/build
-
+        - name: Wrzuc artefakty
+          uess: actions/upload-pages-artifact@v3
+          with:
+            path: config/node/frontend/build
 
   deploy:
     environment:
@@ -52,6 +50,6 @@ jobs: ## Definiuje to co ma być robione
     needs: build
 
     steps:
-      - name: Deploy to gh pages
+      - name: Wrzucenie na github pages
         id: deployment
         uses: actions/deploy-pages@v4
