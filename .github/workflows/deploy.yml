@@ -20,27 +20,27 @@ jobs:
     defaults:
       run:
         working-directory: config/node/frontend
-      steps:
-        - name: Sprawdzenie
-          uses: actions/checkout@v4
+    steps:
+      - name: Sprawdzenie
+        uses: actions/checkout@v4
 
-        - name: Przygotuj Node
-          uses: actions/setup-node@v4
-          with:
-            node-version: 24
-            cache: npm
-            cache-dependency-path: config/node/rontend/package-lock.json
+      - name: Przygotuj Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: config/node/rontend/package-lock.json
 
-        - name: Instaluj zaleznosci
-          run: npm ci
+      - name: Instaluj zaleznosci
+        run: npm ci
 
-        - name: Zkompiluj
-          run: npm run build
+      - name: Zkompiluj
+        run: npm run build
 
-        - name: Wrzuc artefakty
-          uess: actions/upload-pages-artifact@v3
-          with:
-            path: config/node/frontend/build
+      - name: Wrzuc artefakty
+        uess: actions/upload-pages-artifact@v3
+        with:
+          path: config/node/frontend/build
 
   deploy:
     environment:
