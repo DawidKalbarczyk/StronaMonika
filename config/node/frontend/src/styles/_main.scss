@@ -1,0 +1,19 @@
+.app {
+  background: $background-color;
+  color: $secondary-color;
+  height: 100vh;
+
+  @include flex-center;
+
+  .home__button {
+    width: fit-content;
+    margin-top: 2vh;
+    color: red;
+  }
+}
+
+.mapComponent {
+  height: 100vh;
+  width: 100vw;
+}
+
