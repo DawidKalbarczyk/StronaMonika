@@ -4,7 +4,7 @@ import {Suspense} from "react";
 import routes from './routes/Router';
 import {RouterProvider} from 'react-router-dom';
 import {CircularProgress} from "@mui/material";
-
+import './styles/style.scss';
 function App() {
   return (
     <div className="app">
