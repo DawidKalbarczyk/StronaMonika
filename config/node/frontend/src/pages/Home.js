@@ -1,5 +1,6 @@
 import React from 'react';
-
+import "../styles/mainPage.css";
+import { getImage } from "../components/imagePaths.js";
 //import {Typography, Button} from "@mui/material";
 //import {Link} from "react-router-dom";
 
@@ -19,24 +20,40 @@ function Home(props) {
         </div>>
 
          */
+
+
         // Main Frame!!!!!
+
         <div className="main">
             <div className="header">
                 <div className="left-header">
 
                 </div>
             </div>
-            <div className="main-content">
-                <div className="owner-info-container">
-                    <div className="owner-photo-container">
-                        <img className="owner-photo" src="photos/myPhotos/20251102_131503(1)%5B1%5D.jpg"/>
-                    </div>
-                </div>
-                <div className="owner-quote-container">
+            <div className="main-content-container">
+                <div className="left-bar">
 
                 </div>
+                <div className="main-content">
+                    <div className="owner-info-container">
+                        <div className="owner-photo-container">
+                            <img className="owner-photo" src={getImage("/Photos/myPhotos/homepagephoto.jpg")} alt={"Owner"}/>
+                        </div>
+                        <div className="owner-quote-container">
+                            <div className="owner-quote">
+                                „Każda kobieta niesie w sobie historię odwagi, doświadczeń i
+                                decyzji, które ją ukształtowały
+                                a to miejsce pozwala na chwilę zatrzymać się przy sobie
+                                i tym, co naprawdę dla Ciebie ważne."
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
+
+
 
     );
 }
