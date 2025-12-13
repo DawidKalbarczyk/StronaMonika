@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: config/node/rontend/package-lock.json
+          cache-dependency-path: config/node/frontend/package-lock.json
 
       - name: Instaluj zaleznosci
         run: npm ci
