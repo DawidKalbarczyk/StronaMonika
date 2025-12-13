@@ -6,6 +6,7 @@ const routes = createHashRouter(
             path: '/',
             element: <Home/>
         },
+        /*
         {
             path: '/about',
             element: <About/>
@@ -21,11 +22,7 @@ const routes = createHashRouter(
         {
             path: '/list',
             element: <ListOfItems/>
-        },
-        {
-            path: '/',
-            element: <Home/>
-        },
+        }, */
         {
             path: '*',
             element: <div>404</div>
