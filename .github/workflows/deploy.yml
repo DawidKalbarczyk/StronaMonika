@@ -38,7 +38,7 @@ jobs:
         run: npm run build
 
       - name: Wrzuc artefakty
-        uess: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: config/node/frontend/build
 
