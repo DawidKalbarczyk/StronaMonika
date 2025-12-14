@@ -5,7 +5,6 @@ import { getImage } from "../components/imagePaths.js";
 //import {Link} from "react-router-dom";
 
 function Home(props) {
-    console.log(getImage("/photos/myPhotos/homepagephoto.jpg"));
     return (
         /*
         <<div className="home">
@@ -28,7 +27,7 @@ function Home(props) {
         <div className="main">
             <div className="header">
                 <div className="left-header">
-
+                    <img className="logo-image" src={getImage("/photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png")} alt={"Logo"}/>
                 </div>
             </div>
             <div className="main-content-container">

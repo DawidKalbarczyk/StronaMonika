@@ -25,13 +25,23 @@ body {
     grid-template-columns: 1fr 2fr;
     width: auto;
     height: 150px;
-    background-color: red;
+    background-color: rgba(195, 198, 197);
+    border-radius: 20px;
+
 }
 
 .left-header {
-    border: 10px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+
 }
 
+.logo-image {
+    width: 40%;
+}
 .main-content-container {
     display: grid;
     grid-template-columns: 25px 1fr;
@@ -57,6 +67,8 @@ body {
 .owner-photo-container {
     padding: 0px 25px 0px 0px;
     background-color: rgba(195, 198, 197);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 100px;
 
 }
 
