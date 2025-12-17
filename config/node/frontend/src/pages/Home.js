@@ -27,13 +27,11 @@ function Home(props) {
         <div className="main">
             <div className="header">
                 <div className="left-header">
-                    <img className="logo-image" src={getImage("/photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png")} alt={"Logo"}/>
+                    <img className="logo-image" src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
                 </div>
             </div>
             <div className="main-content-container">
-                <div className="left-bar">
-
-                </div>
+                <div className="left-bar"></div>
                 <div className="main-content">
                     <div className="owner-info-container">
                         <div className="owner-photo-container">
@@ -41,14 +39,30 @@ function Home(props) {
                         </div>
                         <div className="owner-quote-container">
                             <div className="owner-quote">
-                                „Każda kobieta niesie w sobie historię odwagi, doświadczeń i
-                                decyzji, które ją ukształtowały
-                                a to miejsce pozwala na chwilę zatrzymać się przy sobie
-                                i tym, co naprawdę dla Ciebie ważne."
+                                „Każda kobieta niesie w sobie historię <span className="owner-quote-span1">odwagi,
+                                doświadczeń i decyzji,</span> <span className="owner-quote-span2">
+                                które ją ukształtowały a to miejsce pozwala na chwilę zatrzymać się
+                                </span> <span className="owner-quote-span3">przy sobie
+                                i tym, co naprawdę dla Ciebie ważne."</span>
                             </div>
                         </div>
                     </div>
+                    <div className="unique-info-container">
+                        <div className="unique-info-title">
+                            <p className="unique-info-text">Dlaczego warto mnie odwiedzic?</p>
+                        </div>
+
+                        <div className="unique-info-tile-container">
+                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile"></div>
+                        </div>
+                    </div>
                 </div>
+                <div className="right-bar"></div>
             </div>
 
         </div>

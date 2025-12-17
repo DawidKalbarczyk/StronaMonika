@@ -1,15 +1,21 @@
 body {
     margin: 0;
-    background-image: radial-gradient(
-    circle,
-    #707070 0%,
-    #454545 40%,
-    #404040 100%
-);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../../public/photos/textures/light-gray-texture-pattern.jpg");
+        background-repeat: repeat;
+        background-size: 700px 700px;
+    height: 3000px;
+    /*
+    seamless texture
+
+     */
+
 }
 
 .main {
     padding: 0px 0px;
+
 }
 
 .header {
@@ -17,11 +23,11 @@ body {
     grid-template-columns: 1fr 2fr;
     width: auto;
     min-height: 100px;
-    max-height: 105px;
-    background-color: rgba(195, 198, 197);
-    border-radius: 20px;
-    border-bottom-left-radius: 200px 70px;
-    border-bottom-right-radius: 200px 70px;
+    max-height: 120px;
+    background-color: rgba(0, 0, 0, 1);
+
+    border-bottom-left-radius: 200px 80px;
+    border-bottom-right-radius: 200px 80px;
 
 }
 
@@ -35,19 +41,26 @@ body {
 }
 
 .logo-image {
-    width: 40%;
+    width: 43%;
 }
 .main-content-container {
-    padding: 0px 48px;
+    padding: 20px 48px;
     display: grid;
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 30px 1fr 30px;
     margin-top: 20px;
+
 }
 
 .left-bar {
     background-color: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+.right-bar {
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .main-content {
     border: 2px solid blue;
@@ -61,16 +74,21 @@ body {
 }
 
 .owner-photo-container {
-    padding: 0px 25px 0px 0px;
-    background-color: rgba(195, 198, 197);
+    padding: 0px 30px 0px 0px;
+    background-color: /*(rgba(195, 198, 197)*/ rgb(166, 168, 168);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 100px;
+    margin-right: 28%;
+    box-shadow:
+            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
+            inset 0px 0px 5px 2px rgba(0,0,0,0.4);
+
 
 }
 
 .owner-photo {
     object-fit: cover;
-    width: 85%;
+    width: 100%;
     border-top-left-radius: 150px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 150px;
@@ -83,14 +101,93 @@ body {
 }
 
 .owner-quote-container {
-    background-color: rgba(195, 198, 197);
-    margin-left: 40px;
+    background-color: rgb(166, 168, 168);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("../../public/photos/saloonPhotos/20251103_083910.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    margin-left: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 12% 30%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 12% 15%;
+    box-shadow:
+            inset 0px 0px 50px 50px rgba(0, 0, 0, 0.1),
+            inset 0px 0px 20px 10px rgba(0,0,0,0.3);
+
 }
 
 .owner-quote {
     display: inline-block;
-    width: 200px;
+    color: white;
+    text-shadow:
+        -1px -1px 0 rgba(0,0,0,0.8),
+         1px -1px 0 rgba(0,0,0,0.8),
+        -1px  1px 0 rgba(0,0,0,0.8),
+         1px  1px 0 rgba(0,0,0,0.8);
+    width: 100%;
+    font-size: 30px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
 
+}
+
+.owner-quote-span1 {
+    display: block;
+    margin-left: 20%;
+}
+
+.owner-quote-span2 {
+    display: block;
+    margin-left: 10%;
+}
+
+.owner-quote-span3 {
+    display: block;
+    margin-left: 42%;
+}
+
+.unique-info-container {
+    background-color: rgb(166, 168, 168);
+    margin-top: 100px;
+}
+.unique-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unique-info-text {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 30px;
+    margin: 0;
+    margin: 50px 1px;
+    display: inline-block;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    padding-bottom: 5px;
+}
+
+.unique-info-tile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    border: 1px solid red;
+    margin: 0px 30px;
+    padding: 20px;
+}
+
+.unique-info-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
+    margin: 20px;
 }
