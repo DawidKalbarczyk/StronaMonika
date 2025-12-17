@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    margin-top: 150px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url("../../public/photos/textures/light-gray-texture-pattern.jpg");
@@ -25,10 +26,18 @@ body {
     min-height: 100px;
     max-height: 120px;
     background-color: rgba(0, 0, 0, 1);
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     border-bottom-left-radius: 200px 80px;
     border-bottom-right-radius: 200px 80px;
-
+    transform: translateY(0);
+    transition: transform 0.7s ease-in-out;
+}
+.header-off {
+    transform: translateY(-100%);
+    transition: transform 0.7s ease-in-out;
 }
 
 .left-header {
@@ -55,6 +64,7 @@ body {
     background-color: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    box-shadow: -5px 0px 10px 5px rgba(0, 0, 0, 0.7);
 }
 
 .right-bar {
@@ -63,7 +73,7 @@ body {
     border-bottom-right-radius: 20px;
 }
 .main-content {
-    border: 2px solid blue;
+    border: 0px solid blue;
 
 }
 
@@ -71,6 +81,14 @@ body {
 .owner-info-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    background-color: rgb(166, 168, 168);
+    border-top-right-radius: 70% 85%;
+    border-bottom-right-radius: 12% 15%;
+    box-shadow:
+            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
+            inset 0px 0px 5px 2px rgba(0,0,0,0.4),
+            0px -5px 10px rgba(0, 0, 0, 1),
+            0 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .owner-photo-container {
@@ -103,7 +121,7 @@ body {
 .owner-quote-container {
     background-color: rgb(166, 168, 168);
     background:
-        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url("../../public/photos/saloonPhotos/20251103_083910.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -120,7 +138,8 @@ body {
     border-bottom-right-radius: 12% 15%;
     box-shadow:
             inset 0px 0px 50px 50px rgba(0, 0, 0, 0.1),
-            inset 0px 0px 20px 10px rgba(0,0,0,0.3);
+            inset 0px 0px 20px 10px rgba(0,0,0,0.3),
+            0px -5px 10px rgba(0, 0, 0, 0.7);
 
 }
 
@@ -151,12 +170,19 @@ body {
 
 .owner-quote-span3 {
     display: block;
-    margin-left: 42%;
+    margin-left: 40%;
 }
 
 .unique-info-container {
     background-color: rgb(166, 168, 168);
     margin-top: 100px;
+    padding-bottom: 50px;
+    box-shadow:
+            7px -7px 10px rgba(0, 0, 0, 0.8);
+
+
+
+
 }
 .unique-info-title {
     display: flex;
@@ -178,9 +204,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
-    border: 1px solid red;
+    border: 0px solid red;
     margin: 0px 30px;
     padding: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    padding-bottom: 30px;
 }
 
 .unique-info-tile {
@@ -188,6 +216,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid green;
+    border: 0px solid green;
     margin: 20px;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
 }
+

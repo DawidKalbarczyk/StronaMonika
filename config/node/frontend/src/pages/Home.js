@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/mainPage.css";
+import "../styles/common-styles.css";
 import { getImage } from "../components/imagePaths.js";
+import "../components/mainPage.js";
 //import {Typography, Button} from "@mui/material";
 //import {Link} from "react-router-dom";
 
@@ -49,24 +51,35 @@ function Home(props) {
                     </div>
                     <div className="unique-info-container">
                         <div className="unique-info-title">
-                            <p className="unique-info-text">Dlaczego warto mnie odwiedzic?</p>
+                            <p className="unique-info-text">Dlaczego warto mnie odwiedzić?</p>
                         </div>
 
                         <div className="unique-info-tile-container">
-                            <div className="unique-info-tile"></div>
-                            <div className="unique-info-tile"></div>
-                            <div className="unique-info-tile"></div>
-                            <div className="unique-info-tile"></div>
-                            <div className="unique-info-tile"></div>
-                            <div className="unique-info-tile"></div>
+                            <div className="unique-info-tile">
+                                Cecha 1
+                            </div>
+                            <div className="unique-info-tile">
+                                Cecha 2
+                            </div>
+                            <div className="unique-info-tile">
+                                Cecha 3
+                            </div>
+                            <div className="unique-info-tile">
+                                Cecha 4
+                            </div>
+                            <div className="unique-info-tile">
+                                Cecha 5
+                            </div>
+                            <div className="unique-info-tile">
+                                Cecha 6
+                            </div>
                         </div>
                     </div>
+                    <div style={{backgroundColor: "white", height: 200}}>aaaa</div>
                 </div>
-                <div className="right-bar"></div>
             </div>
 
         </div>
-
 
 
     );

@@ -1,0 +1,20 @@
+.containers-box-shadow {
+  box-shadow:
+            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
+            inset 0px 0px 5px 2px rgba(0,0,0,0.4);
+}
+/*
+
+
+Tylko z góry
+box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+
+ Tylko z dołu
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+ Tylko z lewej
+box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+
+ Tylko z prawej
+box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+*/
