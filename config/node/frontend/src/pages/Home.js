@@ -29,7 +29,7 @@ function Home(props) {
         <div className="main">
             <div className="header">
                 <div className="left-header">
-                    <img className="logo-image" loading="lazy" src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
+                    <img className="logo-image" alt={getImage("/photos/icons/alt-image.svg")} src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
                 </div>
             </div>
             <div className="main-content-container">
@@ -37,7 +37,7 @@ function Home(props) {
                 <div className="main-content">
                     <div className="owner-info-container">
                         <div className="owner-photo-container">
-                            <img className="owner-photo" loading="lazy" src={getImage("/photos/myPhotos/homepagephoto.jpg")} alt={"Owner"}/>
+                            <img className="owner-photo" alt={getImage("/photos/icons/alt-image.svg")} src={getImage("/photos/myPhotos/homepagephoto.jpg")} alt={"Owner"}/>
                         </div>
                         <div className="owner-quote-container">
                             <div className="owner-quote">
