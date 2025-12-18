@@ -29,7 +29,7 @@ function Home(props) {
         <div className="main">
             <div className="header">
                 <div className="left-header">
-                    <img className="logo-image" src={getImage("/photos/logo/kolr_czarny-edited.png")} alt={"Logo"}/>
+                    <img className="logo-image" src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
                 </div>
             </div>
             <div className="main-content-container">
