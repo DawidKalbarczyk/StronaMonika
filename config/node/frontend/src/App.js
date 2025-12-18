@@ -3,7 +3,7 @@ import './styles/style.scss';
 import {Suspense, useState} from "react";
 import routes from './routes/Router';
 import {RouterProvider} from 'react-router-dom';
-import PageLoader from "/routes/CircularProgress";
+import PageLoader from "/routes/CircularProgress.js";
 import './styles/style.scss';
 import React, {useEffect} from 'react';
 function App() {
