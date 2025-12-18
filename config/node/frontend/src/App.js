@@ -5,7 +5,7 @@ import routes from './routes/Router';
 import {RouterProvider} from 'react-router-dom';
 import {CircularProgress} from "@mui/material";
 import './styles/style.scss';
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -15,7 +15,7 @@ function App() {
   }, []);
   if (!isLoaded) {
       return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: 100vh}}>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: "100vh"}}>
             <CircularProgress/>
         </div>
       );
