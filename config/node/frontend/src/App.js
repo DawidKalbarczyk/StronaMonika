@@ -9,9 +9,14 @@ import React, {useEffect} from 'react';
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
-      window.onload =  () => {
+      if (document.readyState === 'complete') {
           setIsLoaded(true);
-      };
+      } else{
+          const handleLoad = () => setIsLoaded(true);
+          window.addEventListener('load', handleLoad);
+
+          return () => window.removeEventListener('load', handleLoad);
+      }
   }, []);
   if (!isLoaded) {
       return (
