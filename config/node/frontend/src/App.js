@@ -1,34 +1,21 @@
 
 import './styles/style.scss';
-import {Suspense, useState} from "react";
+import {Suspense} from "react";
 import routes from './routes/Router';
 import {RouterProvider} from 'react-router-dom';
-import {CircularProgress} from "@mui/material";
+import PageLoader from "./routes/CircularProgress.js";
 import './styles/style.scss';
-import React, {useEffect} from 'react';
+
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-      window.onload =  () => {
-          setIsLoaded(true);
-      };
-  }, []);
-  if (!isLoaded) {
-      return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: "100vh"}}>
-            <CircularProgress/>
-        </div>
-      );
-  }
   return (
       <div className="app">
           <Suspense
-              fallback={<CircularProgress/>}>
+              fallback={<PageLoader />}>
             <RouterProvider router={routes}/>
         </Suspense>
 
         </div>
   );
 }
-
+//TODO repair progress bar
 export default App;

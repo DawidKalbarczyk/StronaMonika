@@ -119,6 +119,7 @@ body {
 }
 
 .owner-quote-container {
+
     background-color: rgb(166, 168, 168);
     background:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
@@ -179,6 +180,8 @@ body {
     padding-bottom: 50px;
     box-shadow:
             7px -7px 10px rgba(0, 0, 0, 0.8);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 
 
 
