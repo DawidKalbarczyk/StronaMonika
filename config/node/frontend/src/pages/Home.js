@@ -36,6 +36,7 @@ function Home(props) {
                 <div className="left-bar"></div>
                 <div className="main-content">
                     <div className="owner-info-container">
+
                         <div className="owner-photo-container">
                             <img className="owner-photo" src={getImage("/photos/myPhotos/homepagephoto.jpg")} alt={"Owner"}/>
                         </div>
