@@ -60,22 +60,82 @@ function Home(props) {
 
                         <div className="unique-info-tile-container">
                             <div className="unique-info-tile">
-                                Cecha 1
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                             <div className="unique-info-tile">
-                                Cecha 2
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                             <div className="unique-info-tile">
-                                Cecha 3
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                             <div className="unique-info-tile">
-                                Cecha 4
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                             <div className="unique-info-tile">
-                                Cecha 5
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                             <div className="unique-info-tile">
-                                Cecha 6
+                                <div className="unique-info-tile-title-container">
+                                    <p className="unique-info-tile-title">
+                                        abcdefghijklmnoprtstw
+                                    </p>
+                                    <p className="unique-info-tile-description">
+                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
+                                        dwmidawidaniwdanidwaniwdi
+                                        daniwniadnfenpnfwerobrgeb
+                                        dudwqndundenueufrburbug
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
