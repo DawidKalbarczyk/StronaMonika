@@ -162,7 +162,8 @@ body {
     transition:
             border-radius 0.5s ease-in-out,
             padding 0.5s ease-in-out,
-            height 0.5s ease-in-out;
+            height 0.5s ease-in-out,
+            background-size 0.5s ease-in-out;
     overflow: hidden;
 }
 
@@ -222,7 +223,7 @@ body {
     padding-bottom: 50px;
     box-shadow:
             7px -7px 10px rgba(0, 0, 0, 0.8),
-            inset 0px 0px 25px 20px rgba(0, 0, 0, 0.4);
+            inset 0px 0px 25px 10px rgba(0, 0, 0, 0.4);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 
@@ -265,5 +266,39 @@ body {
     border: 0px solid green;
     margin: 20px;
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
+    transition:
+        background 0.35s ease-in-out,
+        padding 0.35s ease-in-out,
+        width 0.35s ease-in-out;
+    padding: 0% 10% 0% 10%;
 }
 
+.unique-info-tile:hover {
+    background-color: rgba(0,0,0,0.10);
+    cursor: pointer;
+    padding: 0% 5% 0% 5%;
+
+}
+.unique-info-tile:hover .unique-info-tile-title-container .unique-info-tile-title {
+    font-size: 25px;
+}
+
+.unique-info-tile-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.unique-info-tile-title {
+    font-size: 24px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    transition:
+        font-size 0.35s ease-in-out;
+}
+
+.unique-info-tile-description {
+
+    text-wrap: wrap;
+    white-space: wrap;
+}
