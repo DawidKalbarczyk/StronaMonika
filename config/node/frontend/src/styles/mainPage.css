@@ -5,7 +5,7 @@ body {
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url("../../public/photos/textures/light-gray-texture-pattern.jpg");
         background-repeat: repeat;
-        background-size: 200px 200px;
+        background-size: 500px 500px;
     height: 3000px;
     /*
     seamless texture
@@ -34,6 +34,7 @@ body {
     border-bottom-right-radius: 200px 80px;
     transform: translateY(0);
     transition: transform 0.7s ease-in-out;
+    z-index: 1000;
 }
 .header-off {
     transform: translateY(-100%);
@@ -89,6 +90,8 @@ body {
             inset 0px 0px 5px 2px rgba(0,0,0,0.4),
             0px -5px 10px rgba(0, 0, 0, 1),
             0 5px 2px rgba(0, 0, 0, 0.5);
+    height: 21%;
+    transition: height 0.35s ease-in-out;
 }
 
 .owner-photo-container {
@@ -117,9 +120,9 @@ body {
     vertical-align: bottom;
     display: block;
     transition:
-            border-radius 0.35s ease-in-out,
-            transform 0.35s ease-in-out,
-            width 0.35s ease-in-out;
+            border-radius 0.5s ease-in-out,
+            transform 0.5s ease-in-out,
+            width 0.5s ease-in-out;
 
 }
 .owner-photo:hover {
@@ -128,6 +131,9 @@ body {
     width: 110%;
 }
 
+.owner-quote-container-wrapper {
+
+}
 
 .owner-quote-container {
 
@@ -135,11 +141,11 @@ body {
     background:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url("../../public/photos/saloonPhotos/20251103_083910.jpg");
-        background-size: cover;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
     margin-left: 8%;
-
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,17 +159,32 @@ body {
             inset 0px 0px 20px 10px rgba(0,0,0,0.3),
             0px -5px 10px rgba(0, 0, 0, 0.7);
     transition:
-            border-radius 0.35s ease-in-out,
-            padding 0.35s ease-in-out;
+            border-radius 0.5s ease-in-out,
+            padding 0.5s ease-in-out,
+            height 0.5s ease-in-out;
     overflow: hidden;
 }
 
 .owner-quote-container:hover {
     border-radius: 0 15px 15px 0px;
     padding: 0% 14% 0% 14%;
+    background-size: 110% auto;
 
 }
-
+.owner-info-container:has(.owner-quote-container:hover),
+.owner-info-container:has(.owner-photo:hover){
+    height: 23.8%;
+}
+.owner-info-container:has(.owner-quote-container:hover) .owner-photo{
+    width: 110%;
+    transform: scale(1.1);
+    border-radius: 0;
+}
+.owner-info-container:has(.owner-photo:hover) .owner-quote-container{
+    border-radius: 0 15px 15px 0px;
+    padding: 0% 14% 0% 14%;
+    background-size: 110% auto;
+}
 .owner-quote {
     display: inline-block;
     color: white;
