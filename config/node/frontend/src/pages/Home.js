@@ -81,79 +81,72 @@ function Home(props) {
                         <div className="unique-info-tile-container">
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Indywidualne podejście
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Zależy mi na tym, aby dobrze poznać Twoje potrzeby i oczekiwania,
+                                        dzięki czemu mogę zaproponować rozwiązania dopasowane do Ciebie.
                                     </p>
                                 </div>
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/experience-icon-woman.png")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Doświadczenie poparte praktyką
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Wiedza i zdobyte doświadczenie pozwalają mi realizować
+                                        zabiegi sprawnie, solidinie i z dbałością o szczegóły.
                                     </p>
                                 </div>
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/quality-icon.png")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Wysoka jakość wykonania
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Stawiam na dokładność i estetykę, ponieważ wierzę,
+                                        że przekłada się to na zadowolenie klientów.
                                     </p>
                                 </div>
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" style={{transform: "scale(1.5)"}}src={getImage("/photos/icons/punctuality-icon.png")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Rzetelność i terminowość
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Dbam o to, aby wszystko było gotowe na twoją wizytę.
+                                        Możesz na mnie liczyć - punktualność i terminowość to podstawa.
                                     </p>
                                 </div>
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Przyjazna atmosfera
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Utrzymuję dobrą komunikację i komfort na każdym etapie, aby
+                                        wizyta była prosta i bezproblemowa.
                                     </p>
                                 </div>
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
                                     <p className="unique-info-tile-title">
-                                        abcdefghijklmnoprtstw
+                                        Zaufanie klientów
                                     </p>
                                     <p className="unique-info-tile-description">
-                                        DescriptionAbcdefghmwimdiad wniadwdiwaadwniwdni
-                                        dwmidawidaniwdanidwaniwdi
-                                        daniwniadnfenpnfwerobrgeb
-                                        dudwqndundenueufrburbug
+                                        Pozytywne opinie oraz osoby, które chętnie do mnie wracają, są najlepszym potwierdzeniem jakości mojej pracy.
                                     </p>
                                 </div>
                             </div>
