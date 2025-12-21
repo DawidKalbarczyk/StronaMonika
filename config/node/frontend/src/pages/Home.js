@@ -81,7 +81,7 @@ function Home(props) {
                         <div className="unique-info-tile-container">
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")} alt={"Indywidualne Podejście"}/>
                                     <p className="unique-info-tile-title">
                                         Indywidualne podejście
                                     </p>
@@ -93,7 +93,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/experience-icon-woman.png")}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/experience-icon-woman.png")} alt={"Doświadczenie"}/>
                                     <p className="unique-info-tile-title">
                                         Doświadczenie poparte praktyką
                                     </p>
@@ -105,7 +105,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/quality-icon.png")}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/quality-icon.png")} alt={"Jakość"}/>
                                     <p className="unique-info-tile-title">
                                         Wysoka jakość wykonania
                                     </p>
@@ -117,7 +117,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" style={{transform: "scale(1.5)"}}src={getImage("/photos/icons/punctuality-icon.png")}/>
+                                    <img className="unique-info-tile-image" style={{transform: "scale(1.5)"}} src={getImage("/photos/icons/punctuality-icon.png")} alt={"Punktualność"}/>
                                     <p className="unique-info-tile-title">
                                         Rzetelność i terminowość
                                     </p>
@@ -129,7 +129,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")} alt={"Atmosfera"}/>
                                     <p className="unique-info-tile-title">
                                         Przyjazna atmosfera
                                     </p>
@@ -141,7 +141,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")} alt={"Zaufanie"}/>
                                     <p className="unique-info-tile-title">
                                         Zaufanie klientów
                                     </p>
@@ -157,6 +157,7 @@ function Home(props) {
             </div>
 
         </div>
+    // TODO zrob scrolla, zeby sie nie odpalal przy przescrollowaniu ilus razy. (Dodaj warunek jezeli > iles pikseli to dopiero wylacz. Do zrobienia keidys
 
 
     );
