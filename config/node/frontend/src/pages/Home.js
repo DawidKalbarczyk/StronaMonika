@@ -45,6 +45,39 @@ function Home(props) {
                 <div className="left-header">
                     <img className="logo-image" src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
                 </div>
+                <div className="right-header">
+                    <div className="right-header-content-container">
+                        <div className="right-header-content">
+                            O mnie
+                        </div>
+
+                    </div>
+                    <div className="right-header-content-container">
+                        <div className="right-header-content">
+                            Zabiegi
+                        </div>
+
+                    </div>
+                    <div className="right-header-content-container">
+                        <div className="right-header-content">
+                            <span style={{display: "block"}}>Wskazania,</span> przeciwwskazania
+                        </div>
+
+                    </div>
+                    <div className="right-header-content-container">
+                        <div className="right-header-content">
+                            Cennik
+                        </div>
+                    </div>
+                    <div className="right-header-content-container">
+                        <div className="right-header-content">
+                            Kontakt
+                        </div>
+                    </div>
+                </div>
+                <div className="socialmedia-header">
+
+                </div>
             </div>
             <div className="facebook-pic-fixed-container">
                 <img className="facebook-pic-fixed" src={getImage("/photos/saloonPhotos/1-fac.jpg")} alt={"1-fac"}/>
