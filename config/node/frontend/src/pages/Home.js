@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "../styles/mainPage.css";
 import "../styles/common-styles.css";
 import { getImage } from "../components/imagePaths.js";
@@ -7,6 +7,20 @@ import "../components/mainPage.js";
 //import {Link} from "react-router-dom";
 
 function Home(props) {
+    useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('unique-info-container-show');
+        }
+    });
+    });
+
+    const container = document.querySelector('.unique-info-container');
+    if (container) {
+        observer.observe(container);
+    }
+    });
     return (
         /*
         <<div className="home">
@@ -31,6 +45,12 @@ function Home(props) {
                 <div className="left-header">
                     <img className="logo-image" src={getImage("/photos/logo/kolor_czarny-edited.png")} alt={"Logo"}/>
                 </div>
+            </div>
+            <div className="facebook-pic-fixed-container">
+                <img className="facebook-pic-fixed" src={getImage("/photos/saloonPhotos/1-fac.jpg")} alt={"1-fac"}/>
+            </div>
+            <div className="facebook-pic-fixed-container fac-cont2">
+                <img className="facebook-pic-fixed fac-pic2" src={getImage("/photos/treatmentPhotos/ai-generated-9400921_1280.jpg")} alt={"2-fac"}/>
             </div>
             <div className="main-content-container">
                 <div className="left-bar"></div>
