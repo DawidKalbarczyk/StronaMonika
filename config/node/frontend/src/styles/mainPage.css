@@ -3,7 +3,7 @@ body {
     margin-top: 150px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("../../public/photos/textures/light-gray-texture-pattern.jpg");
+        url("../../public/photos/textures/small-blotted-light-gray-wall-pattern.jpg");
         background-repeat: repeat;
         background-size: 500px 500px;
     height: 3000px;
@@ -23,7 +23,7 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     width: auto;
     min-height: 100px;
     max-height: 120px;
@@ -48,17 +48,59 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
-
+    max-width: 50%;
+    margin-left: 20%;
 }
 
+.logo-image {
+    width: 65%;
+}
+
+.right-header {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.right-header-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    border: 3px groove rgba(255,255,255,0.3);
+    border-top-left-radius: 60% 60%;
+    border-top-right-radius: 5% 5%;
+    border-bottom-right-radius: 60% 60%;
+    border-bottom-left-radius: 5% 5%;
+    padding: 1% 4% 1% 4%;
+    cursor: pointer;
+    transition:
+        background-color 0.4s ease-in-out,
+        transform 0.4s ease-in-out;
+
+    will-change: transform;
+
+}
+.right-header-content-container:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: scale(1.03);
+}
+
+.right-header-content {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'JetBrains Mono', serif;
+}
 .facebook-pic-fixed-container,
 .fac-cont2 {
     position: fixed;
-    right: 10px;
+    right: 78px;
     bottom: 0;
     top: 0;
-    height: 750px;
     z-index: -50;
     opacity: 0;
     transition:
@@ -71,7 +113,7 @@ body {
     opacity: 1;
 }
 .fac-cont2 {
-    left: 10px;
+    left: 48px;
     right: auto;
 }
 
@@ -86,9 +128,7 @@ body {
 .fac-pic2 {
     object-position: center;
 }
-.logo-image {
-    width: 43%;
-}
+
 .main-content-container {
     padding: 20px 48px;
     display: grid;
@@ -104,11 +144,6 @@ body {
     box-shadow: -5px 0px 10px 5px rgba(0, 0, 0, 0.7);
 }
 
-.right-bar {
-    background-color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
 .main-content {
     border: 0px solid blue;
 
@@ -118,7 +153,7 @@ body {
 .owner-info-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    background-color: rgb(166, 168, 168);
+    background-color: rgba(166, 168, 168, 0.95);
     border-top-right-radius: 70% 85%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
@@ -126,7 +161,6 @@ body {
             inset 0px 0px 5px 2px rgba(0,0,0,0.4),
             0px -5px 10px rgba(0, 0, 0, 1),
             0 5px 2px rgba(0, 0, 0, 0.5);
-    height: 21%;
     transition: height 0.35s ease-in-out;
 }
 
@@ -140,6 +174,8 @@ body {
             inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
             inset 0px 0px 5px 2px rgba(0,0,0,0.4);
     overflow: hidden;
+    transition:
+        border-radius 0.5s ease-in-out;
 
 
 }
@@ -166,7 +202,9 @@ body {
     transform: scale(1.1);
     width: 110%;
 }
-
+.owner-photo-container:has(.owner-photo:hover) {
+    border-radius: 0;
+}
 .owner-quote-container-wrapper {
 
 }
@@ -204,14 +242,18 @@ body {
 
 .owner-quote-container:hover {
     border-radius: 0 15px 15px 0px;
-    padding: 0% 14% 0% 14%;
     background-size: 110% auto;
-
 }
+.owner-quote-container:hover .owner-quote {
+    font-size: 33px;
+}
+/*
 .owner-info-container:has(.owner-quote-container:hover),
 .owner-info-container:has(.owner-photo:hover){
     height: 23.8%;
 }
+
+ */
 .owner-info-container:has(.owner-quote-container:hover) .owner-photo{
     width: 110%;
     transform: scale(1.1);
@@ -219,8 +261,10 @@ body {
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container{
     border-radius: 0 15px 15px 0px;
-    padding: 0% 14% 0% 14%;
     background-size: 110% auto;
+}
+.owner-info-container:has(.owner-photo:hover) .owner-quote-container .owner-quote {
+    font-size: 33px;
 }
 .owner-quote {
     display: inline-block;
@@ -234,6 +278,8 @@ body {
     font-size: 30px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
+    transition:
+        font-size 0.5s ease-in-out;
 
 }
 
@@ -249,11 +295,11 @@ body {
 
 .owner-quote-span3 {
     display: block;
-    margin-left: 40%;
+    margin-left: 30%;
 }
 
 .unique-info-container {
-    background-color: rgb(166, 168, 168);
+    background-color: rgba(166, 168, 168, 0.95);
     margin-top: 70px;
     padding-bottom: 50px;
     box-shadow:
@@ -353,5 +399,4 @@ body {
     box-sizing: border-box;
     text-align: center;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-
 }
