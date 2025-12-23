@@ -150,7 +150,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" style={{transform: "scale(1.3)"}}src={getImage("/photos/icons/punctuality-icon.png")}/>
+                                    <img className="unique-info-tile-image" style={{transform: "scale(1.3)"}} src={getImage("/photos/icons/punctuality-icon.png")} alt={"Punktualność"}/>
                                     <p className="unique-info-tile-title">
                                         Rzetelność i terminowość
                                     </p>
