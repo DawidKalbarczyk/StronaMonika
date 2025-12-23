@@ -41,7 +41,7 @@ function Home(props) {
         // Main Frame!!!!!
 
         <div className="main">
-            {Headbar()}
+            <Headbar/>
             <div className="facebook-pic-fixed-container">
                 <img className="facebook-pic-fixed" src={getImage("/photos/saloonPhotos/1-fac.jpg")} alt={"1-fac"}/>
             </div>
