@@ -1,9 +1,9 @@
 import {createHashRouter} from "react-router-dom";
 import {Home, AboutMe, Cennik, Galeria, Kontakt, WskazaniaPrzeciw, Zabiegi} from './LazyImports';
-const basename = process.env.NODE_ENV === 'production'
+/*const basename = process.env.NODE_ENV === 'production'
     ? '/StronaMonika'
     : '';
-
+*/
 const routes = createHashRouter(
     [
         {
@@ -38,10 +38,11 @@ const routes = createHashRouter(
             path: '*',
             element: <div>404</div>
         }
-    ],
+    ]/*,
     {
       basename: basename
     }
+    */
 )
 
 export default routes;
