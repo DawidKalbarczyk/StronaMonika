@@ -1,3 +1,26 @@
+body {
+    margin: 0;
+    margin-top: 150px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../../public/photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+        background-repeat: repeat;
+        background-size: 500px 500px;
+    height: 3000px;
+    z-index: -100;
+    /*
+    seamless texture
+
+     */
+
+}
+
+.main {
+    padding: 0px 0px;
+
+}
+
+
 .containers-box-shadow {
   box-shadow:
             inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
