@@ -150,7 +150,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" style={{transform: "scale(1.5)"}} src={getImage("/photos/icons/punctuality-icon.png")} alt={"Punktualność"}/>
+                                    <img className="unique-info-tile-image" style={{transform: "scale(1.3)"}}src={getImage("/photos/icons/punctuality-icon.png")}/>
                                     <p className="unique-info-tile-title">
                                         Rzetelność i terminowość
                                     </p>
@@ -162,7 +162,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")} alt={"Atmosfera"}/>
+                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/friendly-icon.png")} alt={"przyjazna atmosfera"}/>
                                     <p className="unique-info-tile-title">
                                         Przyjazna atmosfera
                                     </p>
@@ -174,7 +174,7 @@ function Home(props) {
                             </div>
                             <div className="unique-info-tile">
                                 <div className="unique-info-tile-title-container">
-                                    <img className="unique-info-tile-image" src={getImage("/photos/icons/individual-icon-png-1.jpg")} alt={"Zaufanie"}/>
+                                    <img className="unique-info-tile-image" style={{transform: "scale(0.8)"}} src={getImage("/photos/icons/trusty-icon.png")} alt={"Zaufanie"}/>
                                     <p className="unique-info-tile-title">
                                         Zaufanie klientów
                                     </p>
@@ -190,7 +190,6 @@ function Home(props) {
             </div>
 
         </div>
-    // TODO zrob scrolla, zeby sie nie odpalal przy przescrollowaniu ilus razy. (Dodaj warunek jezeli > iles pikseli to dopiero wylacz. Do zrobienia keidys
 
 
     );
