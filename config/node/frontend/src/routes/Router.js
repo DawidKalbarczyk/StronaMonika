@@ -1,33 +1,47 @@
 import {createHashRouter} from "react-router-dom";
-import {Home/*, ListOfItems, About, Map, Services*/} from './LazyImports';
+import {Home, AboutMe, Cennik, Galeria, Kontakt, WskazaniaPrzeciw, Zabiegi} from './LazyImports';
+const basename = process.env.NODE_ENV === 'production'
+    ? '/StronaMonika'
+    : '';
+
 const routes = createHashRouter(
     [
         {
             path: '/',
             element: <Home/>
         },
-        /*
         {
-            path: '/about',
-            element: <About/>
+            path: '/cennik',
+            element: <Cennik/>
         },
         {
-            path: '/map',
-            element: <Map/>
+            path: '/o-mnie',
+            element: <AboutMe/>
         },
         {
-            path: '/services',
-            element: <Services/>
+            path: '/galeria',
+            element: <Galeria/>
         },
         {
-            path: '/list',
-            element: <ListOfItems/>
-        }, */
+            path: '/kontakt',
+            element: <Kontakt/>
+        },
+        {
+            path: '/wskazania-przeciwwskazania',
+            element: <WskazaniaPrzeciw/>
+        },
+        {
+            path: '/zabiegi',
+            element: <Zabiegi/>
+        },
         {
             path: '*',
             element: <div>404</div>
         }
-    ]
+    ],
+    {
+      basename: basename
+    }
 )
 
 export default routes;
