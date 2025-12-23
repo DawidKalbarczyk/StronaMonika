@@ -1,3 +1,7 @@
+html {
+    box-shadow: inset 0px 0px 200px 300px rgba(0,0,0,0.4)
+}
+
 body {
     margin: 0;
     margin-top: 150px;
@@ -8,6 +12,7 @@ body {
         background-size: 500px 500px;
     height: 3000px;
     z-index: -100;
+
     /*
     seamless texture
 
@@ -17,6 +22,7 @@ body {
 
 .main {
     padding: 0px 0px;
+
 
 }
 
