@@ -28,9 +28,11 @@ body {
 
 
 .containers-box-shadow {
-  box-shadow:
-            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
-            inset 0px 0px 5px 2px rgba(0,0,0,0.4);
+  box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+}
+
+.bg-colour {
+    background-color: rgb(166, 168, 168);
 }
 /*
 
@@ -97,7 +99,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 60%;
+    height: 55%;
     border: 3px groove rgba(255,255,255,0.3);
     border-top-left-radius: 60% 60%;
     border-top-right-radius: 5% 5%;
@@ -124,6 +126,54 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     font-size: 20px;
     font-family: 'JetBrains Mono', serif;
 }
+
+.socialmedia-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socialmedia-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmedia-photo {
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+}
+/*
+.arrow-down-1 {
+    display: inline-block;
+    position: absolute;
+    margin-left: 4%;
+    margin-top: 1.5%;
+    font-size: 25px;
+    font-weight: bold;
+    transition:
+        transform 0.35s ease-in-out,
+        margin-top 0.35s ease-in-out;
+}
+.right-header-content-container:hover .arrow-down-1 {
+    margin-top: -5%;
+    transform:
+            rotate(180deg);
+}
+.arrow-down-2 {
+    display: inline-block;
+    position: absolute;
+    margin-left: 12%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: bold;
+    transition:
+        transform 0.35s ease-in-out,
+        margin-top 0.35s ease-in-out;
+}
+
+ */
 .facebook-pic-fixed-container,
 .fac-cont2 {
     position: fixed;
@@ -164,3 +214,41 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     border-bottom-left-radius: 20px;
     box-shadow: -5px 0px 10px 5px rgba(0, 0, 0, 0.7);
 }
+
+
+.footer {
+    color: rgb(0,0,0);
+    text-align: center;
+    padding: 25px;
+    border-top: 3px groove rgba(0,0,0, 0.5);
+    font-family: 'JetBrains Mono', serif;
+    font-size: 14px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer a {
+    color: #002651;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.separator {
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+}
+
+
