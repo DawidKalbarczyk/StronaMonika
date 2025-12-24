@@ -5,7 +5,7 @@ import { getImage } from "../components/imagePaths.js";
 import "../components/mainPage.js";
 //import {Typography, Button} from "@mui/material";
 import Headbar from "../components/headbar.js";
-
+import AdminInfo from "../components/adminInfo.js";
 function Home(props) {
     useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -149,7 +149,9 @@ function Home(props) {
                         </div>
                     </div>
                     <div style={{backgroundColor: "white", height: 200}}>aaaa</div>
+                    <AdminInfo/>
                 </div>
+
             </div>
 
         </div>
