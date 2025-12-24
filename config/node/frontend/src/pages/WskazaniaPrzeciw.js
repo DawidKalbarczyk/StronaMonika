@@ -10,5 +10,5 @@ function WskazaniaPrzeciw(props) {
     );
 
 }
-
+// TODO dodać kafelki do wyboru danej podstrony.
 export default WskazaniaPrzeciw;
