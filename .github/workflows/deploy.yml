@@ -24,6 +24,19 @@ jobs:
       - name: Sprawdzenie
         uses: actions/checkout@v4
 
+      - name: Przygotuj Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Instaluj zależności Python
+        run: pip install pandas openpyxl
+        working-directory: config/node/backend
+
+      - name: Konwertuj Excel na JSON
+        run: python convertJson.py
+        working-directory: config/node/backend
+
       - name: Przygotuj Node
         uses: actions/setup-node@v4
         with:
