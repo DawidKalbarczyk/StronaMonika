@@ -84,6 +84,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
 .logo-image {
     width: 100%;
+    transition:
+        transform 0.35s ease-in-out;
+}
+.logo-image:hover{
+    transform: scale(1.1);
 }
 
 .right-header {
@@ -140,10 +145,16 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .socialmedia-photo {
-    width: 50px;
+    width: 40px;
     border-radius: 10px;
     border: none;
+    transition:
+        transform 0.35s ease-in-out;
 }
+.socialmedia-photo:hover {
+    transform: scale(1.15);
+}
+
 /*
 .arrow-down-1 {
     display: inline-block;
