@@ -1,9 +1,18 @@
 import pandas as pd
 import os
 
-path = os.path.join(os.path.abspath(__file__),"..", "data", "cennik.xlsx")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(script_dir, "data", "cennik.xlsx")
 sheet = pd.read_excel(path)
 
+
+output_path = os.path.join(script_dir,"..", "frontend","public", "data","cennik.json")
+sheet.to_json(
+    output_path,
+    orient="records",
+    force_ascii=False,
+    indent=2
+)
 """
 print(sheet)
 columns = []
@@ -22,9 +31,3 @@ print(descriptions)
 print(prices)
 """
 
-sheet.to_json(
-    os.path.join(os.path.abspath(__file__),"..", "..", "frontend", "public", "data", "cennik.json"),
-    orient="records",
-    force_ascii=False,
-    indent=2
-)
