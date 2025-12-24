@@ -43,7 +43,9 @@ function Headbar() {
                 </Link>
             </div>
             <div className="socialmedia-header">
-
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/obsessionkosmetologia/" className="socialmedia-container">
+                    <img className="socialmedia-photo" src={getImage("/photos/icons/facebook-icon.png")} alt="Facebook icon"/>
+                </a>
             </div>
         </div>
     );
