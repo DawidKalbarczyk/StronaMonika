@@ -7,8 +7,6 @@ import "../styles/cennik.css";
 import Headbar from "../components/headbar.js";
 import AdminInfo from "../components/adminInfo.js";
 function Home(props) {
-    // TODO Zmień to bo nie działa po przełączeniu znowu na główną z cennika.
-    // TODO zmień body, bo nie działa dla głównej strony
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
