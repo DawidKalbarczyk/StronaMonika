@@ -6,7 +6,7 @@ path = os.path.join(script_dir, "data", "cennik.xlsx")
 sheet = pd.read_excel(path)
 
 
-output_path = os.path.join(script_dir,"data")
+output_path = os.path.join(script_dir,"data", "cennik.json")
 sheet.to_json(
     output_path,
     orient="records",
