@@ -41,7 +41,7 @@ jobs:
           cp -r pages-js _site/
           cp -r styles _site/
           cp -r photos _site/
-          cp -r backend -site/
+          cp -r backend _site/
           cp -r modules _site/
           cp index.html _site/
           cp index.js _site/
