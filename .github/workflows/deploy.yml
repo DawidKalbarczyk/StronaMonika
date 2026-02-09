@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: config/node/frontend
     steps:
       - name: Sprawdzenie
         uses: actions/checkout@v4
@@ -31,29 +28,28 @@ jobs:
 
       - name: Instaluj zależności Python
         run: pip install pandas openpyxl
-        working-directory: config/node/backend
+        working-directory: backend
 
       - name: Konwertuj Excel na JSON
         run: python convertJson.py
-        working-directory: config/node/backend
+        working-directory: backend
 
-      - name: Przygotuj Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-          cache-dependency-path: config/node/frontend/package-lock.json
-
-      - name: Instaluj zaleznosci
-        run: npm install
-
-      - name: Zkompiluj
-        run: npm run build
+      - name: Przygotuj pliki do wrzucenia
+        run: |
+          mkdir -p _site
+          cp -r pages _site/
+          cp -r pages-js _site/
+          cp -r styles _site/
+          cp -r photos _site/
+          cp -r backend _site/
+          cp -r modules _site/
+          cp index.html _site/
+          cp index.js _site/
 
       - name: Wrzuc artefakty
         uses: actions/upload-pages-artifact@v3
         with:
-          path: config/node/frontend/build
+          path: _site
 
   deploy:
     environment:
