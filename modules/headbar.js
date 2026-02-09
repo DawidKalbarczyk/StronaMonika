@@ -1,7 +1,9 @@
 function Headbar() {
     let path = "";
     let path2 = "";
-    if (window.location.pathname.endsWith("index.html")) {
+    const pathName = window.location.pathname;
+
+    if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
         path = "pages"
         path2 = "photos"
     } else {
