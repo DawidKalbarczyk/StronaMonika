@@ -2,7 +2,7 @@ name: Deploy react app to github pages
 on:
   push:
     branches:
-      - env-test
+      - main
 
 permissions:
   contents: read
