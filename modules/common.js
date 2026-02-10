@@ -29,12 +29,17 @@ export function initHomeScrollHandlers() {
 		lastScrollTop = check <= 0 ? 0 : check;
 	});
 
-	window.addEventListener("scroll", () => {
-		const scrollY = window.scrollY;
-		if (scrollY >= 300) {
-			document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
-		}
-	});
+
+	const pathName = window.location.pathname;
+	if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
+		window.addEventListener("scroll", () => {
+			const scrollY = window.scrollY;
+			if (scrollY >= 300) {
+				document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
+			}
+		});
+	}
+
 
 	window.addEventListener("scroll", () => {
 		const scrollY = window.scrollY;

@@ -24,48 +24,95 @@ html {
 }
 
 .right-header-content-colors-switched {
-    color: rgba(0,0,0,0.85);
+    color: #dcdcdc;
     text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
 }
 
 .right-header-content-container-colors-switched {
-    border: 3px solid rgba(0,0,0, 0.5);
+    border: 3px solid #dcdcdc;
     box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
 }
 
+.main-content-cennik {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
 .item-main-container {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../photos/textures/pale-gray-grained-wall-template.jpg");
+    background-size: 100px 1000px;
+    background-repeat: repeat;
+    background-position: center;
+    box-shadow:
+            7px 0px 10px rgba(0, 0, 0, 0.8),
+            inset 0 0 20px 20px rgba(0,0,0,0.5);
 
 }
 
 .item-container { /* Rekord */
-    background-color: white;
+
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr;
     align-items: center;
     justify-content: center;
-    padding: 4px 8px;
-    border: 1px solid red;
+    margin-top: 0;
+    padding-top: 12px;
+    font-size: 20px;
+    border-bottom: 2px solid #dcdcdc;
+
 }
 
+.item-container-titles {
+    background: rgba(255,255,255,1);
+    font-size: 26px;
+    padding-top: 16px;
+    border-bottom: 0;
+    box-shadow:
+            7px 0px 10px rgba(0, 0, 0, 0.8),
+            inset 0 0 10px 10px rgba(0,0,0,0.5);
+}
 .item-container .separator {
-    color: black;
-    font-size: 40px;
+    align-self: stretch;
+    justify-self: center;
+    width: 6px;
+    color: transparent;
     height: 100%;
-    display: flex;
-    align-items: center;
+    border-left: 2px solid #dcdcdc;
+    font-size: 24px;
+    margin-top: -5px;
+
+    
 }
 
-.item-wrapper {
-    border: 1px solid green;
+.item-container-titles .separator {
+    border-left: 2px solid black;
 }
+
+.item-container:last-child {
+    border-bottom: 0;
+}
+
 .item-props { /* Pozycja */
-    color: black;
+    color: #dcdcdc;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid purple;
-    width: fit-content;
-    border-bottom: 2px solid black;
+    width: 400px;
     justify-self: center;
     font-family: 'Arimo', sans-serif;
+    padding-bottom: 12px;
+
+}
+
+.item-props-titles {
+    padding-bottom: 16px;
+    width: calc(100% - 15%);
+    border: none;
+    color: black;
+}
+.main-content-cennik {
+
 }

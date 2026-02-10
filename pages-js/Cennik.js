@@ -26,12 +26,12 @@ function Cennik() {
 
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
-                    <div class="item-container">
-                        <div class="item-props">Zabieg</div>
+                    <div class="item-container item-container-titles">
+                        <div class="item-props item-props-titles">Zabieg</div>
                         <div class="separator">|</div>
-                        <div class="item-props">Opis</div>
+                        <div class="item-props item-props-titles">Opis</div>
                         <div class="separator">|</div>
-                        <div class="item-props">Cena</div>
+                        <div class="item-props item-props-titles">Cena</div>
                     </div>
                     <! -- ExcelReader --> 
                 </div>
@@ -42,7 +42,7 @@ function Cennik() {
 
     const excelReader = ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
-    document.querySelector(".logo-image").src = "../photos/logo/logo_obsession_black_transparent.png";
+    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-cennik");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
