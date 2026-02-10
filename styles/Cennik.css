@@ -47,8 +47,9 @@ html {
     background-repeat: repeat;
     background-position: center;
     box-shadow:
-            7px 0px 10px rgba(0, 0, 0, 0.8),
+            7px 0 10px rgba(0, 0, 0, 0.8),
             inset 0 0 20px 20px rgba(0,0,0,0.5);
+    border-bottom-right-radius: 2px;
 
 }
 
@@ -70,8 +71,9 @@ html {
     font-size: 26px;
     padding-top: 16px;
     border-bottom: 0;
+    border-top-right-radius: 2px;
     box-shadow:
-            7px 0px 10px rgba(0, 0, 0, 0.8),
+            7px 0 10px rgba(0, 0, 0, 0.8),
             inset 0 0 10px 10px rgba(0,0,0,0.5);
 }
 .item-container .separator {
