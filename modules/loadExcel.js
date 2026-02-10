@@ -1,7 +1,11 @@
 function ExcelReader() {
     const container = document.createElement('div');
 
-    fetch("../backend/data/cennik.json")
+    const isGitHubPages = window.location.hostname.endsWith("github.io");
+    const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
+    const dataUrl = `${repoSegment}/backend/data/cennik.json`;
+
+    fetch(dataUrl)
         .then(res => res.json())
         .then(data => {
             data.forEach(item => {
@@ -10,6 +14,9 @@ function ExcelReader() {
                 itemDiv.innerHTML = `${item.NAZWA} - ${item.OPIS} - ${item.CENA} zł`
                 container.appendChild(itemDiv);
             });
+        })
+        .catch(error => {
+            console.error("Failed to load cennik.json:", error);
         });
 
 
