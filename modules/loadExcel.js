@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
-import {getImage} from "./imagePaths";
 function ExcelReader() {
-    const [data, setData] = useState([]);
+    const container = document.createElement('div');
 
-    useEffect(() => {
-        fetch(getImage("/data/cennik.json"))
-            .then(res => res.json())
-            .then(setData);
-    }, []);
+    fetch("../backend/data/cennik.json")
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'price-item';
+                itemDiv.innerHTML = `${item.NAZWA} - ${item.OPIS} - ${item.CENA} zł`
+                container.appendChild(itemDiv);
+            });
+        });
 
-    return (
-        <div>
-            {data.map((item, i) => (
-                <div key={i} style={{color: "white"}}>
-                    {item.NAZWA} – {item.OPIS} - {item.CENA} zł
-                </div>
-            ))}
-        </div>
-    );
+
+    return container;
 }
 
 export default ExcelReader;

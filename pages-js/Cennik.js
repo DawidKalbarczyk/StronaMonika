@@ -1,19 +1,11 @@
-
-import ExcelReader from  "../components/loadExcel.js";
+import ExcelReader from  "../modules/loadExcel.js";
 import Headbar from "../modules/headbar.js";
 
-function Cennik(props) {
-    document.querySelector(".logo-image").src = "../photos/logo/logo_obsession_black_transparent.png";
-    document.querySelector(".header").classList.add("header-cennik");
-    document.querySelectorAll(".right-header-content").forEach((elem) => {
-        elem.classList.add("right-header-content-colors-switched");
-    });
-    document.querySelectorAll(".right-header-content-container").forEach((elem) => {
-        elem.classList.add("right-header-content-container-colors-switched");
-    });
+function Cennik() {
     document.querySelector('body').style.marginTop = "0px";
 
     const headbar = Headbar();
+
     document.body.innerHTML = `
         <div class="main">
             ${headbar}
@@ -30,13 +22,23 @@ function Cennik(props) {
 
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
-
-                    <ExcelReader/>
+                    <! -- ExcelReader --> 
                 </div>
             </div>
 
         </div>
     `;
+
+    const excelReader = ExcelReader();
+    document.querySelector('.main-content-cennik').appendChild(excelReader);
+    document.querySelector(".logo-image").src = "../photos/logo/logo_obsession_black_transparent.png";
+    document.querySelector(".header").classList.add("header-cennik");
+    document.querySelectorAll(".right-header-content").forEach((elem) => {
+        elem.classList.add("right-header-content-colors-switched");
+    });
+    document.querySelectorAll(".right-header-content-container").forEach((elem) => {
+        elem.classList.add("right-header-content-container-colors-switched");
+    });
 }
 
 export default Cennik;
