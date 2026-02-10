@@ -1,5 +1,6 @@
 function ExcelReader() {
     const container = document.createElement('div');
+    container.className = 'item-main-container'
 
     const isGitHubPages = window.location.hostname.endsWith("github.io");
     const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
@@ -10,10 +11,36 @@ function ExcelReader() {
         .then(data => {
             data.forEach(item => {
                 const itemDiv = document.createElement('div');
-                itemDiv.className = 'price-item';
-                itemDiv.innerHTML = `${item.NAZWA} - ${item.OPIS} - ${item.CENA} zł`
+                itemDiv.className = 'item-container';
+
+                const itemName = document.createElement('div');
+                itemName.className = 'item-props';
+                itemName.innerHTML = `${item.NAZWA}`;
+                itemDiv.appendChild(itemName);
+
+                const separator1 = document.createElement('div');
+                separator1.className = 'separator';
+                separator1.innerHTML = '|';
+                itemDiv.appendChild(separator1);
+
+                const itemDescription = document.createElement('div');
+                itemDescription.className = 'item-props';
+                itemDescription.innerHTML = `${item.OPIS}`;
+                itemDiv.appendChild(itemDescription);
+
+                const separator2 = document.createElement('div');
+                separator2.className = 'separator';
+                separator2.innerHTML = '|';
+                itemDiv.appendChild(separator2);
+
+                const itemPrice = document.createElement('div');
+                itemPrice.className = 'item-props';
+                itemPrice.innerHTML = `${item.CENA}`;
+                itemDiv.appendChild(itemPrice);
+
                 container.appendChild(itemDiv);
             });
+
         })
         .catch(error => {
             console.error("Failed to load cennik.json:", error);
