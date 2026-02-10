@@ -1,61 +1,10 @@
 import AdminInfo from "./modules/adminInfo.js";
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
+import { initHomeScrollHandlers } from "./modules/common.js";
 
 function Home() {
-    document.addEventListener('DOMContentLoaded',() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('unique-info-container-show');
-                }
-            });
-            document.querySelector('body').style.marginTop = "150px";
-        });
-
-        const container = document.querySelector('.unique-info-container');
-        if (container) {
-            observer.observe(container);
-        }
-    });
-
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', (event) => {
-        let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 50) {
-            if (check > lastScrollTop) {
-                document.querySelector('.header').classList.add('header-off');
-            }
-            else if (check < lastScrollTop) {
-                document.querySelector('.header').classList.remove('header-off');
-            }
-        }
-
-        lastScrollTop = check <= 0 ? 0 : check;
-    });
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY; // ile px przewinięte od góry
-        if (scrollY >= 300) {
-            document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
-
-        }
-    });
-
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY; // ile px przewinięte od góry
-
-        if (scrollY >= 400) {
-            document.querySelectorAll(".facebook-pic-fixed-container").forEach((element)=> {
-                element.classList.add("facebook-pic-fixed-container-run");
-            });
-            // tutaj Twoja akcja
-        }
-        if (scrollY <= 500) {
-            document.querySelectorAll(".facebook-pic-fixed-container").forEach((element)=> {
-                element.classList.remove("facebook-pic-fixed-container-run");
-            });
-        }
-    });
+    initHomeScrollHandlers();
 
 
     const adminInfo = AdminInfo();

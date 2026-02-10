@@ -1,14 +1,18 @@
 import ExcelReader from  "../modules/loadExcel.js";
 import Headbar from "../modules/headbar.js";
+import Banner from "../modules/banners.js";
+import {initHomeScrollHandlers} from "../modules/common.js";
 
 function Cennik() {
+    initHomeScrollHandlers();
     document.querySelector('body').style.marginTop = "0px";
 
     const headbar = Headbar();
-
+    const banner = Banner();
     document.body.innerHTML = `
+        ${headbar}
         <div class="main">
-            ${headbar}
+            ${banner}
             <div class="facebook-pic-fixed-container">
                 <img class="facebook-pic-fixed" src="../photos/saloonPhotos/1-fac.jpg" alt="1-fac"/>
             </div>
@@ -22,6 +26,13 @@ function Cennik() {
 
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
+                    <div class="item-container item-container-titles">
+                        <div class="item-props item-props-titles">Zabieg</div>
+                        <div class="separator">|</div>
+                        <div class="item-props item-props-titles">Opis</div>
+                        <div class="separator">|</div>
+                        <div class="item-props item-props-titles">Cena</div>
+                    </div>
                     <! -- ExcelReader --> 
                 </div>
             </div>
@@ -31,7 +42,7 @@ function Cennik() {
 
     const excelReader = ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
-    document.querySelector(".logo-image").src = "../photos/logo/logo_obsession_black_transparent.png";
+    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-cennik");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
