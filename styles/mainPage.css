@@ -19,7 +19,8 @@
             inset 0px 0px 5px 2px rgba(0,0,0,0.4),
             0px -5px 10px rgba(0, 0, 0, 1),
             0 5px 2px rgba(0, 0, 0, 0.5);
-    transition: height 0.35s ease-in-out;
+    transition: border-radius 0.35s ease-in-out, transform 0.35s ease-in-out;
+    overflow: hidden;
 }
 
 .owner-photo-container {
@@ -41,6 +42,7 @@
 .owner-photo {
     object-fit: cover;
     width: 100%;
+    height: 100%;
     border-top-left-radius: 150px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 150px;
@@ -51,14 +53,12 @@
     display: block;
     transition:
             border-radius 0.5s ease-in-out,
-            transform 0.5s ease-in-out,
-            width 0.5s ease-in-out;
+            transform 0.5s ease-in-out;
 
 }
 .owner-photo:hover {
     border-radius: 0;
-    transform: scale(1.1);
-    width: 110%;
+    transform: scale(1.08);
 }
 .owner-photo-container:has(.owner-photo:hover) {
     border-radius: 0;
@@ -91,19 +91,25 @@
             inset 0px 0px 20px 10px rgba(0,0,0,0.3),
             0px -5px 10px rgba(0, 0, 0, 0.7);
     transition:
-            border-radius 0.5s ease-in-out,
+            border-radius 0.35s ease-in-out,
             padding 0.5s ease-in-out,
-            height 0.5s ease-in-out,
-            background-size 0.5s ease-in-out;
+            background-size 0.5s ease-in-out,
+            transform 0.5s ease-in-out;
+    transform-origin: right top;
     overflow: hidden;
 }
 
 .owner-quote-container:hover {
     border-radius: 0 15px 15px 0px;
     background-size: 110% auto;
+    transform: scale(1.05);
 }
 .owner-quote-container:hover .owner-quote {
-    font-size: 33px;
+    transform: scale(1.02);
+}
+
+.owner-info-container:has(.owner-quote-container:hover) {
+    border-radius: 0;
 }
 /*
 .owner-info-container:has(.owner-quote-container:hover),
@@ -113,19 +119,20 @@
 
  */
 .owner-info-container:has(.owner-quote-container:hover) .owner-photo{
-    width: 110%;
-    transform: scale(1.1);
+    transform: scale(1.08);
     border-radius: 0;
 }
 .owner-info-container:has(.owner-quote-container:hover) .owner-photo-container{
-    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container{
     border-radius: 0 15px 15px 0px;
     background-size: 110% auto;
+    transform: scale(1.05);
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container .owner-quote {
-    font-size: 33px;
+    transform: scale(1.02);
 }
 .owner-quote {
     display: inline-block;
@@ -140,7 +147,7 @@
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     transition:
-        font-size 0.5s ease-in-out;
+        transform 0.5s ease-in-out;
 
 }
 
