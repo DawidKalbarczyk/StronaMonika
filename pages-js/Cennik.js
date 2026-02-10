@@ -1,14 +1,18 @@
 import ExcelReader from  "../modules/loadExcel.js";
 import Headbar from "../modules/headbar.js";
+import Banner from "../modules/banners.js";
+import {initHomeScrollHandlers} from "../modules/common.js";
 
 function Cennik() {
+    initHomeScrollHandlers();
     document.querySelector('body').style.marginTop = "0px";
 
     const headbar = Headbar();
-
+    const banner = Banner();
     document.body.innerHTML = `
+        ${headbar}
         <div class="main">
-            ${headbar}
+            ${banner}
             <div class="facebook-pic-fixed-container">
                 <img class="facebook-pic-fixed" src="../photos/saloonPhotos/1-fac.jpg" alt="1-fac"/>
             </div>
@@ -22,6 +26,13 @@ function Cennik() {
 
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
+                    <div class="item-container">
+                        <div class="item-props">Zabieg</div>
+                        <div class="separator">|</div>
+                        <div class="item-props">Opis</div>
+                        <div class="separator">|</div>
+                        <div class="item-props">Cena</div>
+                    </div>
                     <! -- ExcelReader --> 
                 </div>
             </div>

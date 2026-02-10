@@ -33,6 +33,39 @@ html {
     box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
 }
 
-.price-item {
-    color: white;
+.item-main-container {
+
+}
+
+.item-container { /* Rekord */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border: 1px solid red;
+}
+
+.item-container .separator {
+    color: black;
+    font-size: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.item-wrapper {
+    border: 1px solid green;
+}
+.item-props { /* Pozycja */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid purple;
+    width: fit-content;
+    border-bottom: 2px solid black;
+    justify-self: center;
+    font-family: 'Arimo', sans-serif;
 }

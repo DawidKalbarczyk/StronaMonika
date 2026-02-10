@@ -102,7 +102,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         transform 0.35s ease-in-out;
 }
 .logo-image:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .right-header {
@@ -142,7 +142,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     color: white;
     text-align: center;
     font-size: 20px;
-    font-family: 'JetBrains Mono', serif;
+    font-family: 'Arimo', sans-serif;
 }
 
 .socialmedia-header {
