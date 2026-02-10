@@ -1,6 +1,6 @@
 import Headbar from "../modules/headbar.js";
 
-function Kontakt(props) {
+function Kontakt() {
 
     const headbar = Headbar();
     document.body.innerHTML = `
