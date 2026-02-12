@@ -3,15 +3,24 @@ export function initHomeScrollHandlers() {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					entry.target.classList.add('unique-info-container-show');
+					if (entry.target.classList.contains('unique-info-container')) {
+						entry.target.classList.add('unique-info-container-show');
+					}
+					if (entry.target.classList.contains('work-info-container')) {
+						entry.target.classList.add('work-info-container-show');
+					}
 				}
 			});
 			document.querySelector('body').style.marginTop = "150px";
 		});
 
-		const container = document.querySelector('.unique-info-container');
-		if (container) {
-			observer.observe(container);
+		const uniqueContainer = document.querySelector('.unique-info-container');
+		if (uniqueContainer) {
+			observer.observe(uniqueContainer);
+		}
+		const workContainer = document.querySelector('.unique-info-container');
+		if (workContainer) {
+			observer.observe(workContainer);
 		}
 	});
 
@@ -36,6 +45,9 @@ export function initHomeScrollHandlers() {
 			const scrollY = window.scrollY;
 			if (scrollY >= 300) {
 				document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
+			}
+			if (scrollY >= 1400) {
+				document.querySelector(".work-info-tile-container").classList.add("work-info-tile-container-show");
 			}
 		});
 	}

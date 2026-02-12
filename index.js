@@ -6,7 +6,6 @@ import { initHomeScrollHandlers } from "./modules/common.js";
 function Home() {
     initHomeScrollHandlers();
 
-
     const adminInfo = AdminInfo();
     const headbar = Headbar();
     const banner = Banner();
@@ -103,12 +102,96 @@ function Home() {
                             </div>
                             <div class="unique-info-tile">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" style="transform: scale(0.8);" src="photos/icons/trusty-icon.png" alt="Zaufanie"/>
+                                    <img class="unique-info-tile-image" style="transform: scale(0.9);" src="photos/icons/trusty-icon.png" alt="Zaufanie"/>
                                     <p class="unique-info-tile-title">
                                         Zaufanie klientów
                                     </p>
                                     <p class="unique-info-tile-description">
                                         Pozytywne opinie oraz osoby, które chętnie do mnie wracają, są najlepszym potwierdzeniem jakości mojej pracy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="work-info-container">
+                        <div class="work-info-title">
+                            <p class="work-info-text">Wybrane usługi jakie oferuję</p>
+                        </div>
+
+                        <div class="work-info-tile-container">
+                            <div class="work-info-tile work-info-tile-x1">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/acne-treatment.png" alt="Oczyszczanie Twarzy"/>
+                                    <p class="work-info-tile-title">
+                                        Oczyszczanie i Regeneracja Twarzy
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Przywróć swojej skórze świeżość i blask. Zabieg głęboko oczyszcza pory, usuwa
+                                        zanieszczyszczenia i dotlenia cerę sprawiając, żewygląda na wypoczętą, głądką i promienną.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="work-info-tile work-info-tile-x2">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/beauty.png" alt="Makijaż"/>
+                                    <p class="work-info-tile-title">
+                                        Makijaż Okolicznościowy
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Perfekcyjny wygląd na każdą ważną chwilę. Podkreślę Twoje naturalne atuty i ukryję niedoskonałości,
+                                        tworząc makijaż, który zachwyca trwałością i idealnie pasuje do Twojej urody.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="work-info-tile work-info-tile-x3">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/botox-lips.png" alt="Zabieg ust"/>
+                                    <p class="work-info-tile-title">
+                                        Modelowanie i Estetyka Ust
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Podkreśl zmysłowość swoich ust. Zabieg pozwala na subtelną koretkę kształtu, poprawę symetrii,
+                                        wygładzanie zmarszczek wokół ust lub delikatne wywinięcie wargi do pełniejszego efektu.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="work-info-tile work-info-tile-x4">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/nail-polish.png" alt="Manicure Hybrydowy"/>
+                                    <p class="work-info-tile-title">
+                                        Manicure Hybrydowy
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Zadbane dłonie to Twoja wizytówka. Oferuję trwałą stylizację odporną na odpryski, precyzyjne 
+                                        opracowanie skórek oraz szeroką gamę kolorów, którymi będziesz cieszyć się nawet do 3 tygodni.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="work-info-tile work-info-tile-x5">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/permanent-eyebrows.png" alt="Brwi permanentne"/>
+                                    <p class="work-info-tile-title">
+                                        Makijaż Permanenty Brwi
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Oszczędź czas i ciesz się idealnym kształtem brwi tuż po przebudzeniu. Zabieg nadaje twarzy 
+                                        wyrazistości, uzupełnia braki we włoskach i gwarantuje naturalny efekt, który zostaje z Tobą na długo.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="work-info-tile work-info-tile-x6">
+                                <div class="work-info-tile-title-container">
+                                    <img class="work-info-tile-image" src="photos/icons/services-icons/eyelash.png" alt="Rzęsy"/>
+                                    <p class="work-info-tile-title">
+                                        Stylizacja i Przedłużanie Rzęs
+                                    </p>
+                                    <p class="work-info-tile-description">
+                                        Zapomnij o tuszowaniu rzęs. Oferuję profesjonalną plikację, która zagęszcza i wydłuża naturalne włoski.
+                                        Dobieram odpowiednią metodę, aby nadać Twojemu spojrzeniu głębie i spektakularny, ale estetyczny wygląd.
                                     </p>
                                 </div>
                             </div>
