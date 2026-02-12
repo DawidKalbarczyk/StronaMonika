@@ -39,7 +39,6 @@ function Cennik() {
 
         </div>
     `;
-
     const excelReader = ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
     document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
