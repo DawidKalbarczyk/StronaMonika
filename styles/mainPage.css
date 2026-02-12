@@ -3,7 +3,7 @@
 
 
 .main-content {
-    border: 0px solid blue;
+    border: 0 solid blue;
 
 }
 
@@ -23,9 +23,9 @@
     border-top-right-radius: 70% 85%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
-            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
-            inset 0px 0px 5px 2px rgba(0,0,0,0.4),
-            0px -5px 10px rgba(0, 0, 0, 1),
+            inset 0 0 10px 10px rgba(0, 0, 0, 0.4),
+            inset 0 0 5px 2px rgba(0,0,0,0.4),
+            0 -5px 10px rgba(0, 0, 0, 1),
             0 5px 2px rgba(0, 0, 0, 0.5);
     transition: border-radius 0.35s, transform 0.35s ease-in-out;
     overflow: hidden;
@@ -38,7 +38,7 @@
 }
 
 .owner-photo-container {
-    padding: 0px 30px 0px 0px;
+    padding: 0 30px 0 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 100px;
     margin-right: 28%;
@@ -89,15 +89,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0% 8% 0% 8%;
+    padding: 0 8% 0 8%;
     border-top-right-radius: 100%;
     border-top-left-radius: 12% 30%;
     border-bottom-left-radius: 80%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
-            inset 0px 0px 50px 50px rgba(0, 0, 0, 0.1),
-            inset 0px 0px 20px 10px rgba(0,0,0,0.3),
-            0px -5px 10px rgba(0, 0, 0, 0.7);
+            inset 0 0 50px 50px rgba(0, 0, 0, 0.1),
+            inset 0 0 20px 10px rgba(0,0,0,0.3),
+            0 -5px 10px rgba(0, 0, 0, 0.7);
     transition:
             border-radius 0.35s ease-in-out,
             padding 0.5s ease-in-out,
@@ -108,7 +108,7 @@
 }
 
 .owner-quote-container:hover {
-    border-radius: 0 15px 15px 0px;
+    border-radius: 0 15px 15px 0;
     background-size: 110% auto;
     transform: scale(1.05);
 }
@@ -135,7 +135,7 @@
     border-bottom-right-radius: 2px;
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container{
-    border-radius: 0 15px 15px 0px;
+    border-radius: 0 15px 15px 0;
     background-size: 110% auto;
     transform: scale(1.05);
 }
@@ -174,27 +174,30 @@
     margin-left: 30%;
 }
 
-.unique-info-container {
+.unique-info-container,
+.work-info-container {
     background-color: rgba(166, 168, 168, 0.95);
     margin-top: 70px;
     padding-bottom: 50px;
-    box-shadow:
-            7px -7px 10px rgba(0, 0, 0, 0.8),
-            inset 0px 0px 40px 30px rgba(0,0,0,0.5);
+    box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-
-
-
-
 }
-.unique-info-title {
+.work-info-container {
+    background-color: rgba(62, 62, 62, 0.95);
+}
+
+.unique-info-title,
+.work-info-title {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.unique-info-text {
+
+.unique-info-text,
+.work-info-text {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 30px;
     margin: 50px 1px;
@@ -202,8 +205,13 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.6);
     padding-bottom: 5px;
 }
+.work-info-text {
+    color: #dcdcdc;
+    border-bottom-color: white;
+}
 
-.unique-info-tile-container {
+.unique-info-tile-container,
+.work-info-tile-container {
     display: grid;
     background:
             linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
@@ -212,12 +220,12 @@
     background-size: 400px 400px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
-    border: 0px solid red;
-    margin: 0px 30px;
+    border: 0 solid red;
+    margin: 0 30px;
     padding: 20px;
     box-shadow:
-            0px 0px 5px 2px rgba(0, 0, 0, 0.3),
-            inset 0px 0px 20px 15px rgba(0,0,0,0.4);
+            0 0 5px 2px rgba(0, 0, 0, 0.5),
+            inset 0 0 20px 15px rgba(0,0,0,0.4);
 
     padding-bottom: 30px;
     opacity: 0;
@@ -226,17 +234,40 @@
         opacity 1.3s ease-in-out,
         transform 1.3s ease-in-out;
 }
-.unique-info-tile-container-show {
+
+.work-info-tile-container {
+    box-shadow:
+            0 0 35px 25px rgba(0, 0, 0, 0.5),
+            inset 0 0 20px 15px rgba(0,0,0,0.4);
+}
+
+.work-info-tile-container {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 550px 550px;
+    column-gap: 75px;
+    margin: 0 150px;
+    padding: 20px 120px;
+}
+
+.unique-info-tile-container-show,
+.work-info-tile-container-show  {
     opacity: 1;
     transform: translateY(0px);
 }
-.unique-info-tile {
+.unique-info-tile,
+.work-info-tile {
     display: flex;
     flex-direction: column;
     background-color: rgba(166, 168, 168);
     align-items: center;
     justify-content: start;
-    border: 0px solid green;
+    border: 0 solid green;
     margin: 20px;
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
     transition:
@@ -250,7 +281,58 @@
     box-sizing: border-box;
 }
 
-.unique-info-tile:hover {
+.work-info-tile {
+    border-radius: 400px;
+    padding: 18% 0;
+    box-shadow: 0 0 15px 15px rgba(0,0,0,0.4)
+
+
+}
+.work-info-tile-x1 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/acne.png");
+    background-size: cover;
+    background-position: -200px 0;
+}
+.work-info-tile-x2 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/makeup.png");
+    background-size: cover;
+    background-position: -150px 0;
+}
+.work-info-tile-x3 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/lips.png");
+    background-size: cover;
+    background-position: -250px 0;
+}
+.work-info-tile-x4 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/manicure.png");
+    background-size: cover;
+    background-position: -150px 0;
+}
+.work-info-tile-x5 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/eyebrows.png");
+    background-size: cover;
+    background-position: -175px 0;
+}
+.work-info-tile-x6 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../photos/myPhotos/services-photos/lashes.png");
+    background-size: cover;
+    background-position: -175px 0;
+}
+
+.unique-info-tile:hover,
+.work-info-tile:hover {
     filter: brightness(0.85);
     transform: scale(1.05);
 
@@ -258,29 +340,55 @@
 .unique-info-tile:hover .unique-info-tile-title-container .unique-info-tile-title {
     font-size: 25px;
 }
+.work-info-tile:hover .work-info-tile-title-container .work-info-tile-title {
+    font-size: 25px;
+}
 
-.unique-info-tile-title-container {
+.unique-info-tile-title-container,
+.work-info-tile-title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.unique-info-tile-image {
+.unique-info-tile-image,
+.work-info-tile-image {
     width: 50px;
     height: 50px;
 }
-.unique-info-tile-title {
+
+.work-info-tile-image {
+    filter: invert(1) brightness(0.8);
+}
+
+.work-info-tile-image {
+    transform: scale(1.5);
+}
+.unique-info-tile-title,
+.work-info-tile-title {
     font-size: 24px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     transition:
         font-size 0.35s ease-in-out;
     text-align: center;
+
+}
+.work-info-tile-title {
+    color: #dcdcdc;
 }
 
-.unique-info-tile-description {
+.unique-info-tile-description,
+.work-info-tile-description {
     width: 80%;
     box-sizing: border-box;
     text-align: center;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin-top: 0;
+}
+
+.work-info-tile-description {
+    width: 55%;
+    font-size: 18px;
+    color: #dcdcdc;
 }
