@@ -285,9 +285,56 @@
     border-radius: 400px;
     padding: 18% 0;
     box-shadow: 0 0 15px 15px rgba(0,0,0,0.4)
-
-
 }
+
+.unique-info-tile-x1 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/indywidualne.png");
+    background-size: cover;
+    background-position: -25px 0;
+}
+
+.unique-info-tile-x2 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/praktyka.png");
+    background-size: cover;
+    background-position: -250px 0;
+}
+
+.unique-info-tile-x3 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/jakosc-uslugi.png");
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.unique-info-tile-x4 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/terminowosc.png");
+    background-size: cover;
+    background-position: -40px 0;
+}
+
+.unique-info-tile-x5 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/atmosfera.png");
+    background-size: cover;
+    background-position: 0 -75px;
+}
+
+.unique-info-tile-x6 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../photos/myPhotos/unique-photos/zaufanie.png");
+    background-size: cover;
+    background-position: 0 0;
+}
+
 .work-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
@@ -305,7 +352,7 @@
 .work-info-tile-x3 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/lips.png");
+            url("../photos/myPhotos/zaufanie.png/lips.png");
     background-size: cover;
     background-position: -250px 0;
 }
@@ -385,10 +432,11 @@
     text-align: center;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     margin-top: 0;
+    font-size: 18px;
 }
 
 .work-info-tile-description {
     width: 55%;
-    font-size: 18px;
+
     color: #dcdcdc;
 }

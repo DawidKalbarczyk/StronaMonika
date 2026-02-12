@@ -40,7 +40,7 @@ function Home() {
                         </div>
 
                         <div class="unique-info-tile-container">
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x1">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" src="photos/icons/individual-icon-png-1.jpg" alt="Indywidualne Podejście"/>
                                     <p class="unique-info-tile-title">
@@ -52,7 +52,7 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x2">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" src="photos/icons/experience-icon-woman.png" alt="Doświadczenie"/>
                                     <p class="unique-info-tile-title">
@@ -64,7 +64,7 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x3">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" src="photos/icons/quality-icon.png" alt="Jakość"/>
                                     <p class="unique-info-tile-title">
@@ -76,7 +76,7 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x4">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" style="transform: scale(1.3);" src="photos/icons/punctuality-icon.png" alt="Punktualność"/>
                                     <p class="unique-info-tile-title">
@@ -88,7 +88,7 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x5">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" src="photos/icons/friendly-icon.png" alt="przyjazna atmosfera"/>
                                     <p class="unique-info-tile-title">
@@ -100,7 +100,7 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="unique-info-tile">
+                            <div class="unique-info-tile unique-info-tile-x6">
                                 <div class="unique-info-tile-title-container">
                                     <img class="unique-info-tile-image" style="transform: scale(0.9);" src="photos/icons/trusty-icon.png" alt="Zaufanie"/>
                                     <p class="unique-info-tile-title">
