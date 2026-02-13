@@ -290,7 +290,7 @@
 .unique-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/indywidualne.png");
+            url("../photos/myPhotos/unique-photos/indywidualne.jpg");
     background-size: cover;
     background-position: -25px 0;
 }
@@ -298,7 +298,7 @@
 .unique-info-tile-x2 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/praktyka.png");
+            url("../photos/myPhotos/unique-photos/praktyka.jpg");
     background-size: cover;
     background-position: -250px 0;
 }
@@ -306,7 +306,7 @@
 .unique-info-tile-x3 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/jakosc-uslugi.png");
+            url("../photos/myPhotos/unique-photos/jakosc-uslugi.jpg");
     background-size: cover;
     background-position: 0 0;
 }
@@ -314,7 +314,7 @@
 .unique-info-tile-x4 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/terminowosc.png");
+            url("../photos/myPhotos/unique-photos/terminowosc.jpg");
     background-size: cover;
     background-position: -40px 0;
 }
@@ -322,7 +322,7 @@
 .unique-info-tile-x5 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/atmosfera.png");
+            url("../photos/myPhotos/unique-photos/atmosfera.jpg");
     background-size: cover;
     background-position: 0 -75px;
 }
@@ -330,7 +330,7 @@
 .unique-info-tile-x6 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/zaufanie.png");
+            url("../photos/myPhotos/unique-photos/zaufanie.jpg");
     background-size: cover;
     background-position: 0 0;
 }
@@ -338,42 +338,42 @@
 .work-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/acne.png");
+            url("../photos/myPhotos/services-photos/acne.jpg");
     background-size: cover;
     background-position: -200px 0;
 }
 .work-info-tile-x2 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/makeup.png");
+            url("../photos/myPhotos/services-photos/makeup.jpg");
     background-size: cover;
     background-position: -150px 0;
 }
 .work-info-tile-x3 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/zaufanie.png/lips.png");
+            url("../photos/myPhotos/services-photos/lips.jpg");
     background-size: cover;
     background-position: -250px 0;
 }
 .work-info-tile-x4 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/manicure.png");
+            url("../photos/myPhotos/services-photos/manicure.jpg");
     background-size: cover;
     background-position: -150px 0;
 }
 .work-info-tile-x5 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/eyebrows.png");
+            url("../photos/myPhotos/services-photos/eyebrows.jpg");
     background-size: cover;
     background-position: -175px 0;
 }
 .work-info-tile-x6 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/lashes.png");
+            url("../photos/myPhotos/services-photos/lashes.jpg");
     background-size: cover;
     background-position: -175px 0;
 }
