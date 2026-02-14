@@ -7,7 +7,7 @@ function initMap() {
         1spl!2spl" 
         width="100%" 
         height="550" 
-        style="border:0;" 
+        class="map-component"
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"></iframe>
