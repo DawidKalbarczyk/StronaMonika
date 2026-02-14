@@ -2,7 +2,7 @@ import AdminInfo from "./modules/adminInfo.js";
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
 import { initHomeScrollHandlers } from "./modules/common.js";
-import initMap from "./modules/map";
+import initMap from "./modules/map.js";
 
 function Home() {
     initHomeScrollHandlers();
