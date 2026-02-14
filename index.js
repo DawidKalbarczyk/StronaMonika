@@ -2,6 +2,7 @@ import AdminInfo from "./modules/adminInfo.js";
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
 import { initHomeScrollHandlers } from "./modules/common.js";
+import initMap from "./modules/map";
 
 function Home() {
     initHomeScrollHandlers();
@@ -9,6 +10,7 @@ function Home() {
     const adminInfo = AdminInfo();
     const headbar = Headbar();
     const banner = Banner();
+    const mapComponent = initMap();
     document.body.innerHTML = (`
         ${headbar}
         <div class="main">
@@ -197,6 +199,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
+                    ${mapComponent}
                     <div style={{backgroundColor: "white", height: 200}}>aaaa</div>
                     ${adminInfo}
                 </div>
