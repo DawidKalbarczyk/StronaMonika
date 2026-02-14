@@ -35,7 +35,7 @@ function ExcelReader() {
 
                 const itemPrice = document.createElement('div');
                 itemPrice.className = 'item-props';
-                itemPrice.innerHTML = `${item.CENA}`;
+                itemPrice.innerHTML = `${item.CENA} zł`;
                 itemDiv.appendChild(itemPrice);
 
                 container.appendChild(itemDiv);

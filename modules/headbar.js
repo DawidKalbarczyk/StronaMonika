@@ -27,7 +27,7 @@ function Headbar() {
                 </a>
                 <a href="${path}/WskazaniaPrzeciw.html" class="headbar-link right-header-content-container right-header-content">
                     <div style="text-align: center;">
-                        <span style='display: block;'>Wskazania,</span>
+                        <span style='display: block;'>Wskazania i</span>
                         <span>przeciwwskazania</span>
                     </div>
                         
