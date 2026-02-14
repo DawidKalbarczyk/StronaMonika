@@ -115,6 +115,51 @@ html {
     border: none;
     color: black;
 }
+
 .main-content-cennik {
+    margin: 64px 0;
+}
+
+.main-content-container-cennik {
+    display: block;
+}
+
+.main-content-info,
+.main-content-info-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container .main-content-info {
+    box-shadow: none;
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    border-bottom: 2px solid #dcdcdc;
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
+
+.main-content-info-title,
+.main-content-info-description {
+    font-size: 36px;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content-info-description {
+    font-size: 24px;
+}
+
+.left-bar {
+    box-shadow: none;
+}
+

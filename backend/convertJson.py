@@ -5,7 +5,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(script_dir, "data", "cennik.xlsx")
 sheet = pd.read_excel(path)
 
-
+sheet = sheet.sort_values(by="CENA", ascending=True)
 
 output_path = os.path.join(script_dir,"data", "cennik.json")
 sheet.to_json(

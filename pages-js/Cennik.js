@@ -2,6 +2,7 @@ import ExcelReader from  "../modules/loadExcel.js";
 import Headbar from "../modules/headbar.js";
 import Banner from "../modules/banners.js";
 import {initHomeScrollHandlers} from "../modules/common.js";
+import initMap from "../modules/map.js";
 
 function Cennik() {
     initHomeScrollHandlers();
@@ -9,6 +10,7 @@ function Cennik() {
 
     const headbar = Headbar();
     const banner = Banner();
+    const mapContent = initMap();
     document.body.innerHTML = `
         ${headbar}
         <div class="main">
@@ -22,8 +24,19 @@ function Cennik() {
             <div class="main-cennik-photo-container">
                  <img class="main-cennik-photo" alt="main-cennik-photo" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
-            <div class="main-content-container">
-
+            
+            <div class="main-content-container main-content-container-cennik">
+                <div class="main-content-info">
+                    <div class="main-content-info-title-container">
+                        <p class="main-content-info-title">Kosmetologia</p>
+                    </div>
+                    <div class="main-content-info-description-container">
+                        <div class="main-content-info-description">
+                                            
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
                     <div class="item-container item-container-titles">
@@ -36,8 +49,9 @@ function Cennik() {
                     <! -- ExcelReader --> 
                 </div>
             </div>
-
+            ${mapContent}
         </div>
+        
     `;
     const excelReader = ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
@@ -49,6 +63,7 @@ function Cennik() {
     document.querySelectorAll(".right-header-content-container").forEach((elem) => {
         elem.classList.add("right-header-content-container-colors-switched");
     });
+
 }
 
 export default Cennik;
