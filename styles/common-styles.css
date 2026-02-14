@@ -277,8 +277,30 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     font-size: 40px;
 }
 
+.admin-info-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Zmień background color *.
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+}
+
+.admin-info-logo-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.admin-info-logo-container-logo {
+    width: 50%;
+}
+
 .map-component {
     border: 0;
+    margin-top: 70px;
 }
 
 
