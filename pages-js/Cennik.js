@@ -15,12 +15,7 @@ function Cennik() {
         ${headbar}
         <div class="main">
             ${banner}
-            <div class="facebook-pic-fixed-container">
-                <img class="facebook-pic-fixed" src="../photos/saloonPhotos/1-fac.jpg" alt="1-fac"/>
-            </div>
-            <div class="facebook-pic-fixed-container fac-cont2">
-                <img class="facebook-pic-fixed fac-pic2" src="../photos/treatmentPhotos/ai-generated-9400921_1280.jpg" alt="2-fac"/>
-            </div>
+           
             <div class="main-cennik-photo-container">
                  <img class="main-cennik-photo" alt="main-cennik-photo" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
@@ -48,8 +43,9 @@ function Cennik() {
                     </div>
                     <! -- ExcelReader --> 
                 </div>
+                ${mapContent}
             </div>
-            ${mapContent}
+            
         </div>
         
     `;
