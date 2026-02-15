@@ -287,6 +287,18 @@
     box-shadow: 0 0 15px 15px rgba(0,0,0,0.4)
 }
 
+@media(max-width: 1680px) {
+    .owner-quote {
+        width: 85%;
+    }
+    .work-info-tile-container {
+        padding: 0;
+        column-gap: 0;
+        margin: 0 100px;
+    }
+
+}
+
 .unique-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
