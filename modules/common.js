@@ -1,3 +1,6 @@
+import AdminInfo from "./adminInfo.js";
+import readTime from "./updateTime.js";
+
 export function initHomeScrollHandlers() {
 	document.addEventListener('DOMContentLoaded', () => {
 		const observer = new IntersectionObserver((entries) => {
@@ -64,6 +67,22 @@ export function initHomeScrollHandlers() {
 		if (scrollY <= 500) {
 			document.querySelectorAll(".facebook-pic-fixed-container").forEach((element) => {
 				element.classList.remove("facebook-pic-fixed-container-run");
+			});
+		}
+	});
+}
+
+
+export function handleReadTime() {
+	document.addEventListener('DOMContentLoaded', () => {
+		const mainContent = document.querySelector(".main-content");
+		if (mainContent) {
+			mainContent.innerHTML += AdminInfo();
+			readTime().then(time => {
+				const updateTimeElement = document.getElementById("last-update-time");
+				if (updateTimeElement) {
+					updateTimeElement.textContent = time;
+				}
 			});
 		}
 	});

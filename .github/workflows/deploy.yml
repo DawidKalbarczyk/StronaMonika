@@ -30,7 +30,7 @@ jobs:
         run: pip install pandas openpyxl
         working-directory: backend
 
-      - name: Konwertuj Excel na JSON
+      - name: Konwertuj Excel na JSON + Update Time
         run: python convertJson.py
         working-directory: backend
 

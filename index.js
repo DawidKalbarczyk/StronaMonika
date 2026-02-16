@@ -1,13 +1,11 @@
-import AdminInfo from "./modules/adminInfo.js";
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
-import { initHomeScrollHandlers } from "./modules/common.js";
+import {handleReadTime, initHomeScrollHandlers} from "./modules/common.js";
 import initMap from "./modules/map.js";
 
 function Home() {
     initHomeScrollHandlers();
-
-    const adminInfo = AdminInfo();
+    handleReadTime();
     const headbar = Headbar();
     const banner = Banner();
     const mapComponent = initMap();
@@ -26,11 +24,10 @@ function Home() {
                         <div class="owner-quote-container-wrapper">
                             <div class="owner-quote-container">
                                 <div class="owner-quote">
-                                    „Każda kobieta niesie w sobie historię <span class="owner-quote-span1">odwagi,
-                                    doświadczeń i decyzji,</span> <span class="owner-quote-span2">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;„Każda kobieta niesie w sobie historię odwagi,
+                                    doświadczeń i decyzji,
                                     które ją ukształtowały a to miejsce pozwala na chwilę zatrzymać się
-                                    </span> <span class="owner-quote-span3">przy sobie
-                                    i tym, co naprawdę dla Ciebie ważne."</span>
+                                    przy sobie i tym, co naprawdę dla Ciebie ważne."
                                 </div>
                             </div>
                         </div>
@@ -200,8 +197,7 @@ function Home() {
                         </div>
                     </div>
                     ${mapComponent}
-                    <div style={{backgroundColor: "white", height: 200}}>aaaa</div>
-                    ${adminInfo}
+                    
                 </div>
 
             </div>
