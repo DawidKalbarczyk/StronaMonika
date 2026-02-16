@@ -14,17 +14,35 @@ function AdminInfo() {
     `
 
      */
+    const pathName = window.location.pathname;
+    let path = "";
+    let path2 = "";
+    if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
+        path = "pages"
+        path2 = "photos"
+    } else {
+        path = "../pages"
+        path2 = "../photos"
+    }
 
     const html = `
         <footer class="admin-info-footer">
             <div class="admin-info-logo-container">
-                <img src="../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png" alt="admin info logo" class="admin-info-logo-container-logo">
+                <img src="${path2}/logo/logo-obsession-zmianakolorow-bialy-cropped.png" alt="admin info logo" class="admin-info-logo-container-logo">
                 <p class="admin-info-logo-description">- ekspert w kosmetologii. Zadbaj ze mną o swoje piękno świadomie, skutecznie i bezpiecznie!</p>
             </div>
             <div class="admin-info-services-container">
                 <p class="admin-info-titles">Moje zabiegi</p>
                 <p class="admin-info-descriptions">
-                
+                    XXXXXXXXXXXXXXXXXX<br>
+                    XXXXXXXXXXXXXXXXXX<br>
+                    XXXXXXXXXXXXXXXXXX<br>
+                    XXXXXXXXXXXXXXXXXX<br>
+                    XXXXXXXXXXXXXXXXXX<br>
+                    <a href="${path}/Zabiegi.html" class="admin-info-href">
+                       Więcej...
+                    </a>
+                 
                 </p>
             </div>
             <div class="admin-info-contact-container">
@@ -44,10 +62,12 @@ function AdminInfo() {
             </div>
             <div class="admin-info-admin-container">
                 <p class="admin-info-titles">Wykonawca</p>
-                <p class="admin-info-descriptions">
+                <p class="admin-info-descriptions admin">
                     Dawid Kalbarczyk<br>
-                    E-mail: k_kalbarczyk@o2.pl<br>
-                    Tel: +48 665 268 517
+                    <span class="admin-info-titles-weighted">E-mail:</span><br> 
+                    k_kalbarczyk@o2.pl<br>
+                    <span class="admin-info-titles-weighted">Tel:</span><br>
+                    +48 665 268 517<br>
                     Ostatnia aktualizacja:<br>
                     &nbsp;&nbsp;&nbsp;<span id="last-update-time">Ładowanie...</span>
                 </p>
