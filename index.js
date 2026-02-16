@@ -1,13 +1,11 @@
-import AdminInfo from "./modules/adminInfo.js";
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
-import { initHomeScrollHandlers } from "./modules/common.js";
+import {handleReadTime, initHomeScrollHandlers} from "./modules/common.js";
 import initMap from "./modules/map.js";
 
 function Home() {
     initHomeScrollHandlers();
-
-    const adminInfo = AdminInfo();
+    handleReadTime();
     const headbar = Headbar();
     const banner = Banner();
     const mapComponent = initMap();
@@ -200,8 +198,7 @@ function Home() {
                         </div>
                     </div>
                     ${mapComponent}
-                    <div style={{backgroundColor: "white", height: 200}}>aaaa</div>
-                    ${adminInfo}
+                    
                 </div>
 
             </div>

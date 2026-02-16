@@ -310,19 +310,32 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     width: 100%;
 }
 
+.admin-info-logo-description {
+    color: rgba(255,255,255,0.6);
+}
+
 .admin-info-services-container,
 .admin-info-contact-container,
 .admin-info-admin-container {
     display: grid;
     grid-template-rows: 50px 1fr;
     height: 252px;
-    place-items: center;
+    place-items: start;
     border-right: 1px solid black;
     padding: 24px 50px;
+    color: rgba(255,255,255,0.6);
 }
 
 .admin-info-titles {
     font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.admin-info-titles-weighted {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
 }
 
 .admin-info-descriptions {
