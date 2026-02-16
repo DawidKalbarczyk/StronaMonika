@@ -1,5 +1,9 @@
 async function readTime() {
-    const response = await fetch('/backend/data/czas.txt');
+    const isGitHubPages = window.location.hostname.endsWith("github.io");
+    const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
+    const dataUrl = `${repoSegment}/backend/data/czas.txt`;
+    
+    const response = await fetch(dataUrl);
     return await response.text();
 }
 
