@@ -14,8 +14,8 @@ body {
         url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
         background-repeat: repeat;
         background-size: 500px 500px;
-    height: 10000px;
     z-index: -100;
+    height: 120%;
     font-family: 'Arimo', sans-serif;
     /*
     seamless texture
@@ -291,7 +291,10 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     background-size: 500px 500px;
     align-items: center;
     justify-content: space-between;
-    height: 300px;
+    height: 350px;
+    margin-top: 30px;
+    box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
 }
 
 .admin-info-logo-container {
@@ -340,11 +343,25 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
 .admin-info-descriptions {
     line-height: 2;
-
+    width: 100%;
 }
+
+.admin {
+    font-size: 14px;
+}
+
+.admin-info-href {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .map-component {
     border: 0;
     margin-top: 70px;
+    margin-bottom: 0;
+    box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
 }
 
 
