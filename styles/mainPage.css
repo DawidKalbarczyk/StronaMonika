@@ -151,7 +151,7 @@
         -1px  1px 3px rgba(0,0,0,0.8),
          1px  1px 3px rgba(0,0,0,0.8);
     width: 100%;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     transition:
@@ -279,10 +279,11 @@
         filter 0.35s ease-in-out;
     padding: 12% 5% 10% 5%;
     box-sizing: border-box;
+
 }
 
 .work-info-tile {
-    border-radius: 400px;
+    border-radius: 50%;
     padding: 18% 0;
     box-shadow: 0 0 15px 15px rgba(0,0,0,0.4)
 }
@@ -426,11 +427,13 @@
 }
 .unique-info-tile-title,
 .work-info-tile-title {
+    margin-top: 30px;
     font-size: 24px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     transition:
         font-size 0.35s ease-in-out;
     text-align: center;
+    font-weight: bold;
 
 }
 .work-info-tile-title {
@@ -443,7 +446,7 @@
     box-sizing: border-box;
     text-align: center;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    margin-top: 0;
+    margin-top: 12px;
     font-size: 18px;
 }
 
