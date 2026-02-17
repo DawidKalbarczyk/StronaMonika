@@ -11,16 +11,16 @@ function Form() {
                     <input type="hidden" name="_subject" value="Nowe zgłoszenie - zapis na zabieg">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://twoja-strona.pl/dziekujemy.html">
+                    <input type="hidden" name="_next" value="https://twoja-strona.pl/Thanks.html">
                     
                     <!-- Pola formularza -->
-                    <input type="text" name="imie" placeholder="Imię i nazwisko" required>
+                    <input type="text" name="Imie" placeholder="Imię i nazwisko" required>
                     
-                    <input type="tel" name="telefon" placeholder="Numer telefonu" required>
+                    <input type="tel" name="Telefon" placeholder="Numer telefonu" required>
                     
-                    <input type="text" name="data" placeholder="Preferowana data (np. 25.02.2026)">
+                    <input type="text" name="Data" placeholder="Preferowana data (np. 25.02.2026)">
                     
-                    <select name="zabieg" required>
+                    <select name="Zabieg" required>
                       <option value="">Wybierz rodzaj zabiegu</option>
                       
                       <optgroup label="Zabiegi na twarz">
@@ -42,8 +42,8 @@ function Form() {
                       </optgroup>
                     </select>
                     
-                    <textarea name="uwagi" rows="4" placeholder="Opis zabiegu"></textarea>
-                    <textarea name="uwagi" rows="4" placeholder="Dodatkowe uwagi (opcjonalnie)"></textarea>
+                    <textarea name="Opis zabiegu" rows="4" placeholder="Opis zabiegu"></textarea>
+                    <textarea name="Dodatkowe uwagi" rows="4" placeholder="Dodatkowe uwagi (opcjonalnie)"></textarea>
                     
                     <!-- Zgoda RODO -->
                     <div class="checkbox-group">

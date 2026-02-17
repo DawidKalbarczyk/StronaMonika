@@ -1,6 +1,6 @@
 import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
-import {handleReadTime, initHomeScrollHandlers} from "./modules/common.js";
+import {handleReadTime, initHomeScrollHandlers, initFormAnimations} from "./modules/common.js";
 import initMap from "./modules/map.js";
 import Form from "./modules/form.js";
 
@@ -207,5 +207,10 @@ function Home() {
 
         </div>
     `);
+    setTimeout(() => initFormAnimations(), 0);
 }
 export default Home;
+
+
+//TODO skalowanie dla wszystkich urządzeń, w tej chwili kod jest pomieszany i dziala na 1920x1080 lub 1680
+//TODO zmienić w formularzu link dla strony postawionej już za pomocą hostingu
