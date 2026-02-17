@@ -1,6 +1,36 @@
 import AdminInfo from "./adminInfo.js";
 import readTime from "./updateTime.js";
 
+export function initFormAnimations() {
+	const formForm = document.querySelector('.form-form');
+	if (!formForm) return;
+
+	const formSeparator = document.querySelector('.form-separator');
+	const formOther = document.querySelector('.form-other');
+	const formContainer = document.querySelector('.form-container');
+	const formMainContainer = document.querySelector('.form-main-container');
+
+	formForm.classList.add('slide-left');
+	if (formSeparator) formSeparator.classList.add('slide-center');
+	if (formOther) formOther.classList.add('slide-right');
+
+	if (formMainContainer) {
+		const formSlideObs = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					if (formContainer) formContainer.classList.add('form-container-show');
+					formForm.classList.add('slide-in');
+					if (formSeparator) formSeparator.classList.add('slide-in');
+					if (formOther) formOther.classList.add('slide-in');
+					formSlideObs.disconnect();
+				}
+			});
+		}, { rootMargin: '0px 0px -10% 0px' });
+
+		formSlideObs.observe(formMainContainer);
+	}
+}
+
 export function initHomeScrollHandlers() {
 	document.addEventListener('DOMContentLoaded', () => {
 		const observer = new IntersectionObserver((entries) => {
