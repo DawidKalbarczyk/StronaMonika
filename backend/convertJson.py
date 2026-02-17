@@ -1,10 +1,10 @@
 import pandas as pd
 import os
-
+import pytz
 from datetime import datetime
 
-
-now = datetime.now().strftime("%d.%m.%Y, %H:%M:%S")
+polish_tz = pytz.timezone('Europe/Warsaw')
+now = datetime.now(polish_tz).strftime("%d.%m.%Y, %H:%M:%S")
 
 os.makedirs('data', exist_ok=True)
 
