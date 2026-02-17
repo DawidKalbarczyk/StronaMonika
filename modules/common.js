@@ -12,6 +12,9 @@ export function initHomeScrollHandlers() {
 					if (entry.target.classList.contains('work-info-container')) {
 						entry.target.classList.add('work-info-container-show');
 					}
+					if (entry.target.classList.contains('form-container')) {
+						entry.target.classList.add('form-container-show');
+					}
 				}
 			});
 			document.querySelector('body').style.marginTop = "150px";
@@ -21,9 +24,13 @@ export function initHomeScrollHandlers() {
 		if (uniqueContainer) {
 			observer.observe(uniqueContainer);
 		}
-		const workContainer = document.querySelector('.unique-info-container');
+		const workContainer = document.querySelector('.work-info-container');
 		if (workContainer) {
 			observer.observe(workContainer);
+		}
+		const formContainer = document.querySelector('.form-container');
+		if (formContainer) {
+			observer.observe(formContainer);
 		}
 	});
 
@@ -51,6 +58,9 @@ export function initHomeScrollHandlers() {
 			}
 			if (scrollY >= 1400) {
 				document.querySelector(".work-info-tile-container").classList.add("work-info-tile-container-show");
+			}
+			if (scrollY >= 3400) {
+				document.querySelector(".form-container").classList.add('form-container-show');
 			}
 		});
 	}
