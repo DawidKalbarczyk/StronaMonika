@@ -394,8 +394,18 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     margin-top: 2%;
-
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 
+        opacity 1.3s ease-in-out,
+        transform 1.3s ease-in-out;
 }
+
+.form-container-show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 .form-title {
 
     font-size: 32px;
