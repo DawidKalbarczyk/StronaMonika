@@ -59,12 +59,12 @@ export function initHomeScrollHandlers() {
 	window.addEventListener("scroll", () => {
 		const scrollY = window.scrollY;
 
-		if (scrollY >= 400) {
+		if (scrollY >= 300) {
 			document.querySelectorAll(".facebook-pic-fixed-container").forEach((element) => {
 				element.classList.add("facebook-pic-fixed-container-run");
 			});
 		}
-		if (scrollY <= 500) {
+		if (scrollY <= 400) {
 			document.querySelectorAll(".facebook-pic-fixed-container").forEach((element) => {
 				element.classList.remove("facebook-pic-fixed-container-run");
 			});
