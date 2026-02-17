@@ -435,10 +435,12 @@
         font-size 0.35s ease-in-out;
     text-align: center;
     font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
 
 }
 .work-info-tile-title {
     color: #dcdcdc;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 
 .unique-info-tile-description,
@@ -449,10 +451,12 @@
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     margin-top: 12px;
     font-size: 18px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 .work-info-tile-description {
     width: 55%;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
 
     color: #dcdcdc;
 }

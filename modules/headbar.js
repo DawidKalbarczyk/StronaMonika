@@ -25,13 +25,6 @@ function Headbar() {
                 <a href="${path}/Zabiegi.html" class="headbar-link right-header-content-container right-header-content">
                     Zabiegi
                 </a>
-                <a href="${path}/WskazaniaPrzeciw.html" class="headbar-link right-header-content-container right-header-content">
-                    <div style="text-align: center;">
-                        <span style='display: block;'>Wskazania i</span>
-                        <span>przeciwwskazania</span>
-                    </div>
-                        
-                </a>
                 <a href="${path}/Cennik.html" class="headbar-link right-header-content-container right-header-content">
                     Cennik
                 </a>

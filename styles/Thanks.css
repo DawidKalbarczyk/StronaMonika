@@ -1,0 +1,66 @@
+
+html, body {
+    margin: 0;
+    height: 100dvh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 1000px 1000px;
+}
+
+.thanks-main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 80px;
+    flex: 1;
+    overflow: auto;
+    background:
+            linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url("../photos/textures/finnish-grey-brick-random-bond-wrge2b.jpg");
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    box-shadow:
+            inset 0 0 25px 15px rgba(0,0,0,0.5),
+            0 0 15px 10px rgba(0,0,0,0.5);
+
+}
+
+.thanks-title {
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+    font-size: 32px;
+
+}
+
+.thanks-description {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5% 0;
+    font-size: 24px;
+    background-color: rgba(0,0,0,0.25);
+
+}
+
+.thanks-description-weighted {
+    font-weight: bold;
+}
+
+
+
+.thanks-main-container p {
+    text-align: center;
+    color: #dcdcdc;
+    text-shadow: 1px 1px 2px rgba(0,0,0,1);
+}
