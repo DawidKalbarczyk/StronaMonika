@@ -2,6 +2,7 @@ import Headbar from "./modules/headbar.js";
 import Banner from "./modules/banners.js";
 import {handleReadTime, initHomeScrollHandlers} from "./modules/common.js";
 import initMap from "./modules/map.js";
+import Form from "./modules/form.js";
 
 function Home() {
     initHomeScrollHandlers();
@@ -9,6 +10,7 @@ function Home() {
     const headbar = Headbar();
     const banner = Banner();
     const mapComponent = initMap();
+    const form = Form();
     document.body.innerHTML = (`
         ${headbar}
         <div class="main">
@@ -196,6 +198,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
+                    ${form}
                     ${mapComponent}
                     
                 </div>
