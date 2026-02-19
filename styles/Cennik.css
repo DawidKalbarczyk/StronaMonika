@@ -13,6 +13,7 @@ body {
     box-sizing: border-box;
 }
 
+
 .main-cennik-photo {
     object-fit: cover;
     object-position: 0 60%;
@@ -20,6 +21,8 @@ body {
     height: 100%;
     filter: brightness(80%);
 }
+
+
 /* Zmienic aby tło było na headbarze i zmienić
 za pomocą JS zdjęcie i background
  */
@@ -28,11 +31,9 @@ za pomocą JS zdjęcie i background
     background-color: rgba(0,0,0,0.2);
     z-index: 99999999;
     transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
 }
 
-body {
-    margin-top: 0;
-}
 
 .right-header-content-colors-switched {
     color: #dcdcdc;
@@ -40,12 +41,15 @@ body {
 }
 
 .right-header-content-container-colors-switched {
-    border: 3px solid #dcdcdc;
+    border: none;
     box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
 }
 
 .main-content-container {
-    margin: 0 30px 0 0;
+    margin: 70px 0 0 0;
+    padding-right: 78px;
+    background: rgba(0,0,0,0.2);
 }
 
 .main-content-cennik {
