@@ -27,7 +27,7 @@ jobs:
           python-version: '3.x'
 
       - name: Instaluj zależności Python
-        run: pip install pandas openpyxl pytz
+        run: pip install pandas openpyxl pytz json
         working-directory: backend
 
       - name: Konwertuj Excel na JSON + Update Time

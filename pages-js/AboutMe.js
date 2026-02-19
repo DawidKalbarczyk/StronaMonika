@@ -4,6 +4,7 @@ import Banner from "../modules/banners.js";
 import Form from "../modules/form.js";
 import initMap from "../modules/map.js";
 import AdminInfo from "../modules/adminInfo.js";
+import readTime from "../modules/updateTime.js";
 
 function AboutMe() {
     initHomeScrollHandlers();
@@ -122,6 +123,14 @@ function AboutMe() {
     if (photoDiv) observer.observe(photoDiv);
     if (textDiv) observer.observe(textDiv);
     if (descDiv) observer.observe(descDiv);
+
+    // Aktualizacja czasu ostatniej modyfikacji
+    readTime().then(time => {
+        const updateTimeElement = document.getElementById("last-update-time");
+        if (updateTimeElement) {
+            updateTimeElement.textContent = time;
+        }
+    });
 }
 
 export default AboutMe;

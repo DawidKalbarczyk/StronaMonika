@@ -156,7 +156,7 @@ body {
     box-sizing: border-box;
     box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(-100px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
@@ -194,7 +194,7 @@ body {
     padding: 0;
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(-100px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
@@ -235,7 +235,7 @@ body {
     margin-left: 100px;
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(100px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
@@ -254,5 +254,5 @@ body {
 .about-me-container-separator {
     height: 2px;
     background-color: white;
-    margin: 25px 0 0 250px;
+    margin: 25px 250px 0 250px;
 }
