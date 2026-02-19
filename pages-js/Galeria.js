@@ -22,7 +22,7 @@ function Galeria() {
         <div class="main">
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/treatmentPhotos/7364.jpg"/>
             </div>
             <div class="main-content-container main-content-container-gallery">
                 <div class="left-bar"></div>
