@@ -98,6 +98,30 @@ function AboutMe() {
 
         lastScrollTop2 = check <= 0 ? 0 : check;
     });
+
+    // Intersection Observer dla animacji slide-in
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Obserwuj elementy do animacji
+    const photoDiv = document.querySelector('.aboutme-container-photo-div');
+    const textDiv = document.querySelector('.aboutme-container-text-div');
+    const descDiv = document.querySelector('.aboutme-container-desc');
+
+    if (photoDiv) observer.observe(photoDiv);
+    if (textDiv) observer.observe(textDiv);
+    if (descDiv) observer.observe(descDiv);
 }
 
 export default AboutMe;

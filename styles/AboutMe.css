@@ -155,7 +155,14 @@ body {
     border-radius: 0 10% 10% 0;
     box-sizing: border-box;
     box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
 
+.aboutme-container-photo-div.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .aboutme-container-photo {
@@ -186,6 +193,14 @@ body {
     align-items: center;
     padding: 0;
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.aboutme-container-text-div.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .aboutme-container-text-div p {
@@ -214,6 +229,14 @@ body {
     border-radius: 25px 0 0 25px;
     margin-left: 100px;
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateX(300px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.aboutme-container-desc.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .aboutme-container-desc-p {
