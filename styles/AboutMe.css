@@ -209,6 +209,11 @@ body {
     font-size: 22px;
     width: 500px;
     text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.aboutme-container-text-div p:hover {
+    transform: scale(1.05);
 }
 
 .aboutme-container-desc-wrapper {
