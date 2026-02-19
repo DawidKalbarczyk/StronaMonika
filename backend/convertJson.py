@@ -3,6 +3,7 @@ import os
 import pytz
 import json
 from datetime import datetime
+from PIL import Image
 
 polish_tz = pytz.timezone('Europe/Warsaw')
 now = datetime.now(polish_tz).strftime("%d.%m.%Y, %H:%M:%S")
@@ -34,6 +35,19 @@ images = [
     f for f in os.listdir(gallery_path)
     if os.path.splitext(f)[1].lower() in extensions
 ]
+
+output_gallery = os.path.join(script_dir, "data", "gallery.json")
+with open(output_gallery, 'w', encoding='utf-8') as f:
+    json.dump(images, f, indent=2, ensure_ascii=False)
+
+
+compressed_path = os.path.join(script_dir, "gallery_compressed")
+os.makedirs(compressed_path, exist_ok=True)
+
+for filename in images:
+    img = Image.open(os.path.join(gallery_path, filename))
+    img.thumbnail((1920, 1080))
+    img.save(os.path.join(compressed_path, filename), "JPEG", quality=70, optimize=True)
 
 output_gallery = os.path.join(script_dir, "data", "gallery.json")
 with open(output_gallery, 'w', encoding='utf-8') as f:
