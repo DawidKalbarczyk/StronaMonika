@@ -127,7 +127,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     height: 55%;
-    border: 3px groove rgba(255,255,255,0.3);
+    /*border: 3px groove rgba(255,255,255,0.3);*/
     border-radius: 8px;
     padding: 0.7% 3% 0.7% 3%;
     cursor: pointer;
@@ -150,7 +150,6 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     color: #dcdcdc;
     text-align: center;
     font-size: 18px;
-    font-family: 'Arimo', sans-serif;
 
 }
 
@@ -492,7 +491,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 .form-separator-text {
     font-size: 60px;
     font-weight: bold;
-    transform: rotate(270deg);
+    transform: rotate(315deg);
 }
 
 

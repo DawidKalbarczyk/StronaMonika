@@ -31,7 +31,7 @@ function Cennik() {
                     </div>
                     <div class="main-content-info-description-container">
                         <div class="main-content-info-description">
-                                            
+                                         
                         </div>
                     </div>
                 </div>
