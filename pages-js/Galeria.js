@@ -1,5 +1,5 @@
 import Headbar from "../modules/headbar.js";
-import {initHomeScrollHandlers} from "../modules/common.js";
+import {initHomeScrollHandlers, initFormAnimations} from "../modules/common.js";
 import Banner from "../modules/banners.js";
 import Form from "../modules/form.js";
 import initMap from "../modules/map.js";
@@ -77,6 +77,8 @@ function Galeria() {
         lastScrollTop2 = check <= 0 ? 0 : check;
     });
 
+    setTimeout(() => initFormAnimations(), 0);
+
     readTime().then(time => {
         const updateTimeElement = document.getElementById("last-update-time");
         if (updateTimeElement) {
@@ -87,20 +89,29 @@ function Galeria() {
     generatePhotosHTML('../backend/gallery').then(photos => {
         document.querySelector('.main-content-photos').innerHTML = photos;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add("visible");
-                    }, index * 150);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll(".photo-simple, .photo-center").forEach((photo) => {
-            observer.observe(photo);
+        const photoElements = document.querySelectorAll(".photo-simple, .photo-center");
+        photoElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
         });
+
+        setTimeout(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        el.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
+                        requestAnimationFrame(() => {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        });
+                        observer.unobserve(el);
+                    }
+                });
+            }, { rootMargin: '0px 0px -50% 0px' });
+
+            photoElements.forEach(photo => observer.observe(photo));
+        }, 100);
 
         document.querySelectorAll(".photo-simple img, .photo-center img").forEach((photo) => {
             photo.addEventListener("click", (e) => {

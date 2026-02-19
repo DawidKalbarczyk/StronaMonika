@@ -13,13 +13,11 @@
     grid-template-columns: 1fr 3fr;
 
     background:
-            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/textures/finnish-grey-brick-random-bond-wrge2b.jpg");
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
-    background-size: 400px 400px;
+    background-size: 300px 300px;
 
-
-    background-color: rgba(166, 168, 168, 0.95);
     border-top-right-radius: 70% 85%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
@@ -214,10 +212,10 @@
 .work-info-tile-container {
     display: grid;
     background:
-            linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-            url("../photos/textures/finnish-grey-brick-random-bond-wrge2b.jpg");
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
-    background-size: 400px 400px;
+    background-size: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
     border: 0 solid red;
