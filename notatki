@@ -5,7 +5,6 @@ import Form from "../modules/form.js";
 import initMap from "../modules/map.js";
 import AdminInfo from "../modules/adminInfo.js";
 import readTime from "../modules/updateTime.js";
-import generatePhotosHTML from "../modules/generatePhotos.js";
 
 function Galeria() {
     initHomeScrollHandlers();
@@ -31,30 +30,24 @@ function Galeria() {
                         <p class="main-content-info-title">Galeria</p>
                     </div>
                     <div class="main-content-aboutme">
-                        <div class="main-content-photos">
-                        <!-- tu wejdą zdjęcia -->
-                        </div>
-                        <div class="gallery-container-separator">
+
+                    WDAWDADWAADW
                     </div>
                     ${form}
                     ${mapContent}
                     ${adminInfo}
                 </div>
-                
-                
+
+
             </div>
-            
-            
+
+
         </div>
-                
-                
-                
-        
+
+
+
+
     `;
-
-
-
-
     document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-gallery");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
@@ -83,42 +76,117 @@ function Galeria() {
             updateTimeElement.textContent = time;
         }
     });
-
-    generatePhotosHTML('../backend/gallery').then(photos => {
-        document.querySelector('.main-content-photos').innerHTML = photos;
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add("visible");
-                    }, index * 150);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll(".photo-simple, .photo-center").forEach((photo) => {
-            observer.observe(photo);
-        });
-
-        document.querySelectorAll(".photo-simple img, .photo-center img").forEach((photo) => {
-            photo.addEventListener("click", (e) => {
-                const overlay = document.createElement("div");
-                overlay.classList.add("photo-overlay");
-
-                const img = document.createElement("img");
-                img.src = e.target.src;
-                img.classList.add("photo-overlay-img");
-
-                overlay.appendChild(img);
-                document.body.appendChild(overlay);
-
-                overlay.addEventListener("click", () => overlay.remove());
-            });
-        });
-    });
-
 }
 
 export default Galeria;
+
+body {
+    margin-top: 0 !important;
+}
+
+.header {
+    z-index: 9999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.left-bar {}
+
+.main-gallery-photo-container {
+    width: 100%;
+    height: 650px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+}
+
+.main-gallery-photo {
+    object-fit: cover;
+    object-position: 0 60%;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+.header-gallery {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 99999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
+}
+
+.right-header-content-colors-switched {
+    color: #dcdcdc;
+    text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
+}
+
+.right-header-content-container-colors-switched {
+    border: none;
+    box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
+}
+
+.main-content-container {
+    margin: 70px 0 0 0;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.main-content-container-gallery {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 76px;
+}
+
+
+.main-content-aboutme {
+    z-index: 1000;
+    margin: 64px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-content-container-aboutme .main-content-info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container-aboutme .left-bar {
+    grid-column: 1;
+    grid-row: 2 / span 100;
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    /*border-bottom: 2px solid #dcdcdc;*/
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content-info-title {
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    border-bottom: 2px solid white;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.map-component {
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.admin-info-footer {
+    margin-top: 70px;
+}

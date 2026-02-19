@@ -5,6 +5,7 @@ import {initHomeScrollHandlers, initFormAnimations} from "../modules/common.js";
 import initMap from "../modules/map.js";
 import Form from "../modules/form.js";
 import AdminInfo from "../modules/adminInfo.js";
+import readTime from "../modules/updateTime.js";
 
 function Cennik() {
     initHomeScrollHandlers();
@@ -110,6 +111,14 @@ function Cennik() {
         }
 
         lastScrollTop2 = check <= 0 ? 0 : check;
+    });
+
+    // Aktualizacja czasu ostatniej modyfikacji
+    readTime().then(time => {
+        const updateTimeElement = document.getElementById("last-update-time");
+        if (updateTimeElement) {
+            updateTimeElement.textContent = time;
+        }
     });
 }
 
