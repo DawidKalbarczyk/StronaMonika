@@ -30,8 +30,16 @@ jobs:
         run: pip install pandas openpyxl pytz Pillow
         working-directory: backend
 
-      - name: Konwertuj Excel na JSON + Update Time
+      - name: Konwertuj Excel na JSON + Update Time + Scale Gallery
         run: python convertJson.py
+        working-directory: backend
+
+      - name: Instaluj zależności Python - Word
+        run: pip install python-docx odfpy
+        working-directory: backend
+
+      - name: Konwertuj Word na JSON
+        run: python convertWord.py
         working-directory: backend
 
       - name: Przygotuj pliki do wrzucenia

@@ -15,7 +15,7 @@ function ExcelReader() {
 
                 const itemName = document.createElement('div');
                 itemName.className = 'item-props';
-                itemName.innerHTML = `${item.NAZWA}`;
+                itemName.innerHTML = `${item.ZABIEG}`;
                 itemDiv.appendChild(itemName);
 
                 const separator1 = document.createElement('div');
@@ -23,15 +23,29 @@ function ExcelReader() {
                 separator1.innerHTML = '|';
                 itemDiv.appendChild(separator1);
 
-                const itemDescription = document.createElement('div');
-                itemDescription.className = 'item-props';
-                itemDescription.innerHTML = `${item.OPIS}`;
-                itemDiv.appendChild(itemDescription);
+
+
+
+                const itemTime = document.createElement('div');
+                itemTime.className = 'item-props';
+                itemTime.innerHTML = `${item.CZASZABIEGU}`;
+                itemDiv.appendChild(itemTime);
 
                 const separator2 = document.createElement('div');
                 separator2.className = 'separator';
                 separator2.innerHTML = '|';
                 itemDiv.appendChild(separator2);
+
+
+                const itemDescription = document.createElement('div');
+                itemDescription.className = 'item-props';
+                itemDescription.innerHTML = `${item.OPIS}`;
+                itemDiv.appendChild(itemDescription);
+
+                const separator3 = document.createElement('div');
+                separator3.className = 'separator';
+                separator3.innerHTML = '|';
+                itemDiv.appendChild(separator3);
 
                 const itemPrice = document.createElement('div');
                 itemPrice.className = 'item-props';
