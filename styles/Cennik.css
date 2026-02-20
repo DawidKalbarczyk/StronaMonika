@@ -84,7 +84,7 @@ za pomocą JS zdjęcie i background
 .item-container { /* Rekord */
 
     display: grid;
-    grid-template-columns: 1fr auto 2fr auto 1fr;
+    grid-template-columns: 2fr auto 1.1fr auto 3fr auto 1fr;
     align-items: center;
     justify-content: center;
     margin-top: 0;
@@ -139,9 +139,9 @@ za pomocą JS zdjęcie i background
     justify-content: center;
     justify-self: center;
     font-size: 16px;
-    padding-bottom: 12px;
+    padding: 0 24px 12px 24px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    word-break: break-all;
+    text-align: center;
 }
 
 .item-props-titles {
