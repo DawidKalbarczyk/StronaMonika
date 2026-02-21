@@ -198,6 +198,12 @@ body {
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
+@media(max-width:1920px) {
+    .aboutme-container-text-div {
+        margin: 0 150px 0 0;
+    }
+}
+
 .aboutme-container-text-div.visible {
     opacity: 1;
     transform: translateX(0);
@@ -222,6 +228,12 @@ body {
     margin-right: -135px;
     margin-left: -100px;
 
+}
+
+@media(max-width: 1920px) {
+    .aboutme-container-desc-wrapper {
+        margin-right: -173px;
+    }
 }
 
 .aboutme-container-desc {
