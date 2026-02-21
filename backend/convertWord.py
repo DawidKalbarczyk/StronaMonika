@@ -11,13 +11,18 @@ def czytaj_plik(sciezka):
     if ext == ".docx":
         doc = Document(sciezka)
         for akapit in doc.paragraphs:
+            print(repr(akapit.text))
+            tekst = " ".join(akapit.text.split())
             if akapit.text.strip():
-                akapity.append(akapit.text)
+                akapity.append(tekst)
 
     elif ext == ".odt":
         doc = load(sciezka)
         for akapit in doc.text.getElementsByType(P):
-            tekst = "".join(node.data for node in akapit.childNodes if node.nodeType == 3)
+            tekst = " ".join(
+                node.data for node in akapit.childNodes if node.nodeType == 3
+            )
+            tekst = " ".join(tekst.split())  # normalizacja spacji
             if tekst.strip():
                 akapity.append(tekst)
 
@@ -41,7 +46,7 @@ def czytaj_word():
             continue
 
         # Część 1: akapity pisane CAPS LOCK (przed separatorem)
-        czesc_1 = [a for a in akapity if a.isupper()]
+        czesc_1 = [a for a in akapity if a.upper() == a]
 
         # Szukanie separatora
         indeks = None
@@ -68,7 +73,7 @@ def czytaj_word():
 
         print(f"Odczytano: {plik}")
 
-    output_path = os.path.join(script_dir, "data", "wynik.json")
+    output_path = os.path.join(script_dir, "data", "descriptions.json")
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(wyniki, f, ensure_ascii=False, indent=4)
 

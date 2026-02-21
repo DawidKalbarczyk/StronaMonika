@@ -5,9 +5,8 @@ import Form from "../modules/form.js";
 import initMap from "../modules/map.js";
 import AdminInfo from "../modules/adminInfo.js";
 import readTime from "../modules/updateTime.js";
-import treatmentLoad from "../modules/treatmentLoad.js";
 
-function Zabiegi() {
+function PickedTreatment() {
     initHomeScrollHandlers();
     document.querySelector('body').style.marginTop = "0px";
 
@@ -21,19 +20,18 @@ function Zabiegi() {
         ${headbar}
         <div class="main">
             ${banner}
-            <div class="main-treat-photo-container">
-                 <img class="main-treat-photo" alt="main-treat-photo" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
+            <div class="main-gallery-photo-container">
+                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
             </div>
-            <div class="main-content-container main-content-container-treat">
+            <div class="main-content-container main-content-container-gallery">
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
-                        <p class="main-content-info-title">Zabiegi</p>
+                        <p class="main-content-info-title">Galeria</p>
                     </div>
-                    <div class="main-content-treat">
-                          <div class="main-treatment">
-                          
-                          </div>
+                    <div class="main-content-aboutme">
+
+                    WDAWDADWAADW
                     </div>
                     ${form}
                     ${mapContent}
@@ -46,14 +44,12 @@ function Zabiegi() {
 
         </div>
 
-    
+
 
 
     `;
-    treatmentLoad();
-
     document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
-    document.querySelector(".header").classList.add("header-treat");
+    document.querySelector(".header").classList.add("header-gallery");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
     });
@@ -66,9 +62,9 @@ function Zabiegi() {
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
         if (check > 630) {
-            document.querySelector('.header').classList.remove('header-treat');
+            document.querySelector('.header').classList.remove('header-gallery');
         } else {
-            document.querySelector('.header').classList.add('header-treat');
+            document.querySelector('.header').classList.add('header-gallery');
         }
 
         lastScrollTop2 = check <= 0 ? 0 : check;
@@ -82,4 +78,4 @@ function Zabiegi() {
     });
 }
 
-export default Zabiegi;
+export default PickedTreatment;
