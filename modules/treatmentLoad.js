@@ -8,7 +8,6 @@ function treatmentLoad() {
         .then(res => res.json())
         .then(data => {
             treatmentList = Object.values(data).flatMap(plik => plik.part1);
-            console.log(treatmentList);
             let treatmentDiv = document.querySelector(".main-treatment");
             treatmentList.forEach((treatment) => {
                 //Utworzenie linka z parametrem
