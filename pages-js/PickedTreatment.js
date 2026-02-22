@@ -5,10 +5,14 @@ import Form from "../modules/form.js";
 import initMap from "../modules/map.js";
 import AdminInfo from "../modules/adminInfo.js";
 import readTime from "../modules/updateTime.js";
+import pickedTreatmentLoad from "../modules/pickedTreatmentLoad.js";
+
 
 function PickedTreatment() {
     initHomeScrollHandlers();
+    pickedTreatmentLoad()
     document.querySelector('body').style.marginTop = "0px";
+
 
     const headbar = Headbar();
     const banner = Banner();
@@ -27,11 +31,26 @@ function PickedTreatment() {
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
-                        <p class="main-content-info-title">Galeria</p>
+                        <!--<p class="main-content-info-title">Galeria</p> -->
                     </div>
                     <div class="main-content-aboutme">
-
-                    WDAWDADWAADW
+                        <div class="treatment-description-1st-div">
+                            <div class="treatment-description-1st-text-container">
+                                
+                            </div>
+                            <div class="treatment-description-1st-photo-container">
+                            
+                            </div>
+                        </div>
+                        <div class="treatment-description-2nd-div">
+                            <div></div>
+                            <div class="treatment-description-2nd-photo-container">
+                            
+                            </div>
+                            <div class="treatment-description-2nd-text-container">
+                            
+                            </div>
+                        </div>
                     </div>
                     ${form}
                     ${mapContent}
