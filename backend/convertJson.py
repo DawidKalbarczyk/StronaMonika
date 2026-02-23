@@ -19,7 +19,6 @@ sheet = pd.read_excel(path)
 
 sheet = sheet.sort_values(by="ZABIEG", ascending=True)
 
-# Grupowanie po nazwie zabiegu
 groups = {}
 for _, row in sheet.iterrows():
     zabieg = str(row['ZABIEG']).strip()
@@ -30,6 +29,17 @@ for _, row in sheet.iterrows():
         'OPIS': row['OPIS'],
         'CENA': row['CENA']
     })
+
+for zabieg in groups:
+    def sort_key(x):
+        cena = str(x['CENA'])
+        if '+' in cena:
+            return float('inf')
+        try:
+            return float(cena.replace(' ', '').split('-')[0].strip())
+        except ValueError:
+            return float('inf')
+    groups[zabieg].sort(key=sort_key)
 
 result = [{'ZABIEG': k, 'items': v} for k, v in groups.items()]
 
