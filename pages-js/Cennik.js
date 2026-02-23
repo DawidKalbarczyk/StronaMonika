@@ -40,10 +40,8 @@ function Cennik() {
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
                     <div class="item-container item-container-titles">
-                        <div class="item-props item-props-titles">Zabieg</div>
-                        <div class="separator">|</div>
                         <div class="item-props item-props-titles">Czas Trwania</div>
-                         <div class="separator">|</div>
+                        <div class="separator">|</div>
                         <div class="item-props item-props-titles">Opis</div>
                         <div class="separator">|</div>
                         <div class="item-props item-props-titles">Cena</div>

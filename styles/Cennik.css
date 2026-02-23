@@ -85,7 +85,7 @@ za pomocą JS zdjęcie i background
 .item-container { /* Rekord */
 
     display: grid;
-    grid-template-columns: 2fr auto 1.1fr auto 3fr auto 1fr;
+    grid-template-columns: 1.1fr auto 3fr auto 1fr;
     align-items: center;
     justify-content: center;
     margin-top: 0;
@@ -95,6 +95,19 @@ za pomocą JS zdjęcie i background
     opacity: 0;
     transition: opacity 1.5s ease-out;
 
+}
+
+.item-group-header {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 24px 10px 24px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(220,220,220,0.4);
+    background: rgba(255,255,255,0.06);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
 .item-container.item-container-visible {
