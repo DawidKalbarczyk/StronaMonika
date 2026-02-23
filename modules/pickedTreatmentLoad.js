@@ -92,8 +92,7 @@ function displayTreatment(data) {
 
     const animatedElements = [
         part2Div,
-        firstPhoto,
-        secondPhoto,
+        firstPhotoContainer,
         part3Div,
         part4Div,
         part5Div,
@@ -104,13 +103,18 @@ function displayTreatment(data) {
         el.style.transform = 'translateY(60px)';
     });
 
+    // secondPhotoContainer ma w CSS transform: translateY(-50%) - osobna animacja
+    secondPhotoContainer.style.opacity = '0';
+    secondPhotoContainer.style.transform = 'translateY(calc(-50% + 60px))';
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
+                const isAbsolute = entry.target === secondPhotoContainer;
                 entry.target.style.animationDelay = `${i * 0.12}s`;
-                entry.target.classList.add('slide-in-pt');
+                entry.target.classList.add(isAbsolute ? 'slide-in-pt-absolute' : 'slide-in-pt');
                 entry.target.addEventListener('animationend', () => {
-                    entry.target.classList.remove('slide-in-pt');
+                    entry.target.classList.remove('slide-in-pt', 'slide-in-pt-absolute');
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = '';
                     entry.target.style.animationDelay = '';
@@ -121,6 +125,7 @@ function displayTreatment(data) {
     }, { threshold: 0.3 });
 
     animatedElements.forEach(el => observer.observe(el));
+    observer.observe(secondPhotoContainer);
 }
 
 export default PickedTreatmentLoad;
