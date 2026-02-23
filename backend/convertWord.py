@@ -1,6 +1,7 @@
 from docx import Document
 from odf.opendocument import load
 from odf.text import P
+from odf import teletype
 import json
 import os
 
@@ -19,9 +20,7 @@ def czytaj_plik(sciezka):
     elif ext == ".odt":
         doc = load(sciezka)
         for akapit in doc.text.getElementsByType(P):
-            tekst = " ".join(
-                node.data for node in akapit.childNodes if node.nodeType == 3
-            )
+            tekst = teletype.extractText(akapit)
             tekst = " ".join(tekst.split())  # normalizacja spacji
             if tekst.strip():
                 akapity.append(tekst)

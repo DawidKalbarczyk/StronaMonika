@@ -44,6 +44,31 @@ function treatmentLoad() {
                 treatmentDiv.appendChild(treatmentLink);
 
             });
+
+            let batchIndex = 0;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = `${batchIndex * 0.1}s`;
+                        entry.target.classList.add('slide-in');
+                        batchIndex++;
+                        observer.unobserve(entry.target);
+                    }
+                });
+                batchIndex = 0;
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.treatment-item').forEach((item) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(60px)';
+                item.addEventListener('animationend', () => {
+                    item.classList.remove('slide-in');
+                    item.style.opacity = '1';
+                    item.style.transform = '';
+                    item.style.animationDelay = '';
+                }, { once: true });
+                observer.observe(item);
+            });
         });
 }
 export default treatmentLoad;

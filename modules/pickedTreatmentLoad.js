@@ -77,6 +77,50 @@ function displayTreatment(data) {
     part3Div.innerHTML = data.part3.join('<br>');
     const secondTextContainer = document.querySelector(".treatment-description-2nd-text-container");
     secondTextContainer.appendChild(part3Div);
+
+    const treatmentProsContainer = document.querySelector(".treatment-pros-div");
+    const part4Div = document.createElement('p');
+    part4Div.innerHTML = `${data.part4.join('<br>')}`;
+    part4Div.className = "treatment-pros-text";
+    treatmentProsContainer.appendChild(part4Div);
+
+    const treatmentConsContainer = document.querySelector(".treatment-cons-div");
+    const part5Div = document.createElement('p');
+    part5Div.innerHTML = `${data.part5.join('<br>')}`;
+    part5Div.className = "treatment-cons-text";
+    treatmentConsContainer.appendChild(part5Div);
+
+    const animatedElements = [
+        part2Div,
+        firstPhoto,
+        secondPhoto,
+        part3Div,
+        part4Div,
+        part5Div,
+    ];
+
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(60px)';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationDelay = `${i * 0.12}s`;
+                entry.target.classList.add('slide-in-pt');
+                entry.target.addEventListener('animationend', () => {
+                    entry.target.classList.remove('slide-in-pt');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = '';
+                    entry.target.style.animationDelay = '';
+                }, { once: true });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    animatedElements.forEach(el => observer.observe(el));
 }
 
 export default PickedTreatmentLoad;
