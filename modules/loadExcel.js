@@ -9,52 +9,46 @@ function ExcelReader() {
     fetch(dataUrl)
         .then(res => res.json())
         .then(data => {
-            data.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'item-container';
+            data.forEach(group => {
+                // Nagłówek grupy (nazwa zabiegu)
+                const groupHeader = document.createElement('div');
+                groupHeader.className = 'item-group-header';
+                groupHeader.textContent = group.ZABIEG;
+                container.appendChild(groupHeader);
 
-                const itemName = document.createElement('div');
-                itemName.className = 'item-props';
-                itemName.innerHTML = `${item.ZABIEG}`;
-                itemDiv.appendChild(itemName);
+                // Wiersze grupy (czas, opis, cena)
+                group.items.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'item-container';
 
-                const separator1 = document.createElement('div');
-                separator1.className = 'separator';
-                separator1.innerHTML = '|';
-                itemDiv.appendChild(separator1);
+                    const itemTime = document.createElement('div');
+                    itemTime.className = 'item-props';
+                    itemTime.innerHTML = `${item.CZASZABIEGU}`;
+                    itemDiv.appendChild(itemTime);
 
+                    const separator1 = document.createElement('div');
+                    separator1.className = 'separator';
+                    separator1.innerHTML = '|';
+                    itemDiv.appendChild(separator1);
 
+                    const itemDescription = document.createElement('div');
+                    itemDescription.className = 'item-props';
+                    itemDescription.innerHTML = `${item.OPIS}`;
+                    itemDiv.appendChild(itemDescription);
 
+                    const separator2 = document.createElement('div');
+                    separator2.className = 'separator';
+                    separator2.innerHTML = '|';
+                    itemDiv.appendChild(separator2);
 
-                const itemTime = document.createElement('div');
-                itemTime.className = 'item-props';
-                itemTime.innerHTML = `${item.CZASZABIEGU}`;
-                itemDiv.appendChild(itemTime);
+                    const itemPrice = document.createElement('div');
+                    itemPrice.className = 'item-props';
+                    itemPrice.innerHTML = `${item.CENA} zł`;
+                    itemDiv.appendChild(itemPrice);
 
-                const separator2 = document.createElement('div');
-                separator2.className = 'separator';
-                separator2.innerHTML = '|';
-                itemDiv.appendChild(separator2);
-
-
-                const itemDescription = document.createElement('div');
-                itemDescription.className = 'item-props';
-                itemDescription.innerHTML = `${item.OPIS}`;
-                itemDiv.appendChild(itemDescription);
-
-                const separator3 = document.createElement('div');
-                separator3.className = 'separator';
-                separator3.innerHTML = '|';
-                itemDiv.appendChild(separator3);
-
-                const itemPrice = document.createElement('div');
-                itemPrice.className = 'item-props';
-                itemPrice.innerHTML = `${item.CENA} zł`;
-                itemDiv.appendChild(itemPrice);
-
-                container.appendChild(itemDiv);
+                    container.appendChild(itemDiv);
+                });
             });
-
         })
         .catch(error => {
             console.error("Failed to load cennik.json:", error);

@@ -10,7 +10,6 @@ import pickedTreatmentLoad from "../modules/pickedTreatmentLoad.js";
 
 function PickedTreatment() {
     initHomeScrollHandlers();
-    pickedTreatmentLoad()
     document.querySelector('body').style.marginTop = "0px";
 
 
@@ -25,7 +24,7 @@ function PickedTreatment() {
         <div class="main">
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>
             </div>
             <div class="main-content-container main-content-container-gallery">
                 <div class="left-bar"></div>
@@ -51,6 +50,17 @@ function PickedTreatment() {
                             
                             </div>
                         </div>
+                        <div class="treatment-pros-cons-div">
+                            <p class="treatment-pros-cons-title">WSKAZANIA</p>
+                            <p class="treatment-pros-cons-title">PRZECIWWSKAZANIA</p>
+                            <div class="treatment-pros-div">
+                             
+                            </div>
+                            <div class="treatment-cons-div">
+                                
+                            </div>
+                        </div>
+                        
                     </div>
                     ${form}
                     ${mapContent}
@@ -95,6 +105,8 @@ function PickedTreatment() {
             updateTimeElement.textContent = time;
         }
     });
+
+    pickedTreatmentLoad();
 }
 
 export default PickedTreatment;

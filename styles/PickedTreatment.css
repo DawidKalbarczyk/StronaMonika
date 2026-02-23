@@ -1,4 +1,19 @@
 
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-pt {
+    animation: slideInFromBottom 1.1s ease-out forwards;
+}
+
 body {
     margin-top: 0 !important;
 }
@@ -17,14 +32,16 @@ body {
     height: 650px;
     padding: 0 0 20px 0;
     box-sizing: border-box;
+
 }
 
 .main-gallery-photo {
     object-fit: cover;
-    object-position: 0 60%;
+    object-position: 0% 40%;
     width: 100%;
     height: 100%;
     filter: brightness(80%);
+
 }
 
 .header-gallery {
@@ -126,7 +143,8 @@ body {
         justify-content: center;
         align-items: center;
         background-color: rgba(0,0,0,0.7);
-        padding: 24px;
+        padding: 36px 48px;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
     }
         .treatment-description-1st-text {
             color: white;
@@ -143,6 +161,7 @@ body {
         bottom: -20%;
         border-radius: 500px 500px 0 0;
         z-index: 999;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
     }
         .treatment-description-1st-photo {
             object-fit: cover;
@@ -150,6 +169,7 @@ body {
             width: 100%;
             height: 100%;
             filter: brightness(0.9) contrast(1.1);
+
 
         }
 
@@ -172,6 +192,7 @@ body {
         transform: translateY(-50%);
         border-radius: 0 500px 500px 0;
         z-index: 999;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8)
     }
         .treatment-description-2nd-photo {
             object-fit: cover;
@@ -187,9 +208,52 @@ body {
         align-items: center;
         background-color: rgba(0,0,0,0.7);
         padding: 10% 15%;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
     }
         .treatment-description-2nd-text {
             color: white;
             font-size: 20px;
             line-height: 2;
 }
+
+.treatment-pros-cons-div {
+    padding: 100px 50px 35px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 40px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+    .treatment-pros-cons-title {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        border-bottom: 2px solid white;
+        padding-bottom: 12px;
+        margin: 0 0 16px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        background-color: rgba(0,0,0,0.7);
+        padding: 200px 150px 100px 200px;
+        overflow: hidden;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+    }
+    .treatment-pros-div {
+        border-radius: 400px 400px 0 0;
+    }
+    .treatment-cons-div {
+        border-radius: 0 0 400px 400px;
+    }
+
+        .treatment-pros-text,
+        .treatment-cons-text {
+            color: white;
+            font-size: 22px;
+            line-height: 2;
+            margin: 0;
+            text-align: justify;
+
+        }
