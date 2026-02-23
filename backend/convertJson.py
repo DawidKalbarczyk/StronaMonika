@@ -19,13 +19,23 @@ sheet = pd.read_excel(path)
 
 sheet = sheet.sort_values(by="ZABIEG", ascending=True)
 
+# Grupowanie po nazwie zabiegu
+groups = {}
+for _, row in sheet.iterrows():
+    zabieg = str(row['ZABIEG']).strip()
+    if zabieg not in groups:
+        groups[zabieg] = []
+    groups[zabieg].append({
+        'CZASZABIEGU': row['CZASZABIEGU'],
+        'OPIS': row['OPIS'],
+        'CENA': row['CENA']
+    })
+
+result = [{'ZABIEG': k, 'items': v} for k, v in groups.items()]
+
 output_path = os.path.join(script_dir,"data", "cennik.json")
-sheet.to_json(
-    output_path,
-    orient="records",
-    force_ascii=False,
-    indent=2
-)
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(result, f, ensure_ascii=False, indent=2)
 
 
 gallery_path = os.path.join(script_dir, "gallery")
