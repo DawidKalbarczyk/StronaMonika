@@ -17,7 +17,7 @@ function AboutMe() {
     const adminInfo = AdminInfo();
     document.body.innerHTML = `
         ${headbar}
-        <div class="main">
+        <div class="main" id="main-link">
             ${banner}
            
             <div class="main-aboutme-photo-container">
