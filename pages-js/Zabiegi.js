@@ -19,7 +19,7 @@ function Zabiegi() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main">
+        <div class="main"  id="main-link">
             ${banner}
             <div class="main-treat-photo-container">
                  <img class="main-treat-photo" alt="main-treat-photo" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>

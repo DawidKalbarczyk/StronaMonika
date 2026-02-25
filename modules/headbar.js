@@ -28,12 +28,26 @@ function Headbar() {
                 <a href="${path}/Cennik.html" class="headbar-link right-header-content-container right-header-content">
                     Cennik
                 </a>
+                <a href="#main-link" class="right-header-return-button-link">
+                    <div class="right-header-absolute">
+                        <img alt="return-button" class="right-header-return-button" src="../photos/icons/return-button.png"/>
+                </div>
+                </a>
+                
+            </div>
+            <div class="right-header right-header2">
                 <a href="${path}/Kontakt.html" class="headbar-link right-header-content-container right-header-content">
                     Kontakt
                 </a>
                 <a href="${path}/Galeria.html" class="headbar-link right-header-content-container right-header-content">
                     Galeria
                 </a>
+                <a href="#contact" class="header-button-link">
+                    <button class="header-button">
+                        Umów wizytę
+                    </button>
+                </a>
+                
             </div>
             <div class="socialmedia-header">
                 <a target="_blank" rel="noreferrer" href="https://www.facebook.com/obsessionkosmetologia/" class="socialmedia-container">

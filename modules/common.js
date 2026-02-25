@@ -70,8 +70,10 @@ export function initHomeScrollHandlers() {
 		if (check > 50) {
 			if (check > lastScrollTop) {
 				document.querySelector('.header').classList.add('header-off');
+				document.querySelector('.right-header-return-button-link').classList.add('right-header-return-button-link-enabled');
 			} else if (check < lastScrollTop) {
 				document.querySelector('.header').classList.remove('header-off');
+				document.querySelector('.right-header-return-button-link').classList.remove('right-header-return-button-link-enabled');
 			}
 		}
 
