@@ -21,7 +21,7 @@ function PickedTreatment() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main">
+        <div class="main" id="main-link">
             ${banner}
             <div class="main-gallery-photo-container">
                  <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>

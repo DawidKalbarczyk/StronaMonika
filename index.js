@@ -13,7 +13,7 @@ function Home() {
     const form = Form();
     document.body.innerHTML = (`
         ${headbar}
-        <div class="main">
+        <div class="main" id="main-link">
             ${banner}
             <div class="main-content-container">
                 <div class="left-bar"></div>

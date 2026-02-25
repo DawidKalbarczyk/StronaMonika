@@ -1,14 +1,162 @@
 import Headbar from "../modules/headbar.js";
+import {initHomeScrollHandlers} from "../modules/common.js";
+import Banner from "../modules/banners.js";
+import Form from "../modules/form.js";
+import initMap from "../modules/map.js";
+import AdminInfo from "../modules/adminInfo.js";
+import readTime from "../modules/updateTime.js";
 
 function Kontakt() {
+    initHomeScrollHandlers();
+    document.querySelector('body').style.marginTop = "0px";
 
     const headbar = Headbar();
+    const banner = Banner();
+    const form = Form();
+    const mapContent = initMap();
+    const adminInfo = AdminInfo();
+
     document.body.innerHTML = `
-        <div>
-            ${headbar}
-            <div class="test">Kontakt</div>
+        ${headbar}
+        <div class="main" id="main-link">
+            ${banner}
+            <div class="main-contact-photo-container">
+                 <img class="main-contact-photo" alt="main-contact-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+            </div>
+            <div class="main-content-container main-content-container-contact">
+                <div class="left-bar"></div>
+                <div class="main-content-info">
+                    <div class="main-content-info-title-container">
+                        <p class="main-content-info-title">Kontakt</p>
+                    </div>
+                    <div class="main-content-contact">
+                        <div class="social-media-wrapper">
+                            <div class="social-media-container">
+                                <a target="_blank" href="https://www.facebook.com/obsessionkosmetologia/" class="social-media-link">
+                                    <div class="social-media-item-container">
+                                        <p class="social-media-item-title">
+                                            Facebook
+                                        </p>
+                                        <img alt="facebook-picture" class="social-media-item-photo" src="../photos/icons/facebook-icon.png"/>
+                                        
+                                    </div>
+                                </a>
+                                <a target="_blank" href="" class="social-media-link">
+                                    <div class="social-media-item-container">
+                                        <p class="social-media-item-title">
+                                            Instagram
+                                        </p>
+                                        <img alt="instagram-picture" class="social-media-item-photo" src="../photos/icons/instagram%20(1).png"/>
+                                        
+                                    </div>
+                                </a>
+                                <a target="_blank" href="" class="social-media-link">
+                                    <div class="social-media-item-container">
+                                        <p class="social-media-item-title">
+                                            WhatsApp
+                                        </p>
+                                        <img alt="whatsapp-picture" class="social-media-item-photo" src="../photos/icons/whatsapp.png"/>
+                                        
+                                    </div>
+                                </a>
+                                <a target="_blank" href="https://www.google.com/search?q=salon+obsession+monika+molenda" class="social-media-link">
+                                    <div class="social-media-item-container">
+                                        <p class="social-media-item-title">
+                                            Google
+                                        </p>
+                                        <img alt="google-picture" class="social-media-item-photo" src="../photos/icons/google.png"/>
+                                        
+                                    </div>
+                                </a>
+                                <a target="_blank" href="https://www.google.com/maps/place/Salon+Kosmetologiczny+Obsession+Monika+Molenda/@51.5856847,21.5516814,17z/data=!3m1!4b1!4m6!3m5!1s0x471893b532066d7b:0xfd0915e32f4c2dcd!8m2!3d51.5856814!4d21.5542563!16s%2Fg%2F11y14_3k78?entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D/" class="social-media-link">
+                                    <div class="social-media-item-container">
+                                        <p class="social-media-item-title">
+                                            Google Maps
+                                        </p>
+                                        <img alt="google-maps-picture" class="social-media-item-photo" src="../photos/icons/google-maps.png"/>
+                                        
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="company-details">
+                            <div class="company-details-wrapper">
+                                <div class="company-details-container">
+                                    <div class="company-details-text-container">
+                                        <p class="paragraph-title">Dane o firmie</p>
+                                        <p>NIP: 8121814059</p>
+                                        <p>REGON: 365937706</p>
+                                        <p>Adres:</p>
+                                        <p class="paragraph-indent">ul. Bohaterów Getta 24 lok.4</p>
+                                        <p class="paragraph-indent">26-900 Kozienice</p>
+                                        <p>Działalność od 2016 roku</p>
+                                    </div>
+                                    <div class="company-details-photo-container">
+                                        <img alt="contact-photo1" class="company-details-photo" src="../photos/myPhotos/contact-photo-1.jpg"/>
+                                        <img alt="contact-photo2" class="company-details-photo" src="../photos/myPhotos/contact-photo-2.jpg"/>
+                                        <img alt="contact-photo3" class="company-details-photo" src="../photos/myPhotos/contact-photo-3.jpg"/>
+                                        <img alt="contact-photo4" class="company-details-photo" src="../photos/myPhotos/contact-photo-4.jpg"/>
+                                        <img alt="contact-photo5" class="company-details-photo" src="../photos/myPhotos/contact-photo-5.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ${form}
+                    ${mapContent}
+                    ${adminInfo}
+                </div>
+
+
+            </div>
+
+
         </div>
-    `
+
+
+
+
+    `;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { e.target.classList.toggle('slide-in', e.isIntersecting); });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.social-media-item-container').forEach((el, i) => {
+        el.classList.add('slide-bottom'); el.style.transitionDelay = `${i * 0.1}s`; observer.observe(el);
+    });
+    ['.company-details-text-container', '.company-details-photo-container'].forEach((sel, i) => {
+        const el = document.querySelector(sel);
+        if (el) { el.classList.add(i === 0 ? 'slide-left' : 'slide-right'); observer.observe(el); }
+    });
+
+    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".header").classList.add("header-contact");
+    document.querySelectorAll(".right-header-content").forEach((elem) => {
+        elem.classList.add("right-header-content-colors-switched");
+    });
+    document.querySelectorAll(".right-header-content-container").forEach((elem) => {
+        elem.classList.add("right-header-content-container-colors-switched");
+    });
+
+
+    let lastScrollTop2 = 0;
+    window.addEventListener('scroll', () => {
+        let check = window.pageYOffset || document.documentElement.scrollTop;
+        if (check > 630) {
+            document.querySelector('.header').classList.remove('header-contact');
+        } else {
+            document.querySelector('.header').classList.add('header-contact');
+        }
+
+        lastScrollTop2 = check <= 0 ? 0 : check;
+    });
+
+    readTime().then(time => {
+        const updateTimeElement = document.getElementById("last-update-time");
+        if (updateTimeElement) {
+            updateTimeElement.textContent = time;
+        }
+    });
 }
 
 export default Kontakt;

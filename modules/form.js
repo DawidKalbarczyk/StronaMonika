@@ -1,7 +1,7 @@
 function Form() {
 
     const html = `
-        <div class="form-main-container">
+        <div class="form-main-container" id="contact">
             <p class="form-title">
                 Zapisz się do mnie!
             </p>
