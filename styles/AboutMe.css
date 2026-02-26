@@ -113,6 +113,13 @@ body {
     margin: 0;
 }
 
+.main-content-info-title {
+    border-bottom: 2px solid white;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
 .main-content-info-description {
     font-size: 24px;
 }

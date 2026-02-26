@@ -640,8 +640,8 @@
         margin: 15px auto;
         padding: 0;
         border-radius: 50%;
-        width: 280px;
-        height: 280px;
+        width: 320px;
+        height: 320px;
         box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
         overflow: hidden;
         display: flex;
@@ -726,8 +726,8 @@
     }
 
     .work-info-tile {
-        width: 260px;
-        height: 260px;
+        width: 300px;
+        height: 300px;
     }
 
     .work-info-tile-title {
@@ -763,8 +763,8 @@
     }
 
     .work-info-tile {
-        width: 250px;
-        height: 250px;
+        width: 290px;
+        height: 290px;
     }
 
     .work-info-tile-title {
@@ -805,8 +805,8 @@
     }
 
     .work-info-tile {
-        width: 240px;
-        height: 240px;
+        width: 270px;
+        height: 270px;
     }
 
     .work-info-tile-image {
@@ -864,8 +864,8 @@
     }
 
     .work-info-tile {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
     }
 
     .work-info-tile-title-container {
@@ -923,8 +923,8 @@
     }
 
     .work-info-tile {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
     }
 
     .work-info-tile-image {
