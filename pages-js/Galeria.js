@@ -37,7 +37,9 @@ function Galeria() {
                         <div class="gallery-container-separator">
                     </div>
                     ${form}
+                    <div class="section-separator"></div>
                     ${mapContent}
+                    <div class="section-separator"></div>
                     ${adminInfo}
                 </div>
                 

@@ -70,7 +70,9 @@ function AboutMe() {
                     <! -- ExcelReader --> 
                 </div>
                 ${form}
+                <div class="section-separator"></div>
                 ${mapContent}
+                <div class="section-separator"></div>
                 ${adminInfo}
             </div>
             
