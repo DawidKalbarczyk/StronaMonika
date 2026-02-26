@@ -23,7 +23,6 @@ body {
     width: 100%;
     height: 100%;
     filter: brightness(80%);
-    border-bottom-left-radius: 100% 60%;
 }
 
 .header-treat {
@@ -185,3 +184,237 @@ body {
             }
 
 
+/* ============================================
+   MOBILE STYLES - Zabiegi (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-treat-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-treat-photo {
+        object-position: center 30%;
+        border-bottom-left-radius: 0;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header ----- */
+    .header-treat {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-treat {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-treat .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+        width: 80%;
+        padding-bottom: 15px;
+    }
+
+    /* ----- Treatment Grid ----- */
+    .main-content-treat {
+        margin: 20px 0 0 0;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .main-treatment {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    /* ----- Treatment Items ----- */
+    .treatment-item {
+        border-radius: 8px;
+    }
+
+    .treatment-item:hover {
+        transform: none;
+    }
+
+    .treatment-item-photo-div {
+        height: 140px;
+    }
+
+    .treatment-item-photo {
+        border-bottom-left-radius: 50% 30%;
+    }
+
+    .treatment-item-text-div {
+        padding: 10px 5px;
+        background-size: 300px 300px;
+    }
+
+    .treatment-item-text {
+        font-size: 14px;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Form ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-treat-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+    }
+
+    .treatment-item-photo-div {
+        height: 130px;
+    }
+
+    .treatment-item-text {
+        font-size: 13px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-treat-photo-container {
+        height: 240px;
+    }
+
+    .main-treatment {
+        gap: 12px;
+    }
+
+    .treatment-item-photo-div {
+        height: 120px;
+    }
+
+    .treatment-item-text {
+        font-size: 12.5px;
+    }
+
+    .treatment-item-text-div {
+        padding: 8px 4px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-treat-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 26px;
+        width: 85%;
+    }
+
+    .main-content-treat {
+        padding: 12px;
+    }
+
+    .main-treatment {
+        gap: 10px;
+    }
+
+    .treatment-item-photo-div {
+        height: 110px;
+    }
+
+    .treatment-item-text {
+        font-size: 12px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-treat-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .main-content-treat {
+        padding: 10px;
+        margin: 15px 0 0 0;
+    }
+
+    .main-treatment {
+        gap: 8px;
+    }
+
+    .treatment-item-photo-div {
+        height: 100px;
+    }
+
+    .treatment-item-text {
+        font-size: 11.5px;
+    }
+
+    .treatment-item-text-div {
+        padding: 6px 3px;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-treat-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .main-treatment {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .treatment-item-photo-div {
+        height: 150px;
+    }
+
+    .treatment-item-text {
+        font-size: 14px;
+    }
+
+    .treatment-item-text-div {
+        padding: 10px 5px;
+    }
+}

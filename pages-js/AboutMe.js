@@ -88,10 +88,13 @@ function AboutMe() {
     });
 
 
+    const isMobileAboutMe = window.innerWidth <= 767;
+    const headerSwitchThreshold = isMobileAboutMe ? 250 : 630;
+
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > headerSwitchThreshold) {
             document.querySelector('.header').classList.remove('header-aboutme');
         } else {
             document.querySelector('.header').classList.add('header-aboutme');

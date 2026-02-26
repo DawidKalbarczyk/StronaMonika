@@ -20,7 +20,6 @@ body {
     width: 100%;
     height: 100%;
     filter: brightness(80%);
-    border-bottom-left-radius: 100% 60%;
 }
 
 .header-aboutme {
@@ -268,4 +267,331 @@ body {
     height: 2px;
     background-color: white;
     margin: 25px 250px 0 250px;
+}
+
+
+/* ============================================
+   MOBILE STYLES - AboutMe (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-aboutme-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-aboutme-photo {
+        object-position: center 30%;
+        border-bottom-left-radius: 0;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header AboutMe ----- */
+    .header-aboutme {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-aboutme {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-aboutme .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+    }
+
+    .main-content-aboutme {
+        margin: 20px 0 0 0;
+    }
+
+    /* ----- About Me Content ----- */
+    .content-container {
+        width: 100%;
+    }
+
+    .aboutme-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ----- Photo + Title Section ----- */
+    .aboutme-container-info-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme-container-photo-div {
+        margin: 0;
+        border-radius: 0;
+        max-height: 280px;
+        min-height: 280px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 1;
+        transform: none;
+    }
+
+    .aboutme-container-photo {
+        height: 380px;
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
+
+    .aboutme-container-photo:hover {
+        transform: none;
+        filter: brightness(0.8);
+    }
+
+    .aboutme-container-text-div {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 15px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .aboutme-container-text-div p:hover {
+        transform: none;
+    }
+
+    /* ----- Description ----- */
+    .aboutme-container-desc-wrapper {
+        margin: 0;
+        padding: 15px 0 0 0;
+        border-top: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .aboutme-container-desc {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 25px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        padding: 10px 10px;
+    }
+
+    /* ----- Separator ----- */
+    .about-me-container-separator {
+        margin: 20px 30px 0 30px;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Slide animations off ----- */
+    .aboutme-container-photo-div,
+    .aboutme-container-text-div,
+    .aboutme-container-desc {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* ----- Form overrides ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-aboutme-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+    }
+
+    .aboutme-container-photo-div {
+        max-height: 250px;
+        min-height: 250px;
+    }
+
+    .aboutme-container-photo {
+        height: 350px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 15px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 14px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-aboutme-photo-container {
+        height: 240px;
+    }
+
+    .aboutme-container-photo-div {
+        max-height: 230px;
+        min-height: 230px;
+    }
+
+    .aboutme-container-photo {
+        height: 330px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 14.5px;
+        margin-bottom: 6px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 13.5px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-aboutme-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 26px;
+    }
+
+    .aboutme-container-photo-div {
+        max-height: 210px;
+        min-height: 210px;
+    }
+
+    .aboutme-container-photo {
+        height: 300px;
+    }
+
+    .aboutme-container-text-div {
+        padding: 15px 12px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 14px;
+    }
+
+    .aboutme-container-desc {
+        padding: 12px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 13px;
+    }
+
+    .about-me-container-separator {
+        margin: 15px 20px 0 20px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-aboutme-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .aboutme-container-photo-div {
+        max-height: 190px;
+        min-height: 190px;
+    }
+
+    .aboutme-container-photo {
+        height: 280px;
+    }
+
+    .aboutme-container-text-div {
+        padding: 12px 10px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .aboutme-container-desc-wrapper {
+        padding: 10px 0 0 0;
+    }
+
+    .aboutme-container-desc {
+        padding: 10px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .about-me-container-separator {
+        margin: 12px 15px 0 15px;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-aboutme-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .aboutme-container-photo-div {
+        max-height: 160px;
+        min-height: 160px;
+    }
+
+    .aboutme-container-photo {
+        height: 240px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 12px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 11.5px;
+    }
 }

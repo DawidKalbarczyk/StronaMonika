@@ -87,10 +87,13 @@ function PickedTreatment() {
     });
 
 
+    const isMobilePT = window.innerWidth <= 767;
+    const headerThresholdPT = isMobilePT ? 250 : 630;
+
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > headerThresholdPT) {
             document.querySelector('.header').classList.remove('header-gallery');
         } else {
             document.querySelector('.header').classList.add('header-gallery');

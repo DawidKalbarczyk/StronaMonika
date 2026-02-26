@@ -142,10 +142,12 @@ function Kontakt() {
     });
 
 
+    const isMobileKontakt = window.innerWidth <= 767;
+    const kontaktHeaderThreshold = isMobileKontakt ? 250 : 630;
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > kontaktHeaderThreshold) {
             document.querySelector('.header').classList.remove('header-contact');
         } else {
             document.querySelector('.header').classList.add('header-contact');

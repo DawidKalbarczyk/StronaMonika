@@ -272,3 +272,370 @@ body {
             text-align: justify;
 
         }
+
+
+/* ============================================
+   MOBILE STYLES - PickedTreatment (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-gallery-photo-container {
+        height: 280px;
+        padding: 0;
+    }
+
+    .main-gallery-photo {
+        object-position: center 30%;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header ----- */
+    .header-gallery {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-gallery {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .main-content-container-gallery .left-bar {
+        display: none;
+    }
+
+    .left-bar {
+        margin-top: 0;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+        width: 90%;
+        padding-bottom: 12px;
+    }
+
+    .main-content-aboutme {
+        margin: 10px 0 0 0;
+    }
+
+    /* ----- 1st Description Section ----- */
+    .treatment-description-1st-div {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    .treatment-description-1st-text-container {
+        padding: 15px;
+        order: 2;
+    }
+
+    .treatment-description-1st-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .treatment-description-1st-photo-container {
+        position: relative;
+        width: 100%;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        border-radius: 12px;
+        height: 250px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-1st-photo {
+        border-radius: 12px;
+    }
+
+    /* ----- 2nd Description Section ----- */
+    .treatment-description-2nd-div {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .treatment-description-2nd-photo-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-photo {
+        border-radius: 12px;
+    }
+
+    .treatment-description-2nd-text-container {
+        padding: 15px;
+        order: 2;
+    }
+
+    .treatment-description-2nd-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* ----- Pros & Cons ----- */
+    .treatment-pros-cons-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 0;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 20px;
+        padding-bottom: 8px;
+        margin: 15px 0 10px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 20px 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .treatment-pros-div {
+        border-radius: 12px;
+    }
+
+    .treatment-cons-div {
+        border-radius: 12px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Form ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+
+    /* ----- Animations off ----- */
+    .slide-in-pt,
+    .slide-in-pt-absolute {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-gallery-photo-container {
+        height: 250px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 220px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 14px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 18px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 13px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-gallery-photo-container {
+        height: 230px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 200px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 13.5px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 12.5px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-gallery-photo-container {
+        height: 210px;
+    }
+
+    .main-content-info-title {
+        font-size: 20px;
+    }
+
+    .treatment-description-1st-div,
+    .treatment-description-2nd-div {
+        padding: 12px;
+    }
+
+    .treatment-description-1st-text-container,
+    .treatment-description-2nd-text-container {
+        padding: 12px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 180px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 13px;
+    }
+
+    .treatment-pros-cons-div {
+        padding: 15px 12px;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 15px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 17px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 12px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-gallery-photo-container {
+        height: 190px;
+    }
+
+    .main-content-info-title {
+        font-size: 19px;
+        padding-bottom: 10px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-div,
+    .treatment-description-2nd-div {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-text-container,
+    .treatment-description-2nd-text-container {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 160px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 12.5px;
+    }
+
+    .treatment-pros-cons-div {
+        padding: 12px 10px;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 12px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 16px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 11.5px;
+        line-height: 1.6;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-gallery-photo-container {
+        height: 160px;
+    }
+
+    .main-content-info-title {
+        font-size: 17px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 140px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 11.5px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 15px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 11px;
+    }
+}

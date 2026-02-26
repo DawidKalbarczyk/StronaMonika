@@ -65,10 +65,12 @@ function Galeria() {
     });
 
 
+    const isMobileGaleria = window.innerWidth <= 767;
+    const galeriaHeaderThreshold = isMobileGaleria ? 250 : 630;
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > galeriaHeaderThreshold) {
             document.querySelector('.header').classList.remove('header-gallery');
         } else {
             document.querySelector('.header').classList.add('header-gallery');
