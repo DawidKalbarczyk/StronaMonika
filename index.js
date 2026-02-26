@@ -35,6 +35,7 @@ function Home() {
                         </div>
 
                     </div>
+                    <div class="section-separator"></div>
                     <div class="unique-info-container">
                         <div class="unique-info-title">
                             <p class="unique-info-text">Dlaczego warto mnie odwiedzić?</p>
@@ -115,7 +116,7 @@ function Home() {
                         </div>
                     </div>
                     
-                    
+                    <div class="section-separator"></div>
                     
                     <div class="work-info-container">
                         <div class="work-info-title">
@@ -198,7 +199,9 @@ function Home() {
                             </div>
                         </div>
                     </div>
+                    <div class="section-separator"></div>
                     ${form}
+                    <div class="section-separator"></div>
                     ${mapComponent}
                     
                 </div>

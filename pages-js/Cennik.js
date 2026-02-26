@@ -18,7 +18,7 @@ function Cennik() {
     const adminInfo = AdminInfo();
     document.body.innerHTML = `
         ${headbar}
-        <div class="main">
+        <div class="main" id="main-link">
             ${banner}
            
             <div class="main-cennik-photo-container">
@@ -49,7 +49,9 @@ function Cennik() {
                     <! -- ExcelReader --> 
                 </div>
                 ${form}
+                <div class="section-separator"></div>
                 ${mapContent}
+                <div class="section-separator"></div>
                 ${adminInfo}
             </div>
             
