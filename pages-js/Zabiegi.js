@@ -19,7 +19,7 @@ function Zabiegi() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main"  id="main-link">
+        <div class="main" id="main-link">
             ${banner}
             <div class="main-treat-photo-container">
                  <img class="main-treat-photo" alt="main-treat-photo" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
@@ -62,10 +62,13 @@ function Zabiegi() {
     });
 
 
+    const isMobileZabiegi = window.innerWidth <= 767;
+    const headerThreshold = isMobileZabiegi ? 250 : 630;
+
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > headerThreshold) {
             document.querySelector('.header').classList.remove('header-treat');
         } else {
             document.querySelector('.header').classList.add('header-treat');

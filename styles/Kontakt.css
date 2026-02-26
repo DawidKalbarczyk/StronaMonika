@@ -218,3 +218,306 @@ body {
     mask-image: linear-gradient(to right, transparent 0%, black 30%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
 }
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 767px) {
+    body {
+        margin-top: 0 !important;
+    }
+
+    .main-contact-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-contact-photo {
+        object-position: center 60%;
+    }
+
+    .main-content-container-contact {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 16px 10px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+        width: 80%;
+        padding-bottom: 14px;
+    }
+
+    .main-content-contact {
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        row-gap: 30px;
+    }
+
+    .social-media-wrapper,
+    .company-details-wrapper {
+        padding: 15px 10px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 8px;
+        row-gap: 10px;
+    }
+
+    .social-media-item-container {
+        padding: 20px 8px 28px 8px;
+        border-radius: 14px;
+    }
+
+    .social-media-item-container:hover {
+        transform: none;
+    }
+
+    .social-media-item-title {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .social-media-item-photo {
+        width: 50px;
+        border-radius: 15%;
+    }
+
+    .company-details-container {
+        grid-template-columns: 1fr;
+        box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .company-details-text-container {
+        padding: 16px 20px;
+    }
+
+    .company-details-text-container p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .company-details-text-container .paragraph-indent {
+        margin-left: 14px;
+    }
+
+    .company-details-photo-container {
+        grid-template-columns: repeat(5, 1fr);
+        height: 180px;
+        position: relative;
+    }
+
+    .company-details-photo {
+        position: absolute;
+        height: 100%;
+        width: 22%;
+    }
+
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* Disable slide animations */
+    .slide-left,
+    .slide-right,
+    .slide-bottom {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* ----- iPhone 15 Pro Max, 14 Plus, Samsung S24 Ultra (430px) ----- */
+@media screen and (max-width: 430px) {
+    .main-contact-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 25px;
+    }
+
+    .social-media-item-container {
+        padding: 16px 6px 22px 6px;
+    }
+
+    .social-media-item-title {
+        font-size: 12px;
+    }
+
+    .social-media-item-photo {
+        width: 44px;
+    }
+
+    .company-details-text-container p {
+        font-size: 13px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 18px;
+    }
+
+    .company-details-photo-container {
+        height: 150px;
+    }
+}
+
+/* ----- iPhone 15 Pro, Pixel 5/6/7/8 (393px) ----- */
+@media screen and (max-width: 393px) {
+    .main-contact-photo-container {
+        height: 240px;
+    }
+
+    .main-content-info-title {
+        font-size: 23px;
+    }
+
+    .social-media-container {
+        column-gap: 6px;
+        row-gap: 8px;
+    }
+
+    .social-media-item-title {
+        font-size: 11px;
+    }
+
+    .social-media-item-photo {
+        width: 40px;
+    }
+
+    .company-details-text-container p {
+        font-size: 12px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 17px;
+    }
+
+    .company-details-photo-container {
+        height: 130px;
+    }
+}
+
+/* ----- iPhone SE (2nd/3rd), iPhone X, 12 Mini (375px) ----- */
+@media screen and (max-width: 375px) {
+    .main-contact-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 21px;
+    }
+
+    .social-media-item-container {
+        padding: 14px 5px 18px 5px;
+        border-radius: 10px;
+    }
+
+    .social-media-item-title {
+        font-size: 10.5px;
+        margin-bottom: 10px;
+    }
+
+    .social-media-item-photo {
+        width: 36px;
+    }
+
+    .company-details-text-container p {
+        font-size: 11.5px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 16px;
+    }
+
+    .company-details-photo-container {
+        height: 120px;
+    }
+}
+
+/* ----- Galaxy S24/S23/S22/S21/S20 FE (360px) ----- */
+@media screen and (max-width: 360px) {
+    .main-contact-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 20px;
+    }
+
+    .social-media-container {
+        column-gap: 5px;
+    }
+
+    .social-media-item-title {
+        font-size: 10px;
+    }
+
+    .social-media-item-photo {
+        width: 34px;
+    }
+
+    .company-details-text-container p {
+        font-size: 11px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 15px;
+    }
+
+    .company-details-photo-container {
+        height: 110px;
+    }
+}
+
+/* ----- iPhone SE 1st gen, Galaxy A series small (320px) ----- */
+@media screen and (max-width: 320px) {
+    .main-contact-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 18px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-media-item-title {
+        font-size: 9.5px;
+    }
+
+    .social-media-item-photo {
+        width: 30px;
+    }
+
+    .company-details-text-container p {
+        font-size: 10px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 14px;
+    }
+
+    .company-details-photo-container {
+        height: 90px;
+    }
+}

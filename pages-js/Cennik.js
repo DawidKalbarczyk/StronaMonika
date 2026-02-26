@@ -101,10 +101,13 @@ function Cennik() {
     });
 
 
+    const isMobileCennik = window.innerWidth <= 767;
+    const headerThresholdCennik = isMobileCennik ? 250 : 630;
+
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > 630) {
+        if (check > headerThresholdCennik) {
             document.querySelector('.header').classList.remove('header-cennik');
         } else {
             document.querySelector('.header').classList.add('header-cennik');
