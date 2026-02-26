@@ -47,7 +47,7 @@ export function initHomeScrollHandlers() {
 					}
 				}
 			});
-			document.querySelector('body').style.marginTop = "150px";
+			document.querySelector('body').style.marginTop = window.innerWidth <= 767 ? "70px" : "150px";
 		});
 
 		const uniqueContainer = document.querySelector('.unique-info-container');
@@ -83,30 +83,60 @@ export function initHomeScrollHandlers() {
 
 	const pathName = window.location.pathname;
 	if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
-		window.addEventListener("scroll", () => {
-			const scrollY = window.scrollY;
-			if (scrollY >= 300) {
-				document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
-			}
-			if (scrollY >= 1400) {
-				document.querySelector(".work-info-tile-container").classList.add("work-info-tile-container-show");
-			}
-			if (scrollY >= 3400) {
-				document.querySelector(".form-container").classList.add('form-container-show');
-			}
-		});
+		const isMobile = window.innerWidth <= 767;
+
+		if (isMobile) {
+			// On mobile, use IntersectionObserver instead of fixed scroll values
+			document.addEventListener('DOMContentLoaded', () => {
+				const mobileObs = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add(
+								entry.target.classList.contains('unique-info-tile-container')
+									? 'unique-info-tile-container-show'
+									: entry.target.classList.contains('work-info-tile-container')
+										? 'work-info-tile-container-show'
+										: 'form-container-show'
+							);
+							mobileObs.unobserve(entry.target);
+						}
+					});
+				}, { rootMargin: '0px 0px -5% 0px' });
+
+				const utc = document.querySelector(".unique-info-tile-container");
+				const wtc = document.querySelector(".work-info-tile-container");
+				const fc = document.querySelector(".form-container");
+				if (utc) mobileObs.observe(utc);
+				if (wtc) mobileObs.observe(wtc);
+				if (fc) mobileObs.observe(fc);
+			});
+		} else {
+			window.addEventListener("scroll", () => {
+				const scrollY = window.scrollY;
+				if (scrollY >= 300) {
+					document.querySelector(".unique-info-tile-container").classList.add("unique-info-tile-container-show");
+				}
+				if (scrollY >= 1400) {
+					document.querySelector(".work-info-tile-container").classList.add("work-info-tile-container-show");
+				}
+				if (scrollY >= 3400) {
+					document.querySelector(".form-container").classList.add('form-container-show');
+				}
+			});
+		}
 	}
 
 
 	window.addEventListener("scroll", () => {
 		const scrollY = window.scrollY;
+		const isMobileView = window.innerWidth <= 767;
 
-		if (scrollY >= 300) {
+		if (!isMobileView && scrollY >= 300) {
 			document.querySelectorAll(".facebook-pic-fixed-container").forEach((element) => {
 				element.classList.add("facebook-pic-fixed-container-run");
 			});
 		}
-		if (scrollY <= 400) {
+		if (scrollY <= 400 || isMobileView) {
 			document.querySelectorAll(".facebook-pic-fixed-container").forEach((element) => {
 				element.classList.remove("facebook-pic-fixed-container-run");
 			});
