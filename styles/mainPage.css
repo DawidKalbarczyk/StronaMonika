@@ -458,3 +458,266 @@
 
     color: #dcdcdc;
 }
+
+
+/* ============================================
+   MOBILE STYLES - mainPage (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Owner Info Section ----- */
+    .owner-info-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-size: 200px 200px;
+        box-shadow:
+            inset 0 0 10px 5px rgba(0, 0, 0, 0.4),
+            0 3px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover),
+    .owner-info-container:has(.owner-photo:hover) {
+        border-radius: 0;
+    }
+
+    .owner-photo-container {
+        padding: 0;
+        margin-right: 0;
+        border-radius: 0;
+        height: 220px;
+        overflow: hidden;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .owner-photo {
+        border-radius: 0;
+        filter: brightness(0.80) contrast(1.15);
+        object-fit: contain;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .owner-photo:hover {
+        border-radius: 0;
+        transform: none;
+    }
+
+    .owner-photo-container:has(.owner-photo:hover) {
+        border-radius: 0;
+    }
+
+    .owner-quote-container {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 25px 20px;
+        background-size: cover;
+        box-shadow:
+            inset 0 0 30px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .owner-quote-container:hover {
+        border-radius: 0;
+        background-size: cover;
+        transform: none;
+    }
+
+    .owner-quote-container:hover .owner-quote {
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover) .owner-photo {
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover) .owner-photo-container {
+        border-radius: 0;
+    }
+
+    .owner-info-container:has(.owner-photo:hover) .owner-quote-container {
+        border-radius: 0;
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-photo:hover) .owner-quote-container .owner-quote {
+        transform: none;
+    }
+
+    .owner-quote {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .owner-quote-span1,
+    .owner-quote-span2,
+    .owner-quote-span3 {
+        margin-left: 0;
+    }
+
+    /* ----- Unique Info Section ----- */
+    .unique-info-container,
+    .work-info-container {
+        margin-top: 35px;
+        padding-bottom: 25px;
+        border-radius: 0;
+        box-shadow:
+            0 3px 8px rgba(0, 0, 0, 0.6),
+            inset 0 0 20px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 20px;
+        margin: 25px 15px;
+        text-align: center;
+    }
+
+    /* ----- Unique Info Tiles ----- */
+    .unique-info-tile-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 20px;
+        background-size: 200px 200px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .unique-info-tile {
+        margin: 8px 0;
+        padding: 20px 15px;
+        min-height: 200px;
+        border-radius: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .unique-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .unique-info-tile:hover .unique-info-tile-title-container .unique-info-tile-title {
+        font-size: 19px;
+    }
+
+    .unique-info-tile-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .unique-info-tile-title {
+        margin-top: 15px;
+        font-size: 19px;
+    }
+
+    .unique-info-tile-description {
+        width: 95%;
+        font-size: 14px;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+
+    /* ----- Work Info Tiles ----- */
+    .work-info-tile-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 10px;
+        column-gap: 0;
+        background-size: 300px 300px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .work-info-tile {
+        margin: 15px auto;
+        padding: 0;
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .work-info-tile-title-container {
+        padding: 10px 15px;
+    }
+
+    .work-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .work-info-tile:hover .work-info-tile-title-container .work-info-tile-title {
+        font-size: 15px;
+    }
+
+    .work-info-tile-image {
+        width: 30px;
+        height: 30px;
+        transform: scale(1) !important;
+    }
+
+    .work-info-tile-title {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+
+    .work-info-tile-description {
+        width: 75%;
+        font-size: 11px;
+        margin-top: 5px;
+        line-height: 1.3;
+    }
+
+    /* Fix background positions for smaller screens */
+    .unique-info-tile-x1 { background-position: center; }
+    .unique-info-tile-x2 { background-position: center; }
+    .unique-info-tile-x3 { background-position: center; }
+    .unique-info-tile-x4 { background-position: center; }
+    .unique-info-tile-x5 { background-position: center; }
+    .unique-info-tile-x6 { background-position: center; }
+
+    .work-info-tile-x1 { background-position: center; }
+    .work-info-tile-x2 { background-position: center; }
+    .work-info-tile-x3 { background-position: center; }
+    .work-info-tile-x4 { background-position: center; }
+    .work-info-tile-x5 { background-position: center; }
+    .work-info-tile-x6 { background-position: center; }
+}
+
+/* Extra small phones */
+@media (max-width: 374px) {
+    .owner-photo-container {
+        height: 230px;
+    }
+
+    .owner-quote {
+        font-size: 15px;
+    }
+
+    .unique-info-tile-title,
+    .work-info-tile-title {
+        font-size: 17px;
+    }
+
+    .unique-info-tile-description,
+    .work-info-tile-description {
+        font-size: 13px;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 18px;
+    }
+}
