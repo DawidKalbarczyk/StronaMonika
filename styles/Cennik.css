@@ -57,6 +57,8 @@ za pomocą JS zdjęcie i background
     margin: 64px 0 0 0;
     display: flex;
     flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 0 50px 0;
 
 }
 
@@ -65,19 +67,20 @@ za pomocą JS zdjęcie i background
 
 }
 .item-main-container {
-    background:
-            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("../photos/textures/pale-gray-grained-wall-template.jpg");
-    background-size: cover, 100px 1000px;
-    background-repeat: no-repeat, repeat;
-    background-position: center, center;
-    box-shadow:
-            7px 0 10px rgba(0, 0, 0, 0.8),
-            inset 0 0 20px 20px rgba(0,0,0,0.5);
-    border-bottom-right-radius: 2px;
-
     flex: 1;
 
+
+
+}
+
+.item-wrapper-div {
+    margin: 30px 100px 0 100px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../photos/textures/pale-gray-grained-wall-template.jpg);
+    background-size: cover, 100px 100px;
+    background-repeat: no-repeat, repeat;
+    background-position: center, center;
 
 }
 
@@ -87,14 +90,13 @@ za pomocą JS zdjęcie i background
     grid-template-columns: 1.1fr auto 3fr auto 1fr;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
     padding-top: 12px;
     font-size: 20px;
     border-bottom: 2px solid #dcdcdc;
     opacity: 0;
     transition: opacity 1.5s ease-out;
-
 }
+
 
 .item-group-header {
     color: white;
@@ -104,8 +106,8 @@ za pomocą JS zdjęcie i background
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(220,220,220,0.4);
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
+    border-bottom: 2px solid #dcdcdc;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
@@ -117,12 +119,14 @@ za pomocą JS zdjęcie i background
     background: rgba(255,255,255,1);
     padding-top: 16px;
     border-bottom: 0;
-    border-top-right-radius: 2px;
+    border-radius: 25px;
     box-shadow:
             7px 0 10px rgba(0, 0, 0, 0.8),
-            inset 0 0 10px 10px rgba(0,0,0,0.5);
+            inset 0 0 10px 5px rgba(0,0,0,0.5);
     opacity: 1;
     transition: none;
+    margin: 0 100px 0 100px;
+
 }
 .item-container .separator {
     align-self: stretch;
@@ -132,8 +136,6 @@ za pomocą JS zdjęcie i background
     height: 100%;
     border-left: 2px solid #dcdcdc;
     font-size: 24px;
-    margin-top: -5px;
-
     
 }
 
@@ -157,6 +159,7 @@ za pomocą JS zdjęcie i background
     text-align: center;
 }
 
+
 .item-props-titles {
     padding-bottom: 16px;
     width: calc(100% - 15%);
@@ -164,6 +167,13 @@ za pomocą JS zdjęcie i background
     font-size: 28px;
     color: black;
     text-shadow: none;
+}
+
+.item-props-separator {
+    margin: 30px 40% 0 41%;
+    height: 2px;
+    background-color: white;
+
 }
 
 .main-content-container-cennik {
