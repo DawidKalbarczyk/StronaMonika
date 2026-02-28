@@ -173,7 +173,10 @@ za pomocą JS zdjęcie i background
     margin: 30px 40% 0 41%;
     height: 2px;
     background-color: white;
+}
 
+.item-props-separator:first-child {
+    display: none;
 }
 
 .main-content-container-cennik {
@@ -308,6 +311,7 @@ za pomocą JS zdjęcie i background
         padding-top: 10px;
     }
 
+
     .item-props-titles {
         font-size: 16px;
         padding-bottom: 10px;
@@ -366,6 +370,12 @@ za pomocą JS zdjęcie i background
         opacity: 1 !important;
         transform: none !important;
     }
+    .item-wrapper-div {
+        margin: 30px 0 15px 0;
+    }
+    .item-props-separator {
+        margin-top: 15px;
+    }
 }
 
 /* ---- Large phones (≤430px) ---- */
@@ -389,6 +399,15 @@ za pomocą JS zdjęcie i background
     .item-group-header {
         font-size: 14px;
     }
+    .item-wrapper-div {
+        margin: 15px 30px 15px 30px;
+    }
+    .item-props-separator {
+        margin-top: 15px;
+    }
+    .item-container-titles {
+        margin: -20px 30px 0 30px;
+    }
 }
 
 /* ---- Medium phones (≤393px) ---- */
@@ -409,6 +428,12 @@ za pomocą JS zdjęcie i background
     .item-group-header {
         font-size: 13px;
         padding: 10px 8px 6px 8px;
+    }
+    .item-wrapper-div {
+        margin: 15px 30px 15px 30px;
+    }
+    .item-props-separator {
+        margin-top: 15px;
     }
 }
 
@@ -437,6 +462,12 @@ za pomocą JS zdjęcie i background
 
     .item-group-header {
         font-size: 12.5px;
+    }
+    .item-wrapper-div {
+        margin: 15px 30px 15px 30px;
+    }
+    .item-props-separator {
+        margin-top: 15px;
     }
 }
 
@@ -476,6 +507,12 @@ za pomocą JS zdjęcie i background
         font-size: 12px;
         padding: 8px 6px 5px 6px;
     }
+    .item-wrapper-div {
+        margin: 15px 30px 15px 30px;
+    }
+    .item-props-separator {
+        margin-top: 15px;
+    }
 }
 
 /* ---- Very small phones (≤320px) ---- */
@@ -498,5 +535,11 @@ za pomocą JS zdjęcie i background
 
     .item-group-header {
         font-size: 11px;
+    }
+    .item-wrapper-div {
+        margin: 15px 30px 15px 30px;
+    }
+    .item-props-separator {
+        margin-top: 15px;
     }
 }
