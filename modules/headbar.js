@@ -38,7 +38,7 @@ function Headbar() {
                 </a>
                 <a href="#main-link" class="right-header-return-button-link">
                     <div class="right-header-absolute">
-                        <img alt="return-button" class="right-header-return-button" src="../photos/icons/return-button.png"/>
+                        <img alt="return-button" class="right-header-return-button" src="${path2}/icons/return-button.png"/>
                 </div>
                 </a>
                 
@@ -57,11 +57,7 @@ function Headbar() {
                 </a>
                 
             </div>
-            <div class="socialmedia-header">
-                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/obsessionkosmetologia/" class="socialmedia-container">
-                    <img class="socialmedia-photo" src="${path2}/icons/facebook-icon.png" alt="Facebook icon"/>
-                </a>
-            </div>
+            
         </div>
         
         <!-- Mobile menu overlay -->
