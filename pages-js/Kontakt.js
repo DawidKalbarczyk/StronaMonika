@@ -21,7 +21,7 @@ function Kontakt() {
         <div class="main" id="main-link">
             ${banner}
             <div class="main-contact-photo-container">
-                 <img class="main-contact-photo" alt="main-contact-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+                 <img class="main-contact-photo" alt="main-contact-photo" src="../photos/treatmentPhotos/woman-portrait-skincare-routine%20(1).jpg"/>
             </div>
             <div class="main-content-container main-content-container-contact">
                 <div class="left-bar"></div>

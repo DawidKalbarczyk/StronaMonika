@@ -2,6 +2,7 @@ function ExcelReader() {
     const container = document.createElement('div');
     container.className = 'item-main-container'
 
+
     const isGitHubPages = window.location.hostname.endsWith("github.io");
     const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
     const dataUrl = `${repoSegment}/backend/data/cennik.json`;
@@ -10,11 +11,15 @@ function ExcelReader() {
         .then(res => res.json())
         .then(data => {
             data.forEach(group => {
+                const mainDiv = document.createElement('div');
+                mainDiv.className = 'item-wrapper-div';
+
                 // Nagłówek grupy (nazwa zabiegu)
                 const groupHeader = document.createElement('div');
                 groupHeader.className = 'item-group-header';
                 groupHeader.textContent = group.ZABIEG;
-                container.appendChild(groupHeader);
+                mainDiv.appendChild(groupHeader);
+
 
                 // Wiersze grupy (czas, opis, cena)
                 group.items.forEach(item => {
@@ -46,9 +51,16 @@ function ExcelReader() {
                     itemPrice.innerHTML = `${item.CENA} zł`;
                     itemDiv.appendChild(itemPrice);
 
-                    container.appendChild(itemDiv);
+                    mainDiv.appendChild(itemDiv);
+
                 });
+                const itemSeparator = document.createElement('div');
+                itemSeparator.className = "item-props-separator";
+                container.appendChild(itemSeparator);
+                container.appendChild(mainDiv)
+
             });
+
         })
         .catch(error => {
             console.error("Failed to load cennik.json:", error);
