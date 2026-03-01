@@ -73,6 +73,10 @@
 
 }
 
+
+.owner-quote {
+    text-align: center;
+}
 .owner-quote-container {
 
     background-color: rgb(166, 168, 168);
@@ -87,7 +91,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 8% 0 8%;
+    padding: 0 20% 0 12%;
     border-top-right-radius: 100%;
     border-top-left-radius: 12% 30%;
     border-bottom-left-radius: 80%;
