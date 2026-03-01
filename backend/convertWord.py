@@ -59,7 +59,7 @@ def czytaj_word():
                 indeks_wskazania = i
             if "Bezwzględne" in akapit and indeks_bezwzgledne is None:
                 indeks_bezwzgledne = i
-            if "Wskazówki po zabiegu" in akapit and indeks_wskazowki is None:
+            if "Wskazówki" in akapit and indeks_wskazowki is None:
                 indeks_wskazowki = i
 
         # Część 2: tekst DO "Przebieg" (bez caps)

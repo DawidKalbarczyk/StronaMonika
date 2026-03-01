@@ -11,7 +11,7 @@ function Headbar() {
         path2 = "../photos"
     }
     const headbar = `
-        <div class="header">
+        <header class="header">
             <div class="left-header">
              
                 <a href="../index.html" class="headbar-link">
@@ -58,7 +58,7 @@ function Headbar() {
                 
             </div>
             
-        </div>
+        </header>
         
         <!-- Mobile menu overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>

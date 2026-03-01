@@ -63,7 +63,7 @@ function Form() {
             </div>
         </div>
 
-        <div class="form-main-container" id="contact">
+        <section class="form-main-container" id="contact">
             <p class="form-title">
                 Zapisz się do mnie!
             </p>
@@ -135,7 +135,7 @@ function Form() {
                 
             
             
-        </div>
+        </section>
     `;
 
     setTimeout(() => {
