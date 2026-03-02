@@ -5,10 +5,10 @@ function Headbar() {
 
     if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
         path = "pages"
-        path2 = "photos"
+        path2 = "backend/photos_compressed"
     } else {
         path = "../pages"
-        path2 = "../photos"
+        path2 = "../backend/photos_compressed"
     }
     const headbar = `
         <header class="header">

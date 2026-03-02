@@ -23,7 +23,7 @@ function Galeria() {
             <h1 class="seo-h1">Galeria zdjęć – Salon Kosmetologiczny Obsession Kozienice</h1>
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="Zdjęcie z salonu kosmetologicznego Obsession Kozienice" src="../photos/treatmentPhotos/7364.jpg"/>
+                 <img class="main-gallery-photo" alt="Zdjęcie z salonu kosmetologicznego Obsession Kozienice" src="../backend/photos_compressed/treatmentPhotos/7364.jpg"/>
             </div>
             <section class="main-content-container main-content-container-gallery" aria-label="Galeria zdjęć z salonu">
                 <div class="left-bar"></div>
@@ -58,7 +58,7 @@ function Galeria() {
 
 
 
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-gallery");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");

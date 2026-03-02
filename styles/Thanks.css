@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     background:
             linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+              url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
     background-size: 1000px 1000px;
 }
@@ -23,7 +23,7 @@ body {
     overflow: auto;
     background:
             linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-            url("../photos/textures/finnish-grey-brick-random-bond-wrge2b.jpg");
+            url("../backend/photos_compressed/textures/finnish-grey-brick-random-bond-wrge2b.jpg");
     background-repeat: repeat;
     background-size: 400px 400px;
     box-shadow:

@@ -22,7 +22,7 @@ function AboutMe() {
             ${banner}
            
             <div class="main-aboutme-photo-container">
-                 <img class="main-aboutme-photo" alt="Wnętrze salonu kosmetologicznego Obsession w Kozienicach" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+                 <img class="main-aboutme-photo" alt="Wnętrze salonu kosmetologicznego Obsession w Kozienicach" src="../backend/photos_compressed/saloonPhotos/20251103_083853.jpg"/>
             </div>
             
             <section class="main-content-container main-content-container-aboutme" aria-label="Treść strony o mnie">
@@ -38,7 +38,7 @@ function AboutMe() {
                         <div class="aboutme-container">
                             <div class="aboutme-container-info-div">
                                 <div class="aboutme-container-photo-div">
-                                    <img class="aboutme-container-photo" alt="Monika Molenda – właścicielka Salonu Obsession Kozienice" src="../photos/myPhotos/omnie.png">
+                                    <img class="aboutme-container-photo" alt="Monika Molenda – właścicielka Salonu Obsession Kozienice" src="../backend/photos_compressed/myPhotos/omnie.png">
                                 </div>
                                 <div class="aboutme-container-text-div">
                                     <p>WŁAŚCICIELKA SALONU OBSESSION</p>
@@ -81,7 +81,7 @@ function AboutMe() {
         </main>
 
     `;
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-aboutme");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
