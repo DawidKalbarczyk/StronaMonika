@@ -3,8 +3,6 @@ function PickedTreatmentLoad() {
     const urlParams = new URLSearchParams(window.location.search);
     const treatment = urlParams.get('treatment');
 
-    console.log('Wybrany zabieg:', treatment);
-
     if (treatment) {
         loadTreatmentData(treatment);
     } else {
@@ -30,7 +28,6 @@ function loadTreatmentData(treatment) {
             }
 
             if (foundData) {
-                console.log('Znalezione dane:', foundData);
                 displayTreatment(foundData);
             } else {
                 console.error('Nie znaleziono danych dla zabiegu:', treatment);
