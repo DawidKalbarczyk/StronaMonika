@@ -246,7 +246,7 @@ body {
         text-align: center;
         border-bottom: 2px solid white;
         padding-bottom: 12px;
-        margin: 0 0 16px 0;
+        margin: 0 0 40px 0;
     }
 
     .treatment-pros-div,
@@ -261,6 +261,11 @@ body {
     }
     .treatment-cons-div {
         border-radius: 0 0 400px 400px;
+    }
+    .treatment-tips-div {
+        border-radius: 100px;
+        grid-column: 1 / -1;
+        padding: 50px 150px;
     }
 
         .treatment-pros-text,
@@ -400,6 +405,22 @@ body {
         flex-direction: column;
         padding: 20px 15px;
         gap: 0;
+    }
+
+    .treatment-pros-cons-title:nth-child(1) {
+        order: 1;
+    }
+    .treatment-pros-div {
+        order: 2;
+    }
+    .treatment-pros-cons-title:nth-child(2) {
+        order: 3;
+    }
+    .treatment-cons-div:not(.treatment-tips-div) {
+        order: 4;
+    }
+    .treatment-tips-div {
+        order: 5;
     }
 
     .treatment-pros-cons-title {

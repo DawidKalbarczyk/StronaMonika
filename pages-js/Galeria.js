@@ -19,12 +19,13 @@ function Galeria() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="Galeria zdjęć">
+            <h1 class="seo-h1">Galeria zdjęć – Salon Kosmetologiczny Obsession Kozienice</h1>
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/treatmentPhotos/7364.jpg"/>
+                 <img class="main-gallery-photo" alt="Zdjęcie z salonu kosmetologicznego Obsession Kozienice" src="../photos/treatmentPhotos/7364.jpg"/>
             </div>
-            <div class="main-content-container main-content-container-gallery">
+            <section class="main-content-container main-content-container-gallery" aria-label="Galeria zdjęć z salonu">
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
@@ -44,10 +45,10 @@ function Galeria() {
                 </div>
                 
                 
-            </div>
+            </section>
             
             
-        </div>
+        </main>
                 
                 
                 

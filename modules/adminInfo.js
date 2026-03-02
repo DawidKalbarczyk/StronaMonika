@@ -76,7 +76,7 @@ function AdminInfo() {
             </div>
             <div>
             <p class="admin-info-copyright">
-                &#169;&nbsp;</nb><span class="admin-info-copyright-w"> 2026 Salon Kosmetologiczny Obsession Monika Molenda</span>. Wszelkie prawa zastrzeżone. Polityka prywatności
+                &#169;&nbsp;</nb><span class="admin-info-copyright-w"> 2026 Salon Kosmetologiczny Obsession Monika Molenda.</span> Wszelkie prawa zastrzeżone. Polityka prywatności
             </p>
             </div>
         </footer>

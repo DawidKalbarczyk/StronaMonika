@@ -261,20 +261,24 @@ body {
         box-shadow:
             3px -3px 6px rgba(0, 0, 0, 0.8),
             inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 8px;
+        overflow: hidden;
     }
 
     .photos-grid {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-        padding: 10px 8px 0 8px;
+        padding: 10px 0 0 0;
     }
 
     .photos-grid:first-child {
-        padding: 20px 8px 0 8px;
+        padding: 20px 0 0 0;
     }
 
     .photos-grid:last-child {
-        padding: 10px 8px 20px 8px;
+        padding: 10px 0 20px 0;
     }
 
     .photo-simple img {
@@ -403,15 +407,15 @@ body {
 
     .photos-grid {
         gap: 6px;
-        padding: 8px 6px 0 6px;
+        padding: 8px 0 0 0;
     }
 
     .photos-grid:first-child {
-        padding: 16px 6px 0 6px;
+        padding: 16px 0 0 0;
     }
 
     .photos-grid:last-child {
-        padding: 8px 6px 16px 6px;
+        padding: 8px 0 16px 0;
     }
 
     .photo-simple img {
