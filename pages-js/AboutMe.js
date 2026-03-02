@@ -17,14 +17,15 @@ function AboutMe() {
     const adminInfo = AdminInfo();
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="O mnie – Monika Molenda">
+            <h1 class="seo-h1">O mnie – Monika Molenda | Salon Kosmetologiczny Obsession Kozienice</h1>
             ${banner}
            
             <div class="main-aboutme-photo-container">
-                 <img class="main-aboutme-photo" alt="main-aboutme-photo" src="../photos/saloonPhotos/20251103_083853.jpg"/>
+                 <img class="main-aboutme-photo" alt="Wnętrze salonu kosmetologicznego Obsession w Kozienicach" src="../photos/saloonPhotos/20251103_083853.jpg"/>
             </div>
             
-            <div class="main-content-container main-content-container-aboutme">
+            <section class="main-content-container main-content-container-aboutme" aria-label="Treść strony o mnie">
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
                         <p class="main-content-info-title">O Mnie</p>
@@ -37,7 +38,7 @@ function AboutMe() {
                         <div class="aboutme-container">
                             <div class="aboutme-container-info-div">
                                 <div class="aboutme-container-photo-div">
-                                    <img class="aboutme-container-photo" alt="owner-photo" src="../photos/myPhotos/omnie.png">
+                                    <img class="aboutme-container-photo" alt="Monika Molenda – właścicielka Salonu Obsession Kozienice" src="../photos/myPhotos/omnie.png">
                                 </div>
                                 <div class="aboutme-container-text-div">
                                     <p>WŁAŚCICIELKA SALONU OBSESSION</p>
@@ -74,11 +75,11 @@ function AboutMe() {
                 ${mapContent}
                 <div class="section-separator"></div>
                 ${adminInfo}
-            </div>
+            </section>
             
             
-        </div>
-        
+        </main>
+
     `;
     document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-aboutme");

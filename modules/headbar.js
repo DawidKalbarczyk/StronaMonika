@@ -26,7 +26,7 @@ function Headbar() {
                 <span class="hamburger-line"></span>
             </button>
             
-            <div class="right-header">
+            <nav class="right-header" aria-label="Nawigacja główna">
                 <a href="${path}/AboutMe.html" class="headbar-link right-header-content-container right-header-content">
                     O mnie
                 </a>
@@ -42,8 +42,8 @@ function Headbar() {
                 </div>
                 </a>
                 
-            </div>
-            <div class="right-header right-header2">
+            </nav>
+            <nav class="right-header right-header2" aria-label="Nawigacja dodatkowa">
                 <a href="${path}/Kontakt.html" class="headbar-link right-header-content-container right-header-content">
                     Kontakt
                 </a>
@@ -56,7 +56,7 @@ function Headbar() {
                     </button>
                 </a>
                 
-            </div>
+            </nav>
             
         </header>
         

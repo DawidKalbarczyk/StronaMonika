@@ -18,14 +18,15 @@ function Cennik() {
     const adminInfo = AdminInfo();
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="Cennik zabiegów kosmetycznych">
+            <h1 class="seo-h1">Cennik zabiegów kosmetycznych – Salon Obsession Kozienice</h1>
             ${banner}
            
             <div class="main-cennik-photo-container">
-                 <img class="main-cennik-photo" alt="main-cennik-photo" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
+                 <img class="main-cennik-photo" alt="Kobieta podczas zabiegu kosmetycznego – Salon Obsession Kozienice" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
             
-            <div class="main-content-container main-content-container-cennik">
+            <section class="main-content-container main-content-container-cennik" aria-label="Cennik zabiegów">
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
                         <p class="main-content-info-title">Kosmetologia</p>
@@ -53,13 +54,13 @@ function Cennik() {
                 ${mapContent}
                 <div class="section-separator"></div>
                 ${adminInfo}
-            </div>
+            </section>
             
             
-        </div>
-        
+        </main>
+
     `;
-    const excelReader = ExcelReader();
+    const excelReader= ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
 
     // Slide-in animation for item-props on scroll

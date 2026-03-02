@@ -18,12 +18,13 @@ function Kontakt() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="Kontakt z salonem">
+            <h1 class="seo-h1">Kontakt – Salon Kosmetologiczny Obsession Kozienice | Tel: 667 911 466</h1>
             ${banner}
             <div class="main-contact-photo-container">
-                 <img class="main-contact-photo" alt="main-contact-photo" src="../photos/treatmentPhotos/woman-portrait-skincare-routine%20(1).jpg"/>
+                 <img class="main-contact-photo" alt="Salon kosmetologiczny Obsession Kozienice – zapraszamy na zabiegi" src="../photos/treatmentPhotos/woman-portrait-skincare-routine%20(1).jpg"/>
             </div>
-            <div class="main-content-container main-content-container-contact">
+            <section class="main-content-container main-content-container-contact" aria-label="Dane kontaktowe salonu">
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
@@ -110,10 +111,10 @@ function Kontakt() {
                 </div>
 
 
-            </div>
+            </section>
 
 
-        </div>
+        </main>
 
 
 
