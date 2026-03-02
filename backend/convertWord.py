@@ -70,6 +70,8 @@ def czytaj_word():
         # Część 2: tekst DO "Przebieg" (bez caps)
         if indeks_przebieg is not None:
             czesc_2 = [a for a in akapity[:indeks_przebieg] if not a.isupper()]
+        elif indeks_wskazania is not None:
+            czesc_2 = [a for a in akapity[:indeks_wskazania] if not a.isupper()]
         else:
             czesc_2 = [a for a in akapity if not a.isupper()]
 
