@@ -90,12 +90,37 @@ function displayTreatment(data) {
     part5Div.className = "treatment-cons-text";
     treatmentConsContainer.appendChild(part5Div);
 
+    let part6Div = null;
+    if (data.part6 && data.part6.length > 0) {
+        const part6ContainerDiv = document.createElement('div');
+        part6ContainerDiv.className = 'treatment-pros-cons-div';
+
+        const part6Title = document.createElement('p');
+        part6Title.className = 'treatment-pros-cons-title';
+        part6Title.style.gridColumn = '1 / -1';
+        part6Title.textContent = data.part6[0].toUpperCase();
+        part6ContainerDiv.appendChild(part6Title);
+
+        const part6InnerDiv = document.createElement('div');
+        part6InnerDiv.className = 'treatment-cons-div treatment-tips-div';
+
+        part6Div = document.createElement('p');
+        part6Div.innerHTML = data.part6.slice(1).join('<br>');
+        part6Div.className = 'treatment-cons-text';
+        part6InnerDiv.appendChild(part6Div);
+        part6ContainerDiv.appendChild(part6InnerDiv);
+
+        const proConsDiv = document.querySelector('.treatment-pros-cons-div');
+        proConsDiv.insertAdjacentElement('afterend', part6ContainerDiv);
+    }
+
     const animatedElements = [
         part2Div,
         firstPhotoContainer,
         part3Div,
         part4Div,
         part5Div,
+        ...(part6Div ? [part6Div] : []),
     ];
 
     animatedElements.forEach(el => {

@@ -21,12 +21,13 @@ function PickedTreatment() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="Opis zabiegu kosmetycznego">
+            <h1 class="seo-h1">Szczegółowy opis zabiegu – Salon Kosmetologiczny Obsession Kozienice</h1>
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="main-gallery-photo" src="../photos/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>
+                 <img class="main-gallery-photo" alt="Kobieta podczas zabiegu kosmetycznego" src="../photos/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>
             </div>
-            <div class="main-content-container main-content-container-gallery">
+            <section class="main-content-container main-content-container-gallery" aria-label="Opis zabiegu kosmetycznego">
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
@@ -70,10 +71,10 @@ function PickedTreatment() {
                 </div>
 
 
-            </div>
+            </section>
 
 
-        </div>
+        </main>
 
 
 

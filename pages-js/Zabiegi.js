@@ -19,12 +19,13 @@ function Zabiegi() {
 
     document.body.innerHTML = `
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link" aria-label="Zabiegi kosmetyczne">
+            <h1 class="seo-h1">Zabiegi kosmetyczne – Salon Obsession Kozienice</h1>
             ${banner}
             <div class="main-treat-photo-container">
-                 <img class="main-treat-photo" alt="main-treat-photo" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
+                 <img class="main-treat-photo" alt="Zabiegi kosmetyczne – Salon Obsession Kozienice" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
             </div>
-            <div class="main-content-container main-content-container-treat">
+            <section class="main-content-container main-content-container-treat" aria-label="Lista zabiegów kosmetycznych">
                 <div class="left-bar"></div>
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
@@ -44,10 +45,10 @@ function Zabiegi() {
                 </div>
 
 
-            </div>
+            </section>
 
 
-        </div>
+        </main>
 
     
 

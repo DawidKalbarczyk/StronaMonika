@@ -7,6 +7,18 @@ p {
     margin: 0;
 }
 
+.seo-h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
 body {
     margin: 0;
     margin-top: 150px;
@@ -457,14 +469,13 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-rows: 1fr 9fr;
     place-items: center;
-    padding: 4% 2%;
+    padding: 2.5% 2%;
     background-color: rgba(166, 168, 168, 0.95);
     box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8), inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
     margin-top: 70px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     color: #2b2b2b;
     overflow: hidden;
-
 }
 
 .form-container {
@@ -512,6 +523,10 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     padding: 2% 4%;
     margin-bottom: 1.5%;
     font-size: 15px;
+}
+
+.form-form input[name="Telefon"] {
+    margin-top: -0.8%;
 }
 
 .form-form input.input-RODO {
@@ -1059,15 +1074,16 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .admin-info-logo-container {
-        padding: 12px 10px;
+        padding: 8px;
         height: auto;
         border-right: 1px solid rgba(255,255,255,0.06);
         border-bottom: 1px solid rgba(255,255,255,0.06);
         grid-template-rows: auto;
+        place-items: center;
     }
 
     .admin-info-logo-container-logo {
-        width: 70%;
+        width: 60%;
     }
 
     .admin-info-logo-description {
@@ -1078,15 +1094,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     .admin-info-contact-container,
     .admin-info-admin-container {
         height: auto;
-        padding: 10px 12px;
+        padding: 6px 8px;
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.06);
         grid-template-rows: auto auto;
-        gap: 4px;
-    }
-
-    .admin-info-services-container {
-        border-right: none;
+        gap: 0;
     }
 
     .admin-info-contact-container {
@@ -1094,27 +1106,29 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .admin-info-titles {
-        font-size: 15px;
+        font-size: 12px;
+        margin: 0 0 2px 0;
     }
 
     .admin-info-titles-weighted {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .admin-info-descriptions {
-        line-height: 1.5;
-        font-size: 12px;
+        line-height: 1.4;
+        font-size: 10px;
+        margin: 0;
     }
 
     .admin-info-href {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .admin-info-copyright {
-        font-size: 10px;
+        font-size: 9px;
         text-align: center;
         justify-content: center;
-        padding: 2% 3%;
+        padding: 4px 6px;
         flex-wrap: wrap;
     }
 
@@ -1249,34 +1263,16 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         height: 260px;
     }
 
-    .admin-info-footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    .admin-info-logo-container {
-        padding: 10px 8px;
-    }
-
-    .admin-info-logo-container-logo {
-        width: 50%;
-    }
-
-    .admin-info-services-container,
-    .admin-info-contact-container,
-    .admin-info-admin-container {
-        padding: 8px 10px;
-    }
-
     .admin-info-titles {
-        font-size: 13px;
-    }
-
-    .admin-info-descriptions {
         font-size: 11px;
     }
 
+    .admin-info-descriptions {
+        font-size: 10px;
+    }
+
     .admin-info-copyright {
-        font-size: 9px;
+        font-size: 8px;
     }
 }
 
@@ -1381,13 +1377,17 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         height: 240px;
     }
 
+    .admin-info-titles {
+        font-size: 11px;
+    }
+
     .admin-info-descriptions {
-        font-size: 10.5px;
+        font-size: 10px;
         line-height: 1.4;
     }
 
     .admin-info-copyright {
-        font-size: 9px;
+        font-size: 8px;
     }
 }
 
@@ -1451,11 +1451,15 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .admin-info-titles {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .admin-info-descriptions {
-        font-size: 10px;
+        font-size: 9px;
+    }
+
+    .admin-info-copyright {
+        font-size: 7px;
     }
 }
 

@@ -13,15 +13,20 @@ function Home() {
     const form = Form();
     document.body.innerHTML = (`
         ${headbar}
-        <div class="main" id="main-link">
+        <main class="main" id="main-link">
             ${banner}
             <div class="main-content-container">
                 <div class="left-bar"></div>
                 <div class="main-content">
-                    <div class="owner-info-container">
+                    <section class="owner-info-container">
+                        <h1 class="seo-h1">Salon Kosmetologiczny Obsession – Monika Molenda, Kozienice</h1>
 
                         <div class="owner-photo-container">
                             <img class="owner-photo" src="photos/myPhotos/homepagephoto.jpg" alt="Owner"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251101_111034.jpg" alt="Owner 2"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251101_111127.jpg" alt="Owner 3"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251102_130628.jpg" alt="Owner 4"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251102_130901.jpg" alt="Owner 5"/>
                         </div>
                         <div class="owner-quote-container-wrapper">
                             <div class="owner-quote-container">
@@ -34,9 +39,9 @@ function Home() {
                             </div>
                         </div>
 
-                    </div>
+                    </section>
                     <div class="section-separator"></div>
-                    <div class="unique-info-container">
+                    <section class="unique-info-container">
                         <div class="unique-info-title">
                             <p class="unique-info-text">Dlaczego warto mnie odwiedzić?</p>
                         </div>
@@ -114,11 +119,11 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     
                     <div class="section-separator"></div>
                     
-                    <div class="work-info-container">
+                    <section class="work-info-container">
                         <div class="work-info-title">
                             <p class="work-info-text">Wybrane usługi jakie oferuję</p>
                         </div>
@@ -198,7 +203,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     <div class="section-separator"></div>
                     ${form}
                     <div class="section-separator"></div>
@@ -208,7 +213,7 @@ function Home() {
 
             </div>
 
-        </div>
+        </main>
     `);
     setTimeout(() => initFormAnimations(), 0);
 }
