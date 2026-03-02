@@ -25,7 +25,7 @@ function PickedTreatment() {
             <h1 class="seo-h1">Szczegółowy opis zabiegu – Salon Kosmetologiczny Obsession Kozienice</h1>
             ${banner}
             <div class="main-gallery-photo-container">
-                 <img class="main-gallery-photo" alt="Kobieta podczas zabiegu kosmetycznego" src="../photos/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>
+                 <img class="main-gallery-photo" alt="Kobieta podczas zabiegu kosmetycznego" src="../backend/photos_compressed/treatmentPhotos/woman-portrait-skincare-routine.jpg"/>
             </div>
             <section class="main-content-container main-content-container-gallery" aria-label="Opis zabiegu kosmetycznego">
                 <div class="left-bar"></div>
@@ -80,7 +80,7 @@ function PickedTreatment() {
 
 
     `;
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-gallery");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");

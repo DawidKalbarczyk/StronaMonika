@@ -169,7 +169,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../photos/textures/pale-gray-grained-wall-template.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../backend/photos_compressed/textures/pale-gray-grained-wall-template.jpg");
             background-size: 500px 500px;
             background-repeat: repeat;
             background-position: center;

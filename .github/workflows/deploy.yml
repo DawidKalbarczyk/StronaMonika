@@ -47,8 +47,20 @@ jobs:
         run: pip install python-docx odfpy
         working-directory: backend
 
+      - name: Cache photos_compressed
+        id: cache-photos
+        uses: actions/cache@v4
+        with:
+          path: backend/photos_compressed
+          key: photos-${{ hashFiles('backend/photos/**') }}
+
       - name: Konwertuj Word na JSON
-        run: python convertWord.py
+        run: python -c "import convertWord; convertWord.czytaj_word()"
+        working-directory: backend
+
+      - name: Kompresuj zdjęcia
+        if: steps.cache-photos.outputs.cache-hit != 'true'
+        run: python -c "import convertWord; convertWord.kompresuj_myphotos()"
         working-directory: backend
 
       - name: Przygotuj pliki do wrzucenia
@@ -57,7 +69,6 @@ jobs:
           cp -r pages _site/
           cp -r pages-js _site/
           cp -r styles _site/
-          cp -r photos _site/
           cp -r backend _site/
           cp -r modules _site/
           cp index.html _site/

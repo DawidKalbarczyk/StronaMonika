@@ -23,7 +23,7 @@ function Zabiegi() {
             <h1 class="seo-h1">Zabiegi kosmetyczne – Salon Obsession Kozienice</h1>
             ${banner}
             <div class="main-treat-photo-container">
-                 <img class="main-treat-photo" alt="Zabiegi kosmetyczne – Salon Obsession Kozienice" src="../photos/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
+                 <img class="main-treat-photo" alt="Zabiegi kosmetyczne – Salon Obsession Kozienice" src="../backend/photos_compressed/treatmentPhotos/Gemini_Generated_Image_evsm4eevsm4eevsm.png"/>
             </div>
             <section class="main-content-container main-content-container-treat" aria-label="Lista zabiegów kosmetycznych">
                 <div class="left-bar"></div>
@@ -56,7 +56,7 @@ function Zabiegi() {
     `;
     treatmentLoad();
 
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-treat");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");

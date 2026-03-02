@@ -2,6 +2,7 @@ from docx import Document
 from odf.opendocument import load
 from odf.text import P
 from odf import teletype
+from PIL import Image
 import json
 import os
 
@@ -30,6 +31,10 @@ def czytaj_plik(sciezka):
 def czytaj_word():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     word_dir = os.path.join(script_dir, "word")
+
+    if not os.path.isdir(word_dir):
+        print("Folder backend/word nie istnieje – pomijam konwersję Word")
+        return
 
     pliki = [f for f in os.listdir(word_dir) if f.endswith((".docx", ".odt"))]
     if not pliki:
@@ -121,4 +126,44 @@ def czytaj_word():
 
     print(f"\nZapisano do {output_path}")
 
-czytaj_word()
+def kompresuj_myphotos():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    src_dir = os.path.join(script_dir, "photos")
+    dst_dir = os.path.join(script_dir, "photos_compressed")
+
+    if not os.path.isdir(src_dir):
+        print("Folder backend/photos nie istnieje – pomijam kompresję zdjęć")
+        return
+
+    extensions = ['.jpg', '.jpeg', '.png', '.webp']
+
+    for root, dirs, files in os.walk(src_dir):
+        rel = os.path.relpath(root, src_dir)
+        out_root = os.path.join(dst_dir, rel)
+        os.makedirs(out_root, exist_ok=True)
+
+        for filename in files:
+            ext = os.path.splitext(filename)[1].lower()
+            if ext not in extensions:
+                continue
+
+            src_file = os.path.join(root, filename)
+            is_png = ext == '.png'
+            out_name = os.path.splitext(filename)[0] + ('.png' if is_png else '.jpg')
+            dst_file = os.path.join(out_root, out_name)
+
+            img = Image.open(src_file)
+            if not is_png:
+                img = img.convert('RGB')
+            img.thumbnail((1920, 1080))
+            if is_png:
+                img.save(dst_file, 'PNG', optimize=True)
+            else:
+                img.save(dst_file, 'JPEG', quality=75, optimize=True)
+            print(f"Skompresowano: {os.path.relpath(src_file, script_dir)} → {os.path.relpath(dst_file, script_dir)}")
+
+    print("Kompresja photos zakończona")
+
+if __name__ == '__main__':
+    czytaj_word()
+    kompresuj_myphotos()
