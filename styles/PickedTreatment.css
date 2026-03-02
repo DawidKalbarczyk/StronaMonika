@@ -266,7 +266,7 @@ body {
         border-radius: 0 0 400px 400px;
     }
     .treatment-tips-div {
-        border-radius: 100px;
+        border-radius: 0;
         grid-column: 1 / -1;
         padding: 50px 150px;
     }
@@ -424,7 +424,6 @@ body {
     }
     .treatment-tips-div {
         order: 5;
-        margin: 0;
     }
 
     .treatment-pros-cons-title {
