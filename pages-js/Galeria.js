@@ -91,7 +91,7 @@ function Galeria() {
         }
     });
 
-    generatePhotosHTML('../backend/gallery').then(photos => {
+    generatePhotosHTML('../backend/gallery_compressed').then(photos => {
         document.querySelector('.main-content-photos').innerHTML = photos;
 
         const photoElements = document.querySelectorAll(".photo-simple, .photo-center");
