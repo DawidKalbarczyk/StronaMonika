@@ -98,7 +98,7 @@ function displayTreatment(data) {
         const part6Title = document.createElement('p');
         part6Title.className = 'treatment-pros-cons-title';
         part6Title.style.gridColumn = '1 / -1';
-        part6Title.textContent = data.part6[0].toUpperCase();
+        part6Title.textContent = data.part6[0].replace(/:$/, '').toUpperCase();
         part6ContainerDiv.appendChild(part6Title);
 
         const part6InnerDiv = document.createElement('div');
