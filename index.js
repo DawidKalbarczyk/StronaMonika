@@ -22,11 +22,11 @@ function Home() {
                         <h1 class="seo-h1">Salon Kosmetologiczny Obsession – Monika Molenda, Kozienice</h1>
 
                         <div class="owner-photo-container">
-                            <img class="owner-photo" src="photos/myPhotos/homepagephoto.jpg" alt="Owner"/>
-                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251101_111034.jpg" alt="Owner 2"/>
-                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251101_111127.jpg" alt="Owner 3"/>
-                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251102_130628.jpg" alt="Owner 4"/>
-                            <img class="owner-photo owner-photo-mobile-extra" src="photos/myPhotos/20251102_130901.jpg" alt="Owner 5"/>
+                            <img class="owner-photo" src="backend/photos_compressed/myPhotos/homepagephoto.jpg" alt="Owner"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111034.jpg" alt="Owner 2"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111127.jpg" alt="Owner 3"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251102_130628.jpg" alt="Owner 4"/>
+                            <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251102_130901.jpg" alt="Owner 5"/>
                         </div>
                         <div class="owner-quote-container-wrapper">
                             <div class="owner-quote-container">
@@ -49,7 +49,7 @@ function Home() {
                         <div class="unique-info-tile-container">
                             <div class="unique-info-tile unique-info-tile-x1">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" src="photos/icons/individual-icon-png-1.jpg" alt="Indywidualne Podejście"/>
+                                    <img class="unique-info-tile-image" src="backend/photos_compressed/icons/individual-icon-png-1.jpg" alt="Indywidualne Podejście"/>
                                     <p class="unique-info-tile-title">
                                         Indywidualne podejście
                                     </p>
@@ -61,7 +61,7 @@ function Home() {
                             </div>
                             <div class="unique-info-tile unique-info-tile-x2">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" src="photos/icons/experience-icon-woman.png" alt="Doświadczenie"/>
+                                    <img class="unique-info-tile-image" src="backend/photos_compressed/icons/experience-icon-woman.png" alt="Doświadczenie"/>
                                     <p class="unique-info-tile-title">
                                         Doświadczenie poparte praktyką
                                     </p>
@@ -73,7 +73,7 @@ function Home() {
                             </div>
                             <div class="unique-info-tile unique-info-tile-x3">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" src="photos/icons/quality-icon.png" alt="Jakość"/>
+                                    <img class="unique-info-tile-image" src="backend/photos_compressed/icons/quality-icon.png" alt="Jakość"/>
                                     <p class="unique-info-tile-title">
                                         Wysoka jakość wykonania
                                     </p>
@@ -85,7 +85,7 @@ function Home() {
                             </div>
                             <div class="unique-info-tile unique-info-tile-x4">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" style="transform: scale(1.3);" src="photos/icons/punctuality-icon.png" alt="Punktualność"/>
+                                    <img class="unique-info-tile-image" style="transform: scale(1.3);" src="backend/photos_compressed/icons/punctuality-icon.png" alt="Punktualność"/>
                                     <p class="unique-info-tile-title">
                                         Rzetelność i terminowość
                                     </p>
@@ -97,7 +97,7 @@ function Home() {
                             </div>
                             <div class="unique-info-tile unique-info-tile-x5">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" src="photos/icons/friendly-icon.png" alt="przyjazna atmosfera"/>
+                                    <img class="unique-info-tile-image" src="backend/photos_compressed/icons/friendly-icon.png" alt="przyjazna atmosfera"/>
                                     <p class="unique-info-tile-title">
                                         Przyjazna atmosfera
                                     </p>
@@ -109,7 +109,7 @@ function Home() {
                             </div>
                             <div class="unique-info-tile unique-info-tile-x6">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" style="transform: scale(0.9);" src="photos/icons/trusty-icon.png" alt="Zaufanie"/>
+                                    <img class="unique-info-tile-image" style="transform: scale(0.9);" src="backend/photos_compressed/icons/trusty-icon.png" alt="Zaufanie"/>
                                     <p class="unique-info-tile-title">
                                         Zaufanie klientów
                                     </p>
@@ -131,7 +131,7 @@ function Home() {
                         <div class="work-info-tile-container">
                             <div class="work-info-tile work-info-tile-x1">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/acne-treatment.png" alt="Oczyszczanie Twarzy"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/acne-treatment.png" alt="Oczyszczanie Twarzy"/>
                                     <p class="work-info-tile-title">
                                         Oczyszczanie i Regeneracja Twarzy
                                     </p>
@@ -143,7 +143,7 @@ function Home() {
                             </div>
                             <div class="work-info-tile work-info-tile-x2">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/beauty.png" alt="Makijaż"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/beauty.png" alt="Makijaż"/>
                                     <p class="work-info-tile-title">
                                         Makijaż Okolicznościowy
                                     </p>
@@ -155,7 +155,7 @@ function Home() {
                             </div>
                             <div class="work-info-tile work-info-tile-x3">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/botox-lips.png" alt="Zabieg ust"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/botox-lips.png" alt="Zabieg ust"/>
                                     <p class="work-info-tile-title">
                                         Modelowanie i Estetyka Ust
                                     </p>
@@ -167,7 +167,7 @@ function Home() {
                             </div>
                             <div class="work-info-tile work-info-tile-x4">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/nail-polish.png" alt="Manicure Hybrydowy"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/nail-polish.png" alt="Manicure Hybrydowy"/>
                                     <p class="work-info-tile-title">
                                         Manicure Hybrydowy
                                     </p>
@@ -179,7 +179,7 @@ function Home() {
                             </div>
                             <div class="work-info-tile work-info-tile-x5">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/permanent-eyebrows.png" alt="Brwi permanentne"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/permanent-eyebrows.png" alt="Brwi permanentne"/>
                                     <p class="work-info-tile-title">
                                         Makijaż Permanenty Brwi
                                     </p>
@@ -192,7 +192,7 @@ function Home() {
                             
                             <div class="work-info-tile work-info-tile-x6">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="photos/icons/services-icons/eyelash.png" alt="Rzęsy"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/eyelash.png" alt="Rzęsy"/>
                                     <p class="work-info-tile-title">
                                         Stylizacja i Przedłużanie Rzęs
                                     </p>

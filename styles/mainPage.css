@@ -26,7 +26,7 @@
 
     background:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
     background-size: 300px 300px;
 
@@ -97,7 +97,7 @@
     background-color: rgb(166, 168, 168);
     background:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("../photos/saloonPhotos/20251103_083910.jpg");
+        url("../backend/photos_compressed/saloonPhotos/20251103_083910.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
@@ -232,7 +232,7 @@
     display: grid;
     background:
             linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
     background-size: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -261,7 +261,7 @@
 .work-info-tile-container {
     background:
             linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-            url("../photos/textures/small-blotted-light-gray-wall-pattern.jpg");
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
     background-repeat: repeat;
     background-size: 500px 500px;
     display: grid;
@@ -321,7 +321,7 @@
 .unique-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/indywidualne.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/indywidualne.jpg");
     background-size: cover;
     background-position: -25px 0;
 }
@@ -329,7 +329,7 @@
 .unique-info-tile-x2 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/praktyka.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/praktyka.jpg");
     background-size: cover;
     background-position: -250px 0;
 }
@@ -337,7 +337,7 @@
 .unique-info-tile-x3 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/jakosc-uslugi.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/jakosc-uslugi.jpg");
     background-size: cover;
     background-position: 0 0;
 }
@@ -345,7 +345,7 @@
 .unique-info-tile-x4 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/terminowosc.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/terminowosc.jpg");
     background-size: cover;
     background-position: -40px 0;
 }
@@ -353,7 +353,7 @@
 .unique-info-tile-x5 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/atmosfera.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/atmosfera.jpg");
     background-size: cover;
     background-position: 0 -75px;
 }
@@ -361,7 +361,7 @@
 .unique-info-tile-x6 {
     background:
             linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-            url("../photos/myPhotos/unique-photos/zaufanie.jpg");
+            url("../backend/photos_compressed/myPhotos/unique-photos/zaufanie.jpg");
     background-size: cover;
     background-position: 0 0;
 }
@@ -369,42 +369,42 @@
 .work-info-tile-x1 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/acne.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/acne.jpg");
     background-size: cover;
     background-position: -200px 0;
 }
 .work-info-tile-x2 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/makeup.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/makeup.jpg");
     background-size: cover;
     background-position: -150px 0;
 }
 .work-info-tile-x3 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/lips.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/lips.jpg");
     background-size: cover;
     background-position: -250px 0;
 }
 .work-info-tile-x4 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/manicure.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/manicure.jpg");
     background-size: cover;
     background-position: -150px 0;
 }
 .work-info-tile-x5 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/eyebrows.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/eyebrows.jpg");
     background-size: cover;
     background-position: -175px 0;
 }
 .work-info-tile-x6 {
     background:
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url("../photos/myPhotos/services-photos/lashes.jpg");
+            url("../backend/photos_compressed/myPhotos/services-photos/lashes.jpg");
     background-size: cover;
     background-position: -175px 0;
 }

@@ -23,7 +23,7 @@ function Cennik() {
             ${banner}
            
             <div class="main-cennik-photo-container">
-                 <img class="main-cennik-photo" alt="Kobieta podczas zabiegu kosmetycznego – Salon Obsession Kozienice" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
+                 <img class="main-cennik-photo" alt="Kobieta podczas zabiegu kosmetycznego – Salon Obsession Kozienice" src="../backend/photos_compressed/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
             
             <section class="main-content-container main-content-container-cennik" aria-label="Cennik zabiegów">
@@ -94,7 +94,7 @@ function Cennik() {
 
     setTimeout(() => initFormAnimations(), 0);
 
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-cennik");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");

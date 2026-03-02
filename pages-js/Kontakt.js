@@ -22,7 +22,7 @@ function Kontakt() {
             <h1 class="seo-h1">Kontakt – Salon Kosmetologiczny Obsession Kozienice | Tel: 667 911 466</h1>
             ${banner}
             <div class="main-contact-photo-container">
-                 <img class="main-contact-photo" alt="Salon kosmetologiczny Obsession Kozienice – zapraszamy na zabiegi" src="../photos/treatmentPhotos/woman-portrait-skincare-routine%20(1).jpg"/>
+                 <img class="main-contact-photo" alt="Salon kosmetologiczny Obsession Kozienice – zapraszamy na zabiegi" src="../backend/photos_compressed/treatmentPhotos/woman-portrait-skincare-routine%20(1).jpg"/>
             </div>
             <section class="main-content-container main-content-container-contact" aria-label="Dane kontaktowe salonu">
                 <div class="left-bar"></div>
@@ -38,7 +38,7 @@ function Kontakt() {
                                         <p class="social-media-item-title">
                                             Facebook
                                         </p>
-                                        <img alt="facebook-picture" class="social-media-item-photo" src="../photos/icons/facebook-icon.png"/>
+                                        <img alt="facebook-picture" class="social-media-item-photo" src="../backend/photos_compressed/icons/facebook-icon.png"/>
                                         
                                     </div>
                                 </a>
@@ -47,7 +47,7 @@ function Kontakt() {
                                         <p class="social-media-item-title">
                                             Instagram
                                         </p>
-                                        <img alt="instagram-picture" class="social-media-item-photo" src="../photos/icons/instagram%20(1).png"/>
+                                        <img alt="instagram-picture" class="social-media-item-photo" src="../backend/photos_compressed/icons/instagram%20(1).png"/>
                                         
                                     </div>
                                 </a>
@@ -56,7 +56,7 @@ function Kontakt() {
                                         <p class="social-media-item-title">
                                             WhatsApp
                                         </p>
-                                        <img alt="whatsapp-picture" class="social-media-item-photo" src="../photos/icons/whatsapp.png"/>
+                                        <img alt="whatsapp-picture" class="social-media-item-photo" src="../backend/photos_compressed/icons/whatsapp.png"/>
                                         
                                     </div>
                                 </a>
@@ -65,7 +65,7 @@ function Kontakt() {
                                         <p class="social-media-item-title">
                                             Google
                                         </p>
-                                        <img alt="google-picture" class="social-media-item-photo" src="../photos/icons/google.png"/>
+                                        <img alt="google-picture" class="social-media-item-photo" src="../backend/photos_compressed/icons/google.png"/>
                                         
                                     </div>
                                 </a>
@@ -74,7 +74,7 @@ function Kontakt() {
                                         <p class="social-media-item-title">
                                             Google Maps
                                         </p>
-                                        <img alt="google-maps-picture" class="social-media-item-photo" src="../photos/icons/google-maps.png"/>
+                                        <img alt="google-maps-picture" class="social-media-item-photo" src="../backend/photos_compressed/icons/google-maps.png"/>
                                         
                                     </div>
                                 </a>
@@ -93,11 +93,11 @@ function Kontakt() {
                                         <p>Działalność od 2016 roku</p>
                                     </div>
                                     <div class="company-details-photo-container">
-                                        <img alt="contact-photo1" class="company-details-photo" src="../photos/myPhotos/contact-photo-1.jpg"/>
-                                        <img alt="contact-photo2" class="company-details-photo" src="../photos/myPhotos/contact-photo-2.jpg"/>
-                                        <img alt="contact-photo3" class="company-details-photo" src="../photos/myPhotos/contact-photo-3.jpg"/>
-                                        <img alt="contact-photo4" class="company-details-photo" src="../photos/myPhotos/contact-photo-4.jpg"/>
-                                        <img alt="contact-photo5" class="company-details-photo" src="../photos/myPhotos/contact-photo-5.jpg"/>
+                                        <img alt="contact-photo1" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-1.jpg"/>
+                                        <img alt="contact-photo2" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-2.jpg"/>
+                                        <img alt="contact-photo3" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-3.jpg"/>
+                                        <img alt="contact-photo4" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-4.jpg"/>
+                                        <img alt="contact-photo5" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-5.jpg"/>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ function Kontakt() {
         if (el) { el.classList.add(i === 0 ? 'slide-left' : 'slide-right'); observer.observe(el); }
     });
 
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-contact");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
