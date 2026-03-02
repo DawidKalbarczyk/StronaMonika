@@ -49,7 +49,7 @@ function Home() {
                         <div class="unique-info-tile-container">
                             <div class="unique-info-tile unique-info-tile-x1">
                                 <div class="unique-info-tile-title-container">
-                                    <img class="unique-info-tile-image" src="backend/photos_compressed/icons/individual-icon-png-1.jpg" alt="Indywidualne Podejście"/>
+                                    <img class="unique-info-tile-image" style="mix-blend-mode: multiply;" src="backend/photos_compressed/icons/individual-icon-png-1.jpg" alt="Indywidualne Podejście"/>
                                     <p class="unique-info-tile-title">
                                         Indywidualne podejście
                                     </p>
