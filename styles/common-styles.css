@@ -232,10 +232,12 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
     border: 1px solid black;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    transition: filter 0.5s ease;
 }
 
 .header-button:hover {
     cursor: pointer;
+    filter: brightness(0.7);
 }
 
 .socialmedia-header {
@@ -938,6 +940,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
         padding: 14px 0;
         font-weight: bold;
+        transition: filter 0.5s ease;
+    }
+
+    .mobile-menu-cta:hover {
+        filter: brightness(0.7);
     }
 
     .mobile-menu-social {
