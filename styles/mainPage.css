@@ -478,12 +478,62 @@
     color: #dcdcdc;
 }
 
+.announcement-div {
+    height: 200px;
+    background-color: rgba(140, 63, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px 0 150px;
+}
+
+.announcement-div {
+    font-size: 30px;
+    color: #dcdcdc;
+}
+
+.announcement-separate-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.door-icon {
+    width: 12%;
+    filter: invert(0.9)
+}
 
 /* ============================================
    MOBILE STYLES - mainPage (max-width: 767px)
    ============================================ */
 
 @media (max-width: 767px) {
+
+    /* ----- Announcement ----- */
+    .announcement-div {
+        height: auto;
+        min-height: 120px;
+        padding: 15px 20px;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .announcement-separate-div {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .door-icon {
+        width: 60px;
+    }
+
+    .announcement-text p {
+        margin: 4px 0;
+    }
 
     /* ----- Owner Info Section ----- */
     .owner-info-container {
@@ -724,6 +774,11 @@
 
 /* ---- Large phones (iPhone 15 Pro Max, 14 Plus, 13 Pro Max) ---- */
 @media (max-width: 430px) {
+    .announcement-div {
+        font-size: 16px;
+        min-height: 110px;
+    }
+
     .owner-photo-container {
         height: 210px;
     }
@@ -767,6 +822,12 @@
 
 /* ---- Medium phones (iPhone 15 Pro, 14 Pro, Pixel 5, Xiaomi 13) ---- */
 @media (max-width: 393px) {
+    .announcement-div {
+        font-size: 15px;
+        min-height: 100px;
+        padding: 12px 15px;
+    }
+
     .owner-photo-container {
         height: 200px;
     }
@@ -804,6 +865,11 @@
 
 /* ---- Small phones (iPhone SE, 8, X/XS, 11 Pro, 12/13 Mini) ---- */
 @media (max-width: 375px) {
+    .announcement-div {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
     .owner-photo-container {
         height: 190px;
     }
@@ -854,6 +920,15 @@
 
 /* ---- Compact phones (Galaxy S24/S23/S22/S21/S20 FE, Huawei) ---- */
 @media (max-width: 360px) {
+    .announcement-div {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .door-icon {
+        width: 50px;
+    }
+
     .owner-photo-container {
         height: 180px;
     }
@@ -917,6 +992,15 @@
 
 /* ---- Very small phones (iPhone SE 1st gen, older devices) ---- */
 @media (max-width: 320px) {
+    .announcement-div {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .door-icon {
+        width: 45px;
+    }
+
     .owner-photo-container {
         height: 160px;
     }
