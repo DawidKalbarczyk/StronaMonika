@@ -211,9 +211,25 @@ body {
     }
 }
 
+/* ============================================
+   LAPTOP STYLES - AboutMe (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1600px) {
+
+    /* ----- Spacing between photo and owner text ----- */
+    .aboutme-container-info-div {
+        grid-template-rows: auto auto;
+        align-content: start;
+        row-gap: 50px;
+    }
+}
+
 .aboutme-container-text-div.visible {
     opacity: 1;
     transform: translateX(0);
+    padding: 48px 0;
 }
 
 .aboutme-container-text-div p {
