@@ -219,6 +219,20 @@ body {
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
 }
 
+/* ===== LAPTOP (covers 125% Windows DPI scaling on 1920x1080) ===== */
+@media (min-width: 768px) and (max-width: 1600px) {
+
+    /* ----- "Dane o firmie" fits on one line ----- */
+    .company-details-text-container {
+        padding: 24px;
+    }
+
+    .company-details-text-container .paragraph-title {
+        font-size: 26px;
+        margin-left: 0;
+    }
+}
+
 /* ===== MOBILE ===== */
 @media screen and (max-width: 767px) {
     body {
