@@ -506,6 +506,19 @@
 }
 
 /* ============================================
+   LAPTOP STYLES - mainPage (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1600px) {
+
+    /* ----- Announcement images spacing ----- */
+    .door-icon {
+        margin: 0 30px;
+    }
+}
+
+/* ============================================
    MOBILE STYLES - mainPage (max-width: 767px)
    ============================================ */
 

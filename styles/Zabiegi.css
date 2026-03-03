@@ -185,6 +185,23 @@ body {
 
 
 /* ============================================
+   LAPTOP STYLES - Zabiegi (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1600px) {
+
+    /* ----- Treatment tiles - slightly wider ----- */
+    .main-content-treat {
+        padding: 35px;
+    }
+
+    .main-treatment {
+        gap: 28px;
+    }
+}
+
+/* ============================================
    MOBILE STYLES - Zabiegi (max-width: 767px)
    ============================================ */
 
