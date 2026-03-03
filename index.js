@@ -11,10 +11,23 @@ function Home() {
     const banner = Banner();
     const mapComponent = initMap();
     const form = Form();
+    const isAnnouncment = true;
+
     document.body.innerHTML = (`
         ${headbar}
         <main class="main" id="main-link">
             ${banner}
+            <div class="announcement-div">
+                <div class="announcement-separate-div">
+                    <img alt="door-icon" class="door-icon" src="backend/photos/icons/closed-sign.png"/>
+                    <div class="announcement-text">
+                        <p>Salon Obsession będzie nieczynny w dniach 05.03.2026r. - 09.03.2026r.</p>
+                        <p>Przepraszam za wszelkie niedogodności i dziękuję za wyrozumiałość.</p>
+                    </div>
+                    <img alt="door-icon" class="door-icon" src="backend/photos/icons/closed-sign.png"/>
+                </div>
+                
+            </div>
             <div class="main-content-container">
                 <div class="left-bar"></div>
                 <div class="main-content">
@@ -215,6 +228,11 @@ function Home() {
 
         </main>
     `);
+    if (isAnnouncment) {
+        document.querySelector(".announcement-div").style.opacity = "1";
+    } else {
+        document.querySelector(".announcement-div").style.opacity = "0";
+    }
     setTimeout(() => initFormAnimations(), 0);
 }
 export default Home;
