@@ -240,8 +240,10 @@ body {
     background-color: rgba(0,0,0,0.5);
 }
 
-.treatment-tips-div {
-    margin: 0 150px 0 150px;
+@media (min-width: 768px) {
+    .treatment-tips-div {
+        margin: 0 150px 0 150px;
+    }
 }
     .treatment-pros-cons-title {
         color: white;
@@ -424,6 +426,11 @@ body {
     }
     .treatment-tips-div {
         order: 5;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .treatment-pros-cons-title {

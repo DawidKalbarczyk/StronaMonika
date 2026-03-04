@@ -93,7 +93,7 @@ body {
 }
 
 .main-content-info-title {
-    font-size: 50px;
+    font-size: 36px;
     color: white;
     margin: 0;
     border-bottom: 2px solid white;
@@ -113,11 +113,7 @@ body {
 
 
 .main-content-photos {
-    background:
-            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
-    background-repeat: repeat;
-    background-size: 250px 250px;
+    background-color: rgba(142, 141, 141, 0.8);
     box-shadow:
             7px -7px 10px rgba(0, 0, 0, 0.8),
             inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
@@ -211,251 +207,20 @@ body {
 
 
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.photo-simple,
+.photo-center {
+    /* stan initial w JS */
 }
 
-/* ===== MOBILE ===== */
-@media screen and (max-width: 767px) {
-    body {
-        margin-top: 0 !important;
-    }
+/* ============================================
+   LAPTOP STYLES - Galeria (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
 
-    .main-gallery-photo-container {
-        height: 300px;
-        padding: 0;
-    }
+@media (min-width: 768px) and (max-width: 1600px) {
 
-    .main-gallery-photo {
-        object-position: center 60%;
-    }
-
+    /* ----- left-bar aligned with content ----- */
     .main-content-container-gallery {
-        display: block;
-        padding-right: 0;
-        margin: 30px 0 0 0;
-    }
-
-    .left-bar {
-        display: none;
-    }
-
-    .main-content-info-title-container {
-        padding: 16px 10px;
-    }
-
-    .main-content-info-title {
-        font-size: 28px;
-        width: 80%;
-        padding-bottom: 14px;
-    }
-
-    .main-content-aboutme {
-        margin: 20px 0 0 0;
-    }
-
-    .main-content-photos {
-        background-size: cover, 150px 150px;
-        background-repeat: no-repeat, repeat;
-        box-shadow:
-            3px -3px 6px rgba(0, 0, 0, 0.8),
-            inset 0 0 20px 15px rgba(0, 0, 0, 0.5);
-        box-sizing: border-box;
-        width: 100%;
-        padding: 0 8px;
-        overflow: hidden;
-    }
-
-    .photos-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 10px 0 0 0;
-    }
-
-    .photos-grid:first-child {
-        padding: 20px 0 0 0;
-    }
-
-    .photos-grid:last-child {
-        padding: 10px 0 20px 0;
-    }
-
-    .photo-simple img {
-        height: 200px;
-        border-radius: 12px;
-        box-shadow: 0 0 6px 3px rgba(0,0,0,0.5);
-    }
-
-    .photo-simple img:hover {
-        transform: none;
-    }
-
-    .photo-center {
-        display: contents;
-    }
-
-    .photo-center img {
-        height: 200px;
-        border-radius: 12px;
-        box-shadow: 0 0 6px 3px rgba(0,0,0,0.5);
-    }
-
-    .photo-center img:hover {
-        transform: none;
-    }
-
-    .photo-overlay-img {
-        max-width: 95%;
-        max-height: 85%;
-        border-radius: 6px;
-    }
-
-    .gallery-container-separator {
-        margin: 30px 40px 0 40px;
-    }
-
-    .map-component {
-        margin: 30px 0 0 0;
-    }
-
-    .admin-info-footer {
-        margin-top: 30px;
-    }
-
-    /* Disable scroll animations on mobile */
-    .photo-simple,
-    .photo-center {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
+        padding-left: 24px;
     }
 }
-
-/* ----- iPhone 15 Pro Max, 14 Plus, Samsung S24 Ultra (430px) ----- */
-@media screen and (max-width: 430px) {
-    .main-gallery-photo-container {
-        height: 260px;
-    }
-
-    .main-content-info-title {
-        font-size: 25px;
-    }
-
-    .photo-simple img {
-        height: 180px;
-    }
-
-    .photo-center img {
-        height: 180px;
-    }
-}
-
-/* ----- iPhone 15 Pro, Pixel 5/6/7/8 (393px) ----- */
-@media screen and (max-width: 393px) {
-    .main-gallery-photo-container {
-        height: 240px;
-    }
-
-    .main-content-info-title {
-        font-size: 23px;
-    }
-
-    .photos-grid {
-        gap: 8px;
-    }
-
-    .photo-simple img {
-        height: 160px;
-    }
-
-    .photo-center img {
-        height: 160px;
-    }
-}
-
-/* ----- iPhone SE (2nd/3rd), iPhone X, 12 Mini (375px) ----- */
-@media screen and (max-width: 375px) {
-    .main-gallery-photo-container {
-        height: 220px;
-    }
-
-    .main-content-info-title {
-        font-size: 21px;
-    }
-
-    .photo-simple img {
-        height: 145px;
-        border-radius: 10px;
-    }
-
-    .photo-center img {
-        height: 145px;
-        border-radius: 10px;
-    }
-}
-
-/* ----- Galaxy S24/S23/S22/S21/S20 FE (360px) ----- */
-@media screen and (max-width: 360px) {
-    .main-gallery-photo-container {
-        height: 200px;
-    }
-
-    .main-content-info-title {
-        font-size: 20px;
-    }
-
-    .photos-grid {
-        gap: 6px;
-        padding: 8px 0 0 0;
-    }
-
-    .photos-grid:first-child {
-        padding: 16px 0 0 0;
-    }
-
-    .photos-grid:last-child {
-        padding: 8px 0 16px 0;
-    }
-
-    .photo-simple img {
-        height: 130px;
-    }
-
-    .photo-center img {
-        height: 130px;
-    }
-
-    .gallery-container-separator {
-        margin: 20px 30px 0 30px;
-    }
-}
-
-/* ----- iPhone SE 1st gen, Galaxy A series small (320px) ----- */
-@media screen and (max-width: 320px) {
-    .main-gallery-photo-container {
-        height: 170px;
-    }
-
-    .main-content-info-title {
-        font-size: 18px;
-    }
-
-    .photos-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .photo-simple img {
-        height: 160px;
-    }
-
-    .photo-center img {
-        height: 160px;
-    }
-
-    .gallery-container-separator {
-        margin: 15px 20px 0 20px;
-    }
-}
-

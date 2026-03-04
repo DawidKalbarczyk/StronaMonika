@@ -798,6 +798,48 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
 
 /* ============================================
+   LAPTOP STYLES (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1600px) {
+
+    /* ----- Headbar - even button distribution ----- */
+    .right-header:not(.right-header2) {
+        padding-right: 140px;
+        padding-left: 40px;
+        margin-left: -200px;
+
+    }
+
+    .right-header.right-header2 {
+        padding-left: 0px;
+        margin-left: -280px;
+    }
+
+    .header {
+        grid-template-columns: 1fr 1.8fr 1.8fr;
+    }
+
+    .right-header-return-button {
+        margin-left: -50px;
+    }
+    .header-button {
+        margin-left: -50px;
+        padding: 18px 50px;
+    }
+
+    .announcement-div {
+        padding: 0 50px;
+    }
+
+    .left-header {
+        margin-left: 80px;
+    }
+    
+}
+
+/* ============================================
    MOBILE STYLES - Phones only (max-width: 767px)
    ============================================ */
 
