@@ -83,14 +83,25 @@ function Kontakt() {
                         <div class="company-details">
                             <div class="company-details-wrapper">
                                 <div class="company-details-container">
-                                    <div class="company-details-text-container">
-                                        <p class="paragraph-title">Dane o firmie</p>
-                                        <p>NIP: 8121814059</p>
-                                        <p>REGON: 365937706</p>
-                                        <p>Adres:</p>
-                                        <p class="paragraph-indent">ul. Bohaterów Getta 24 lok.4</p>
-                                        <p class="paragraph-indent">26-900 Kozienice</p>
-                                        <p>Działalność od 2016 roku</p>
+                                    <div class="company-details-text-wrapper">
+                                        <div class="company-details-text-container">
+                                            <p class="paragraph-title">Dane o firmie</p>
+                                            <p>NIP: 8121814059</p>
+                                            <p>REGON: 365937706</p>
+                                            <p>Adres:</p>
+                                            <p class="paragraph-indent">ul. Bohaterów Getta 24 lok.4</p>
+                                            <p class="paragraph-indent">26-900 Kozienice</p>
+                                        </div>
+                                        <div class="company-hours-container">
+                                            <p class="paragraph-title">Godziny otwarcia</p>
+                                            <p class="paragraph-indent">Poniedziałek: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Wtorek: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Środa: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Czwartek: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Piątek: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Sobota: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Niedziela: XX:XX-YY:YY</p>
+                                        </div>
                                     </div>
                                     <div class="company-details-photo-container">
                                         <img alt="contact-photo1" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-1.jpg"/>

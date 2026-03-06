@@ -172,31 +172,48 @@ body {
     width: 80%;
 }
 
-.company-details-text-container {
+.company-details-text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-details-text-container,
+.company-hours-container {
     display: flex;
     flex-direction: column;
     padding: 24px 72px;
 }
 
-.company-details-text-container p {
+.company-hours-container {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.company-details-text-container p,
+.company-hours-container p {
     font-size: 24px;
     color: white;
     line-height: 2;
+    text-align: center;
 }
 
-.company-details-text-container .paragraph-indent {
-    margin-left: 24px;
+.company-details-text-container .paragraph-indent,
+.company-hours-container .paragraph-indent {
+    margin-left: 0;
 }
 
-.company-details-text-container .paragraph-title {
+.company-details-text-container .paragraph-title,
+.company-hours-container .paragraph-title {
     font-size: 36px;
-    margin-left: 72px;
+    margin-left: 0;
+}
+
+.company-hours-container p {
+    white-space: nowrap;
 }
 
 .company-details-photo-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height: 500px;
     overflow: hidden;
     position: relative;
 }
@@ -223,13 +240,19 @@ body {
 @media (min-width: 768px) and (max-width: 1600px) {
 
     /* ----- "Dane o firmie" fits on one line ----- */
-    .company-details-text-container {
+    .company-details-text-container,
+    .company-hours-container {
         padding: 24px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 26px;
-        margin-left: 0;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 20px;
     }
 }
 
@@ -309,23 +332,42 @@ body {
         box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.8);
     }
 
+    .company-details-text-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        flex: 1;
+        padding: 16px 12px;
+    }
+
     .company-details-text-container {
-        padding: 16px 20px;
+        border-right: 1px solid rgba(255,255,255,0.2);
     }
 
-    .company-details-text-container p {
-        font-size: 14px;
+    .company-hours-container {
+        border-top: none;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 13px;
         line-height: 1.7;
+        text-align: center;
     }
 
-    .company-details-text-container .paragraph-title {
-        font-size: 20px;
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 17px;
         margin-left: 0;
         text-align: center;
     }
 
-    .company-details-text-container .paragraph-indent {
-        margin-left: 14px;
+    .company-details-text-container .paragraph-indent,
+    .company-hours-container .paragraph-indent {
+        margin-left: 0;
     }
 
     .company-details-photo-container {
@@ -380,11 +422,13 @@ body {
         width: 44px;
     }
 
-    .company-details-text-container p {
+    .company-details-text-container p,
+    .company-hours-container p {
         font-size: 13px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 18px;
     }
 
@@ -416,11 +460,13 @@ body {
         width: 40px;
     }
 
-    .company-details-text-container p {
+    .company-details-text-container p,
+    .company-hours-container p {
         font-size: 12px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 17px;
     }
 
@@ -453,11 +499,13 @@ body {
         width: 36px;
     }
 
-    .company-details-text-container p {
+    .company-details-text-container p,
+    .company-hours-container p {
         font-size: 11.5px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 16px;
     }
 
@@ -488,11 +536,13 @@ body {
         width: 34px;
     }
 
-    .company-details-text-container p {
+    .company-details-text-container p,
+    .company-hours-container p {
         font-size: 11px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 15px;
     }
 
@@ -523,11 +573,13 @@ body {
         width: 30px;
     }
 
-    .company-details-text-container p {
+    .company-details-text-container p,
+    .company-hours-container p {
         font-size: 10px;
     }
 
-    .company-details-text-container .paragraph-title {
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
         font-size: 14px;
     }
 

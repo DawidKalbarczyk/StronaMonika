@@ -387,7 +387,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
 .admin-info-footer-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     height: 300px;
@@ -415,12 +415,14 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .admin-info-services-container,
+.admin-info-hours-container,
 .admin-info-contact-container,
 .admin-info-admin-container {
     display: grid;
     grid-template-rows: 50px 1fr;
     height: 252px;
-    place-items: start;
+    place-items: center;
+    text-align: center;
     border-right: 1px solid black;
     padding: 24px 50px;
     color: rgba(255,255,255,0.6);
@@ -518,13 +520,13 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     background-color: rgba(30,30,30,0.9);
     color: #bdbdbd;
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 18px;
 }
 
 .form-form input {
-
     padding: 2% 4%;
     margin-bottom: 1.5%;
-    font-size: 15px;
 }
 
 .form-form input[name="Telefon"] {
@@ -559,9 +561,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     width: 200px;
     align-self: center;
     padding: 2%;
-    font-size: 17px;
     cursor: pointer;
-
 }
 
 .form-separator {
@@ -725,6 +725,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     transition: color 0.2s;
     padding: 0;
     z-index: 1;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 .privacy-modal-close:hover {
@@ -769,6 +770,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .privacy-modal-content p {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 14px;
     color: #b0b0b0;
     line-height: 1.7;
@@ -781,6 +783,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .privacy-modal-content li {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 14px;
     color: #b0b0b0;
     line-height: 1.7;
@@ -835,6 +838,43 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
     .left-header {
         margin-left: 80px;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer-content {
+        height: auto;
+        min-height: 220px;
+    }
+
+    .admin-info-logo-container {
+        padding: 16px 20px;
+        height: auto;
+    }
+
+    .admin-info-services-container,
+    .admin-info-hours-container,
+    .admin-info-contact-container,
+    .admin-info-admin-container {
+        padding: 16px 12px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .admin-info-titles {
+        font-size: 16px;
+    }
+
+    .admin-info-descriptions {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .admin-info-titles-weighted {
+        font-size: 13px;
+    }
+
+    .admin-info-href {
+        font-size: 14px;
     }
     
 }
@@ -1063,11 +1103,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 20% 20%;
-        margin: 0;
+        margin: 0 -4%;
         margin-bottom: 0;
         padding: 30px 0;
         height: 80px;
-        border-radius: 8px;
+        border-radius: 0;
         overflow: hidden;
     }
 
@@ -1125,14 +1165,15 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     .admin-info-logo-container {
         padding: 8px;
         height: auto;
-        border-right: 1px solid rgba(255,255,255,0.06);
+        grid-column: 1 / -1;
+        border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.06);
         grid-template-rows: auto;
         place-items: center;
     }
 
     .admin-info-logo-container-logo {
-        width: 60%;
+        width: 40%;
     }
 
     .admin-info-logo-description {
@@ -1140,6 +1181,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .admin-info-services-container,
+    .admin-info-hours-container,
     .admin-info-contact-container,
     .admin-info-admin-container {
         height: auto;
@@ -1147,9 +1189,17 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.06);
         grid-template-rows: auto auto;
+        place-items: start center;
+        text-align: center;
         gap: 0;
     }
 
+    .admin-info-hours-container {
+        grid-column: auto;
+        border-right: none;
+    }
+
+    .admin-info-services-container,
     .admin-info-contact-container {
         border-right: 1px solid rgba(255,255,255,0.06);
     }

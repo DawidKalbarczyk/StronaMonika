@@ -1,19 +1,4 @@
 function AdminInfo() {
-    /*const html = `
-        <footer class="footer bg-colour">
-            <div class="footer-content">
-                <span>Administrator strony: <a href="mailto:k_kalbarczyk@o2.pl">k_kalbarczyk@o2.pl</a></span>
-                <span class="separator">|</span>
-                <span>Strona o charakterze informacyjnym</span>
-                <span class="separator">|</span>
-                <span>Wszelkie prawa zastrzeżone</span>
-                <span class="separator">|</span>
-                <span>© 2025 Dawid Kalbarczyk</span>
-            </div>
-        </footer>
-    `
-
-     */
     const pathName = window.location.pathname;
     let path = "";
     let path2 = "";
@@ -46,6 +31,18 @@ function AdminInfo() {
                      
                     </p>
                 </div>
+                <div class="admin-info-hours-container">
+                    <p class="admin-info-titles">Godziny otwarcia</p>
+                    <p class="admin-info-descriptions">
+                        Poniedziałek: XX:XX–YY:YY<br>
+                        Wtorek: XX:XX–YY:YY<br>
+                        Środa: XX:XX–YY:YY<br>
+                        Czwartek: XX:XX–YY:YY<br>
+                        Piątek: XX:XX–YY:YY<br>
+                        Sobota: XX:XX–YY:YY<br>
+                        Niedziela: XX:XX–YY:YY
+                    </p>
+                </div>
                 <div class="admin-info-contact-container">
                     <p class="admin-info-titles">Dane kontaktowe</p>
                     <p class="admin-info-descriptions">
@@ -54,7 +51,7 @@ function AdminInfo() {
                         <span class="admin-info-titles-weighted">
                             Telefon:
                         </span><br>
-                        +48 XXX XXX XXX
+                        +48 667 911 466
                         <br><span class="admin-info-titles-weighted">
                             E-mail:
                         </span><br>
@@ -67,7 +64,7 @@ function AdminInfo() {
                         Dawid Kalbarczyk<br>
                         <span class="admin-info-titles-weighted">E-mail:</span><br> 
                         k_kalbarczyk@o2.pl<br>
-                        <span class="admin-info-titles-weighted">Tel:</span><br>
+                        <span class="admin-info-titles-weighted">Telefon:</span><br>
                         +48 665 268 517<br>
                         Ostatnia aktualizacja:<br>
                         &nbsp;&nbsp;&nbsp;<span id="last-update-time">Ładowanie...</span>
