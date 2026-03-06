@@ -3,18 +3,21 @@ function Headbar() {
     let path2 = "";
     const pathName = window.location.pathname;
 
+    let logoHref = "";
     if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
         path = "pages"
         path2 = "backend/photos_compressed"
+        logoHref = "index.html"
     } else {
         path = "../pages"
         path2 = "../backend/photos_compressed"
+        logoHref = "../index.html"
     }
     const headbar = `
         <header class="header">
             <div class="left-header">
              
-                <a href="../index.html" class="headbar-link">
+                <a href="${logoHref}" class="headbar-link">
                     <img class="logo-image" src="${path2}/logo/kolor_czarny-edited.png" alt="Logo"/>
                 </a>
             </div>

@@ -313,7 +313,7 @@ za pomocą JS zdjęcie i background
 
 
     .item-props-titles {
-        font-size: 16px;
+        font-size: 18px;
         padding-bottom: 10px;
         padding-left: 5px;
         padding-right: 5px;
@@ -334,7 +334,7 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 6px 8px 6px;
     }
 
@@ -389,11 +389,11 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props-titles {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .item-props {
-        font-size: 11.5px;
+        font-size: 13.5px;
     }
 
     .item-group-header {
@@ -417,12 +417,12 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props {
-        font-size: 11px;
+        font-size: 13px;
         padding: 0 4px 8px 4px;
     }
 
     .item-props-titles {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .item-group-header {
@@ -452,12 +452,12 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props {
-        font-size: 10.5px;
+        font-size: 12.5px;
         padding: 0 3px 7px 3px;
     }
 
     .item-props-titles {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .item-group-header {
@@ -494,12 +494,12 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props {
-        font-size: 10px;
+        font-size: 12px;
         padding: 0 3px 6px 3px;
     }
 
     .item-props-titles {
-        font-size: 12px;
+        font-size: 14px;
         padding-bottom: 8px;
     }
 
@@ -526,11 +526,11 @@ za pomocą JS zdjęcie i background
     }
 
     .item-props {
-        font-size: 9px;
+        font-size: 11px;
     }
 
     .item-props-titles {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .item-group-header {

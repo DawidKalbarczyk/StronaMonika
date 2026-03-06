@@ -51,14 +51,14 @@ function AboutMe() {
                             <div class="aboutme-container-desc-wrapper">
                                 <div class="aboutme-container-desc">
                                     <p class="aboutme-container-desc-p">
-                                       Zapraszam Cię do mojego świata Beauty.<br>
+                                       <span class="aboutme-desc-centered">Zapraszam Cię do mojego świata Beauty.</span>
                                         Moje wieloletnie zainteresowanie kosmetologią i pasja do niej przerodziły się w zawód, z którym jestem związana od kilku lat. Jestem dyplomowanym kosmetologiem, absolwentką Wyższej Szkoły Zawodowej  Kosmetologii i Pielęgnacji Zdrowia w Warszawie oraz Broadway Beauty Collage o kierunku Kosmetologia Estetyczna, a także uczestniczką wielu szkoleń i kursów uzupełniających kompetencje zawodowe.Z branżą Beaty związana jestem przeszło 20 lat. 
                                         Na co dzień pracuję w moim salonie w Kozienicach, gdzie przeprowadzam zabiegi kosmetologiczne skór dojrzałych, ale również problematycznych t.j. trądzikowych, naczyniowych, z przebarwieniami, rozszerzonymi porami.
                                         Wykonuję również makijaż permanentny brwi, ust oraz oczu w kilku technikach pigmentacji. Jestem stylistką brwi i rzęs. W moim salonie można wykonać takie zabiegi oprawy oczu jak podstawowa henna brwi i rzęs z regulacją oraz laminacja rzęs czy brwi. 
                                         Piękno kobiet jest moją pasją. Stąd też inna moja profesja, czyli wizaż. Słucham potrzeb klientki, ale kiedy trzeba staram się też doradzić. Jestem cierpliwa i dokładna.
                                         Jestem również stylistką paznokci. Piękne i zadbane dłonie i stopy to wizytówka każdej kobiety. W swoich stylizacjach stawiam na naturalność oraz minimalizm, jak mówią mniej znaczy więcej.
                                         Jeśli marzysz o gładkiej skórze możesz umówić się również na zabieg depilacji woskiem różnych partii ciała. Wszystko po to by poczuć się pewniej.
-                                        Mogę powiedzić, że mam w życiu to szczęście, że zawód który sobie wybrałam  jest jednocześnie moją pasją.<br> Do zobaczenia w Obsession.
+                                        Mogę powiedzić, że mam w życiu to szczęście, że zawód który sobie wybrałam  jest jednocześnie moją pasją.<br><span class="aboutme-desc-centered"> Do zobaczenia w Obsession.</span>
     
                                     </p>
                                 </div>
