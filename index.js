@@ -11,7 +11,8 @@ function Home() {
     const banner = Banner();
     const mapComponent = initMap();
     const form = Form();
-    const isAnnouncment = true;
+    // Komunikat dotyczący nieaktywności salonu
+    const isAnnouncment = false;
 
     document.body.innerHTML = (`
         ${headbar}
@@ -231,7 +232,8 @@ function Home() {
     if (isAnnouncment) {
         document.querySelector(".announcement-div").style.opacity = "1";
     } else {
-        document.querySelector(".announcement-div").style.opacity = "0";
+        document.querySelector(".announcement-div").style.display = "none";
+        document.body.classList.add("no-announcement");
     }
     setTimeout(() => initFormAnimations(), 0);
 }

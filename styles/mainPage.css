@@ -488,6 +488,11 @@
     padding: 0 150px 0 150px;
 }
 
+/* Extra top spacing when header is the only top element */
+body.no-announcement .main-content-container {
+    margin-top: 70px;
+}
+
 .announcement-div {
     font-size: 30px;
     color: #dcdcdc;
@@ -532,6 +537,10 @@
         font-size: 18px;
         text-align: center;
         margin-top: 20px;
+    }
+
+    body.no-announcement .main-content-container {
+        margin-top: 12px;
     }
 
     .announcement-separate-div {
