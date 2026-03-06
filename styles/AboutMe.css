@@ -282,8 +282,13 @@ body {
 .aboutme-container-desc-p {
     font-size: 20px;
     color: #dcdcdc;
-    text-align: center;
+    text-align: justify;
     line-height: 1.5;
+}
+
+.aboutme-desc-centered {
+    display: block;
+    text-align: center;
 }
 
 .about-me-container-separator {
@@ -415,7 +420,7 @@ body {
     .aboutme-container-desc-p {
         font-size: 15px;
         line-height: 1.6;
-        text-align: left;
+        text-align: justify;
         padding: 10px 10px;
     }
 
