@@ -12,7 +12,7 @@ function Home() {
     const mapComponent = initMap();
     const form = Form();
     // Komunikat dotyczący nieaktywności salonu
-    const isAnnouncment = false;
+    const isAnnouncment = true;
 
     document.body.innerHTML = (`
         ${headbar}
