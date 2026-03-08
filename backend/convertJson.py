@@ -49,6 +49,7 @@ with open(output_path, 'w', encoding='utf-8') as f:
 
 
 gallery_path = os.path.join(script_dir, "gallery")
+os.makedirs(gallery_path, exist_ok=True)
 extensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif']
 
 images = [
