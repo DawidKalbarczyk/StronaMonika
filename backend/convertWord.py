@@ -51,6 +51,11 @@ def czytaj_word():
         # Część 1: akapity pisane CAPS LOCK (bez punktorów i cyfr)
         czesc_1 = [a for a in akapity if a.upper() == a and a.strip() and not a.strip().startswith(('*', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9'))]
 
+        # Fallback: jeśli brak akapitów CAPS (np. marka zapisana mixed-case jak PQAge),
+        # użyj pierwszego niepustego akapitu jako nazwy zabiegu
+        if not czesc_1 and akapity:
+            czesc_1 = [akapity[0]]
+
         # Szukanie separatorów
         indeks_przebieg = None
         indeks_wskazania = None
