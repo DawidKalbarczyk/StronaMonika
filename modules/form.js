@@ -68,7 +68,7 @@ function Form() {
                 Zapisz się do mnie!
             </p>
             <div class="form-container">
-                <form class="form-form" id="contactForm" action="https://formsubmit.co/k_kalbarczyk@o2.pl" method="POST" target="_blank">
+                <form class="form-form" id="contactForm" action="https://formsubmit.co/obsession.kosmetologia@gmail.com" method="POST" target="_blank">
                 <!-- Ukryte pola konfiguracyjne FormSubmit -->
                     <input type="hidden" name="_subject" value="Nowe zgłoszenie - zapis na zabieg">
                     <input type="hidden" name="_captcha" value="false">
@@ -87,20 +87,30 @@ function Form() {
                       
                       <optgroup label="Zabiegi na twarz">
                         <option value="Twarz - Peeling">Peeling</option>
-                        <option value="Twarz - Mezoterapia">Mezoterapia</option>
-                        <option value="Twarz - Oczyszczanie">Oczyszczanie</option>
+                        <option value="Twarz - Dermapen">Dermapen</option>
+                        <option value="Twarz - Oczyszczanie twarzy">Oczyszczanie twarzy</option>
                       </optgroup>
                       
                       <optgroup label="Zabiegi na ciało">
-                        <option value="Ciało - Masaż relaksacyjny">Masaż relaksacyjny</option>
-                        <option value="Ciało - Masaż leczniczy">Masaż leczniczy</option>
                         <option value="Ciało - Depilacja">Depilacja</option>
+                        
                       </optgroup>
                       
-                      <optgroup label="Zabiegi specjalistyczne">
-                        <option value="Specjalistyczny - Mezoterapia igłowa">Mezoterapia igłowa</option>
-                        <option value="Specjalistyczny - Lipoliza">Lipoliza</option>
-                        <option value="Specjalistyczny - Karboksyterapia">Karboksyterapia</option>
+                      <optgroup label="Zabiegi dłoń i stóp">
+                        <option value="Ręce - Manicure">Manicure</option>
+                        <option value="Stopy - Pedicure">Pedicure</option>
+                      </optgroup>
+                      
+                      <optgroup label="Zabiegi brwi i rzęs">
+                        <option value="Brwi/Rzęsy - Henna">Henna</option>
+                        <option value="Brwi/Rzęsy - Laminacja">Laminacja</option>
+                        <option value="Brwi/Rzęsy - Regulacja">Regulacja</option>
+                      </optgroup>
+                      
+                      <optgroup label="Makijaże">
+                        <option value="Makijaż twarzy - Okolicznościowy">Okolicznościowy</option>
+                        <option value="Makijaż twarzy - Permanentny">Permanentny</option>
+                        <option value="Brwi/Rzęsy - Regulacja">Regulacja</option>
                       </optgroup>
                     </select>
                     
@@ -127,7 +137,7 @@ function Form() {
                         <p class="form-other-weighted">Telefon: </p>
                         <p class="form-other-simple">667 911 466</p>
                         <p class="form-other-weighted">E-mail: </p>
-                        <p class="form-other-simple">XXXXXXXXXXXXX</p>
+                        <p class="form-other-simple">obsession.kosmetologia@gmail.com</p>
                     </div>
                     
                 </div>

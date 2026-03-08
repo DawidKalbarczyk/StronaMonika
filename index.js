@@ -12,7 +12,7 @@ function Home() {
     const mapComponent = initMap();
     const form = Form();
     // Komunikat dotyczący nieaktywności salonu
-    const isAnnouncment = true;
+    const isAnnouncment = false;
 
     document.body.innerHTML = (`
         ${headbar}
@@ -36,7 +36,7 @@ function Home() {
                         <h1 class="seo-h1">Salon Kosmetologiczny Obsession – Monika Molenda, Kozienice</h1>
 
                         <div class="owner-photo-container">
-                            <img class="owner-photo" src="backend/photos_compressed/myPhotos/homepagephoto.jpg" alt="Owner"/>
+                            <img class="owner-photo" src="backend/photos_compressed/myPhotos/20260308_120252.jpg" alt="Owner"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111034.jpg" alt="Owner 2"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111127.jpg" alt="Owner 3"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251102_130628.jpg" alt="Owner 4"/>
@@ -169,13 +169,13 @@ function Home() {
                             </div>
                             <div class="work-info-tile work-info-tile-x3">
                                 <div class="work-info-tile-title-container">
-                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/botox-lips.png" alt="Zabieg ust"/>
+                                    <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/peeling-icon.png" alt="Zabieg ust"/>
                                     <p class="work-info-tile-title">
-                                        Modelowanie i Estetyka Ust
+                                        Peeling Chemiczny
                                     </p>
                                     <p class="work-info-tile-description">
-                                        Podkreśl zmysłowość swoich ust. Zabieg pozwala na subtelną koretkę kształtu, poprawę symetrii,
-                                        wygładzanie zmarszczek wokół ust lub delikatne wywinięcie wargi do pełniejszego efektu.
+                                        Odkryj nieskazitelny blask swojej cery. Zabieg pozwala na głęboką odnowę struktury skóry, skuteczną redukcję niedoskonałości 
+                                        oraz wyrównanie kolorytu, przywracając twarzy jedwabistą gładkość i młodzieńczą witalność.
                                     </p>
                                 </div>
                             </div>
@@ -208,11 +208,11 @@ function Home() {
                                 <div class="work-info-tile-title-container">
                                     <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/eyelash.png" alt="Rzęsy"/>
                                     <p class="work-info-tile-title">
-                                        Stylizacja i Przedłużanie Rzęs
+                                        Laminacja rzęs
                                     </p>
                                     <p class="work-info-tile-description">
-                                        Zapomnij o tuszowaniu rzęs. Oferuję profesjonalną plikację, która zagęszcza i wydłuża naturalne włoski.
-                                        Dobieram odpowiednią metodę, aby nadać Twojemu spojrzeniu głębie i spektakularny, ale estetyczny wygląd.
+                                        Wydobądź naturalną głębię swojego spojrzenia. Zabieg pozwala na precyzyjne uniesienie i podkręcenie rzęs, optyczne ich zagęszczenie oraz intensywne 
+                                        odżywienie, co daje efekt wyrazistej oprawy oka bez konieczności codziennego makijażu.
                                     </p>
                                 </div>
                             </div>

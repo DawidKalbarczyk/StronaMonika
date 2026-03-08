@@ -51,7 +51,7 @@ function Kontakt() {
                                         
                                     </div>
                                 </a>
-                                <a target="_blank" href="" class="social-media-link">
+                                <a target="_blank" href="https://wa.me/48667911466" class="social-media-link">
                                     <div class="social-media-item-container">
                                         <p class="social-media-item-title">
                                             WhatsApp
@@ -94,13 +94,13 @@ function Kontakt() {
                                         </div>
                                         <div class="company-hours-container">
                                             <p class="paragraph-title">Godziny otwarcia</p>
-                                            <p class="paragraph-indent">Poniedziałek: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Wtorek: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Środa: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Czwartek: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Piątek: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Sobota: XX:XX-YY:YY</p>
-                                            <p class="paragraph-indent">Niedziela: XX:XX-YY:YY</p>
+                                            <p class="paragraph-indent">Poniedziałek: Zamknięte</p>
+                                            <p class="paragraph-indent">Wtorek: 08:30-14:00, 16:30-20:00</p>
+                                            <p class="paragraph-indent">Środa: 08:30-15:00</p>
+                                            <p class="paragraph-indent">Czwartek: 08:30-14:00, 16:30-20:00</p>
+                                            <p class="paragraph-indent">Piątek: 08:30-14:00, 16:30-20:00</p>
+                                            <p class="paragraph-indent">Sobota: 08:30-15:00</p>
+                                            <p class="paragraph-indent">Niedziela: Zamknięte</p>
                                         </div>
                                     </div>
                                     <div class="company-details-photo-container">

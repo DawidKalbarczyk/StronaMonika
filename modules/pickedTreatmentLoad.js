@@ -65,7 +65,7 @@ function displayTreatment(data) {
     // Div dla part3
     const secondPhoto = document.createElement('img');
     secondPhoto.alt = `${data.part1.join('<br>')}-2nd`;
-    secondPhoto.src = `../backend/word_photos/${photoName}.jpg`;
+    secondPhoto.src = `../backend/word_photos/${photoName}%202.jpg`;
     secondPhoto.className = "treatment-description-2nd-photo";
     const secondPhotoContainer = document.querySelector(".treatment-description-2nd-photo-container");
     secondPhotoContainer.appendChild(secondPhoto);
