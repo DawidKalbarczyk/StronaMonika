@@ -20,11 +20,11 @@ function AdminInfo() {
                 <div class="admin-info-services-container">
                     <p class="admin-info-titles">Moje zabiegi</p>
                     <p class="admin-info-descriptions">
-                        XXXXXXXXXXXXXXXXXX<br>
-                        XXXXXXXXXXXXXXXXXX<br>
-                        XXXXXXXXXXXXXXXXXX<br>
-                        XXXXXXXXXXXXXXXXXX<br>
-                        XXXXXXXXXXXXXXXXXX<br>
+                        Makijaż permanentny<br>
+                        Depilacja różnych części ciała<br>
+                        Henna brwi i rzęs<br>
+                        Pedicure i Manicure<br>
+                        Peelingi chemiczne i Dermapen<br>
                         <a href="${path}/Zabiegi.html" class="admin-info-href">
                            Więcej...
                         </a>
@@ -34,19 +34,19 @@ function AdminInfo() {
                 <div class="admin-info-hours-container">
                     <p class="admin-info-titles">Godziny otwarcia</p>
                     <p class="admin-info-descriptions">
-                        Poniedziałek: XX:XX–YY:YY<br>
-                        Wtorek: XX:XX–YY:YY<br>
-                        Środa: XX:XX–YY:YY<br>
-                        Czwartek: XX:XX–YY:YY<br>
-                        Piątek: XX:XX–YY:YY<br>
-                        Sobota: XX:XX–YY:YY<br>
-                        Niedziela: XX:XX–YY:YY
+                        Poniedziałek: Zamknięte<br>
+                        Wtorek: 08:30-14:00, 16:30-20:00<br>
+                        Środa: 08:30-15:00<br>
+                        Czwartek: 08:30-14:00, 16:30-20:00<br>
+                        Piątek: 08:30-14:00, 16:30-20:00<br>
+                        Sobota: 08:30-15:00<br>
+                        Niedziela: Zamknięte
                     </p>
                 </div>
                 <div class="admin-info-contact-container">
                     <p class="admin-info-titles">Dane kontaktowe</p>
                     <p class="admin-info-descriptions">
-                        Bohaterów Getta 24 lok. X<br>
+                        Bohaterów Getta 24 lok. 4<br>
                         26-900 Kozienice<br>
                         <span class="admin-info-titles-weighted">
                             Telefon:
@@ -55,7 +55,7 @@ function AdminInfo() {
                         <br><span class="admin-info-titles-weighted">
                             E-mail:
                         </span><br>
-                        XXXXXXXXXXXXXXXXXXXXX
+                        obsession.kosmetologia@gmail.com
                     </p>
                 </div>
                 <div class="admin-info-admin-container">
