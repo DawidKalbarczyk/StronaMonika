@@ -94,7 +94,7 @@ function Galeria() {
     generatePhotosHTML('../backend/gallery_compressed').then(photos => {
         document.querySelector('.main-content-photos').innerHTML = photos;
 
-        const photoElements = document.querySelectorAll(".photo-simple, .photo-center");
+        const photoElements = document.querySelectorAll(".gallery-photo");
         photoElements.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
@@ -118,7 +118,7 @@ function Galeria() {
             photoElements.forEach(photo => observer.observe(photo));
         }, 100);
 
-        document.querySelectorAll(".photo-simple img, .photo-center img").forEach((photo) => {
+        document.querySelectorAll(".gallery-photo").forEach((photo) => {
             photo.addEventListener("click", (e) => {
                 const overlay = document.createElement("div");
                 overlay.classList.add("photo-overlay");

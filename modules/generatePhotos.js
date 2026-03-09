@@ -4,43 +4,11 @@ async function generatePhotosHTML(folderPath) {
 
     const images = imageNames.map(name => `${folderPath}/${name}`);
 
-    if (images.length < 4) {
-        return `<p>Za mało zdjęć w folderze (potrzebne minimum 4)</p>`;
+    if (images.length < 1) {
+        return `<p>Brak zdjęć w galerii</p>`;
     }
 
-    let html = '';
-    let i = 0;
-
-    while (i < images.length) {
-        const remaining = images.length - i;
-
-        if (remaining >= 4) {
-            html += `
-                <div class="photos-grid">
-                    <div class="photo-simple">
-                        <img src="${images[i]}" alt="photo" />
-                    </div>
-                    <div class="photo-center">
-                        <img src="${images[i + 1]}" alt="photo" />
-                        <img src="${images[i + 2]}" alt="photo" />
-                    </div>
-                    <div class="photo-simple">
-                        <img src="${images[i + 3]}" alt="photo" />
-                    </div>
-                </div>
-            `;
-            i += 4;
-        } else {
-            html += `<div class="photo-simple">`;
-            while (i < images.length) {
-                html += `<img src="${images[i]}" alt="photo" />`;
-                i++;
-            }
-            html += `</div>`;
-        }
-    }
-
-    return html;
+    return images.map(src => `<img class="gallery-photo" src="${src}" alt="zdjęcie z salonu" />`).join('');
 }
 
 export default generatePhotosHTML;
