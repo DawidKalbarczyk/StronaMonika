@@ -52,7 +52,7 @@ jobs:
         working-directory: backend
 
       - name: Kompresuj zdjęcia
-        run: python -c "import convertWord; convertWord.kompresuj_myphotos()"
+        run: python -c "import convertWord; convertWord.kompresuj_myphotos(); convertWord.kompresuj_word_photos()"
         working-directory: backend
 
       - name: Przygotuj pliki do wrzucenia
