@@ -68,6 +68,8 @@ os.makedirs(compressed_path, exist_ok=True)
 for filename in images:
     img = Image.open(os.path.join(gallery_path, filename))
     img.thumbnail((1920, 1080))
+    if img.mode in ("RGBA", "P", "LA"):
+        img = img.convert("RGB")
     img.save(os.path.join(compressed_path, filename), "JPEG", quality=70, optimize=True)
 
 output_gallery = os.path.join(script_dir, "data", "gallery.json")
