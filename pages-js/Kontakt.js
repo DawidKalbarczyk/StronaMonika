@@ -141,9 +141,9 @@ function Kontakt() {
     document.querySelectorAll('.social-media-item-container').forEach((el, i) => {
         el.classList.add('slide-bottom'); el.style.transitionDelay = `${i * 0.02}s`; observer.observe(el);
     });
-    ['.company-details-text-container', '.company-details-photo-container'].forEach((sel, i) => {
+    ['.company-details-text-container', '.company-hours-container', '.company-details-photo-container'].forEach((sel, i) => {
         const el = document.querySelector(sel);
-        if (el) { el.classList.add(i === 0 ? 'slide-left' : 'slide-right'); observer.observe(el); }
+        if (el) { el.classList.add(i < 2 ? 'slide-left' : 'slide-right'); observer.observe(el); }
     });
 
     document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";

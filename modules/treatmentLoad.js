@@ -28,7 +28,7 @@ function treatmentLoad() {
                 //Zdjęcie
                 const treatmentItemPhoto = document.createElement('img');
                 treatmentItemPhoto.className = 'treatment-item-photo';
-                treatmentItemPhoto.src = `../backend/word_photos/${treatment}.jpg`;
+                treatmentItemPhoto.src = `../backend/word_photos_compressed/${treatment}.jpg`;
                 treatmentItemPhoto.alt = `${treatment}-photo`;
                 treatmentItemPhotoDiv.appendChild(treatmentItemPhoto);
                 treatmentItem.appendChild(treatmentItemPhotoDiv);
