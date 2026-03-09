@@ -57,7 +57,7 @@ function displayTreatment(data) {
     const firstPhoto = document.createElement('img');
     firstPhoto.alt = `${data.part1.join('<br>')}-1st`;
     const photoName = data.part1[0]; // "HENNA RZĘS"
-    firstPhoto.src = `../backend/word_photos/${photoName}.jpg`;
+    firstPhoto.src = `../backend/word_photos_compressed/${photoName}.jpg`;
     firstPhoto.className = "treatment-description-1st-photo";
     const firstPhotoContainer = document.querySelector(".treatment-description-1st-photo-container");
     firstPhotoContainer.appendChild(firstPhoto);
@@ -65,7 +65,7 @@ function displayTreatment(data) {
     // Div dla part3
     const secondPhoto = document.createElement('img');
     secondPhoto.alt = `${data.part1.join('<br>')}-2nd`;
-    secondPhoto.src = `../backend/word_photos/${photoName}%202.jpg`;
+    secondPhoto.src = `../backend/word_photos_compressed/${photoName}%202.jpg`;
     secondPhoto.className = "treatment-description-2nd-photo";
     const secondPhotoContainer = document.querySelector(".treatment-description-2nd-photo-container");
     secondPhotoContainer.appendChild(secondPhoto);

@@ -171,6 +171,41 @@ def kompresuj_myphotos():
 
     print("Kompresja photos zakończona")
 
+def kompresuj_word_photos():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    src_dir = os.path.join(script_dir, "word_photos")
+    dst_dir = os.path.join(script_dir, "word_photos_compressed")
+
+    if not os.path.isdir(src_dir):
+        print("Folder backend/word_photos nie istnieje – pomijam kompresję zdjęć Zabiegi")
+        return
+
+    extensions = ['.jpg', '.jpeg', '.png', '.webp']
+    os.makedirs(dst_dir, exist_ok=True)
+
+    for filename in os.listdir(src_dir):
+        ext = os.path.splitext(filename)[1].lower()
+        if ext not in extensions:
+            continue
+
+        src_file = os.path.join(src_dir, filename)
+        is_png = ext == '.png'
+        out_name = os.path.splitext(filename)[0] + ('.png' if is_png else '.jpg')
+        dst_file = os.path.join(dst_dir, out_name)
+
+        img = Image.open(src_file)
+        if not is_png:
+            img = img.convert('RGB')
+        img.thumbnail((1920, 1080))
+        if is_png:
+            img.save(dst_file, 'PNG', optimize=True)
+        else:
+            img.save(dst_file, 'JPEG', quality=75, optimize=True)
+        print(f"Skompresowano: {os.path.relpath(src_file, script_dir)} → {os.path.relpath(dst_file, script_dir)}")
+
+    print("Kompresja word_photos zakończona")
+
 if __name__ == '__main__':
     czytaj_word()
     kompresuj_myphotos()
+    kompresuj_word_photos()
