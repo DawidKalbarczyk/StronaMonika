@@ -189,7 +189,7 @@ body {
    covers 125% Windows DPI scaling on 1920x1080
    ============================================ */
 
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
 
     /* ----- Treatment tiles - slightly wider ----- */
     .main-content-treat {
@@ -198,6 +198,62 @@ body {
 
     .main-treatment {
         gap: 28px;
+    }
+}
+
+/* ============================================
+   TABLET STYLES - Zabiegi (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-treat-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-treat {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-treat .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title {
+        font-size: 36px;
+        width: 80%;
+        padding-bottom: 15px;
+    }
+
+    .main-content-treat {
+        margin: 20px 0 0 0;
+        padding: 20px;
+    }
+
+    .main-treatment {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .treatment-item {
+        border-radius: 10px;
+    }
+
+    .treatment-item:hover {
+        transform: none;
+    }
+
+    .treatment-item-photo-div {
+        height: 180px;
+    }
+
+    .treatment-item-text {
+        font-size: 16px;
     }
 }
 

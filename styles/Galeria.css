@@ -177,11 +177,51 @@ body {
    covers 125% Windows DPI scaling on 1920x1080
    ============================================ */
 
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
 
     /* ----- left-bar aligned with content ----- */
     .main-content-container-gallery {
         padding-left: 24px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin-top: 0 !important;
+    }
+
+    .main-gallery-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-gallery {
+        display: block;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+        width: 80%;
+        padding-bottom: 14px;
+    }
+
+    .main-content-photos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 30px 15px;
+    }
+
+    .gallery-photo {
+        border-radius: 16px;
+    }
+
+    .gallery-photo {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 }
 

@@ -240,7 +240,7 @@ body {
     background-color: rgba(0,0,0,0.5);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     .treatment-tips-div {
         margin: 0 150px 0 150px;
     }
@@ -283,6 +283,128 @@ body {
 
         }
 
+
+/* ============================================
+   TABLET STYLES - PickedTreatment (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-gallery-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-gallery {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .main-content-container-gallery .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+        width: 90%;
+        padding-bottom: 12px;
+    }
+
+    .treatment-description-1st-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .treatment-description-1st-text-container {
+        padding: 20px;
+        order: 2;
+    }
+
+    .treatment-description-1st-photo-container {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .treatment-description-2nd-photo-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-text-container {
+        padding: 20px;
+        order: 2;
+    }
+
+    .treatment-pros-cons-div {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 0;
+    }
+
+    .treatment-tips-div {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 24px;
+        margin: 15px 0 12px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 25px 25px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .treatment-pros-div {
+        border-radius: 12px;
+    }
+
+    .treatment-cons-div {
+        border-radius: 12px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .slide-in-pt,
+    .slide-in-pt-absolute {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
 
 /* ============================================
    MOBILE STYLES - PickedTreatment (max-width: 767px)

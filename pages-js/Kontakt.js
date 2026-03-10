@@ -105,7 +105,7 @@ function Kontakt() {
                                     </div>
                                     <div class="company-details-photo-container">
                                         <img alt="contact-photo1" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-1.jpg"/>
-                                        <img alt="contact-photo2" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-2.jpg"/>
+                                        <img alt="contact-photo2" class="company-details-photo" src="../backend/photos_compressed/myPhotos/20260308_120511.jpg"/>
                                         <img alt="contact-photo3" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-3.jpg"/>
                                         <img alt="contact-photo4" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-4.jpg"/>
                                         <img alt="contact-photo5" class="company-details-photo" src="../backend/photos_compressed/myPhotos/contact-photo-5.jpg"/>

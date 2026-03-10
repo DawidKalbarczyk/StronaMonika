@@ -216,7 +216,7 @@ body {
    covers 125% Windows DPI scaling on 1920x1080
    ============================================ */
 
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
 
     /* ----- Spacing between photo and owner text ----- */
     .aboutme-container-info-div {
@@ -297,6 +297,115 @@ body {
     margin: 25px 250px 0 250px;
 }
 
+
+/* ============================================
+   TABLET STYLES - AboutMe (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-aboutme-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-aboutme {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-aboutme .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 36px;
+    }
+
+    .main-content-aboutme {
+        margin: 20px 0 0 0;
+    }
+
+    .aboutme-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme-container-info-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme-container-photo-div {
+        margin: 0;
+        border-radius: 0;
+        max-height: 320px;
+        min-height: 320px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 1;
+        transform: none;
+    }
+
+    .aboutme-container-photo {
+        height: 420px;
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
+
+    .aboutme-container-photo:hover {
+        transform: none;
+        filter: brightness(0.8);
+    }
+
+    .aboutme-container-text-div {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 24px;
+        opacity: 1;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .aboutme-container-text-div p {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .aboutme-container-desc-wrapper {
+        margin: 0;
+        padding: 20px 0 0 0;
+    }
+
+    .aboutme-container-desc {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 20px 30px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .about-me-container-separator {
+        margin: 25px 60px 0 60px;
+    }
+
+    .slide-left,
+    .slide-right {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
 
 /* ============================================
    MOBILE STYLES - AboutMe (max-width: 767px)
