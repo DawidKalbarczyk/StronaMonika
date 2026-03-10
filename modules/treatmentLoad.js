@@ -36,7 +36,7 @@ function treatmentLoad() {
                 //Podpis zdjęcia
                 const treatmentItemText = document.createElement('p');
                 treatmentItemText.className = 'treatment-item-text';
-                treatmentItemText.innerHTML = treatment.toLowerCase().charAt(0).toUpperCase() + treatment.toLowerCase().slice(1);
+                treatmentItemText.innerHTML = treatment.charAt(0).toUpperCase() + treatment.slice(1);
                 treatmentItemTextDiv.appendChild(treatmentItemText);
                 treatmentItem.appendChild(treatmentItemTextDiv);
 
