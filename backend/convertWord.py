@@ -48,8 +48,8 @@ def czytaj_word():
         if not akapity:
             continue
 
-        # Część 1: akapity pisane CAPS LOCK (bez punktorów i cyfr)
-        czesc_1 = [a for a in akapity if a.upper() == a and a.strip() and not a.strip().startswith(('*', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9'))]
+        # Część 1: akapity pisane CAPS LOCK (bez punktorów i cyfr) – konwertujemy do Title Case
+        czesc_1 = [a.title() for a in akapity if a.upper() == a and a.strip() and not a.strip().startswith(('*', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9'))]
 
         # Fallback: jeśli brak akapitów CAPS (np. marka zapisana mixed-case jak PQAge),
         # użyj pierwszego niepustego akapitu jako nazwy zabiegu
