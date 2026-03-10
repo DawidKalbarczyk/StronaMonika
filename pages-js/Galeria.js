@@ -100,23 +100,21 @@ function Galeria() {
             el.style.transform = 'translateY(20px)';
         });
 
-        setTimeout(() => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const el = entry.target;
-                        el.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
-                        requestAnimationFrame(() => {
-                            el.style.opacity = '1';
-                            el.style.transform = 'translateY(0)';
-                        });
-                        observer.unobserve(el);
-                    }
-                });
-            }, { rootMargin: '0px 0px -50% 0px' });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    el.style.transition = 'opacity 1.5s ease-out, transform 1.5s ease-out';
+                    requestAnimationFrame(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    });
+                    observer.unobserve(el);
+                }
+            });
+        }, { rootMargin: '0px 0px -10% 0px' });
 
-            photoElements.forEach(photo => observer.observe(photo));
-        }, 100);
+        photoElements.forEach(photo => observer.observe(photo));
 
         document.querySelectorAll(".gallery-photo").forEach((photo) => {
             photo.addEventListener("click", (e) => {
