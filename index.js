@@ -36,7 +36,7 @@ function Home() {
                         <h1 class="seo-h1">Salon Kosmetologiczny Obsession – Monika Molenda, Kozienice</h1>
 
                         <div class="owner-photo-container">
-                            <img class="owner-photo" src="backend/photos_compressed/myPhotos/homepagephoto.jpg" alt="Owner"/>
+                            <img class="owner-photo" src="backend/photos_compressed/myPhotos/20260308_120252.jpg" alt="Owner"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111034.jpg" alt="Owner 2"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251101_111127.jpg" alt="Owner 3"/>
                             <img class="owner-photo owner-photo-mobile-extra" src="backend/photos_compressed/myPhotos/20251102_130628.jpg" alt="Owner 4"/>

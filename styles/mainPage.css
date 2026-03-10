@@ -96,8 +96,8 @@
 
     background-color: rgb(166, 168, 168);
     background:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("../backend/photos_compressed/saloonPhotos/20251103_083910.jpg");
+        linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.01)),
+        url("../backend/photos_compressed/saloonPhotos/843.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
