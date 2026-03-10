@@ -309,6 +309,7 @@ za pomocą JS zdjęcie i background
     /* ----- Table Header Row ----- */
     .item-container-titles {
         padding-top: 10px;
+        margin: 0;
     }
 
 
