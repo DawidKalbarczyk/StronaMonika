@@ -237,7 +237,7 @@ body {
 }
 
 /* ===== LAPTOP (covers 125% Windows DPI scaling on 1920x1080) ===== */
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
 
     /* ----- "Dane o firmie" fits on one line ----- */
     .company-details-text-container,
@@ -253,6 +253,109 @@ body {
     .company-details-text-container p,
     .company-hours-container p {
         font-size: 20px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin-top: 0 !important;
+    }
+
+    .main-contact-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-contact {
+        display: block;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-info-title-container {
+        padding: 16px 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+        width: 80%;
+        padding-bottom: 14px;
+    }
+
+    .main-content-contact {
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        row-gap: 30px;
+    }
+
+    .social-media-wrapper,
+    .company-details-wrapper {
+        padding: 20px 15px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        padding: 20px;
+    }
+
+    .company-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .company-details-text-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .company-details-text-container {
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .company-hours-container {
+        border-top: none;
+    }
+
+    .company-details-photo-container {
+        grid-template-columns: repeat(5, 1fr);
+        height: 220px;
+        position: relative;
+        display: grid;
+        margin-top: 0;
+    }
+
+    .company-details-photo {
+        position: absolute;
+        height: 100%;
+        width: 22%;
+        left: auto;
+        flex: none;
+        min-height: unset;
+        display: block;
+        border-radius: 0;
+    }
+
+    .company-details-photo:not(:first-child) {
+        mask-image: linear-gradient(to right, transparent 0%, black 30%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+    }
+
+    .slide-left,
+    .slide-right {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 

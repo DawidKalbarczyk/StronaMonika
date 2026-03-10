@@ -246,6 +246,92 @@ za pomocą JS zdjęcie i background
 
 
 /* ============================================
+   TABLET STYLES - Cennik (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-cennik-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-cennik-photo {
+        object-position: center 40%;
+    }
+
+    .main-content-container {
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .main-content-container-cennik {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+    }
+
+    .main-content-container-cennik .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+    }
+
+    .main-content-cennik {
+        margin: 15px 0 0 0;
+    }
+
+    .item-container-titles {
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    .item-props-titles {
+        font-size: 20px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .item-group-header {
+        font-size: 17px;
+        padding: 14px 10px 10px 10px;
+    }
+
+    .item-container {
+        grid-template-columns: 0.8fr auto 2.5fr auto 0.8fr;
+        font-size: 16px;
+        padding-top: 8px;
+    }
+
+    .item-props {
+        font-size: 16px;
+        padding: 0 8px 8px 8px;
+    }
+
+    .item-wrapper-div {
+        margin: 20px 0 15px 0;
+    }
+
+    .item-props-separator {
+        margin-top: 15px;
+    }
+
+    .slide-left,
+    .slide-right,
+    .slide-center {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ============================================
    MOBILE STYLES - Cennik (max-width: 767px)
    ============================================ */
 
