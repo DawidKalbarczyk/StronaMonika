@@ -20,15 +20,15 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Sprawdzenie
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Przygotuj Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: Cache pip
-        uses: actions/cache@v4
+        uses: actions/cache@v4.2.0
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
@@ -67,7 +67,7 @@ jobs:
           cp index.js _site/
 
       - name: Wrzuc artefakty
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: _site
 
@@ -81,4 +81,4 @@ jobs:
     steps:
       - name: Wrzucenie na github pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
