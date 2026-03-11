@@ -137,10 +137,12 @@ body {
     .treatment-item {
         display: grid;
         grid-template-rows: 1fr 0.5fr;
-        border-radius: 5%;
         overflow: hidden;
         transition: transform 0.5s ease-in-out;
         box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+        outline: none;
+        will-change: transform;
+        backface-visibility: hidden;
     }
     .treatment-item.slide-in {
         animation: slideInFromBottom 1.1s ease-out forwards;
@@ -148,6 +150,7 @@ body {
     .treatment-item:hover {
         cursor: pointer;
         transform: scale(1.05);
+        outline: none;
     }
 
         .treatment-item-photo-div {
@@ -160,7 +163,6 @@ body {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                border-bottom-left-radius: 100% 60%;
                 filter: brightness(0.8) contrast(1.1);
                 aspect-ratio: 1 /1;
             }
