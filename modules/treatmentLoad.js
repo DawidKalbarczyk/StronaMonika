@@ -8,6 +8,7 @@ function treatmentLoad() {
         .then(res => res.json())
         .then(data => {
             treatmentList = Object.values(data).flatMap(plik => plik.part1);
+            treatmentList.sort((a, b) => a.localeCompare(b, 'pl'));
             let treatmentDiv = document.querySelector(".main-treatment");
             treatmentList.forEach((treatment) => {
                 //Utworzenie linka z parametrem
