@@ -551,6 +551,114 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     padding: 1.5% 4%;
 }
 
+/* ----- Custom Treatment Select ----- */
+.native-select-hidden {
+    position: absolute;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    margin-bottom: 1.5%;
+}
+
+.custom-select-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(30,30,30,0.9);
+    color: #bdbdbd;
+    box-shadow: 3px -3px 5px rgba(0,0,0,0.8);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 18px;
+    padding: 1.5% 4%;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.custom-select-label {
+    color: #bdbdbd;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-select-label--selected {
+    color: #e0e0e0;
+}
+
+.custom-select-chevron {
+    transition: transform 0.2s ease;
+    color: #bdbdbd;
+    pointer-events: none;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.custom-select-wrapper.open .custom-select-chevron {
+    transform: rotate(180deg);
+}
+
+.custom-select-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+    background-color: rgba(25,25,25,0.98);
+    border-radius: 8px;
+    box-shadow: 3px 6px 18px rgba(0,0,0,0.75);
+    z-index: 9999;
+}
+
+.custom-select-wrapper.open .custom-select-panel {
+    display: block;
+}
+
+.custom-select-group-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(189,189,189,0.45);
+    padding: 8px 14px 3px;
+    margin: 0;
+}
+
+.custom-select-option {
+    padding: 10px 14px 10px 22px;
+    color: #bdbdbd;
+    cursor: pointer;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 16px;
+    transition: background-color 0.15s;
+}
+
+.custom-select-option:hover,
+.custom-select-option:focus {
+    background-color: rgba(255,255,255,0.09);
+    outline: none;
+    color: #e0e0e0;
+}
+
+.custom-select-option.selected {
+    background-color: rgba(255,255,255,0.14);
+    color: white;
+}
+
+.custom-select-overlay {
+    display: none;
+}
+
 .form-form textarea {
     margin-bottom: 1.5%;
     padding: 1.5% 4%;
@@ -1063,6 +1171,19 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         font-size: 18px;
     }
 
+    .custom-select-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .custom-select-trigger {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    .custom-select-panel {
+        max-height: 240px;
+    }
+
     .form-separator {
         background:
             linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -1434,6 +1555,37 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         font-size: 17px;
     }
 
+    .custom-select-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .custom-select-trigger {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    /* Bottom-sheet style on mobile */
+    .custom-select-panel {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 55vh;
+        top: auto;
+        border-radius: 16px 16px 0 0;
+        z-index: 100000;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .custom-select-overlay.active {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 99999;
+    }
+
     .form-separator {
         background:
             linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -1625,6 +1777,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         padding: 10px 12px;
     }
 
+    .custom-select-trigger {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
     .form-other-title {
         font-size: 18px;
     }
@@ -1779,6 +1936,15 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         margin-bottom: 8px;
     }
 
+    .custom-select-trigger {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .custom-select-wrapper {
+        margin-bottom: 8px;
+    }
+
     .form-form button {
         font-size: 15px;
         padding: 11px;
@@ -1861,6 +2027,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     .form-form input,
     .form-form select,
     .form-form textarea {
+        font-size: 13px;
+        padding: 8px 8px;
+    }
+
+    .custom-select-trigger {
         font-size: 13px;
         padding: 8px 8px;
     }
