@@ -18,15 +18,14 @@ function Cennik() {
     const adminInfo = AdminInfo();
     document.body.innerHTML = `
         ${headbar}
-        <main class="main" id="main-link" aria-label="Cennik zabiegów kosmetycznych">
-            <h1 class="seo-h1">Cennik zabiegów kosmetycznych – Salon Obsession Kozienice</h1>
+        <div class="main">
             ${banner}
            
             <div class="main-cennik-photo-container">
-                 <img class="main-cennik-photo" alt="Kobieta podczas zabiegu kosmetycznego – Salon Obsession Kozienice" src="../backend/photos_compressed/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
+                 <img class="main-cennik-photo" alt="main-cennik-photo" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
             
-            <section class="main-content-container main-content-container-cennik" aria-label="Cennik zabiegów">
+            <div class="main-content-container main-content-container-cennik">
                 <div class="main-content-info">
                     <div class="main-content-info-title-container">
                         <p class="main-content-info-title">Kosmetologia</p>
@@ -41,7 +40,7 @@ function Cennik() {
                 <div class="left-bar"></div>
                 <div class="main-content-cennik">
                     <div class="item-container item-container-titles">
-                        <div class="item-props item-props-titles">Czas Trwania</div>
+                        <div class="item-props item-props-titles">Zabieg</div>
                         <div class="separator">|</div>
                         <div class="item-props item-props-titles">Opis</div>
                         <div class="separator">|</div>
@@ -50,17 +49,15 @@ function Cennik() {
                     <! -- ExcelReader --> 
                 </div>
                 ${form}
-                <div class="section-separator"></div>
                 ${mapContent}
-                <div class="section-separator"></div>
                 ${adminInfo}
-            </section>
+            </div>
             
             
-        </main>
-
+        </div>
+        
     `;
-    const excelReader= ExcelReader();
+    const excelReader = ExcelReader();
     document.querySelector('.main-content-cennik').appendChild(excelReader);
 
     // Slide-in animation for item-props on scroll
@@ -94,7 +91,7 @@ function Cennik() {
 
     setTimeout(() => initFormAnimations(), 0);
 
-    document.querySelector(".logo-image").src = "../backend/photos_compressed/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
     document.querySelector(".header").classList.add("header-cennik");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");
@@ -104,13 +101,10 @@ function Cennik() {
     });
 
 
-    const isMobileCennik = window.innerWidth <= 767;
-    const headerThresholdCennik = isMobileCennik ? 250 : 630;
-
     let lastScrollTop2 = 0;
     window.addEventListener('scroll', () => {
         let check = window.pageYOffset || document.documentElement.scrollTop;
-        if (check > headerThresholdCennik) {
+        if (check > 630) {
             document.querySelector('.header').classList.remove('header-cennik');
         } else {
             document.querySelector('.header').classList.add('header-cennik');
