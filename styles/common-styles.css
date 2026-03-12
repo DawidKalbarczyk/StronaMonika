@@ -544,10 +544,11 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-form select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
     margin-bottom: 1.5%;
     padding: 1.5% 4%;
-
-
 }
 
 .form-form textarea {
