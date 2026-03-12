@@ -18,7 +18,15 @@ export function initFormAnimations() {
 		const formSlideObs = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					if (formContainer) formContainer.classList.add('form-container-show');
+					if (formContainer) {
+						formContainer.classList.add('form-container-show');
+						formContainer.addEventListener('transitionend', function handler(e) {
+							if (e.propertyName === 'transform') {
+								formContainer.style.transform = 'none';
+								formContainer.removeEventListener('transitionend', handler);
+							}
+						});
+					}
 					formForm.classList.add('slide-in');
 					if (formSeparator) formSeparator.classList.add('slide-in');
 					if (formOther) formOther.classList.add('slide-in');
@@ -43,7 +51,14 @@ export function initHomeScrollHandlers() {
 						entry.target.classList.add('work-info-container-show');
 					}
 					if (entry.target.classList.contains('form-container')) {
-						entry.target.classList.add('form-container-show');
+						const fc = entry.target;
+						fc.classList.add('form-container-show');
+						fc.addEventListener('transitionend', function handler(e) {
+							if (e.propertyName === 'transform') {
+								fc.style.transform = 'none';
+								fc.removeEventListener('transitionend', handler);
+							}
+						});
 					}
 				}
 			});
@@ -91,13 +106,21 @@ export function initHomeScrollHandlers() {
 				const mobileObs = new IntersectionObserver((entries) => {
 					entries.forEach(entry => {
 						if (entry.isIntersecting) {
-							entry.target.classList.add(
-								entry.target.classList.contains('unique-info-tile-container')
-									? 'unique-info-tile-container-show'
-									: entry.target.classList.contains('work-info-tile-container')
-										? 'work-info-tile-container-show'
-										: 'form-container-show'
-							);
+						const cls = entry.target.classList.contains('unique-info-tile-container')
+							? 'unique-info-tile-container-show'
+							: entry.target.classList.contains('work-info-tile-container')
+								? 'work-info-tile-container-show'
+								: 'form-container-show';
+						entry.target.classList.add(cls);
+						if (cls === 'form-container-show') {
+							const fc = entry.target;
+							fc.addEventListener('transitionend', function handler(e) {
+								if (e.propertyName === 'transform') {
+									fc.style.transform = 'none';
+									fc.removeEventListener('transitionend', handler);
+								}
+							});
+						}
 							mobileObs.unobserve(entry.target);
 						}
 					});
@@ -120,7 +143,16 @@ export function initHomeScrollHandlers() {
 					document.querySelector(".work-info-tile-container").classList.add("work-info-tile-container-show");
 				}
 				if (scrollY >= 3400) {
-					document.querySelector(".form-container").classList.add('form-container-show');
+					const fc = document.querySelector(".form-container");
+					if (fc && !fc.classList.contains('form-container-show')) {
+						fc.classList.add('form-container-show');
+						fc.addEventListener('transitionend', function handler(e) {
+							if (e.propertyName === 'transform') {
+								fc.style.transform = 'none';
+								fc.removeEventListener('transitionend', handler);
+							}
+						});
+					}
 				}
 			});
 		}
