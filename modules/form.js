@@ -82,37 +82,57 @@ function Form() {
                     
                     <input type="text" name="Data" placeholder="Preferowana data (np. 25.02.2026)">
                     
-                    <select name="Zabieg" required>
-                      <option value="">Wybierz rodzaj zabiegu</option>
-                      
-                      <optgroup label="Zabiegi na twarz">
-                        <option value="Twarz - Peeling">Peeling</option>
-                        <option value="Twarz - Dermapen">Dermapen</option>
-                        <option value="Twarz - Oczyszczanie twarzy">Oczyszczanie twarzy</option>
-                      </optgroup>
-                      
-                      <optgroup label="Zabiegi na ciało">
-                        <option value="Ciało - Depilacja">Depilacja</option>
-                        
-                      </optgroup>
-                      
-                      <optgroup label="Zabiegi dłoń i stóp">
-                        <option value="Ręce - Manicure">Manicure</option>
-                        <option value="Stopy - Pedicure">Pedicure</option>
-                      </optgroup>
-                      
-                      <optgroup label="Zabiegi brwi i rzęs">
-                        <option value="Brwi/Rzęsy - Henna">Henna</option>
-                        <option value="Brwi/Rzęsy - Laminacja">Laminacja</option>
-                        <option value="Brwi/Rzęsy - Regulacja">Regulacja</option>
-                      </optgroup>
-                      
-                      <optgroup label="Makijaże">
-                        <option value="Makijaż twarzy - Okolicznościowy">Okolicznościowy</option>
-                        <option value="Makijaż twarzy - Permanentny">Permanentny</option>
-                        <option value="Brwi/Rzęsy - Regulacja">Regulacja</option>
-                      </optgroup>
-                    </select>
+                    <div class="custom-select-wrapper" id="treatmentSelectWrapper">
+                        <!-- Hidden native select for form validation/submission -->
+                        <select name="Zabieg" required id="treatmentSelectHidden" class="native-select-hidden" tabindex="-1" aria-hidden="true">
+                            <option value="">Wybierz rodzaj zabiegu</option>
+                            <option value="Twarz - Peeling">Twarz - Peeling</option>
+                            <option value="Twarz - Dermapen">Twarz - Dermapen</option>
+                            <option value="Twarz - Oczyszczanie twarzy">Twarz - Oczyszczanie twarzy</option>
+                            <option value="Ciało - Depilacja">Ciało - Depilacja</option>
+                            <option value="Ręce - Manicure">Ręce - Manicure</option>
+                            <option value="Stopy - Pedicure">Stopy - Pedicure</option>
+                            <option value="Brwi/Rzęsy - Henna">Brwi/Rzęsy - Henna</option>
+                            <option value="Brwi/Rzęsy - Laminacja">Brwi/Rzęsy - Laminacja</option>
+                            <option value="Brwi/Rzęsy - Regulacja">Brwi/Rzęsy - Regulacja</option>
+                            <option value="Makijaż twarzy - Okolicznościowy">Makijaż twarzy - Okolicznościowy</option>
+                            <option value="Makijaż twarzy - Permanentny">Makijaż twarzy - Permanentny</option>
+                        </select>
+                        <!-- Visible custom trigger -->
+                        <button type="button" class="custom-select-trigger" id="treatmentSelectTrigger" aria-haspopup="listbox" aria-expanded="false">
+                            <span class="custom-select-label" id="treatmentSelectLabel">Wybierz rodzaj zabiegu</span>
+                            <span class="custom-select-chevron" aria-hidden="true">&#9662;</span>
+                        </button>
+                        <!-- Dropdown panel -->
+                        <div class="custom-select-panel" id="treatmentSelectPanel" role="listbox">
+                            <div class="custom-select-group">
+                                <p class="custom-select-group-label">Zabiegi na twarz</p>
+                                <div class="custom-select-option" data-value="Twarz - Peeling" role="option" tabindex="0">Peeling</div>
+                                <div class="custom-select-option" data-value="Twarz - Dermapen" role="option" tabindex="0">Dermapen</div>
+                                <div class="custom-select-option" data-value="Twarz - Oczyszczanie twarzy" role="option" tabindex="0">Oczyszczanie twarzy</div>
+                            </div>
+                            <div class="custom-select-group">
+                                <p class="custom-select-group-label">Zabiegi na ciało</p>
+                                <div class="custom-select-option" data-value="Ciało - Depilacja" role="option" tabindex="0">Depilacja</div>
+                            </div>
+                            <div class="custom-select-group">
+                                <p class="custom-select-group-label">Zabiegi dłoń i stóp</p>
+                                <div class="custom-select-option" data-value="Ręce - Manicure" role="option" tabindex="0">Manicure</div>
+                                <div class="custom-select-option" data-value="Stopy - Pedicure" role="option" tabindex="0">Pedicure</div>
+                            </div>
+                            <div class="custom-select-group">
+                                <p class="custom-select-group-label">Zabiegi brwi i rzęs</p>
+                                <div class="custom-select-option" data-value="Brwi/Rzęsy - Henna" role="option" tabindex="0">Henna</div>
+                                <div class="custom-select-option" data-value="Brwi/Rzęsy - Laminacja" role="option" tabindex="0">Laminacja</div>
+                                <div class="custom-select-option" data-value="Brwi/Rzęsy - Regulacja" role="option" tabindex="0">Regulacja</div>
+                            </div>
+                            <div class="custom-select-group">
+                                <p class="custom-select-group-label">Makijaże</p>
+                                <div class="custom-select-option" data-value="Makijaż twarzy - Okolicznościowy" role="option" tabindex="0">Okolicznościowy</div>
+                                <div class="custom-select-option" data-value="Makijaż twarzy - Permanentny" role="option" tabindex="0">Permanentny</div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <textarea name="Opis zabiegu" rows="4" placeholder="Opis zabiegu"></textarea>
                     <textarea name="Dodatkowe uwagi" rows="4" placeholder="Dodatkowe uwagi (opcjonalnie)"></textarea>
@@ -189,6 +209,71 @@ function Form() {
                 if (e.key === 'Escape' && privacyModal.classList.contains('privacy-modal-overlay--visible')) {
                     privacyModal.classList.remove('privacy-modal-overlay--visible');
                     document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // ----- Custom Treatment Select -----
+        const treatmentWrapper = document.getElementById('treatmentSelectWrapper');
+        const treatmentTrigger = document.getElementById('treatmentSelectTrigger');
+        const treatmentPanel = document.getElementById('treatmentSelectPanel');
+        const treatmentLabel = document.getElementById('treatmentSelectLabel');
+        const treatmentHidden = document.getElementById('treatmentSelectHidden');
+
+        if (treatmentWrapper && treatmentTrigger) {
+            const overlay = document.createElement('div');
+            overlay.className = 'custom-select-overlay';
+            document.body.appendChild(overlay);
+
+            function openSelect() {
+                treatmentWrapper.classList.add('open');
+                treatmentTrigger.setAttribute('aria-expanded', 'true');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSelect() {
+                treatmentWrapper.classList.remove('open');
+                treatmentTrigger.setAttribute('aria-expanded', 'false');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            treatmentTrigger.addEventListener('click', function() {
+                treatmentWrapper.classList.contains('open') ? closeSelect() : openSelect();
+            });
+
+            treatmentPanel.querySelectorAll('.custom-select-option').forEach(function(opt) {
+                function selectOption() {
+                    const value = opt.dataset.value;
+                    treatmentLabel.textContent = opt.textContent;
+                    treatmentLabel.classList.add('custom-select-label--selected');
+                    treatmentHidden.value = value;
+                    treatmentPanel.querySelectorAll('.custom-select-option').forEach(function(o) {
+                        o.classList.remove('selected');
+                    });
+                    opt.classList.add('selected');
+                    closeSelect();
+                    treatmentTrigger.focus();
+                }
+                opt.addEventListener('click', selectOption);
+                opt.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectOption(); }
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (treatmentWrapper.classList.contains('open') && !treatmentWrapper.contains(e.target)) {
+                    closeSelect();
+                }
+            });
+
+            overlay.addEventListener('click', closeSelect);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && treatmentWrapper.classList.contains('open')) {
+                    closeSelect();
+                    treatmentTrigger.focus();
                 }
             });
         }
