@@ -43,7 +43,7 @@ function displayTreatment(data) {
     const part1Div = document.createElement('p');
     part1Div.className = 'main-content-info-title';
     part1Div.innerHTML = data.part1.map(item =>
-        item.toLowerCase().charAt(0).toUpperCase() + item.toLowerCase().slice(1)
+        item
     ).join('<br>');
     const title = document.querySelector(".main-content-info-title-container");
     title.appendChild(part1Div);
