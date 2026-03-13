@@ -23,6 +23,13 @@
 </head>
 <body>
 
+<script>
+  document.body.classList.add("page-is-loading");
+  window.addEventListener("load", () => {
+    document.body.classList.remove("page-is-loading");
+  }, { once: true });
+</script>
+
 <script type="module">
   import AboutMe from "../pages-js/AboutMe.js";
   AboutMe();

@@ -22,6 +22,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
+<script>
+  document.body.classList.add("page-is-loading");
+  window.addEventListener("load", () => {
+    document.body.classList.remove("page-is-loading");
+  }, { once: true });
+</script>
 <script type="module">
   import Cennik from "../pages-js/Cennik.js";
   Cennik();
