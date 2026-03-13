@@ -88,6 +88,13 @@
     <p>Adres: Bohaterów Getta 24 lok. 4, 26-900 Kozienice | Tel: 667 911 466</p>
 </noscript>
 
+<script>
+    document.body.classList.add("page-is-loading");
+    window.addEventListener("load", () => {
+        document.body.classList.remove("page-is-loading");
+    }, { once: true });
+</script>
+
 <script type="module">
     import Home from "./index.js";
     Home();

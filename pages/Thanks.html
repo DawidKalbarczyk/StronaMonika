@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../styles/Thanks.css">
 </head>
 <body>
+    <script>
+        document.body.classList.add("page-is-loading");
+        window.addEventListener("load", () => {
+            document.body.classList.remove("page-is-loading");
+        }, { once: true });
+    </script>
+
     <div class="thanks-main-container">
         <div class="thanks-title">
             <p>Twoje zgłoszenie zostało wysłane pomyślnie<br>Dziękuję za zaufanie mojej firmie!</p>
