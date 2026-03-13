@@ -110,6 +110,8 @@ function Form() {
                                 <div class="custom-select-option" data-value="Twarz - Peeling" role="option" tabindex="0">Peeling</div>
                                 <div class="custom-select-option" data-value="Twarz - Dermapen" role="option" tabindex="0">Dermapen</div>
                                 <div class="custom-select-option" data-value="Twarz - Oczyszczanie twarzy" role="option" tabindex="0">Oczyszczanie twarzy</div>
+                                <div class="custom-select-option" data-value="Twarz - Nano-Needles" role="option" tabindex="0">Nano-Needles</div>
+                            
                             </div>
                             <div class="custom-select-group">
                                 <p class="custom-select-group-label">Zabiegi na ciało</p>
