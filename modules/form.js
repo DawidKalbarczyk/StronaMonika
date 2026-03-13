@@ -1,5 +1,19 @@
 function Form() {
 
+    function getPreferredDateExample() {
+        const preferredDate = new Date();
+        preferredDate.setHours(0, 0, 0, 0);
+        preferredDate.setDate(preferredDate.getDate() + 14);
+
+        const day = String(preferredDate.getDate()).padStart(2, '0');
+        const month = String(preferredDate.getMonth() + 1).padStart(2, '0');
+        const year = preferredDate.getFullYear();
+
+        return `${day}.${month}.${year}`;
+    }
+
+    const preferredDateExample = getPreferredDateExample();
+
     const html = `
         <!-- Modal polityki prywatności -->
         <div class="privacy-modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
@@ -80,7 +94,7 @@ function Form() {
                     
                     <input type="tel" name="Telefon" placeholder="Numer telefonu" required>
                     
-                    <input type="text" name="Data" placeholder="Preferowana data (np. 25.02.2026)">
+                    <input type="text" name="Data" placeholder="Preferowana data (np. ${preferredDateExample})">
                     
                     <div class="custom-select-wrapper" id="treatmentSelectWrapper">
                         <!-- Hidden native select for form validation/submission -->
