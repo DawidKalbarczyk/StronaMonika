@@ -11,6 +11,11 @@ function Cennik() {
     initHomeScrollHandlers();
     document.querySelector('body').style.marginTop = "0px";
 
+    const pathName = window.location.pathname;
+    const assetBasePath = pathName.endsWith("index.html") || pathName.endsWith("/")
+        ? "backend/photos_compressed"
+        : "../backend/photos_compressed";
+
     const headbar = Headbar();
     const banner = Banner();
     const form = Form();
@@ -22,7 +27,7 @@ function Cennik() {
             ${banner}
            
             <div class="main-cennik-photo-container">
-                 <img class="main-cennik-photo" alt="main-cennik-photo" src="../photos/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
+                  <img class="main-cennik-photo" alt="main-cennik-photo" src="${assetBasePath}/treatmentPhotos/mloda-kobieta-zaczyna-zabieg-upiekszajacy-brwi.jpg"/>
             </div>
             
             <div class="main-content-container main-content-container-cennik">
@@ -91,7 +96,7 @@ function Cennik() {
 
     setTimeout(() => initFormAnimations(), 0);
 
-    document.querySelector(".logo-image").src = "../photos/logo/logo-obsession-zmianakolorow-bialy-cropped.png";
+    document.querySelector(".logo-image").src = `${assetBasePath}/logo/logo-obsession-zmianakolorow-bialy-cropped.png`;
     document.querySelector(".header").classList.add("header-cennik");
     document.querySelectorAll(".right-header-content").forEach((elem) => {
         elem.classList.add("right-header-content-colors-switched");

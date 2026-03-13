@@ -162,6 +162,7 @@ body {
     border-radius: 0 10% 10% 0;
     box-sizing: border-box;
     box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.8);
+    overflow: visible;
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -174,10 +175,13 @@ body {
 
 .aboutme-container-photo {
     object-fit: cover;
-    height: 500px;
+    object-position: center top;
+    width: auto;
+    height: 560px;
     position: absolute;
-    left: 120px;
+    left: 92px;
     bottom: 0;
+    border-radius: 28px 28px 0 0;
     filter: brightness(0.8);
     transition:
             transform 0.5s ease-in-out,
@@ -223,6 +227,15 @@ body {
         grid-template-rows: auto auto;
         align-content: start;
         row-gap: 50px;
+    }
+
+    .aboutme-container-photo-div {
+        overflow: visible;
+    }
+
+    .aboutme-container-photo {
+        height: 500px;
+        left: 64px;
     }
 }
 
@@ -304,6 +317,10 @@ body {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    .content-container {
+        width: 100%;
+    }
+
     .main-aboutme-photo-container {
         height: 350px;
         padding: 0;
@@ -346,18 +363,23 @@ body {
     .aboutme-container-photo-div {
         margin: 0;
         border-radius: 0;
-        max-height: 320px;
-        min-height: 320px;
+        max-height: none;
+        min-height: 0;
+        height: auto;
         width: 100%;
         display: flex;
         justify-content: center;
-        overflow: hidden;
+        align-items: end;
+        padding: 20px 20px 0 20px;
+        overflow: visible;
         opacity: 1;
         transform: none;
     }
 
     .aboutme-container-photo {
-        height: 420px;
+        width: min(100%, 420px);
+        height: auto;
+        max-width: 100%;
         position: relative;
         left: auto;
         bottom: auto;
@@ -473,17 +495,22 @@ body {
     .aboutme-container-photo-div {
         margin: 0;
         border-radius: 0;
-        max-height: 280px;
-        min-height: 280px;
+        max-height: none;
+        min-height: 0;
+        height: auto;
         display: flex;
         justify-content: center;
-        overflow: hidden;
+        align-items: end;
+        padding: 16px 12px 0 12px;
+        overflow: visible;
         opacity: 1;
         transform: none;
     }
 
     .aboutme-container-photo {
-        height: 380px;
+        width: min(100%, 360px);
+        height: auto;
+        max-width: 100%;
         position: relative;
         left: auto;
         bottom: auto;
@@ -572,13 +599,9 @@ body {
         font-size: 28px;
     }
 
-    .aboutme-container-photo-div {
-        max-height: 250px;
-        min-height: 250px;
-    }
-
     .aboutme-container-photo {
-        height: 350px;
+        width: min(100%, 330px);
+        height: auto;
     }
 
     .aboutme-container-text-div p {
@@ -596,13 +619,9 @@ body {
         height: 240px;
     }
 
-    .aboutme-container-photo-div {
-        max-height: 230px;
-        min-height: 230px;
-    }
-
     .aboutme-container-photo {
-        height: 330px;
+        width: min(100%, 310px);
+        height: auto;
     }
 
     .aboutme-container-text-div p {
@@ -625,13 +644,9 @@ body {
         font-size: 26px;
     }
 
-    .aboutme-container-photo-div {
-        max-height: 210px;
-        min-height: 210px;
-    }
-
     .aboutme-container-photo {
-        height: 300px;
+        width: min(100%, 285px);
+        height: auto;
     }
 
     .aboutme-container-text-div {
@@ -669,13 +684,9 @@ body {
         padding: 10px;
     }
 
-    .aboutme-container-photo-div {
-        max-height: 190px;
-        min-height: 190px;
-    }
-
     .aboutme-container-photo {
-        height: 280px;
+        width: min(100%, 260px);
+        height: auto;
     }
 
     .aboutme-container-text-div {
@@ -715,13 +726,9 @@ body {
         font-size: 22px;
     }
 
-    .aboutme-container-photo-div {
-        max-height: 160px;
-        min-height: 160px;
-    }
-
     .aboutme-container-photo {
-        height: 240px;
+        width: min(100%, 220px);
+        height: auto;
     }
 
     .aboutme-container-text-div p {

@@ -8,8 +8,6 @@ body {
     transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
 }
 
-.left-bar {}
-
 .main-treat-photo-container {
     width: 100%;
     height: 650px;
@@ -73,6 +71,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: none !important;
+    width: 100%;
 }
 
 .main-content-container-treat .left-bar {
@@ -117,7 +116,7 @@ body {
 }
 .main-treatment {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 50px;
 }
 @keyframes slideInFromBottom {
@@ -196,9 +195,12 @@ body {
     /* ----- Treatment tiles - slightly wider ----- */
     .main-content-treat {
         padding: 35px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .main-treatment {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 28px;
     }
 }
@@ -231,14 +233,20 @@ body {
         padding-bottom: 15px;
     }
 
+    .main-content-container-treat .main-content-info {
+        width: 100%;
+    }
+
     .main-content-treat {
         margin: 20px 0 0 0;
         padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .main-treatment {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
     }
 
