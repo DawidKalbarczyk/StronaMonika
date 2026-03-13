@@ -116,7 +116,7 @@ body {
 }
 .main-treatment {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 50px;
 }
 @keyframes slideInFromBottom {
@@ -200,7 +200,7 @@ body {
     }
 
     .main-treatment {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 28px;
     }
 }
@@ -485,7 +485,7 @@ body {
     }
 
     .main-treatment {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
