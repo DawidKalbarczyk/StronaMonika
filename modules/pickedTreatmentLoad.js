@@ -39,6 +39,13 @@ function loadTreatmentData(treatment) {
 }
 
 function displayTreatment(data) {
+    const compressedBasePath = '../backend/word_photos_compressed';
+
+    const buildPhotoSrc = (basePath, treatmentName, suffix = '') => {
+        const fileName = `${treatmentName.toUpperCase()}${suffix}.jpg`;
+        return `${basePath}/${encodeURIComponent(fileName)}`;
+    };
+
      // Div dla part1
     const part1Div = document.createElement('p');
     part1Div.className = 'main-content-info-title';
@@ -57,7 +64,7 @@ function displayTreatment(data) {
     const firstPhoto = document.createElement('img');
     firstPhoto.alt = `${data.part1.join('<br>')}-1st`;
     const photoName = data.part1[0]; // "HENNA RZĘS"
-    firstPhoto.src = `../backend/word_photos/${photoName.toUpperCase()}.jpg`;
+    firstPhoto.src = buildPhotoSrc(compressedBasePath, photoName);
     firstPhoto.className = "treatment-description-1st-photo";
     const firstPhotoContainer = document.querySelector(".treatment-description-1st-photo-container");
     firstPhotoContainer.appendChild(firstPhoto);
@@ -65,7 +72,7 @@ function displayTreatment(data) {
     // Div dla part3
     const secondPhoto = document.createElement('img');
     secondPhoto.alt = `${data.part1.join('<br>')}-2nd`;
-    secondPhoto.src = `../backend/word_photos/${photoName.toUpperCase()}%202.jpg`;
+    secondPhoto.src = buildPhotoSrc(compressedBasePath, photoName, ' 2');
     secondPhoto.className = "treatment-description-2nd-photo";
     const secondPhotoContainer = document.querySelector(".treatment-description-2nd-photo-container");
     secondPhotoContainer.appendChild(secondPhoto);
@@ -125,21 +132,26 @@ function displayTreatment(data) {
         el.style.transform = 'translateY(60px)';
     });
 
-    // secondPhotoContainer ma w CSS transform: translateY(-50%) - osobna animacja
+    const secondPhotoAbsoluteLayout = getComputedStyle(secondPhotoContainer).position === 'absolute';
+
+    // secondPhotoContainer ma osobną animację tylko w layoucie absolutnym (desktop)
     secondPhotoContainer.style.opacity = '0';
-    secondPhotoContainer.style.transform = 'translateY(calc(-50% + 60px))';
+    secondPhotoContainer.style.transform = secondPhotoAbsoluteLayout
+        ? 'translateY(calc(-50% + 60px))'
+        : 'translateY(60px)';
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-                const isAbsolute = entry.target === secondPhotoContainer;
+                const isSecondPhoto = entry.target === secondPhotoContainer;
+                const useAbsoluteAnimation = isSecondPhoto && secondPhotoAbsoluteLayout;
                 entry.target.style.animationDelay = `${i * 0.12}s`;
-                entry.target.classList.add(isAbsolute ? 'slide-in-pt-absolute' : 'slide-in-pt');
+                entry.target.classList.add(useAbsoluteAnimation ? 'slide-in-pt-absolute' : 'slide-in-pt');
                 entry.target.addEventListener('animationend', () => {
-                    entry.target.classList.remove('slide-in-pt', 'slide-in-pt-absolute');
                     entry.target.style.opacity = '1';
-                    entry.target.style.transform = '';
+                    entry.target.style.transform = useAbsoluteAnimation ? 'translateY(-50%)' : 'translateY(0)';
                     entry.target.style.animationDelay = '';
+                    entry.target.classList.remove('slide-in-pt', 'slide-in-pt-absolute');
                 }, { once: true });
                 observer.unobserve(entry.target);
             }

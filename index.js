@@ -5,7 +5,6 @@ import initMap from "./modules/map.js";
 import Form from "./modules/form.js";
 
 function Home() {
-    initHomeScrollHandlers();
     handleReadTime();
     const headbar = Headbar();
     const banner = Banner();
@@ -229,6 +228,7 @@ function Home() {
 
         </main>
     `);
+    initHomeScrollHandlers();
     if (isAnnouncment) {
         document.querySelector(".announcement-div").style.opacity = "1";
     } else {
