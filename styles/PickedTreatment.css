@@ -398,12 +398,6 @@ body {
         text-align: left;
     }
 
-    .slide-in-pt,
-    .slide-in-pt-absolute {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
 }
 
 /* ============================================
@@ -598,13 +592,6 @@ body {
         margin-top: 30px;
     }
 
-    /* ----- Animations off ----- */
-    .slide-in-pt,
-    .slide-in-pt-absolute {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
 }
 
 /* ---- Large phones (≤430px) ---- */

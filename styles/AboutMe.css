@@ -422,11 +422,6 @@ body {
         margin: 25px 60px 0 60px;
     }
 
-    .slide-left,
-    .slide-right {
-        opacity: 1 !important;
-        transform: none !important;
-    }
 }
 
 /* ============================================
@@ -456,7 +451,7 @@ body {
     .main-content-container-aboutme {
         display: flex;
         flex-direction: column;
-        padding-right: 0;
+        padding: 0;
         margin: 30px 0 0 0;
     }
 
@@ -501,19 +496,22 @@ body {
         display: flex;
         justify-content: center;
         align-items: end;
-        padding: 16px 12px 0 12px;
+        padding: 16px 0 0 0;
         overflow: visible;
-        opacity: 1;
-        transform: none;
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
     }
 
     .aboutme-container-photo {
-        width: min(100%, 360px);
+        display: block;
+        width: 100vw;
         height: auto;
-        max-width: 100%;
+        max-width: 100vw;
         position: relative;
         left: auto;
         bottom: auto;
+        border-radius: 0;
     }
 
     .aboutme-container-photo:hover {
@@ -525,8 +523,10 @@ body {
         margin: 0;
         border-radius: 0;
         padding: 20px 15px;
-        opacity: 1;
-        transform: none;
+    }
+
+    .aboutme-container-text-div.visible {
+        padding: 20px 15px;
     }
 
     .aboutme-container-text-div p {
@@ -549,8 +549,6 @@ body {
         margin: 0;
         border-radius: 0;
         padding: 20px 25px;
-        opacity: 1;
-        transform: none;
     }
 
     .aboutme-container-desc-p {
@@ -575,14 +573,6 @@ body {
         margin-top: 30px;
     }
 
-    /* ----- Slide animations off ----- */
-    .aboutme-container-photo-div,
-    .aboutme-container-text-div,
-    .aboutme-container-desc {
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
     /* ----- Form overrides ----- */
     .form-main-container {
         margin-top: 30px;
@@ -600,7 +590,8 @@ body {
     }
 
     .aboutme-container-photo {
-        width: min(100%, 330px);
+        width: 100vw;
+        max-width: 100vw;
         height: auto;
     }
 
@@ -620,7 +611,8 @@ body {
     }
 
     .aboutme-container-photo {
-        width: min(100%, 310px);
+        width: 100vw;
+        max-width: 100vw;
         height: auto;
     }
 
@@ -645,7 +637,8 @@ body {
     }
 
     .aboutme-container-photo {
-        width: min(100%, 285px);
+        width: 100vw;
+        max-width: 100vw;
         height: auto;
     }
 
@@ -685,7 +678,8 @@ body {
     }
 
     .aboutme-container-photo {
-        width: min(100%, 260px);
+        width: 100vw;
+        max-width: 100vw;
         height: auto;
     }
 
@@ -727,7 +721,8 @@ body {
     }
 
     .aboutme-container-photo {
-        width: min(100%, 220px);
+        width: 100vw;
+        max-width: 100vw;
         height: auto;
     }
 
