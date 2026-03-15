@@ -1326,15 +1326,6 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         flex-wrap: wrap;
     }
 
-    /* ----- Scroll Animations off on tablet ----- */
-    .slide-left,
-    .slide-right,
-    .slide-center,
-    .slide-bottom {
-        opacity: 1;
-        transform: none;
-    }
-
     /* ----- Return button ----- */
     .right-header-return-button-link {
         display: none !important;
@@ -1727,15 +1718,6 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
         justify-content: center;
         padding: 4px 6px;
         flex-wrap: wrap;
-    }
-
-    /* ----- Scroll Animations for Mobile ----- */
-    .slide-left,
-    .slide-right,
-    .slide-center,
-    .slide-bottom {
-        opacity: 1;
-        transform: none;
     }
 
     /* ----- Return button ----- */

@@ -352,11 +352,6 @@ body {
         -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
     }
 
-    .slide-left,
-    .slide-right {
-        opacity: 1 !important;
-        transform: none !important;
-    }
 }
 
 /* ===== MOBILE ===== */
@@ -493,14 +488,6 @@ body {
         margin-top: 30px;
     }
 
-    /* Disable slide animations */
-    .slide-left,
-    .slide-right,
-    .slide-bottom {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-    }
 }
 
 /* ----- iPhone 15 Pro Max, 14 Plus, Samsung S24 Ultra (430px) ----- */

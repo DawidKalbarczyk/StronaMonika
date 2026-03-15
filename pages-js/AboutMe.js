@@ -38,7 +38,7 @@ function AboutMe() {
                         <div class="aboutme-container">
                             <div class="aboutme-container-info-div">
                                 <div class="aboutme-container-photo-div">
-                                    <img class="aboutme-container-photo" alt="Monika Molenda – właścicielka Salonu Obsession Kozienice" src="../backend/photos_compressed/myPhotos/omnie3.png">
+                                    <img class="aboutme-container-photo" alt="Monika Molenda – właścicielka Salonu Obsession Kozienice" src="../backend/photos_compressed/myPhotos/omnie3-gimp.png">
                                 </div>
                                 <div class="aboutme-container-text-div">
                                     <p>WŁAŚCICIELKA SALONU OBSESSION</p>

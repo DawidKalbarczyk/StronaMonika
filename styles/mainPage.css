@@ -879,8 +879,6 @@ body.no-announcement .main-content-container {
         margin: 0 10px;
         padding: 20px;
         background-size: 200px 200px;
-        opacity: 1;
-        transform: none;
     }
 
     .unique-info-tile {
@@ -925,8 +923,6 @@ body.no-announcement .main-content-container {
         padding: 10px;
         column-gap: 0;
         background-size: 300px 300px;
-        opacity: 1;
-        transform: none;
     }
 
     .work-info-tile {
