@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przekierowanie...</title>
+</head>
+<body>
+<script>
+    (function () {
+        const path = window.location.pathname;
+        const isPageRoute = path.includes("/pages/");
+        const basePath = isPageRoute
+            ? path.slice(0, path.indexOf("/pages/"))
+            : path.replace(/\/404\.html$/, "");
+
+        const pageMap = {
+            aboutme: "AboutMe.html",
+            cennik: "Cennik.html",
+            galeria: "Galeria.html",
+            kontakt: "Kontakt.html",
+            pickedtreatment: "PickedTreatment.html",
+            thanks: "Thanks.html",
+            zabiegi: "Zabiegi.html"
+        };
+
+        if (isPageRoute) {
+            const rawSlug = path.slice(path.indexOf("/pages/") + 7).split("/")[0] || "";
+            const slug = rawSlug.replace(/\.html$/i, "").toLowerCase();
+            const targetPage = pageMap[slug];
+
+            if (targetPage) {
+                window.location.replace(`${basePath}/pages/${targetPage}${window.location.search}${window.location.hash}`);
+                return;
+            }
+        }
+
+        // Fallback to homepage when route is unknown.
+        window.location.replace(`${basePath}/index.html`);
+    })();
+</script>
+</body>
+</html>
