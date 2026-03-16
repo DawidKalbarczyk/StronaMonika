@@ -14,7 +14,7 @@ function treatmentLoad() {
                 //Utworzenie linka z parametrem
                 const treatmentLink = document.createElement('a');
                 treatmentLink.className = 'treatment-link';
-                treatmentLink.href = `../pages/PickedTreatment.html?treatment=${encodeURIComponent(treatment)}`;
+                treatmentLink.href = `${repoSegment}/pages/pickedtreatment?treatment=${encodeURIComponent(treatment)}`;
 
                 //Utworzenie całego kontenera (item)
                 const treatmentItem = document.createElement('div');

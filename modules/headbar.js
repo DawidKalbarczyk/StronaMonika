@@ -1,17 +1,18 @@
 function Headbar() {
-    let path = "";
     let path2 = "";
     const pathName = window.location.pathname;
+    const markerIndex = pathName.indexOf("/pages/");
+    const basePath = markerIndex !== -1
+        ? pathName.slice(0, markerIndex)
+        : pathName.replace(/\/(?:index\.html)?$/, "");
+    const pageBase = `${basePath}/pages`;
+    const logoHref = `${basePath}/index.html`;
+    const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
 
-    let logoHref = "";
-    if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
-        path = "pages"
+    if (isHomePage) {
         path2 = "backend/photos_compressed"
-        logoHref = "index.html"
     } else {
-        path = "../pages"
         path2 = "../backend/photos_compressed"
-        logoHref = "../index.html"
     }
     const headbar = `
         <header class="header">
@@ -30,13 +31,13 @@ function Headbar() {
             </button>
             
             <nav class="right-header" aria-label="Nawigacja główna">
-                <a href="${path}/AboutMe.html" class="headbar-link right-header-content-container right-header-content">
+                <a href="${pageBase}/aboutme" class="headbar-link right-header-content-container right-header-content">
                     O mnie
                 </a>
-                <a href="${path}/Zabiegi.html" class="headbar-link right-header-content-container right-header-content">
+                <a href="${pageBase}/zabiegi" class="headbar-link right-header-content-container right-header-content">
                     Zabiegi
                 </a>
-                <a href="${path}/Cennik.html" class="headbar-link right-header-content-container right-header-content">
+                <a href="${pageBase}/cennik" class="headbar-link right-header-content-container right-header-content">
                     Cennik
                 </a>
                 <a href="#main-link" class="right-header-return-button-link">
@@ -47,10 +48,10 @@ function Headbar() {
                 
             </nav>
             <nav class="right-header right-header2" aria-label="Nawigacja dodatkowa">
-                <a href="${path}/Kontakt.html" class="headbar-link right-header-content-container right-header-content">
+                <a href="${pageBase}/kontakt" class="headbar-link right-header-content-container right-header-content">
                     Kontakt
                 </a>
-                <a href="${path}/Galeria.html" class="headbar-link right-header-content-container right-header-content">
+                <a href="${pageBase}/galeria" class="headbar-link right-header-content-container right-header-content">
                     Galeria
                 </a>
                 <a href="#contact" class="header-button-link">
@@ -66,11 +67,11 @@ function Headbar() {
         <!-- Mobile menu overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
         <nav class="mobile-menu" id="mobileMenu">
-            <a href="${path}/AboutMe.html" class="mobile-menu-link">O mnie</a>
-            <a href="${path}/Zabiegi.html" class="mobile-menu-link">Zabiegi</a>
-            <a href="${path}/Cennik.html" class="mobile-menu-link">Cennik</a>
-            <a href="${path}/Kontakt.html" class="mobile-menu-link">Kontakt</a>
-            <a href="${path}/Galeria.html" class="mobile-menu-link">Galeria</a>
+            <a href="${pageBase}/aboutme" class="mobile-menu-link">O mnie</a>
+            <a href="${pageBase}/zabiegi" class="mobile-menu-link">Zabiegi</a>
+            <a href="${pageBase}/cennik" class="mobile-menu-link">Cennik</a>
+            <a href="${pageBase}/kontakt" class="mobile-menu-link">Kontakt</a>
+            <a href="${pageBase}/galeria" class="mobile-menu-link">Galeria</a>
             <a href="#contact" class="mobile-menu-link mobile-menu-cta">Umów wizytę</a>
             <div class="mobile-menu-social">
                 <a target="_blank" rel="noreferrer" href="https://www.facebook.com/obsessionkosmetologia/">

@@ -1,12 +1,15 @@
 function AdminInfo() {
     const pathName = window.location.pathname;
-    let path = "";
+    const markerIndex = pathName.indexOf("/pages/");
+    const basePath = markerIndex !== -1
+        ? pathName.slice(0, markerIndex)
+        : pathName.replace(/\/(?:index\.html)?$/, "");
+    const pageBase = `${basePath}/pages`;
+    const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
     let path2 = "";
-    if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
-        path = "pages"
+    if (isHomePage) {
         path2 = "backend/photos_compressed"
     } else {
-        path = "../pages"
         path2 = "../backend/photos_compressed"
     }
 
@@ -25,7 +28,7 @@ function AdminInfo() {
                         Henna brwi i rzęs<br>
                         Pedicure i Manicure<br>
                         Peelingi chemiczne i Dermapen<br>
-                        <a href="${path}/Zabiegi.html" class="admin-info-href">
+                            <a href="${pageBase}/zabiegi" class="admin-info-href">
                            Więcej...
                         </a>
                      
