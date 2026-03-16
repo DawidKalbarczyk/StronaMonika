@@ -97,7 +97,8 @@ export function initHomeScrollHandlers() {
 
 
 	const pathName = window.location.pathname;
-	if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
+	const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
+	if (isHomePage) {
 		const isMobile = window.innerWidth <= 767;
 
 		if (isMobile) {
