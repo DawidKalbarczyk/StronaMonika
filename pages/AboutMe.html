@@ -6,9 +6,9 @@
     <title>O mnie – Monika Molenda | Salon Obsession Kozienice</title>
     <meta name="description" content="Poznaj Monikę Molendę – kosmetologa z pasją i doświadczeniem. Dowiedz się więcej o salonie Obsession w Kozienicach i mojej filozofii pracy.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://obsession-kozienice.pl/pages/AboutMe.html">
+    <link rel="canonical" href="https://obsession-kozienice.pl/pages/aboutme">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://obsession-kozienice.pl/pages/AboutMe.html">
+    <meta property="og:url" content="https://obsession-kozienice.pl/pages/aboutme">
     <meta property="og:title" content="O mnie – Monika Molenda | Salon Obsession Kozienice">
     <meta property="og:description" content="Poznaj Monikę Molendę – kosmetologa z pasją i doświadczeniem. Salon Obsession w Kozienicach.">
     <meta property="og:image" content="https://obsession-kozienice.pl/backend/photos_compressed/myPhotos/homepagephoto.jpg">
@@ -24,6 +24,15 @@
 <body>
 
 <script>
+  const markerIndex = window.location.pathname.indexOf("/pages/");
+  if (markerIndex !== -1) {
+    const basePath = window.location.pathname.slice(0, markerIndex);
+    const normalizedPath = `${basePath}/pages/aboutme`;
+    if (window.location.pathname !== normalizedPath) {
+      window.history.replaceState({}, "", `${normalizedPath}${window.location.search}${window.location.hash}`);
+    }
+  }
+
   document.body.classList.add("page-is-loading");
   window.addEventListener("load", () => {
     document.body.classList.remove("page-is-loading");

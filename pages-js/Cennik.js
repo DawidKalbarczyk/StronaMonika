@@ -12,7 +12,8 @@ function Cennik() {
     document.querySelector('body').style.marginTop = "0px";
 
     const pathName = window.location.pathname;
-    const assetBasePath = pathName.endsWith("index.html") || pathName.endsWith("/")
+    const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
+    const assetBasePath = isHomePage
         ? "backend/photos_compressed"
         : "../backend/photos_compressed";
 

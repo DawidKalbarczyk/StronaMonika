@@ -6,9 +6,9 @@
     <title>Cennik zabiegów – Salon Obsession Kozienice</title>
     <meta name="description" content="Sprawdź aktualne ceny zabiegów kosmetycznych w salonie Obsession w Kozienicach. Makijaż permanentny, stylizacja rzęs, manicure hybrydowy i wiele więcej.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://obsession-kozienice.pl/pages/Cennik.html">
+    <link rel="canonical" href="https://obsession-kozienice.pl/pages/cennik">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://obsession-kozienice.pl/pages/Cennik.html">
+    <meta property="og:url" content="https://obsession-kozienice.pl/pages/cennik">
     <meta property="og:title" content="Cennik zabiegów – Salon Obsession Kozienice">
     <meta property="og:description" content="Aktualne ceny zabiegów kosmetycznych w salonie Obsession w Kozienicach.">
     <meta property="og:image" content="https://obsession-kozienice.pl/backend/photos_compressed/myPhotos/homepagephoto.jpg">
@@ -23,6 +23,15 @@
 </head>
 <body>
 <script>
+  const markerIndex = window.location.pathname.indexOf("/pages/");
+  if (markerIndex !== -1) {
+    const basePath = window.location.pathname.slice(0, markerIndex);
+    const normalizedPath = `${basePath}/pages/cennik`;
+    if (window.location.pathname !== normalizedPath) {
+      window.history.replaceState({}, "", `${normalizedPath}${window.location.search}${window.location.hash}`);
+    }
+  }
+
   document.body.classList.add("page-is-loading");
   window.addEventListener("load", () => {
     document.body.classList.remove("page-is-loading");
