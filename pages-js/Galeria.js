@@ -94,7 +94,9 @@ function Galeria() {
     generatePhotosHTML('../backend/gallery_compressed').then(photos => {
         document.querySelector('.main-content-photos').innerHTML = photos;
 
-        const photoElements = document.querySelectorAll(".gallery-photo");
+        const photoElements = Array.from(document.querySelectorAll(".gallery-photo"));
+        const photoSources = photoElements.map(photo => photo.src);
+
         photoElements.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
@@ -116,19 +118,101 @@ function Galeria() {
 
         photoElements.forEach(photo => observer.observe(photo));
 
-        document.querySelectorAll(".gallery-photo").forEach((photo) => {
-            photo.addEventListener("click", (e) => {
-                const overlay = document.createElement("div");
-                overlay.classList.add("photo-overlay");
+        const openPhotoOverlay = (startIndex) => {
+            if (!photoSources.length) return;
 
-                const img = document.createElement("img");
-                img.src = e.target.src;
-                img.classList.add("photo-overlay-img");
+            let currentIndex = startIndex;
+            const previousBodyOverflow = document.body.style.overflow;
 
-                overlay.appendChild(img);
-                document.body.appendChild(overlay);
+            const overlay = document.createElement("div");
+            overlay.classList.add("photo-overlay");
 
-                overlay.addEventListener("click", () => overlay.remove());
+            const prevButton = document.createElement("button");
+            prevButton.type = "button";
+            prevButton.className = "photo-overlay-nav photo-overlay-nav-left";
+            prevButton.setAttribute("aria-label", "Poprzednie zdjęcie");
+            prevButton.textContent = "‹";
+
+            const nextButton = document.createElement("button");
+            nextButton.type = "button";
+            nextButton.className = "photo-overlay-nav photo-overlay-nav-right";
+            nextButton.setAttribute("aria-label", "Następne zdjęcie");
+            nextButton.textContent = "›";
+
+            const closeButton = document.createElement("button");
+            closeButton.type = "button";
+            closeButton.className = "photo-overlay-close";
+            closeButton.setAttribute("aria-label", "Zamknij podgląd zdjęcia");
+            closeButton.textContent = "×";
+
+            const img = document.createElement("img");
+            img.classList.add("photo-overlay-img");
+
+            const updateOverlayImage = () => {
+                img.src = photoSources[currentIndex];
+                img.alt = `Zdjęcie ${currentIndex + 1} z ${photoSources.length}`;
+            };
+
+            const showPrevious = (e) => {
+                if (e) e.stopPropagation();
+                currentIndex = (currentIndex - 1 + photoSources.length) % photoSources.length;
+                updateOverlayImage();
+            };
+
+            const showNext = (e) => {
+                if (e) e.stopPropagation();
+                currentIndex = (currentIndex + 1) % photoSources.length;
+                updateOverlayImage();
+            };
+
+            const handleKeyDown = (e) => {
+                if (e.key === "ArrowLeft") {
+                    showPrevious();
+                    return;
+                }
+                if (e.key === "ArrowRight") {
+                    showNext();
+                    return;
+                }
+                if (e.key === "Escape") {
+                    closeOverlay();
+                }
+            };
+
+            const closeOverlay = () => {
+                document.removeEventListener("keydown", handleKeyDown);
+                document.body.style.overflow = previousBodyOverflow;
+                overlay.remove();
+            };
+
+            prevButton.addEventListener("click", showPrevious);
+            nextButton.addEventListener("click", showNext);
+            closeButton.addEventListener("click", (e) => {
+                e.stopPropagation();
+                closeOverlay();
+            });
+            img.addEventListener("click", (e) => e.stopPropagation());
+
+            overlay.appendChild(closeButton);
+            overlay.appendChild(prevButton);
+            overlay.appendChild(img);
+            overlay.appendChild(nextButton);
+            document.body.appendChild(overlay);
+            document.body.style.overflow = "hidden";
+
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    closeOverlay();
+                }
+            });
+
+            document.addEventListener("keydown", handleKeyDown);
+            updateOverlayImage();
+        };
+
+        photoElements.forEach((photo, index) => {
+            photo.addEventListener("click", () => {
+                openPhotoOverlay(index);
             });
         });
     });
