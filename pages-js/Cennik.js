@@ -64,7 +64,13 @@ function Cennik() {
         
     `;
     const excelReader = ExcelReader();
-    document.querySelector('.main-content-cennik').appendChild(excelReader);
+    const cennikContent = document.querySelector('.main-content-cennik');
+    cennikContent.appendChild(excelReader);
+
+    const cennikFooterNote = document.createElement('p');
+    cennikFooterNote.className = 'cennik-footer-note';
+    cennikFooterNote.textContent = '* O szczegóły zapytaj przez telefon';
+    cennikContent.appendChild(cennikFooterNote);
 
     // Slide-in animation for item-props on scroll
     const mutObs = new MutationObserver(() => {

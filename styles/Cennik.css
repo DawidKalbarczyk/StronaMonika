@@ -179,6 +179,15 @@ za pomocą JS zdjęcie i background
     display: none;
 }
 
+.cennik-footer-note {
+    margin: 24px 100px 0 100px;
+    color: #dcdcdc;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    opacity: 0.95;
+}
+
 .main-content-container-cennik {
     grid-template-columns: 30px 1fr;
 }
@@ -323,6 +332,12 @@ za pomocą JS zdjęcie i background
         margin-top: 15px;
     }
 
+    .cennik-footer-note {
+        margin: 20px 0 0 0;
+        text-align: center;
+        font-size: 17px;
+    }
+
 }
 
 /* ============================================
@@ -449,6 +464,12 @@ za pomocą JS zdjęcie i background
     }
     .item-props-separator {
         margin-top: 15px;
+    }
+
+    .cennik-footer-note {
+        margin: 20px 0 0 0;
+        text-align: center;
+        font-size: 16px;
     }
 }
 
