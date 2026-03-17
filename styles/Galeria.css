@@ -118,7 +118,7 @@ body {
             7px -7px 10px rgba(0, 0, 0, 0.8),
             inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     padding: 50px 25px;
     box-sizing: border-box;
@@ -126,10 +126,10 @@ body {
 
 .gallery-photo {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 3;
     object-fit: cover;
     filter: brightness(0.8);
-    border-radius: 25px;
+    border-radius: 0px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
 }
@@ -158,6 +158,76 @@ body {
     max-height: 90%;
     object-fit: contain;
     border-radius: 8px;
+}
+
+.photo-overlay-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 68px;
+    height: 68px;
+    padding: 0 0 6px 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 0.8;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+}
+
+.photo-overlay-nav-left {
+    left: 24px;
+}
+
+.photo-overlay-nav-right {
+    right: 24px;
+}
+
+.photo-overlay-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.photo-overlay-nav:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.photo-overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    padding: 4px 0 0 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-overlay-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.photo-overlay-close:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
 }
 
 .gallery-container-separator {
@@ -272,6 +342,44 @@ body {
         max-width: 95%;
         max-height: 85%;
         border-radius: 6px;
+    }
+
+    .photo-overlay-nav {
+        width: 54px;
+        height: 54px;
+        padding: 0 0 4px 0;
+        font-size: 44px;
+    }
+
+    .photo-overlay-nav-left {
+        left: 12px;
+    }
+
+    .photo-overlay-nav-right {
+        right: 12px;
+    }
+
+    .photo-overlay-close {
+        top: 12px;
+        right: 12px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        font-size: 32px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .photo-overlay-nav:hover {
+        background: rgba(0, 0, 0, 0.45);
+        box-shadow: none;
+    }
+
+    .photo-overlay-close:hover {
+        background: rgba(0, 0, 0, 0.45);
+        box-shadow: none;
     }
 
     .gallery-container-separator {
