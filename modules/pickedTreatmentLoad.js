@@ -11,9 +11,12 @@ function PickedTreatmentLoad() {
 }
 
 function loadTreatmentData(treatment) {
-    const isGitHubPages = window.location.hostname.endsWith("github.io");
-    const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
-    const dataUrl = `${repoSegment}/backend/data/descriptions.json`;
+    const pathName = window.location.pathname;
+    const markerIndex = pathName.indexOf("/pages/");
+    const basePath = markerIndex !== -1
+        ? pathName.slice(0, markerIndex)
+        : pathName.replace(/\/(?:index\.html)?$/, "");
+    const dataUrl = `${basePath}/backend/data/descriptions.json`;
 
     fetch(dataUrl)
         .then(res => res.json())
