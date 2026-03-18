@@ -1,7 +1,14 @@
 function treatmentLoad() {
-    const isGitHubPages = window.location.hostname.endsWith("github.io");
-    const repoSegment = isGitHubPages ? `/${window.location.pathname.split("/")[1]}` : "";
-    const dataUrl = `${repoSegment}/backend/data/descriptions.json`;
+    const pathName = window.location.pathname;
+    const markerIndex = pathName.indexOf("/pages/");
+    const basePath = markerIndex !== -1
+        ? pathName.slice(0, markerIndex)
+        : pathName.replace(/\/(?:index\.html)?$/, "");
+    const usePrettyRoutes = window.location.hostname.endsWith("github.io")
+        || window.location.hostname === "obsession-kozienice.pl"
+        || window.location.hostname === "www.obsession-kozienice.pl";
+    const pageBase = `${basePath}/pages`;
+    const dataUrl = `${basePath}/backend/data/descriptions.json`;
 
     let treatmentList = [];
     fetch(dataUrl)
@@ -14,7 +21,10 @@ function treatmentLoad() {
                 //Utworzenie linka z parametrem
                 const treatmentLink = document.createElement('a');
                 treatmentLink.className = 'treatment-link';
-                treatmentLink.href = `${repoSegment}/pages/pickedtreatment?treatment=${encodeURIComponent(treatment)}`;
+                const pickedTreatmentPath = usePrettyRoutes
+                    ? `${pageBase}/pickedtreatment`
+                    : `${pageBase}/PickedTreatment.html`;
+                treatmentLink.href = `${pickedTreatmentPath}?treatment=${encodeURIComponent(treatment)}`;
 
                 //Utworzenie całego kontenera (item)
                 const treatmentItem = document.createElement('div');
