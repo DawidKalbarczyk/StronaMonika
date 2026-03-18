@@ -113,6 +113,7 @@ body {
 .main-content-container-aboutme .left-bar {
     grid-column: 1;
     grid-row: 2 / span 100;
+
 }
 
 .main-content-info-title-container {

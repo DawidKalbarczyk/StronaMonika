@@ -1,10 +1,16 @@
 function AdminInfo() {
     const pathName = window.location.pathname;
+    const usePrettyRoutes = window.location.hostname.endsWith("github.io")
+        || window.location.hostname === "obsession-kozienice.pl"
+        || window.location.hostname === "www.obsession-kozienice.pl";
     const markerIndex = pathName.indexOf("/pages/");
     const basePath = markerIndex !== -1
         ? pathName.slice(0, markerIndex)
         : pathName.replace(/\/(?:index\.html)?$/, "");
     const pageBase = `${basePath}/pages`;
+    const zabiegiHref = usePrettyRoutes
+        ? `${pageBase}/zabiegi`
+        : `${pageBase}/Zabiegi.html`;
     const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
     let path2 = "";
     if (isHomePage) {
@@ -28,7 +34,7 @@ function AdminInfo() {
                         Henna brwi i rzęs<br>
                         Pedicure i Manicure<br>
                         Peelingi chemiczne i Dermapen<br>
-                            <a href="${pageBase}/zabiegi" class="admin-info-href">
+                            <a href="${zabiegiHref}" class="admin-info-href">
                            Więcej...
                         </a>
                      
