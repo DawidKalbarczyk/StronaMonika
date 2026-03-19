@@ -170,11 +170,11 @@ function Home() {
                                 <div class="work-info-tile-title-container">
                                     <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/botox-lips.png" alt="Zabieg ust"/>
                                     <p class="work-info-tile-title">
-                                        Modelowanie i Estetyka Ust
+                                        Makjiaż permanentny ust
                                     </p>
                                     <p class="work-info-tile-description">
-                                        Podkreśl zmysłowość swoich ust. Zabieg pozwala na subtelną koretkę kształtu, poprawę symetrii,
-                                        wygładzanie zmarszczek wokół ust lub delikatne wywinięcie wargi do pełniejszego efektu.
+                                        Odzyskaj czas i pewność siebie dzięki makijażowi permanentnemu, 
+                                        który nada Twoim ustom idealny kształt oraz głęboki, soczysty kolor na lata.
                                     </p>
                                 </div>
                             </div>
@@ -207,11 +207,11 @@ function Home() {
                                 <div class="work-info-tile-title-container">
                                     <img class="work-info-tile-image" src="backend/photos_compressed/icons/services-icons/eyelash.png" alt="Rzęsy"/>
                                     <p class="work-info-tile-title">
-                                        Stylizacja i Przedłużanie Rzęs
+                                        Laminacja brwi i rzęs
                                     </p>
                                     <p class="work-info-tile-description">
-                                        Zapomnij o tuszowaniu rzęs. Oferuję profesjonalną plikację, która zagęszcza i wydłuża naturalne włoski.
-                                        Dobieram odpowiednią metodę, aby nadać Twojemu spojrzeniu głębie i spektakularny, ale estetyczny wygląd.
+                                        Zyskaj perfekcyjną oprawę oczu dzięki laminacji brwi i rzęs, która unosi, 
+                                        dyscyplinuje i optycznie zagęszcza włoski, nadając twarzy wyrazisty wygląd każdego ranka.
                                     </p>
                                 </div>
                             </div>
