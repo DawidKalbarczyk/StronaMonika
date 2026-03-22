@@ -42,7 +42,7 @@ function Kontakt() {
                                         
                                     </div>
                                 </a>
-                                <a target="_blank" href="" class="social-media-link">
+                                <a target="_blank" href="https://www.instagram.com/molendamonika/" class="social-media-link">
                                     <div class="social-media-item-container">
                                         <p class="social-media-item-title">
                                             Instagram
