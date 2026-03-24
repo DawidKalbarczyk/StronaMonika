@@ -285,6 +285,7 @@ body {
         border-radius: 0;
         grid-column: 1 / -1;
         padding: 50px 150px;
+
     }
 
         .treatment-pros-text,
@@ -293,7 +294,7 @@ body {
             font-size: 22px;
             line-height: 2;
             margin: 0;
-            text-align: center;
+            text-align: left;
 
         }
 
