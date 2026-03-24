@@ -241,6 +241,19 @@ body {
     background-color: rgba(0,0,0,0.5);
 }
 
+.treatment-tips-div {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/treatmentPhotos/tips_photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.treatment-tips-div p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
 @media (min-width: 1025px) {
     .treatment-tips-div {
         margin: 0 150px 0 150px;
