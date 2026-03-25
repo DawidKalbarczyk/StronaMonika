@@ -341,10 +341,10 @@ za pomocą JS zdjęcie i background
 }
 
 /* ============================================
-   MOBILE STYLES - Cennik (max-width: 932px)
+   MOBILE STYLES - Cennik (max-width: 767px)
    ============================================ */
 
-@media (max-width: 932px) {
+@media (max-width: 767px) {
 
     /* ----- Hero Photo ----- */
     .main-cennik-photo-container {

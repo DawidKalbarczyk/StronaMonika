@@ -416,10 +416,10 @@ body {
 }
 
 /* ============================================
-   MOBILE STYLES - PickedTreatment (max-width: 932px)
+   MOBILE STYLES - PickedTreatment (max-width: 767px)
    ============================================ */
 
-@media (max-width: 932px) {
+@media (max-width: 767px) {
 
     /* ----- Hero Photo ----- */
     .main-gallery-photo-container {
