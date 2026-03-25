@@ -1338,10 +1338,10 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ============================================
-   MOBILE STYLES - Phones only (max-width: 767px)
+   MOBILE STYLES - Phones only (max-width: 932px)
    ============================================ */
 
-@media (max-width: 767px) {
+@media (max-width: 932px) {
 
     /* ----- Body / Global ----- */
     body {

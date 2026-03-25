@@ -268,10 +268,10 @@ body {
 }
 
 /* ============================================
-   MOBILE STYLES - Zabiegi (max-width: 767px)
+   MOBILE STYLES - Zabiegi (max-width: 932px)
    ============================================ */
 
-@media (max-width: 767px) {
+@media (max-width: 932px) {
 
     /* ----- Hero Photo ----- */
     .main-treat-photo-container {
