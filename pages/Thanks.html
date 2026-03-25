@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Obsession - Podziękowania </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dziękujemy za zgłoszenie | Salon Obsession Kozienice</title>
+    <meta name="description" content="Dziękujemy za wysłanie zgłoszenia do salonu Obsession w Kozienicach. Skontaktujemy się z Tobą telefonicznie w najbliższym możliwym terminie.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.obsession-kozienice.pl/pages/Thanks.html">
     <link rel="icon" type="image/png" href="../backend/photos_compressed/icons/kolor_czarny-edited-192.png">
     <link rel="stylesheet" href="../styles/common-styles.css">
     <link rel="stylesheet" href="../styles/Thanks.css">
 </head>
 <body>
     <script>
-        const usePrettyRoutes = window.location.hostname.endsWith("github.io")
-            || window.location.hostname === "obsession-kozienice.pl"
-            || window.location.hostname === "www.obsession-kozienice.pl";
-
-        if (usePrettyRoutes) {
-            const markerIndex = window.location.pathname.indexOf("/pages/");
-            if (markerIndex !== -1) {
-                const basePath = window.location.pathname.slice(0, markerIndex);
-                const normalizedPath = `${basePath}/pages/thanks`;
-                if (window.location.pathname !== normalizedPath) {
-                    window.history.replaceState({}, "", `${normalizedPath}${window.location.search}${window.location.hash}`);
-                }
-            }
-        }
-
         document.body.classList.add("page-is-loading");
         window.addEventListener("load", () => {
             document.body.classList.remove("page-is-loading");
