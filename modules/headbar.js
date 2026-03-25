@@ -1,17 +1,12 @@
 function Headbar() {
     let path2 = "";
     const pathName = window.location.pathname;
-    const usePrettyRoutes = window.location.hostname.endsWith("github.io")
-        || window.location.hostname === "obsession-kozienice.pl"
-        || window.location.hostname === "www.obsession-kozienice.pl";
     const markerIndex = pathName.indexOf("/pages/");
     const basePath = markerIndex !== -1
         ? pathName.slice(0, markerIndex)
         : pathName.replace(/\/(?:index\.html)?$/, "");
     const pageBase = `${basePath}/pages`;
-    const pageHref = (slug, fileName) => usePrettyRoutes
-        ? `${pageBase}/${slug}`
-        : `${pageBase}/${fileName}`;
+    const pageHref = (_slug, fileName) => `${pageBase}/${fileName}`;
     const logoHref = `${basePath}/index.html`;
     const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
 
