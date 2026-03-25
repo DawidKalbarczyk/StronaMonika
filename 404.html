@@ -10,6 +10,16 @@
     (function () {
         const path = window.location.pathname;
         const isPageRoute = path.includes("/pages/");
+
+        const sitemapMatch = path.match(/^(.*\/sitemap\.xml)(?:\/.*)?$/i);
+        if (sitemapMatch) {
+            const sitemapTarget = sitemapMatch[1];
+            if (sitemapTarget !== path) {
+                window.location.replace(`${sitemapTarget}${window.location.search}${window.location.hash}`);
+            }
+            return;
+        }
+
         const basePath = isPageRoute
             ? path.slice(0, path.indexOf("/pages/"))
             : path.endsWith("/404.html")
