@@ -31,7 +31,7 @@ function loadTreatmentData(treatment) {
             }
 
             if (foundData) {
-                displayTreatment(foundData);
+                displayTreatment(foundData, treatment);
             } else {
                 console.error('Nie znaleziono danych dla zabiegu:', treatment);
             }
@@ -41,7 +41,75 @@ function loadTreatmentData(treatment) {
         });
 }
 
-function displayTreatment(data) {
+function upsertMetaTag(selector, attrs) {
+    let meta = document.querySelector(selector);
+    if (!meta) {
+        meta = document.createElement('meta');
+        Object.entries(attrs).forEach(([key, value]) => {
+            if (key !== 'content') {
+                meta.setAttribute(key, value);
+            }
+        });
+        document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', attrs.content);
+}
+
+function updateTreatmentSeo(treatmentName, data) {
+    const normalizedTreatment = (treatmentName || '').trim();
+    if (!normalizedTreatment) {
+        return;
+    }
+
+    const firstContentLine = Array.isArray(data.part2)
+        ? data.part2.find((line, index) => index > 0 && line && !line.endsWith(':'))
+        : '';
+    const treatmentDescription = firstContentLine
+        ? `${firstContentLine} Umow wizyte w salonie Obsession w Kozienicach.`
+        : `${normalizedTreatment} w salonie Obsession Kozienice. Sprawdz opis zabiegu, wskazania i przeciwwskazania.`;
+
+    const title = `${normalizedTreatment} Kozienice | Salon Obsession`;
+    const canonicalUrl = `https://www.obsession-kozienice.pl/pages/PickedTreatment.html?treatment=${encodeURIComponent(normalizedTreatment)}`;
+
+    document.title = title;
+
+    const h1 = document.querySelector('.seo-h1');
+    if (h1) {
+        h1.textContent = `${normalizedTreatment} - Salon Kosmetologiczny Obsession Kozienice`;
+    }
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', canonicalUrl);
+
+    upsertMetaTag('meta[name="description"]', {
+        name: 'description',
+        content: treatmentDescription
+    });
+
+    upsertMetaTag('meta[property="og:title"]', {
+        property: 'og:title',
+        content: title
+    });
+
+    upsertMetaTag('meta[property="og:description"]', {
+        property: 'og:description',
+        content: treatmentDescription
+    });
+
+    upsertMetaTag('meta[property="og:url"]', {
+        property: 'og:url',
+        content: canonicalUrl
+    });
+}
+
+function displayTreatment(data, treatmentName) {
+    updateTreatmentSeo(treatmentName, data);
+
     const compressedBasePath = '../backend/word_photos_compressed';
 
     const buildPhotoSrc = (basePath, treatmentName, suffix = '') => {
