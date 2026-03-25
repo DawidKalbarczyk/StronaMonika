@@ -87,7 +87,7 @@ function Form() {
                     <input type="hidden" name="_subject" value="Nowe zgłoszenie - zapis na zabieg">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://twoja-strona.pl/pages/thanks">
+                    <input type="hidden" name="_next" value="https://www.obsession-kozienice.pl/pages/thanks">
                     
                     <!-- Pola formularza -->
                     <input type="text" name="Imie" placeholder="Imię i nazwisko" required>
