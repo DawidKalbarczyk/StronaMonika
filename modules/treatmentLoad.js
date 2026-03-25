@@ -4,9 +4,6 @@ function treatmentLoad() {
     const basePath = markerIndex !== -1
         ? pathName.slice(0, markerIndex)
         : pathName.replace(/\/(?:index\.html)?$/, "");
-    const usePrettyRoutes = window.location.hostname.endsWith("github.io")
-        || window.location.hostname === "obsession-kozienice.pl"
-        || window.location.hostname === "www.obsession-kozienice.pl";
     const pageBase = `${basePath}/pages`;
     const dataUrl = `${basePath}/backend/data/descriptions.json`;
 
@@ -21,9 +18,7 @@ function treatmentLoad() {
                 //Utworzenie linka z parametrem
                 const treatmentLink = document.createElement('a');
                 treatmentLink.className = 'treatment-link';
-                const pickedTreatmentPath = usePrettyRoutes
-                    ? `${pageBase}/pickedtreatment`
-                    : `${pageBase}/PickedTreatment.html`;
+                const pickedTreatmentPath = `${pageBase}/PickedTreatment.html`;
                 treatmentLink.href = `${pickedTreatmentPath}?treatment=${encodeURIComponent(treatment)}`;
 
                 //Utworzenie całego kontenera (item)
