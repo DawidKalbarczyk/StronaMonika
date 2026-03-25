@@ -65,6 +65,7 @@ jobs:
           cp -r modules _site/
           cp index.html _site/
           cp 404.html _site/
+          cp sitemap.xml _site/
           cp index.js _site/
 
       - name: Wrzuc artefakty
