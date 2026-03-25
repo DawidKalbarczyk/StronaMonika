@@ -425,10 +425,10 @@ body {
 }
 
 /* ============================================
-   MOBILE STYLES - AboutMe (max-width: 767px)
+   MOBILE STYLES - AboutMe (max-width: 932px)
    ============================================ */
 
-@media (max-width: 767px) {
+@media (max-width: 932px) {
 
     /* ----- Hero Photo ----- */
     .main-aboutme-photo-container {

@@ -285,7 +285,7 @@ body {
 }
 
 /* ===== MOBILE ===== */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 932px) {
     body {
         margin-top: 0 !important;
     }
