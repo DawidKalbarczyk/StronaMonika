@@ -719,10 +719,10 @@ body.no-announcement .main-content-container {
 }
 
 /* ============================================
-   MOBILE STYLES - mainPage (max-width: 932px)
+   MOBILE STYLES - mainPage (max-width: 767px)
    ============================================ */
 
-@media (max-width: 932px) {
+@media (max-width: 767px) {
 
     /* ----- Announcement ----- */
     .announcement-div {
