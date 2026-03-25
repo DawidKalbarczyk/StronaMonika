@@ -1,4 +1,4 @@
-function PickedTreatmentLoad() {
+﻿function PickedTreatmentLoad() {
     // Pobranie parametru z URL
     const urlParams = new URLSearchParams(window.location.search);
     const treatment = urlParams.get('treatment');
@@ -137,32 +137,68 @@ function displayTreatment(data) {
 
     const secondPhotoAbsoluteLayout = getComputedStyle(secondPhotoContainer).position === 'absolute';
 
-    // secondPhotoContainer ma osobną animację tylko w layoucie absolutnym (desktop)
     secondPhotoContainer.style.opacity = '0';
     secondPhotoContainer.style.transform = secondPhotoAbsoluteLayout
         ? 'translateY(calc(-50% + 60px))'
         : 'translateY(60px)';
 
+    const revealAnimatedElement = (target) => {
+        const isSecondPhoto = target === secondPhotoContainer;
+        const useAbsoluteAnimation = isSecondPhoto && secondPhotoAbsoluteLayout;
+        target.classList.add(useAbsoluteAnimation ? 'slide-in-pt-absolute' : 'slide-in-pt');
+        target.addEventListener('animationend', () => {
+            target.style.opacity = '1';
+            target.style.transform = useAbsoluteAnimation ? 'translateY(-50%)' : 'translateY(0)';
+            target.classList.remove('slide-in-pt', 'slide-in-pt-absolute');
+        }, { once: true });
+    };
+
+    const revealIfHidden = (target) => {
+        if (target.style.opacity !== '1') {
+            revealAnimatedElement(target);
+        }
+    };
+
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                const isSecondPhoto = entry.target === secondPhotoContainer;
-                const useAbsoluteAnimation = isSecondPhoto && secondPhotoAbsoluteLayout;
-                entry.target.style.animationDelay = `${i * 0.12}s`;
-                entry.target.classList.add(useAbsoluteAnimation ? 'slide-in-pt-absolute' : 'slide-in-pt');
-                entry.target.addEventListener('animationend', () => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = useAbsoluteAnimation ? 'translateY(-50%)' : 'translateY(0)';
-                    entry.target.style.animationDelay = '';
-                    entry.target.classList.remove('slide-in-pt', 'slide-in-pt-absolute');
-                }, { once: true });
+        entries.forEach((entry) => {
+            if (entry.isIntersecting || entry.intersectionRatio > 0.05) {
+                revealIfHidden(entry.target);
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, {
+        threshold: [0, 0.05, 0.15],
+        rootMargin: '0px 0px -10% 0px'
+    });
 
     animatedElements.forEach(el => observer.observe(el));
     observer.observe(secondPhotoContainer);
+
+    const pendingElements = [...animatedElements, secondPhotoContainer];
+
+    const forceRevealVisibleElements = () => {
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        pendingElements.forEach((el) => {
+            if (el.style.opacity === '1') {
+                return;
+            }
+            const rect = el.getBoundingClientRect();
+            const partiallyVisible = rect.top < viewportHeight * 0.95 && rect.bottom > viewportHeight * 0.05;
+            if (partiallyVisible) {
+                revealIfHidden(el);
+                observer.unobserve(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', forceRevealVisibleElements, { passive: true });
+    window.addEventListener('resize', forceRevealVisibleElements);
+    setTimeout(() => {
+        pendingElements.forEach((el) => {
+            revealIfHidden(el);
+            observer.unobserve(el);
+        });
+    }, 4000);
 }
 
 export default PickedTreatmentLoad;
