@@ -1,12 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Primary SEO -->
+    <title>Salon Kosmetologiczny Obsession – Monika Molenda | Kozienice</title>
+    <meta name="description" content="Kosmetyczka i kosmetolog w salonie Obsession Kozienice. Makijaż permanentny, makijaż, manicure, pedicure, paznokcie, dermapen, nanoigły i depilacja. Umów wizytę: 667 911 466.">
+    <meta name="keywords" content="kosmetyczka, kosmetolog, salon obsession, salon obsession kozienice, paznokcie, makijaż permanentny, makijaż, pedicure, manicure, dermapen, nanoigły, depilacja">
+    <meta name="author" content="Monika Molenda – Salon Obsession">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.obsession-kozienice.pl/">
+
+    <!-- Open Graph (Facebook, Messenger, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.obsession-kozienice.pl/">
+    <meta property="og:title" content="Salon Kosmetologiczny Obsession – Monika Molenda | Kozienice">
+    <meta property="og:description" content="Profesjonalne zabiegi kosmetyczne w sercu Kozienic. Makijaż permanentny, stylizacja rzęs, manicure, pielęgnacja twarzy i ciała. Zadzwoń: 667 911 466.">
+    <meta property="og:image" content="https://www.obsession-kozienice.pl/backend/photos_compressed/icons/return-button.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Salon Obsession Kozienice">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salon Kosmetologiczny Obsession – Monika Molenda | Kozienice">
+    <meta name="twitter:description" content="Profesjonalne zabiegi kosmetyczne w Kozienicach. Makijaż permanentny, rzęsy, manicure i więcej.">
+    <meta name="twitter:image" content="https://www.obsession-kozienice.pl/backend/photos_compressed/icons/return-button.png">
+
+    <!-- Structured Data – Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Salon Kosmetologiczny Obsession",
+        "description": "Kosmetyczka, kosmetolog. Profesjonalne zabiegi kosmetyczne i kosmetologiczne na twarz i ciało – makijaż permanentny, stylizacja rzęs, manicure hybrydowy, oczyszczanie twarzy i wiele więcej.",
+        "url": "https://www.obsession-kozienice.pl/",
+        "telephone": "+48667911466",
+        "image": "https://www.obsession-kozienice.pl/backend/photos_compressed/icons/return-button.png",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bohaterów Getta 24 lok. 4",
+            "addressLocality": "Kozienice",
+            "postalCode": "26-900",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.58579,
+            "longitude": 21.55426
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday","Thursday","Friday"],
+                "opens": "08:30",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Wednesday"],
+                "opens": "08:30",
+                "closes": "15:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            }
+        ],
+        "sameAs": ["https://www.facebook.com/obsessionkosmetologia/"]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="backend/photos_compressed/icons/kolor_czarny-edited-192.png">
+    <link rel="apple-touch-icon" href="backend/photos_compressed/icons/kolor_czarny-edited-192.png">
     <link rel="stylesheet" href="styles/mainPage.css">
     <link rel="stylesheet" href="styles/common-styles.css">
 </head>
 <body>
+<noscript>
+    <h1>Salon Kosmetologiczny Obsession – Monika Molenda, Kozienice</h1>
+    <p>Profesjonalne zabiegi kosmetyczne: makijaż permanentny, stylizacja rzęs, manicure hybrydowy, oczyszczanie twarzy.</p>
+    <p>Adres: Bohaterów Getta 24 lok. 4, 26-900 Kozienice | Tel: 667 911 466</p>
+</noscript>
+
+<script>
+    const isLocalHost = window.location.hostname === "localhost"
+        || window.location.hostname === "127.0.0.1"
+        || window.location.hostname === "[::1]";
+
+    if (!isLocalHost && window.location.pathname.endsWith("/index.html")) {
+        const cleanPath = window.location.pathname.replace(/\/index\.html$/, "/");
+        window.history.replaceState({}, "", `${cleanPath}${window.location.search}${window.location.hash}`);
+    }
+
+    document.body.classList.add("page-is-loading");
+    window.addEventListener("load", () => {
+        document.body.classList.remove("page-is-loading");
+    }, { once: true });
+</script>
 
 <script type="module">
     import Home from "./index.js";

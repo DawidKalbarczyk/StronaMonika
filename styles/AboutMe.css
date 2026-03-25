@@ -1,6 +1,736 @@
-.test {
-    font-size: 24px;
+body {
+    margin-top: 0 !important;
+}
+
+.header {
+    z-index: 9999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.main-aboutme-photo-container {
+    width: 100%;
+    height: 650px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+}
+
+.main-aboutme-photo {
+    object-fit: cover;
+    object-position: 0 40%;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+.header-aboutme {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 99999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
+}
+
+.right-header-content-colors-switched {
+    color: #dcdcdc;
+    text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
+}
+
+.right-header-content-container-colors-switched {
+    border: none;
+    box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
+}
+
+.main-content-container {
+    margin: 70px 0 0 0;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.main-content-aboutme {
+    z-index: 1000;
+    margin: 64px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.left-bar {
+    margin: 64px 0 0 0;
+    z-index: 9999999;
+
+}
+
+.main-content-container-aboutme {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 76px;
+}
+
+.main-content-container-aboutme .main-content-info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container-aboutme .left-bar {
+    grid-column: 1;
+    grid-row: 2 / span 100;
+}
+
+.main-content-info-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container .main-content-info {
+    box-shadow: none;
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    /*border-bottom: 2px solid #dcdcdc;*/
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content-info-title,
+.main-content-info-description {
+    font-size: 50px;
     color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content-info-title {
+    border-bottom: 2px solid white;
+    width: 60%;
     text-align: center;
-    margin-top: 200px;
+    padding-bottom: 24px;
+}
+
+.main-content-info-description {
+    font-size: 24px;
+}
+
+.map-component {
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.admin-info-footer {
+    margin-top: 70px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.aboutme-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.aboutme-container-info-div {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.aboutme-container-photo-div {
+    background-color: rgba(0,0,0,0.7);
+    position: relative;
+    margin: 0 150px 0 0;
+    max-height: 400px;
+    min-height: 400px;
+    border-radius: 0 10% 10% 0;
+    box-sizing: border-box;
+    box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.8);
+    overflow: visible;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.aboutme-container-photo-div.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.aboutme-container-photo {
+    object-fit: cover;
+    object-position: center top;
+    width: auto;
+    height: 560px;
+    position: absolute;
+    left: 92px;
+    bottom: 0;
+    border-radius: 28px 28px 0 0;
+    filter: brightness(0.8);
+    transition:
+            transform 0.5s ease-in-out,
+            translateY 0.5s ease-in-out,
+            filter 0.5s ease-in-out;
+}
+
+.aboutme-container-photo:hover {
+    transform: scale(1.05) translateY(-12px);
+    filter: brightness(1);
+}
+
+.aboutme-container-text-div {
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 0 10% 10% 0;
+    margin: -100px 150px 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+@media(max-width:1920px) {
+    .aboutme-container-text-div {
+        margin: 0 150px 0 0;
+    }
+}
+
+/* ============================================
+   LAPTOP STYLES - AboutMe (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+
+    /* ----- Spacing between photo and owner text ----- */
+    .aboutme-container-info-div {
+        grid-template-rows: auto auto;
+        align-content: start;
+        row-gap: 50px;
+    }
+
+    .aboutme-container-photo-div {
+        overflow: visible;
+    }
+
+    .aboutme-container-photo {
+        height: 500px;
+        left: 64px;
+    }
+}
+
+.aboutme-container-text-div.visible {
+    opacity: 1;
+    transform: translateX(0);
+    padding: 48px 0;
+}
+
+.aboutme-container-text-div p {
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    font-size: 22px;
+    width: 500px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.aboutme-container-text-div p:hover {
+    transform: scale(1.05);
+}
+
+.aboutme-container-desc-wrapper {
+    padding: 24px 0 0 0;
+    border-top: 3px solid white;
+    margin-right: -135px;
+    margin-left: -100px;
+
+}
+
+@media(max-width: 1920px) {
+    .aboutme-container-desc-wrapper {
+        margin-right: -173px;
+    }
+}
+
+.aboutme-container-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    padding: 24px 48px;
+    border-radius: 25px 0 0 25px;
+    margin-left: 100px;
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.aboutme-container-desc.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.aboutme-container-desc-p {
+    font-size: 20px;
+    color: #dcdcdc;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.aboutme-desc-centered {
+    display: block;
+    text-align: center;
+}
+
+.about-me-container-separator {
+    height: 2px;
+    background-color: white;
+    margin: 25px 250px 0 250px;
+}
+
+
+/* ============================================
+   TABLET STYLES - AboutMe (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .content-container {
+        width: 100%;
+    }
+
+    .main-aboutme-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-aboutme {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-aboutme .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 36px;
+    }
+
+    .main-content-aboutme {
+        margin: 20px 0 0 0;
+    }
+
+    .aboutme-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme-container-info-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme-container-photo-div {
+        margin: 0;
+        border-radius: 0;
+        max-height: none;
+        min-height: 0;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding: 20px 20px 0 20px;
+        overflow: visible;
+        opacity: 1;
+        transform: none;
+    }
+
+    .aboutme-container-photo {
+        width: min(100%, 420px);
+        height: auto;
+        max-width: 100%;
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
+
+    .aboutme-container-photo:hover {
+        transform: none;
+        filter: brightness(0.8);
+    }
+
+    .aboutme-container-text-div {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 24px;
+        opacity: 1;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .aboutme-container-text-div p {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .aboutme-container-desc-wrapper {
+        margin: 0;
+        padding: 20px 0 0 0;
+    }
+
+    .aboutme-container-desc {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 20px 30px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .about-me-container-separator {
+        margin: 25px 60px 0 60px;
+    }
+
+}
+
+/* ============================================
+   MOBILE STYLES - AboutMe (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-aboutme-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-aboutme-photo {
+        object-position: center 30%;
+        border-bottom-left-radius: 0;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header AboutMe ----- */
+    .header-aboutme {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-aboutme {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-aboutme .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+    }
+
+    .main-content-aboutme {
+        margin: 20px 0 0 0;
+    }
+
+    /* ----- About Me Content ----- */
+    .content-container {
+        width: 100%;
+    }
+
+    .aboutme-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ----- Photo + Title Section ----- */
+    .aboutme-container-info-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme-container-photo-div {
+        margin: 0;
+        border-radius: 0;
+        max-height: none;
+        min-height: 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding: 16px 0 0 0;
+        overflow: visible;
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }
+
+    .aboutme-container-photo {
+        display: block;
+        width: 100vw;
+        height: auto;
+        max-width: 100vw;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        border-radius: 0;
+    }
+
+    .aboutme-container-photo:hover {
+        transform: none;
+        filter: brightness(0.8);
+    }
+
+    .aboutme-container-text-div {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 15px;
+    }
+
+    .aboutme-container-text-div.visible {
+        padding: 20px 15px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .aboutme-container-text-div p:hover {
+        transform: none;
+    }
+
+    /* ----- Description ----- */
+    .aboutme-container-desc-wrapper {
+        margin: 0;
+        padding: 15px 0 0 0;
+        border-top: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .aboutme-container-desc {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 25px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 10px 10px;
+    }
+
+    /* ----- Separator ----- */
+    .about-me-container-separator {
+        margin: 20px 30px 0 30px;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Form overrides ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-aboutme-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+    }
+
+    .aboutme-container-photo {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 15px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 14px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-aboutme-photo-container {
+        height: 240px;
+    }
+
+    .aboutme-container-photo {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 14.5px;
+        margin-bottom: 6px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 13.5px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-aboutme-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 26px;
+    }
+
+    .aboutme-container-photo {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    .aboutme-container-text-div {
+        padding: 15px 12px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 14px;
+    }
+
+    .aboutme-container-desc {
+        padding: 12px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 13px;
+    }
+
+    .about-me-container-separator {
+        margin: 15px 20px 0 20px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-aboutme-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .aboutme-container-photo {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    .aboutme-container-text-div {
+        padding: 12px 10px;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .aboutme-container-desc-wrapper {
+        padding: 10px 0 0 0;
+    }
+
+    .aboutme-container-desc {
+        padding: 10px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .about-me-container-separator {
+        margin: 12px 15px 0 15px;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-aboutme-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .aboutme-container-photo {
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    .aboutme-container-text-div p {
+        font-size: 12px;
+    }
+
+    .aboutme-container-desc-p {
+        font-size: 11.5px;
+    }
 }

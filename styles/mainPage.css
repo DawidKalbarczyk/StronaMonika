@@ -1,9 +1,19 @@
 
 
-
+.seo-h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
 
 .main-content {
-    border: 0px solid blue;
+    border: 0 solid blue;
 
 }
 
@@ -11,36 +21,44 @@
 .owner-info-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    background-color: rgba(166, 168, 168, 0.95);
+
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+
     border-top-right-radius: 70% 85%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
-            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
-            inset 0px 0px 5px 2px rgba(0,0,0,0.4),
-            0px -5px 10px rgba(0, 0, 0, 1),
+            inset 0 0 10px 10px rgba(0, 0, 0, 0.4),
+            inset 0 0 5px 2px rgba(0,0,0,0.4),
+            0 -5px 10px rgba(0, 0, 0, 1),
             0 5px 2px rgba(0, 0, 0, 0.5);
-    transition: height 0.35s ease-in-out;
+    transition: border-radius 0.35s, transform 0.35s ease-in-out;
+    overflow: hidden;
+}
+
+.owner-info-container:has(.owner-quote-container:hover),
+.owner-info-container:has(.owner-photo:hover) {
+    border-radius: 0;
+    transition: border-radius 0.5s ease-in-out; /* WOLNE rozszerzanie */
 }
 
 .owner-photo-container {
-    padding: 0px 30px 0px 0px;
-    background-color: /*(rgba(195, 198, 197)*/ rgb(166, 168, 168);
+    padding: 0 30px 0 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 100px;
     margin-right: 28%;
-    box-shadow:
-            inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4),
-            inset 0px 0px 5px 2px rgba(0,0,0,0.4);
-    overflow: hidden;
     transition:
         border-radius 0.5s ease-in-out;
-
-
 }
 
 .owner-photo {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
+    height: 100%;
+    filter: brightness(0.72) contrast(1.3);
     border-top-left-radius: 150px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 150px;
@@ -51,14 +69,15 @@
     display: block;
     transition:
             border-radius 0.5s ease-in-out,
-            transform 0.5s ease-in-out,
-            width 0.5s ease-in-out;
-
+            transform 0.5s ease-in-out;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .owner-photo:hover {
     border-radius: 0;
-    transform: scale(1.1);
-    width: 110%;
+    transform: scale(1.08);
+}
+.owner-photo-mobile-extra {
+    display: none;
 }
 .owner-photo-container:has(.owner-photo:hover) {
     border-radius: 0;
@@ -67,12 +86,16 @@
 
 }
 
+
+.owner-quote {
+    text-align: center;
+}
 .owner-quote-container {
 
     background-color: rgb(166, 168, 168);
     background:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("../photos/saloonPhotos/20251103_083910.jpg");
+        linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.01)),
+        url("../backend/photos_compressed/saloonPhotos/843.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
@@ -81,29 +104,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0% 8% 0% 8%;
+    padding: 0 20% 0 12%;
     border-top-right-radius: 100%;
     border-top-left-radius: 12% 30%;
     border-bottom-left-radius: 80%;
     border-bottom-right-radius: 12% 15%;
     box-shadow:
-            inset 0px 0px 50px 50px rgba(0, 0, 0, 0.1),
-            inset 0px 0px 20px 10px rgba(0,0,0,0.3),
-            0px -5px 10px rgba(0, 0, 0, 0.7);
+            inset 0 0 50px 50px rgba(0, 0, 0, 0.1),
+            inset 0 0 20px 10px rgba(0,0,0,0.3),
+            0 -5px 10px rgba(0, 0, 0, 0.7);
     transition:
-            border-radius 0.5s ease-in-out,
+            border-radius 0.35s ease-in-out,
             padding 0.5s ease-in-out,
-            height 0.5s ease-in-out,
-            background-size 0.5s ease-in-out;
+            background-size 0.5s ease-in-out,
+            transform 0.5s ease-in-out;
+    transform-origin: right top;
     overflow: hidden;
 }
 
 .owner-quote-container:hover {
-    border-radius: 0 15px 15px 0px;
+    border-radius: 0 15px 15px 0;
     background-size: 110% auto;
+    transform: scale(1.05);
 }
 .owner-quote-container:hover .owner-quote {
-    font-size: 33px;
+    transform: scale(1.02);
+}
+
+.owner-info-container:has(.owner-quote-container:hover) {
+    border-radius: 0;
 }
 /*
 .owner-info-container:has(.owner-quote-container:hover),
@@ -113,19 +142,20 @@
 
  */
 .owner-info-container:has(.owner-quote-container:hover) .owner-photo{
-    width: 110%;
-    transform: scale(1.1);
+    transform: scale(1.08);
     border-radius: 0;
 }
 .owner-info-container:has(.owner-quote-container:hover) .owner-photo-container{
-    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container{
-    border-radius: 0 15px 15px 0px;
+    border-radius: 0 15px 15px 0;
     background-size: 110% auto;
+    transform: scale(1.05);
 }
 .owner-info-container:has(.owner-photo:hover) .owner-quote-container .owner-quote {
-    font-size: 33px;
+    transform: scale(1.02);
 }
 .owner-quote {
     display: inline-block;
@@ -136,11 +166,11 @@
         -1px  1px 3px rgba(0,0,0,0.8),
          1px  1px 3px rgba(0,0,0,0.8);
     width: 100%;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     transition:
-        font-size 0.5s ease-in-out;
+        transform 0.5s ease-in-out;
 
 }
 
@@ -159,44 +189,59 @@
     margin-left: 30%;
 }
 
-.unique-info-container {
+.unique-info-container,
+.work-info-container {
     background-color: rgba(166, 168, 168, 0.95);
     margin-top: 70px;
     padding-bottom: 50px;
-    box-shadow:
-            7px -7px 10px rgba(0, 0, 0, 0.8),
-            inset 0px 0px 25px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-
-
-
-
 }
-.unique-info-title {
+.work-info-container {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.unique-info-title,
+.work-info-title {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.unique-info-text {
+
+.unique-info-text,
+.work-info-text {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 30px;
-    margin: 0;
     margin: 50px 1px;
     display: inline-block;
     border-bottom: 2px solid rgba(0, 0, 0, 0.6);
     padding-bottom: 5px;
 }
+.work-info-text {
+    color: #dcdcdc;
+    border-bottom-color: white;
+}
 
-.unique-info-tile-container {
+.unique-info-tile-container,
+.work-info-tile-container {
     display: grid;
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
-    border: 0px solid red;
-    margin: 0px 30px;
+    border: 0 solid red;
+    margin: 0 30px;
     padding: 20px;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:
+            0 0 5px 2px rgba(0, 0, 0, 0.5),
+            inset 0 0 20px 15px rgba(0,0,0,0.4);
+
     padding-bottom: 30px;
     opacity: 0;
     transform: translateY(-50px);
@@ -204,16 +249,41 @@
         opacity 1.3s ease-in-out,
         transform 1.3s ease-in-out;
 }
-.unique-info-tile-container-show {
+
+.work-info-tile-container {
+    box-shadow:
+            0 0 35px 25px rgba(0, 0, 0, 0.5),
+            inset 0 0 20px 15px rgba(0,0,0,0.4);
+}
+
+.work-info-tile-container {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+            url("../backend/photos_compressed/textures/small-blotted-light-gray-wall-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 550px 550px;
+    column-gap: 75px;
+    margin: 0 150px;
+    padding: 20px 120px;
+}
+
+.unique-info-tile-container-show,
+.work-info-tile-container-show,
+.form-container-show {
     opacity: 1;
     transform: translateY(0px);
 }
-.unique-info-tile {
+.unique-info-tile,
+.work-info-tile {
     display: flex;
     flex-direction: column;
+    background-color: rgba(166, 168, 168);
     align-items: center;
     justify-content: start;
-    border: 0px solid green;
+    border: 0 solid green;
     margin: 20px;
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.3);
     transition:
@@ -221,42 +291,976 @@
         padding 0.35s ease-in-out,
         width 0.35s ease-in-out,
         transform 0.35s ease-in-out,
-        font-size 0.35s ease-in-out;
+        font-size 0.35s ease-in-out,
+        filter 0.35s ease-in-out;
     padding: 12% 5% 10% 5%;
     box-sizing: border-box;
+
 }
 
-.unique-info-tile:hover {
-    background-color: rgba(0,0,0,0.10);
+.work-info-tile {
+    border-radius: 50%;
+    padding: 18% 0;
+    box-shadow: 0 0 15px 15px rgba(0,0,0,0.4)
+}
+
+@media(max-width: 1680px) {
+    .owner-quote {
+        width: 85%;
+    }
+    .work-info-tile-container {
+        padding: 0;
+        column-gap: 0;
+        margin: 0 100px;
+    }
+
+}
+
+.unique-info-tile-x1 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/indywidualne.jpg");
+    background-size: cover;
+    background-position: -25px 0;
+}
+
+.unique-info-tile-x2 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/praktyka.jpg");
+    background-size: cover;
+    background-position: -250px 0;
+}
+
+.unique-info-tile-x3 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/jakosc-uslugi.jpg");
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.unique-info-tile-x4 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/terminowosc.jpg");
+    background-size: cover;
+    background-position: -40px 0;
+}
+
+.unique-info-tile-x5 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/atmosfera.jpg");
+    background-size: cover;
+    background-position: 0 -75px;
+}
+
+.unique-info-tile-x6 {
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+            url("../backend/photos_compressed/myPhotos/unique-photos/zaufanie.jpg");
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.work-info-tile-x1 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/acne.jpg");
+    background-size: cover;
+    background-position: -200px 0;
+}
+.work-info-tile-x2 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/makeup.jpg");
+    background-size: cover;
+    background-position: -150px 0;
+}
+.work-info-tile-x3 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/lips.jpg");
+    background-size: cover;
+    background-position: -250px 0;
+}
+.work-info-tile-x4 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/manicure.jpg");
+    background-size: cover;
+    background-position: -150px 0;
+}
+.work-info-tile-x5 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/eyebrows.jpg");
+    background-size: cover;
+    background-position: -175px 0;
+}
+.work-info-tile-x6 {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/myPhotos/services-photos/lashes.jpg");
+    background-size: cover;
+    background-position: -175px 0;
+}
+
+.unique-info-tile:hover,
+.work-info-tile:hover {
+    filter: brightness(0.85);
     transform: scale(1.05);
 
 }
 .unique-info-tile:hover .unique-info-tile-title-container .unique-info-tile-title {
     font-size: 25px;
 }
+.work-info-tile:hover .work-info-tile-title-container .work-info-tile-title {
+    font-size: 25px;
+}
 
-.unique-info-tile-title-container {
+.unique-info-tile-title-container,
+.work-info-tile-title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.unique-info-tile-image {
+.unique-info-tile-image,
+.work-info-tile-image {
     width: 50px;
     height: 50px;
 }
-.unique-info-tile-title {
+
+.work-info-tile-image {
+    filter: invert(1) brightness(0.8);
+}
+
+.work-info-tile-image {
+    transform: scale(1.5);
+}
+.unique-info-tile-title,
+.work-info-tile-title {
+    margin-top: 30px;
     font-size: 24px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     transition:
         font-size 0.35s ease-in-out;
     text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+
+}
+.work-info-tile-title {
+    color: #dcdcdc;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 
-.unique-info-tile-description {
+.unique-info-tile-description,
+.work-info-tile-description {
     width: 80%;
     box-sizing: border-box;
     text-align: center;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin-top: 12px;
+    font-size: 18px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.work-info-tile-description {
+    width: 55%;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
+
+    color: #dcdcdc;
+}
+
+.announcement-div {
+    height: 200px;
+    background-color: rgba(140, 63, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px 0 150px;
+}
+
+/* Extra top spacing when header is the only top element */
+body.no-announcement .main-content-container {
+    margin-top: 70px;
+}
+
+.announcement-div {
+    font-size: 30px;
+    color: #dcdcdc;
+}
+
+.announcement-separate-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.door-icon {
+    width: 12%;
+    filter: invert(0.9)
+}
+
+/* ============================================
+   LAPTOP STYLES - mainPage (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+
+    /* ----- Announcement images spacing ----- */
+    .door-icon {
+        margin: 0 30px;
+    }
+}
+
+/* ============================================
+   TABLET STYLES - mainPage (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ----- Owner Info Section ----- */
+    .owner-info-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-size: 200px 200px;
+        box-shadow:
+            inset 0 0 10px 5px rgba(0, 0, 0, 0.4),
+            0 3px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .owner-photo-mobile-extra {
+        display: none;
+    }
+
+    .owner-photo-container {
+        padding: 0;
+        margin-right: 0;
+        border-radius: 0;
+        height: 280px;
+        overflow: hidden;
+        background-color: #111;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .owner-photo-container .owner-photo-mobile-extra {
+        display: block;
+    }
+
+    .owner-photo {
+        border-radius: 0;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .owner-photo:hover {
+        border-radius: 0;
+        transform: none;
+    }
+
+    .owner-quote-container {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 30px 30px;
+        background-size: cover;
+        box-shadow: inset 0 0 30px 20px rgba(0, 0, 0, 0.2);
+        transform: none !important;
+    }
+
+    .owner-quote-container:hover {
+        border-radius: 0;
+        background-size: cover;
+        transform: none;
+    }
+
+    .owner-quote {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .owner-quote-span1,
+    .owner-quote-span2,
+    .owner-quote-span3 {
+        margin-left: 0;
+    }
+
+    /* ----- Unique Info Section ----- */
+    .unique-info-container,
+    .work-info-container {
+        margin-top: 35px;
+        padding-bottom: 25px;
+        border-radius: 0;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 22px;
+        margin: 25px 20px;
+        text-align: center;
+    }
+
+    /* ----- Unique Info Tiles ----- */
+    .unique-info-tile-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 15px;
+        padding: 15px;
+        background-size: 200px 200px;
+        opacity: 1;
+        transform: none;
+        grid-template-rows: auto;
+    }
+
+    .unique-info-tile {
+        margin: 8px;
+        padding: 20px 15px;
+        min-height: 220px;
+        border-radius: 0;
+    }
+
+    .unique-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .unique-info-tile-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .unique-info-tile-title {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .unique-info-tile-description {
+        width: 95%;
+        font-size: 15px;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+
+    /* ----- Work Info Tiles ----- */
+    .work-info-tile-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 15px;
+        padding: 15px;
+        column-gap: 15px;
+        background-size: 300px 300px;
+        opacity: 1;
+        transform: none;
+        grid-template-rows: auto;
+    }
+
+    .work-info-tile {
+        margin: 10px auto;
+        padding: 0;
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .work-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .work-info-tile-image {
+        width: 32px;
+        height: 32px;
+        transform: scale(1) !important;
+    }
+
+    .work-info-tile-title {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .work-info-tile-description {
+        width: 75%;
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 1.3;
+    }
+
+    .unique-info-tile-x1 { background-position: center; }
+    .unique-info-tile-x2 { background-position: center; }
+    .unique-info-tile-x3 { background-position: center; }
+    .unique-info-tile-x4 { background-position: center; }
+    .unique-info-tile-x5 { background-position: center; }
+    .unique-info-tile-x6 { background-position: center; }
+
+    .work-info-tile-x1 { background-position: center; }
+    .work-info-tile-x2 { background-position: center; }
+    .work-info-tile-x3 { background-position: center; }
+    .work-info-tile-x4 { background-position: center; }
+    .work-info-tile-x5 { background-position: center; }
+    .work-info-tile-x6 { background-position: center; }
+}
+
+/* ============================================
+   MOBILE STYLES - mainPage (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Announcement ----- */
+    .announcement-div {
+        height: auto;
+        min-height: 120px;
+        padding: 15px 20px;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    body.no-announcement .main-content-container {
+        margin-top: 12px;
+    }
+
+    .announcement-separate-div {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .door-icon {
+        width: 60px;
+    }
+
+    .announcement-text p {
+        margin: 4px 0;
+    }
+
+    /* ----- Owner Info Section ----- */
+    .owner-info-container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        background-size: 200px 200px;
+        box-shadow:
+            inset 0 0 10px 5px rgba(0, 0, 0, 0.4),
+            0 3px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover),
+    .owner-info-container:has(.owner-photo:hover) {
+        border-radius: 0;
+    }
+
+    .owner-photo-mobile-extra {
+        display: none;
+    }
+
+    .owner-photo-container {
+        padding: 0;
+        margin-right: 0;
+        border-radius: 0;
+        height: 220px;
+        overflow: hidden;
+        background-color: #111;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .owner-photo-container .owner-photo-mobile-extra {
+        display: block;
+    }
+
+    .owner-photo {
+        border-radius: 0;
+        filter: brightness(0.80) contrast(1.15);
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .owner-photo:hover {
+        border-radius: 0;
+        transform: none;
+    }
+
+    .owner-photo-container:has(.owner-photo:hover) {
+        border-radius: 0;
+    }
+
+    .owner-quote-container {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 25px 20px;
+        background-size: cover;
+        box-shadow:
+            inset 0 0 30px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .owner-quote-container:hover {
+        border-radius: 0;
+        background-size: cover;
+        transform: none;
+    }
+
+    .owner-quote-container:hover .owner-quote {
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover) .owner-photo {
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-quote-container:hover) .owner-photo-container {
+        border-radius: 0;
+    }
+
+    .owner-info-container:has(.owner-photo:hover) .owner-quote-container {
+        border-radius: 0;
+        transform: none;
+    }
+
+    .owner-info-container:has(.owner-photo:hover) .owner-quote-container .owner-quote {
+        transform: none;
+    }
+
+    .owner-quote {
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .owner-quote-span1,
+    .owner-quote-span2,
+    .owner-quote-span3 {
+        margin-left: 0;
+    }
+
+    /* ----- Unique Info Section ----- */
+    .unique-info-container,
+    .work-info-container {
+        margin-top: 35px;
+        padding-bottom: 25px;
+        border-radius: 0;
+        box-shadow:
+            0 3px 8px rgba(0, 0, 0, 0.6),
+            inset 0 0 20px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 20px;
+        margin: 25px 15px;
+        text-align: center;
+    }
+
+    /* ----- Unique Info Tiles ----- */
+    .unique-info-tile-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 20px;
+        background-size: 200px 200px;
+    }
+
+    .unique-info-tile {
+        margin: 8px 0;
+        padding: 20px 15px;
+        min-height: 200px;
+        border-radius: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .unique-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .unique-info-tile:hover .unique-info-tile-title-container .unique-info-tile-title {
+        font-size: 19px;
+    }
+
+    .unique-info-tile-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .unique-info-tile-title {
+        margin-top: 15px;
+        font-size: 19px;
+    }
+
+    .unique-info-tile-description {
+        width: 95%;
+        font-size: 14px;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+
+    /* ----- Work Info Tiles ----- */
+    .work-info-tile-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 10px;
+        column-gap: 0;
+        background-size: 300px 300px;
+    }
+
+    .work-info-tile {
+        margin: 15px auto;
+        padding: 0;
+        border-radius: 50%;
+        width: 320px;
+        height: 320px;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .work-info-tile-title-container {
+        padding: 10px 15px;
+    }
+
+    .work-info-tile:hover {
+        filter: none;
+        transform: none;
+    }
+
+    .work-info-tile:hover .work-info-tile-title-container .work-info-tile-title {
+        font-size: 15px;
+    }
+
+    .work-info-tile-image {
+        width: 30px;
+        height: 30px;
+        transform: scale(1) !important;
+    }
+
+    .work-info-tile-title {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+
+    .work-info-tile-description {
+        width: 75%;
+        font-size: 11px;
+        margin-top: 5px;
+        line-height: 1.3;
+    }
+
+    /* Fix background positions for smaller screens */
+    .unique-info-tile-x1 { background-position: center; }
+    .unique-info-tile-x2 { background-position: center; }
+    .unique-info-tile-x3 { background-position: center; }
+    .unique-info-tile-x4 { background-position: center; }
+    .unique-info-tile-x5 { background-position: center; }
+    .unique-info-tile-x6 { background-position: center; }
+
+    .work-info-tile-x1 { background-position: center; }
+    .work-info-tile-x2 { background-position: center; }
+    .work-info-tile-x3 { background-position: center; }
+    .work-info-tile-x4 { background-position: center; }
+    .work-info-tile-x5 { background-position: center; }
+    .work-info-tile-x6 { background-position: center; }
+}
+
+/* ---- Large phones (iPhone 15 Pro Max, 14 Plus, 13 Pro Max) ---- */
+@media (max-width: 430px) {
+    .announcement-div {
+        font-size: 16px;
+        min-height: 110px;
+    }
+
+    .owner-photo-container {
+        height: 210px;
+    }
+
+    .owner-quote {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 19px;
+    }
+
+    .unique-info-tile {
+        min-height: 180px;
+        padding: 18px 12px;
+    }
+
+    .unique-info-tile-title {
+        font-size: 18px;
+    }
+
+    .unique-info-tile-description {
+        font-size: 13px;
+    }
+
+    .work-info-tile {
+        width: 300px;
+        height: 300px;
+    }
+
+    .work-info-tile-title {
+        font-size: 14px;
+    }
+
+    .work-info-tile-description {
+        font-size: 10.5px;
+    }
+}
+
+/* ---- Medium phones (iPhone 15 Pro, 14 Pro, Pixel 5, Xiaomi 13) ---- */
+@media (max-width: 393px) {
+    .announcement-div {
+        font-size: 15px;
+        min-height: 100px;
+        padding: 12px 15px;
+    }
+
+    .owner-photo-container {
+        height: 200px;
+    }
+
+    .owner-quote {
+        font-size: 15.5px;
+    }
+
+    .unique-info-tile {
+        min-height: 170px;
+        padding: 16px 10px;
+    }
+
+    .unique-info-tile-title {
+        font-size: 17px;
+    }
+
+    .unique-info-tile-description {
+        font-size: 13px;
+    }
+
+    .work-info-tile {
+        width: 290px;
+        height: 290px;
+    }
+
+    .work-info-tile-title {
+        font-size: 13.5px;
+    }
+
+    .work-info-tile-description {
+        font-size: 10px;
+    }
+}
+
+/* ---- Small phones (iPhone SE, 8, X/XS, 11 Pro, 12/13 Mini) ---- */
+@media (max-width: 375px) {
+    .announcement-div {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .owner-photo-container {
+        height: 190px;
+    }
+
+    .owner-quote {
+        font-size: 15px;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 18px;
+    }
+
+    .unique-info-tile {
+        min-height: 160px;
+        padding: 14px 10px;
+    }
+
+    .unique-info-tile-title {
+        font-size: 16px;
+    }
+
+    .unique-info-tile-description {
+        font-size: 12.5px;
+    }
+
+    .work-info-tile {
+        width: 270px;
+        height: 270px;
+    }
+
+    .work-info-tile-image {
+        width: 26px;
+        height: 26px;
+    }
+
+    .work-info-tile-title {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .work-info-tile-description {
+        font-size: 9.5px;
+        line-height: 1.25;
+        width: 70%;
+    }
+}
+
+/* ---- Compact phones (Galaxy S24/S23/S22/S21/S20 FE, Huawei) ---- */
+@media (max-width: 360px) {
+    .announcement-div {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .door-icon {
+        width: 50px;
+    }
+
+    .owner-photo-container {
+        height: 180px;
+    }
+
+    .owner-quote {
+        font-size: 14.5px;
+        line-height: 1.5;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 17px;
+        margin: 20px 10px;
+    }
+
+    .unique-info-tile-container,
+    .work-info-tile-container {
+        margin: 0 5px;
+        padding: 8px;
+    }
+
+    .unique-info-tile {
+        min-height: 150px;
+        padding: 12px 8px;
+    }
+
+    .unique-info-tile-title {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .unique-info-tile-description {
+        font-size: 12px;
+    }
+
+    .work-info-tile {
+        width: 250px;
+        height: 250px;
+    }
+
+    .work-info-tile-title-container {
+        padding: 8px 10px;
+    }
+
+    .work-info-tile-image {
+        width: 24px;
+        height: 24px;
+    }
+
+    .work-info-tile-title {
+        font-size: 12.5px;
+        margin-top: 5px;
+    }
+
+    .work-info-tile-description {
+        font-size: 9px;
+        line-height: 1.2;
+        width: 68%;
+    }
+}
+
+/* ---- Very small phones (iPhone SE 1st gen, older devices) ---- */
+@media (max-width: 320px) {
+    .announcement-div {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .door-icon {
+        width: 45px;
+    }
+
+    .owner-photo-container {
+        height: 160px;
+    }
+
+    .owner-quote {
+        font-size: 13px;
+    }
+
+    .unique-info-text,
+    .work-info-text {
+        font-size: 16px;
+    }
+
+    .unique-info-tile {
+        min-height: 130px;
+        padding: 10px 6px;
+    }
+
+    .unique-info-tile-image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .unique-info-tile-title {
+        font-size: 14px;
+    }
+
+    .unique-info-tile-description {
+        font-size: 11px;
+    }
+
+    .work-info-tile {
+        width: 230px;
+        height: 230px;
+    }
+
+    .work-info-tile-image {
+        width: 22px;
+        height: 22px;
+    }
+
+    .work-info-tile-title {
+        font-size: 11.5px;
+    }
+
+    .work-info-tile-description {
+        font-size: 8.5px;
+        width: 65%;
+    }
 }

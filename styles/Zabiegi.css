@@ -1,6 +1,503 @@
-.test {
-    font-size: 24px;
+
+body {
+    margin-top: 0 !important;
+}
+
+.header {
+    z-index: 9999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.main-treat-photo-container {
+    width: 100%;
+    height: 650px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+}
+
+.main-treat-photo {
+    object-fit: cover;
+    object-position: 0 30%;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+.header-treat {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 99999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
+}
+
+.right-header-content-colors-switched {
+    color: #dcdcdc;
+    text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
+}
+
+.right-header-content-container-colors-switched {
+    border: none;
+    box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
+}
+
+.main-content-container {
+    margin: 70px 0 0 0;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.main-content-container-treat {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 76px;
+}
+
+
+.main-content-treat {
+    margin: 64px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-content-container-treat .main-content-info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.main-content-container-treat .left-bar {
+    grid-column: 1;
+    grid-row: 2 / span 100;
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    /*border-bottom: 2px solid #dcdcdc;*/
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content-info-title {
+    font-size: 50px;
     color: white;
+    margin: 0;
+    border-bottom: 2px solid white;
+    width: 60%;
     text-align: center;
-    margin-top: 200px;
+    padding-bottom: 24px;
+}
+
+.map-component {
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.admin-info-footer {
+    margin-top: 70px;
+}
+
+.main-content-treat {
+    box-shadow: 7px 0 10px rgba(0, 0, 0, 0.8), inset 0 0 20px 20px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    background-color: rgba(0,0,0,0.5);
+
+}
+.main-treatment {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 50px;
+}
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    .treatment-link {
+        text-decoration: none;
+    }
+    .treatment-item {
+        display: grid;
+        grid-template-rows: 1fr 0.5fr;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+        outline: none;
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+    .treatment-item.slide-in {
+        animation: slideInFromBottom 1.1s ease-out forwards;
+    }
+    .treatment-item:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        outline: none;
+    }
+
+        .treatment-item-photo-div {
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            height: 250px;
+        }
+
+            .treatment-item-photo {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.8) contrast(1.1);
+                aspect-ratio: 1 /1;
+            }
+
+        .treatment-item-text-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../backend/photos_compressed/textures/pale-gray-grained-wall-template.jpg");
+            background-size: 500px 500px;
+            background-repeat: repeat;
+            background-position: center;
+
+
+        }
+
+            .treatment-item-text {
+                font-size: 28px;
+                color: white;
+                text-align: center;
+            }
+
+
+/* ============================================
+   LAPTOP STYLES - Zabiegi (max-width: 1600px)
+   covers 125% Windows DPI scaling on 1920x1080
+   ============================================ */
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+
+    /* ----- Treatment tiles - slightly wider ----- */
+    .main-content-treat {
+        padding: 35px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-treatment {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px;
+    }
+}
+
+/* ============================================
+   TABLET STYLES - Zabiegi (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-treat-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-treat {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-treat .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title {
+        font-size: 36px;
+        width: 80%;
+        padding-bottom: 15px;
+    }
+
+    .main-content-container-treat .main-content-info {
+        width: 100%;
+    }
+
+    .main-content-treat {
+        margin: 20px 0 0 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-treatment {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .treatment-item {
+        border-radius: 10px;
+    }
+
+    .treatment-item:hover {
+        transform: none;
+    }
+
+    .treatment-item-photo-div {
+        height: 180px;
+    }
+
+    .treatment-item-text {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   MOBILE STYLES - Zabiegi (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-treat-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-treat-photo {
+        object-position: center 30%;
+        border-bottom-left-radius: 0;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header ----- */
+    .header-treat {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-treat {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-container-treat .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+        width: 80%;
+        padding-bottom: 15px;
+    }
+
+    /* ----- Treatment Grid ----- */
+    .main-content-treat {
+        margin: 20px 0 0 0;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .main-treatment {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    /* ----- Treatment Items ----- */
+    .treatment-item {
+        border-radius: 8px;
+    }
+
+    .treatment-item:hover {
+        transform: none;
+    }
+
+    .treatment-item-photo-div {
+        height: 140px;
+    }
+
+    .treatment-item-photo {
+        border-bottom-left-radius: 50% 30%;
+    }
+
+    .treatment-item-text-div {
+        padding: 10px 5px;
+        background-size: 300px 300px;
+    }
+
+    .treatment-item-text {
+        font-size: 14px;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Form ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-treat-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+    }
+
+    .treatment-item-photo-div {
+        height: 130px;
+    }
+
+    .treatment-item-text {
+        font-size: 13px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-treat-photo-container {
+        height: 240px;
+    }
+
+    .main-treatment {
+        gap: 12px;
+    }
+
+    .treatment-item-photo-div {
+        height: 120px;
+    }
+
+    .treatment-item-text {
+        font-size: 12.5px;
+    }
+
+    .treatment-item-text-div {
+        padding: 8px 4px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-treat-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 26px;
+        width: 85%;
+    }
+
+    .main-content-treat {
+        padding: 12px;
+    }
+
+    .main-treatment {
+        gap: 10px;
+    }
+
+    .treatment-item-photo-div {
+        height: 110px;
+    }
+
+    .treatment-item-text {
+        font-size: 12px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-treat-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .main-content-treat {
+        padding: 10px;
+        margin: 15px 0 0 0;
+    }
+
+    .main-treatment {
+        gap: 8px;
+    }
+
+    .treatment-item-photo-div {
+        height: 100px;
+    }
+
+    .treatment-item-text {
+        font-size: 11.5px;
+    }
+
+    .treatment-item-text-div {
+        padding: 6px 3px;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-treat-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .main-treatment {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .treatment-item-photo-div {
+        height: 150px;
+    }
+
+    .treatment-item-text {
+        font-size: 14px;
+    }
+
+    .treatment-item-text-div {
+        padding: 10px 5px;
+    }
 }

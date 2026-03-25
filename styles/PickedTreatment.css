@@ -1,0 +1,796 @@
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottomAbsolute {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-50% + 60px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+.slide-in-pt {
+    animation: slideInFromBottom 1.1s ease-out forwards;
+}
+
+.slide-in-pt-absolute {
+    animation: slideInFromBottomAbsolute 1.1s ease-out forwards;
+}
+
+body {
+    margin-top: 0 !important;
+}
+
+.header {
+    z-index: 9999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.left-bar {
+    margin-top: 163px;
+}
+
+.main-gallery-photo-container {
+    width: 100%;
+    height: 650px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+
+}
+
+.main-gallery-photo {
+    object-fit: cover;
+    object-position: 0 40%;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+
+}
+
+.header-gallery {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 99999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
+}
+
+.right-header-content-colors-switched {
+    color: #dcdcdc;
+    text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
+}
+
+.right-header-content-container-colors-switched {
+    border: none;
+    box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
+}
+
+.main-content-container {
+    margin: 70px 0 0 0;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.main-content-container-gallery {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 76px;
+}
+
+
+.main-content-aboutme {
+    z-index: 1000;
+    margin: 64px 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-content-container-aboutme .main-content-info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container-aboutme .left-bar {
+    grid-column: 1;
+    grid-row: 2 / span 100;
+
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    /*border-bottom: 2px solid #dcdcdc;*/
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content-info-title {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    border-bottom: 2px solid white;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.map-component {
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.admin-info-footer {
+    margin-top: 70px;
+}
+
+.treatment-description-1st-div {
+    margin-top: -24px;
+    padding: 35px 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1.5fr 1fr;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+}
+    .treatment-description-1st-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.7);
+        padding: 36px 48px;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+    }
+        .treatment-description-1st-text {
+            color: white;
+            font-size: 20px;
+            line-height: 2;
+        }
+
+    .treatment-description-1st-photo-container {
+        overflow: hidden;
+        width: 27%;
+        position: absolute;
+        right: 6.5%;
+        top: 35px;
+        bottom: -110px;
+        border-radius: 500px 500px 0 0;
+        z-index: 999;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+    }
+        .treatment-description-1st-photo {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.9) contrast(1.1);
+
+
+        }
+
+.treatment-description-2nd-div {
+    padding: 35px 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+}
+    .treatment-description-2nd-photo-container {
+        overflow: hidden;
+        width: 40%;
+        height: 50%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        bottom: 0;
+        transform: translateY(-50%);
+        border-radius: 0 500px 500px 0;
+        z-index: 999;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8)
+    }
+        .treatment-description-2nd-photo {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+    .treatment-description-2nd-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.7);
+        padding: 10% 15%;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+    }
+        .treatment-description-2nd-text {
+            color: white;
+            font-size: 20px;
+            line-height: 2;
+}
+
+.treatment-pros-cons-div {
+    padding: 100px 50px 35px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 40px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.treatment-tips-div {
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("../backend/photos_compressed/treatmentPhotos/tips_photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.treatment-tips-div p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+@media (min-width: 1025px) {
+    .treatment-tips-div {
+        margin: 0 150px 0 150px;
+    }
+}
+    .treatment-pros-cons-title {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        border-bottom: 2px solid white;
+        padding-bottom: 12px;
+        margin: 0 0 40px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        background-color: rgba(0,0,0,0.7);
+        padding: 200px 150px 100px 200px;
+        overflow: hidden;
+        box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8);
+    }
+    .treatment-pros-div {
+        border-radius: 400px 400px 0 0;
+    }
+    .treatment-cons-div {
+        border-radius: 0 0 400px 400px;
+    }
+    .treatment-tips-div {
+        border-radius: 0;
+        grid-column: 1 / -1;
+        padding: 50px 150px;
+
+    }
+
+        .treatment-pros-text,
+        .treatment-cons-text {
+            color: white;
+            font-size: 22px;
+            line-height: 2;
+            margin: 0;
+            text-align: left;
+
+        }
+
+
+/* ============================================
+   TABLET STYLES - PickedTreatment (768px – 1024px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main-gallery-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-gallery {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .main-content-container-gallery .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+        width: 90%;
+        padding-bottom: 12px;
+    }
+
+    .treatment-description-1st-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .treatment-description-1st-text-container {
+        padding: 20px;
+        order: 2;
+    }
+
+    .treatment-description-1st-photo-container {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .treatment-description-2nd-photo-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-text-container {
+        padding: 20px;
+        order: 2;
+    }
+
+    .treatment-pros-cons-div {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 0;
+    }
+
+    .treatment-tips-div {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 24px;
+        margin: 15px 0 12px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 25px 25px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .treatment-pros-div {
+        border-radius: 12px;
+    }
+
+    .treatment-cons-div {
+        border-radius: 12px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+}
+
+/* ============================================
+   MOBILE STYLES - PickedTreatment (max-width: 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+
+    /* ----- Hero Photo ----- */
+    .main-gallery-photo-container {
+        height: 280px;
+        padding: 0;
+    }
+
+    .main-gallery-photo {
+        object-position: center 30%;
+        filter: brightness(70%);
+    }
+
+    /* ----- Header ----- */
+    .header-gallery {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* ----- Content Container ----- */
+    .main-content-container-gallery {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .main-content-container-gallery .left-bar {
+        display: none;
+    }
+
+    .left-bar {
+        margin-top: 0;
+    }
+
+    .main-content-info-title-container {
+        padding: 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 24px;
+        width: 90%;
+        padding-bottom: 12px;
+    }
+
+    .main-content-aboutme {
+        margin: 10px 0 0 0;
+    }
+
+    /* ----- 1st Description Section ----- */
+    .treatment-description-1st-div {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    .treatment-description-1st-text-container {
+        padding: 15px;
+        order: 2;
+    }
+
+    .treatment-description-1st-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .treatment-description-1st-photo-container {
+        position: relative;
+        width: 100%;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        border-radius: 12px;
+        height: 250px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-1st-photo {
+        border-radius: 12px;
+    }
+
+    /* ----- 2nd Description Section ----- */
+    .treatment-description-2nd-div {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .treatment-description-2nd-photo-container {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        border-radius: 12px;
+        order: 1;
+        margin-bottom: 15px;
+    }
+
+    .treatment-description-2nd-photo {
+        border-radius: 12px;
+    }
+
+    .treatment-description-2nd-text-container {
+        padding: 15px;
+        order: 2;
+    }
+
+    .treatment-description-2nd-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* ----- Pros & Cons ----- */
+    .treatment-pros-cons-div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 0;
+    }
+
+    .treatment-pros-cons-title:nth-child(1) {
+        order: 1;
+    }
+    .treatment-pros-div {
+        order: 2;
+    }
+    .treatment-pros-cons-title:nth-child(2) {
+        order: 3;
+    }
+    .treatment-cons-div:not(.treatment-tips-div) {
+        order: 4;
+    }
+    .treatment-tips-div {
+        order: 5;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 20px;
+        padding-bottom: 8px;
+        margin: 15px 0 10px 0;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 20px 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .treatment-pros-div {
+        border-radius: 12px;
+    }
+
+    .treatment-cons-div {
+        border-radius: 12px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    /* ----- Map ----- */
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    /* ----- Admin Footer ----- */
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+    /* ----- Form ----- */
+    .form-main-container {
+        margin-top: 30px;
+    }
+
+}
+
+/* ---- Large phones (≤430px) ---- */
+@media (max-width: 430px) {
+    .main-gallery-photo-container {
+        height: 250px;
+    }
+
+    .main-content-info-title {
+        font-size: 22px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 220px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 14px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 18px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 13px;
+    }
+}
+
+/* ---- Medium phones (≤393px) ---- */
+@media (max-width: 393px) {
+    .main-gallery-photo-container {
+        height: 230px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 200px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 13.5px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 12.5px;
+    }
+}
+
+/* ---- Small phones (≤375px) ---- */
+@media (max-width: 375px) {
+    .main-gallery-photo-container {
+        height: 210px;
+    }
+
+    .main-content-info-title {
+        font-size: 20px;
+    }
+
+    .treatment-description-1st-div,
+    .treatment-description-2nd-div {
+        padding: 12px;
+    }
+
+    .treatment-description-1st-text-container,
+    .treatment-description-2nd-text-container {
+        padding: 12px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 180px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 13px;
+    }
+
+    .treatment-pros-cons-div {
+        padding: 15px 12px;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 15px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 17px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 12px;
+    }
+}
+
+/* ---- Compact phones (≤360px): Galaxy S series ---- */
+@media (max-width: 360px) {
+    .main-gallery-photo-container {
+        height: 190px;
+    }
+
+    .main-content-info-title {
+        font-size: 19px;
+        padding-bottom: 10px;
+    }
+
+    .main-content-info-title-container {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-div,
+    .treatment-description-2nd-div {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-text-container,
+    .treatment-description-2nd-text-container {
+        padding: 10px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 160px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 12.5px;
+    }
+
+    .treatment-pros-cons-div {
+        padding: 12px 10px;
+    }
+
+    .treatment-pros-div,
+    .treatment-cons-div {
+        padding: 12px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 16px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 11.5px;
+        line-height: 1.6;
+    }
+}
+
+/* ---- Very small phones (≤320px) ---- */
+@media (max-width: 320px) {
+    .main-gallery-photo-container {
+        height: 160px;
+    }
+
+    .main-content-info-title {
+        font-size: 17px;
+    }
+
+    .treatment-description-1st-photo-container,
+    .treatment-description-2nd-photo-container {
+        height: 140px;
+    }
+
+    .treatment-description-1st-text,
+    .treatment-description-2nd-text {
+        font-size: 11.5px;
+    }
+
+    .treatment-pros-cons-title {
+        font-size: 15px;
+    }
+
+    .treatment-pros-text,
+    .treatment-cons-text {
+        font-size: 11px;
+    }
+}

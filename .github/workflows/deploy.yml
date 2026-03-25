@@ -17,21 +17,42 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Sprawdzenie
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Przygotuj Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
+      - name: Cache pip
+        uses: actions/cache@v4.2.0
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Instaluj zależności Python
-        run: pip install pandas openpyxl
+        run: pip install pandas openpyxl pytz Pillow
         working-directory: backend
 
-      - name: Konwertuj Excel na JSON
+      - name: Konwertuj Excel na JSON + Update Time + Scale Gallery
         run: python convertJson.py
+        working-directory: backend
+
+      - name: Instaluj zależności Python - Word
+        run: pip install python-docx odfpy
+        working-directory: backend
+
+      - name: Konwertuj Word na JSON
+        run: python -c "import convertWord; convertWord.czytaj_word()"
+        working-directory: backend
+
+      - name: Kompresuj zdjęcia
+        run: python -c "import convertWord; convertWord.kompresuj_myphotos(); convertWord.kompresuj_word_photos()"
         working-directory: backend
 
       - name: Przygotuj pliki do wrzucenia
@@ -40,14 +61,15 @@ jobs:
           cp -r pages _site/
           cp -r pages-js _site/
           cp -r styles _site/
-          cp -r photos _site/
           cp -r backend _site/
           cp -r modules _site/
           cp index.html _site/
+          cp 404.html _site/
+          cp sitemap.xml _site/
           cp index.js _site/
 
       - name: Wrzuc artefakty
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: _site
 
@@ -61,4 +83,4 @@ jobs:
     steps:
       - name: Wrzucenie na github pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5

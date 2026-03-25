@@ -1,10 +1,11 @@
 function Banner() {
     const pathName = window.location.pathname;
+    const isHomePage = !pathName.includes("/pages/") && (pathName.endsWith("index.html") || pathName.endsWith("/"));
     let path = ""
-    if (pathName.endsWith("index.html") || pathName.endsWith("/")) {
-        path = "photos"
+    if (isHomePage) {
+        path = "backend/photos_compressed"
     } else {
-        path = "../photos"
+        path = "../backend/photos_compressed"
     }
 
     const html = `

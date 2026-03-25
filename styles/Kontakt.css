@@ -1,6 +1,679 @@
-.test {
+
+body {
+    margin-top: 0 !important;
+}
+
+.header {
+    z-index: 9999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.left-bar {}
+
+.main-contact-photo-container {
+    width: 100%;
+    height: 650px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+}
+
+.main-contact-photo {
+    object-fit: cover;
+    object-position: 0 60%;
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+}
+
+.header-contact {
+    background-color: rgba(0,0,0,0.2);
+    z-index: 99999999;
+    transition: background-color 2s ease-in-out, transform 0.7s ease-in-out;
+
+}
+
+.right-header-content-colors-switched {
+    color: #dcdcdc;
+    text-shadow: 1px -1px 5px rgba(117, 117, 117, 0.8);
+}
+
+.right-header-content-container-colors-switched {
+    border: none;
+    box-shadow: 0 0 2px rgba(117, 117, 117, 0.8);
+
+}
+
+.main-content-container {
+    margin: 70px 0 0 0;
+    background: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.main-content-container-contact {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 76px;
+}
+
+
+.main-content-contact {
+    z-index: 1000;
+    margin: 64px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 0;
+    row-gap: 70px;
+}
+
+.main-content-container-aboutme .main-content-info {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.main-content-container-aboutme .left-bar {
+    grid-column: 1;
+    grid-row: 2 / span 100;
+
+}
+
+.left-bar {
+    margin-top: 205px;
+}
+
+.main-content-info-title-container {
+    padding: 24px;
+    /*border-bottom: 2px solid #dcdcdc;*/
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.main-content-info-title {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    border-bottom: 2px solid white;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.map-component {
+    margin: 70px 0 0 0;
+    width: 100%;
+}
+
+.admin-info-footer {
+    margin-top: 70px;
+}
+
+.social-media-wrapper,
+.company-details-wrapper {
+    padding: 50px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.company-details-wrapper {
+}
+.social-media-container,
+.company-details-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 3%;
+
+}
+
+.company-details-container {
+    background-color: rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8)
+}
+
+.social-media-link {
+    text-decoration: none;
+}
+
+.social-media-item-container {
+    background-color: rgba(0,0,0,0.7);
+    padding: 96px 24px 128px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 7px rgba(0,0,0,0.6);
+    transition: transform 0.5s;
+}
+
+.social-media-item-container:hover {
+    transform: scale(1.08);
+}
+
+.social-media-item-title {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 48px;
+}
+
+.social-media-item-photo {
+    border-radius: 20%;
+    width: 80%;
+}
+
+.company-details-text-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-details-text-container,
+.company-hours-container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 72px;
+}
+
+.company-hours-container {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.company-details-text-container p,
+.company-hours-container p {
     font-size: 24px;
     color: white;
+    line-height: 2;
     text-align: center;
-    margin-top: 200px;
+}
+
+.company-details-text-container .paragraph-indent,
+.company-hours-container .paragraph-indent {
+    margin-left: 0;
+}
+
+.company-details-text-container .paragraph-title,
+.company-hours-container .paragraph-title {
+    font-size: 36px;
+    margin-left: 0;
+}
+
+.company-hours-container p {
+    white-space: nowrap;
+}
+
+.company-details-photo-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: hidden;
+    position: relative;
+}
+
+.company-details-photo {
+    position: absolute;
+    height: 100%;
+    width: 22%;
+    object-fit: cover;
+}
+
+.company-details-photo:nth-child(1) { left: 0; }
+.company-details-photo:nth-child(2) { left: 19.5%; }
+.company-details-photo:nth-child(3) { left: 39%; }
+.company-details-photo:nth-child(4) { left: 58.5%; }
+.company-details-photo:nth-child(5) { left: 78%; }
+
+.company-details-photo:not(:first-child) {
+    mask-image: linear-gradient(to right, transparent 0%, black 30%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+
+/* ===== LAPTOP (covers 125% Windows DPI scaling on 1920x1080) ===== */
+@media (min-width: 1025px) and (max-width: 1600px) {
+
+    /* ----- "Dane o firmie" fits on one line ----- */
+    .company-details-text-container,
+    .company-hours-container {
+        padding: 24px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 26px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 20px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin-top: 0 !important;
+    }
+
+    .main-contact-photo-container {
+        height: 350px;
+        padding: 0;
+    }
+
+    .main-content-container-contact {
+        display: block;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .main-content-info-title-container {
+        padding: 16px 15px;
+    }
+
+    .main-content-info-title {
+        font-size: 32px;
+        width: 80%;
+        padding-bottom: 14px;
+    }
+
+    .main-content-contact {
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        row-gap: 30px;
+    }
+
+    .social-media-wrapper,
+    .company-details-wrapper {
+        padding: 20px 15px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        padding: 20px;
+    }
+
+    .company-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .company-details-text-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .company-details-text-container {
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .company-hours-container {
+        border-top: none;
+    }
+
+    .company-details-photo-container {
+        grid-template-columns: repeat(5, 1fr);
+        height: 220px;
+        position: relative;
+        display: grid;
+        margin-top: 0;
+    }
+
+    .company-details-photo {
+        position: absolute;
+        height: 100%;
+        width: 22%;
+        left: auto;
+        flex: none;
+        min-height: unset;
+        display: block;
+        border-radius: 0;
+    }
+
+    .company-details-photo:not(:first-child) {
+        mask-image: linear-gradient(to right, transparent 0%, black 30%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+    }
+
+}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 767px) {
+    body {
+        margin-top: 0 !important;
+    }
+
+    .main-contact-photo-container {
+        height: 300px;
+        padding: 0;
+    }
+
+    .main-contact-photo {
+        object-position: center 60%;
+    }
+
+    .main-content-container-contact {
+        display: block;
+        padding-right: 0;
+        margin: 30px 0 0 0;
+    }
+
+    .left-bar {
+        display: none;
+    }
+
+    .main-content-info-title-container {
+        padding: 16px 10px;
+    }
+
+    .main-content-info-title {
+        font-size: 28px;
+        width: 80%;
+        padding-bottom: 14px;
+    }
+
+    .main-content-contact {
+        margin: 20px 0 0 0;
+        padding: 20px 0;
+        row-gap: 30px;
+    }
+
+    .social-media-wrapper,
+    .company-details-wrapper {
+        padding: 15px 10px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 8px;
+        row-gap: 10px;
+    }
+
+    .social-media-item-container {
+        padding: 20px 8px 28px 8px;
+        border-radius: 14px;
+    }
+
+    .social-media-item-container:hover {
+        transform: none;
+    }
+
+    .social-media-item-title {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .social-media-item-photo {
+        width: 50px;
+        border-radius: 15%;
+    }
+
+    .company-details-container {
+        grid-template-columns: 1fr;
+        box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .company-details-text-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .company-details-text-container,
+    .company-hours-container {
+        flex: 1;
+        padding: 16px 12px;
+    }
+
+    .company-details-text-container {
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .company-hours-container {
+        border-top: none;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 13px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 17px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .company-details-text-container .paragraph-indent,
+    .company-hours-container .paragraph-indent {
+        margin-left: 0;
+    }
+
+    .company-details-photo-container {
+        grid-template-columns: repeat(5, 1fr);
+        height: 180px;
+        position: relative;
+    }
+
+    .company-details-photo {
+        position: absolute;
+        height: 100%;
+        width: 22%;
+    }
+
+    .map-component {
+        margin: 30px 0 0 0;
+    }
+
+    .admin-info-footer {
+        margin-top: 30px;
+    }
+
+}
+
+/* ----- iPhone 15 Pro Max, 14 Plus, Samsung S24 Ultra (430px) ----- */
+@media screen and (max-width: 430px) {
+    .main-contact-photo-container {
+        height: 260px;
+    }
+
+    .main-content-info-title {
+        font-size: 25px;
+    }
+
+    .social-media-item-container {
+        padding: 16px 6px 22px 6px;
+    }
+
+    .social-media-item-title {
+        font-size: 12px;
+    }
+
+    .social-media-item-photo {
+        width: 44px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 13px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 18px;
+    }
+
+    .company-details-photo-container {
+        height: 150px;
+    }
+}
+
+/* ----- iPhone 15 Pro, Pixel 5/6/7/8 (393px) ----- */
+@media screen and (max-width: 393px) {
+    .main-contact-photo-container {
+        height: 240px;
+    }
+
+    .main-content-info-title {
+        font-size: 23px;
+    }
+
+    .social-media-container {
+        column-gap: 6px;
+        row-gap: 8px;
+    }
+
+    .social-media-item-title {
+        font-size: 11px;
+    }
+
+    .social-media-item-photo {
+        width: 40px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 12px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 17px;
+    }
+
+    .company-details-photo-container {
+        height: 130px;
+    }
+}
+
+/* ----- iPhone SE (2nd/3rd), iPhone X, 12 Mini (375px) ----- */
+@media screen and (max-width: 375px) {
+    .main-contact-photo-container {
+        height: 220px;
+    }
+
+    .main-content-info-title {
+        font-size: 21px;
+    }
+
+    .social-media-item-container {
+        padding: 14px 5px 18px 5px;
+        border-radius: 10px;
+    }
+
+    .social-media-item-title {
+        font-size: 10.5px;
+        margin-bottom: 10px;
+    }
+
+    .social-media-item-photo {
+        width: 36px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 11.5px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 16px;
+    }
+
+    .company-details-photo-container {
+        height: 120px;
+    }
+}
+
+/* ----- Galaxy S24/S23/S22/S21/S20 FE (360px) ----- */
+@media screen and (max-width: 360px) {
+    .main-contact-photo-container {
+        height: 200px;
+    }
+
+    .main-content-info-title {
+        font-size: 20px;
+    }
+
+    .social-media-container {
+        column-gap: 5px;
+    }
+
+    .social-media-item-title {
+        font-size: 10px;
+    }
+
+    .social-media-item-photo {
+        width: 34px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 11px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 15px;
+    }
+
+    .company-details-photo-container {
+        height: 110px;
+    }
+}
+
+/* ----- iPhone SE 1st gen, Galaxy A series small (320px) ----- */
+@media screen and (max-width: 320px) {
+    .main-contact-photo-container {
+        height: 170px;
+    }
+
+    .main-content-info-title {
+        font-size: 18px;
+    }
+
+    .social-media-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-media-item-title {
+        font-size: 9.5px;
+    }
+
+    .social-media-item-photo {
+        width: 30px;
+    }
+
+    .company-details-text-container p,
+    .company-hours-container p {
+        font-size: 10px;
+    }
+
+    .company-details-text-container .paragraph-title,
+    .company-hours-container .paragraph-title {
+        font-size: 14px;
+    }
+
+    .company-details-photo-container {
+        height: 90px;
+    }
 }

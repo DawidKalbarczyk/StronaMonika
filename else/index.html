@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/photos/icons/kolor_czarny-edited.ico" />
+    <link rel="icon" href="../return-button.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -26,8 +26,27 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Salon Obsession - Kozienice</title>
+    <style>
+      body {
+        opacity: 1;
+        transition: opacity 0.35s ease-in-out;
+      }
+
+      body.page-is-loading {
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
+    <script>
+      document.body.classList.add("page-is-loading");
+      window.addEventListener("load", () => {
+        document.body.classList.remove("page-is-loading");
+      }, { once: true });
+    </script>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
