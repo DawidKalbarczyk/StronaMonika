@@ -483,6 +483,9 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template-rows: 1fr 9fr;
     place-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 2.5% 2%;
     background-color: rgba(166, 168, 168, 0.95);
     box-shadow: 7px -7px 10px rgba(0, 0, 0, 0.8), inset 0 0 40px 30px rgba(0, 0, 0, 0.5);
@@ -520,12 +523,19 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     padding: 0 5%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-form input,
 .form-form select,
 .form-form textarea,
 .form-form button {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     border-radius: 8px;
     background-color: rgba(30,30,30,0.9);
     color: #bdbdbd;
@@ -572,10 +582,15 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 .custom-select-wrapper {
     position: relative;
     margin-bottom: 1.5%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .custom-select-trigger {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -586,6 +601,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 18px;
     padding: 1.5% 4%;
+    box-sizing: border-box;
     border: none;
     cursor: pointer;
     text-align: left;
@@ -594,6 +610,7 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 .custom-select-label {
     color: #bdbdbd;
     pointer-events: none;
+    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -673,11 +690,36 @@ box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.checkbox-group label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.35;
+}
+
+.form-form input.input-RODO {
+    width: 18px;
+    min-width: 18px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
 
 
 .form-form button[type="submit"] {
     margin-top: 4%;
-    width: 200px;
+    width: min(200px, 100%);
     align-self: center;
     padding: 2%;
     cursor: pointer;
