@@ -12,7 +12,9 @@
         const isPageRoute = path.includes("/pages/");
         const basePath = isPageRoute
             ? path.slice(0, path.indexOf("/pages/"))
-            : path.replace(/\/404\.html$/, "");
+            : path.endsWith("/404.html")
+                ? path.replace(/\/404\.html$/, "")
+                : path.replace(/\/[^/]*$/, "");
 
         const pageMap = {
             aboutme: "AboutMe.html",
@@ -36,7 +38,10 @@
         }
 
         // Fallback to homepage when route is unknown.
-        window.location.replace(`${basePath}/index.html`);
+        const fallbackTarget = `${basePath}/index.html`;
+        if (fallbackTarget !== path) {
+            window.location.replace(fallbackTarget);
+        }
     })();
 </script>
 </body>
