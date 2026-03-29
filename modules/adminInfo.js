@@ -68,7 +68,7 @@ function AdminInfo() {
                     </p>
                 </div>
                 <div class="admin-info-admin-container">
-                    <p class="admin-info-titles">Wykonawca</p>
+                    <p class="admin-info-titles">Wykonawca strony</p>
                     <p class="admin-info-descriptions admin">
                         Dawid Kalbarczyk<br>
                         <span class="admin-info-titles-weighted">E-mail:</span><br> 
