@@ -26,9 +26,8 @@ function Headbar() {
             
             <!-- Hamburger button (mobile only) -->
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+                <span class="hamburger-text">MENU</span>
+                <span class="hamburger-arrow" aria-hidden="true"></span>
             </button>
             
             <nav class="right-header" aria-label="Nawigacja główna">
